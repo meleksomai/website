@@ -1,6 +1,6 @@
+import { mauve, mauveA } from '@radix-ui/colors';
 import { createStitches } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
-import { mauve, mauveA } from '@radix-ui/colors';
 export type { VariantProps } from '@stitches/react';
 
 export const {
