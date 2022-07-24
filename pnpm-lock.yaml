@@ -85,6 +85,52 @@ importers:
     devDependencies:
       typescript: 4.7.4
 
+  packages/layout:
+    specifiers:
+      '@radix-ui/react-popover': 1.0.0
+      '@stitches/react': 1.2.8
+      '@types/react': ^17.0.37
+      '@types/react-dom': ^17.0.11
+      eslint: ^7.32.0
+      eslint-config-thugga: workspace:*
+      react: ^17.0.2
+      react-dom: 17.0.2
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@radix-ui/react-popover': 1.0.0_nn45z5sr7igu7sfun6tiae5hx4
+      '@stitches/react': 1.2.8_react@17.0.2
+    devDependencies:
+      '@types/react': 17.0.47
+      '@types/react-dom': 17.0.17
+      eslint: 7.32.0
+      eslint-config-thugga: link:../eslint-config-custom
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      tsconfig: link:../tsconfig
+      typescript: 4.7.4
+
+  packages/style:
+    specifiers:
+      '@radix-ui/colors': 0.1.8
+      '@stitches/react': 1.2.8
+      '@types/react': ^17.0.37
+      eslint: ^7.32.0
+      eslint-config-thugga: workspace:*
+      react: ^17.0.2
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@radix-ui/colors': 0.1.8
+      '@stitches/react': 1.2.8_react@17.0.2
+    devDependencies:
+      '@types/react': 17.0.47
+      eslint: 7.32.0
+      eslint-config-thugga: link:../eslint-config-custom
+      react: 17.0.2
+      tsconfig: link:../tsconfig
+      typescript: 4.7.4
+
   packages/tsconfig:
     specifiers: {}
 
@@ -557,6 +603,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: false
+
+  /@radix-ui/colors/0.1.8:
+    resolution: {integrity: sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==}
     dev: false
 
   /@radix-ui/primitive/1.0.0:
