@@ -1,0 +1,24 @@
+{
+  "dev": true,
+  "filter": "/^(?!thugga)$/",
+  "indent": "  ",
+  "overrides": true,
+  "peer": false,
+  "prod": true,
+  "resolutions": true,
+  "workspace": false,
+  "semverGroups": [],
+  "semverRange": "",
+  "sortAz": [
+    "contributors",
+    "dependencies",
+    "devDependencies",
+    "keywords",
+    "peerDependencies",
+    "resolutions",
+    "scripts"
+  ],
+  "sortFirst": ["name", "description", "version", "author"],
+  "source": [],
+  "versionGroups": []
+}
