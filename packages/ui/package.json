@@ -1,11 +1,11 @@
 {
   "name": "@thugga/ui",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint ./src/*.ts*"
   },
   "peerDependencies": {
     "react-dom": "^17.0.0",
