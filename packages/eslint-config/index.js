@@ -3,7 +3,7 @@ module.exports = {
     "next", 
     "prettier",
     "plugin:sonarjs/recommended",
-  "plugin:typescript-sort-keys/recommended", // Enables sorting of object properties
+    "plugin:typescript-sort-keys/recommended", // Enables sorting of object properties
 ],
   plugins: [
     "eslint-plugin-tsdoc",
