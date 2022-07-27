@@ -1,8 +1,6 @@
 import { AppProps } from "next/app";
 import React from "react";
 
-import { Container, Flex } from "@thugga/ui";
-
 import globalStyles from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995

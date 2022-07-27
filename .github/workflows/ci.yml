@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    name: Build, Linting
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.5.2
+
+      - name: setup node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: "pnpm"
+
+      - name: install dependencies
+        run: pnpm ci:install
+
+      - name: build
+        run: pnpm build
+
+      - name: linting
+        run: pnpm lint
+      
+      # - name: test
+      #   run: pnpm test
