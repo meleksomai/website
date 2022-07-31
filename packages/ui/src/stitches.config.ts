@@ -1,4 +1,4 @@
-import { mauve, mauveA } from "@radix-ui/colors";
+import { mauve, mauveA, red, redA, blackA } from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
 
@@ -17,12 +17,15 @@ export const {
 } = createStitches({
   theme: {
     colors: {
+      ...blackA,
       ...mauve,
       ...mauveA,
+      ...red,
+      ...redA,
 
       // Semantic colors
-      hiContrast: "$mauve12",
-      loContrast: "$mauve1",
+      hiContrast: "$mauve11",
+      loContrast: "$mauve5",
     },
     fonts: {
       sans: "Inter, -apple-system, system-ui, sans-serif",
@@ -87,26 +90,76 @@ export const {
       light: "(prefers-color-scheme: light)",
     },
     utils: {
-      // us: (value: Stitches.PropertyValue<'userSelect'>) => ({
-      //     WebkitUserSelect: value,
-      //     userSelect: value,
-      // }),
-      // userSelect: (value: Stitches.PropertyValue<'userSelect'>) => ({
-      //     WebkitUserSelect: value,
-      //     userSelect: value,
-      // }),
-      // size: (value: Stitches.PropertyValue<'width'>) => ({
-      //     width: value,
-      //     height: value,
-      // }),
-      // appearance: (value: Stitches.PropertyValue<'appearance'>) => ({
-      //     WebkitAppearance: value,
-      //     appearance: value,
-      // }),
-      // backgroundClip: (value: Stitches.PropertyValue<'backgroundClip'>) => ({
-      //     WebkitBackgroundClip: value,
-      //     backgroundClip: value,
-      // }),
-    },
+      p: (value: Stitches.PropertyValue<"padding">) => ({
+        padding: value,
+      }),
+      pt: (value: Stitches.PropertyValue<"paddingTop">) => ({
+        paddingTop: value,
+      }),
+      pr: (value: Stitches.PropertyValue<"paddingRight">) => ({
+        paddingRight: value,
+      }),
+      pb: (value: Stitches.PropertyValue<"paddingBottom">) => ({
+        paddingBottom: value,
+      }),
+      pl: (value: Stitches.PropertyValue<"paddingLeft">) => ({
+        paddingLeft: value,
+      }),
+      px: (value: Stitches.PropertyValue<"paddingLeft">) => ({
+        paddingLeft: value,
+        paddingRight: value,
+      }),
+      py: (value: Stitches.PropertyValue<"paddingTop">) => ({
+        paddingTop: value,
+        paddingBottom: value,
+      }),
+      m: (value: Stitches.PropertyValue<"margin">) => ({
+        margin: value,
+      }),
+      mt: (value: Stitches.PropertyValue<"marginTop">) => ({
+        marginTop: value,
+      }),
+      mr: (value: Stitches.PropertyValue<"marginRight">) => ({
+        marginRight: value,
+      }),
+      mb: (value: Stitches.PropertyValue<"marginBottom">) => ({
+        marginBottom: value,
+      }),
+      ml: (value: Stitches.PropertyValue<"marginLeft">) => ({
+        marginLeft: value,
+      }),
+      mx: (value: Stitches.PropertyValue<"marginLeft">) => ({
+        marginLeft: value,
+        marginRight: value,
+      }),
+      my: (value: Stitches.PropertyValue<"marginTop">) => ({
+        marginTop: value,
+        marginBottom: value,
+      }),
+      us: (value: Stitches.PropertyValue<"userSelect">) => ({
+        WebkitUserSelect: value,
+        userSelect: value,
+      }),
+      userSelect: (value: Stitches.PropertyValue<"userSelect">) => ({
+        WebkitUserSelect: value,
+        userSelect: value,
+      }),
+      // A property to apply linear gradient
+      linearGradient: (value: string) => ({
+        backgroundImage: `linear-gradient(${value})`,
+      }),
+      size: (value: Stitches.PropertyValue<"width">) => ({
+        width: value,
+        height: value,
+      }),
+      appearance: (value: Stitches.PropertyValue<"appearance">) => ({
+        WebkitAppearance: value,
+        appearance: value,
+      }),
+      backgroundClip: (value: Stitches.PropertyValue<"backgroundClip">) => ({
+        WebkitBackgroundClip: value,
+        backgroundClip: value,
+      }),
+    } as any,
   },
 });
