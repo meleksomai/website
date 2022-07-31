@@ -5,7 +5,8 @@
   "types": "./src/index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./src/*.ts*"
+    "lint": "eslint ./src/*.ts*",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "peerDependencies": {
     "react-dom": "^17.0.0",
