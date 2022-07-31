@@ -5,12 +5,17 @@ import { Text } from "./Text";
 
 const DEFAULT_TAG = "h1";
 
+// Text Component extracted Props
 type TextSizeVariants = Pick<VariantProps<typeof Text>, "size">;
+
+// Heading Component custom Props
 type HeadingSizeVariants = "1" | "2" | "3" | "4";
-type HeadingVariants = { size?: HeadingSizeVariants } & Omit<
-  VariantProps<typeof Text>,
-  "size"
->;
+type HeadingVariants = {
+  // Replacing the Text Props with Heading custom Props
+  size?: HeadingSizeVariants;
+} & Omit<VariantProps<typeof Text>, "size">;
+
+// Heading Props
 type HeadingProps = React.ComponentProps<typeof DEFAULT_TAG> &
   HeadingVariants & { as?: any; css?: CSS };
 
@@ -19,7 +24,7 @@ export const Heading = React.forwardRef<
   HeadingProps
 >((props, forwardedRef) => {
   // '2' here is the default heading size variant
-  const { size = "1", ...textProps } = props;
+  const { size = "1", variant = "black", ...textProps } = props;
   // This is the mapping of Heading Variants to Text variants
   const textSize: Record<HeadingSizeVariants, TextSizeVariants["size"]> = {
     1: { "@initial": "4", "@bp2": "5" },
@@ -32,8 +37,8 @@ export const Heading = React.forwardRef<
   const textCss: Record<HeadingSizeVariants, CSS> = {
     1: { fontWeight: 500, lineHeight: "20px", "@bp2": { lineHeight: "23px" } },
     2: { fontWeight: 500, lineHeight: "25px", "@bp2": { lineHeight: "30px" } },
-    3: { fontWeight: 500, lineHeight: "33px", "@bp2": { lineHeight: "41px" } },
-    4: { fontWeight: 500, lineHeight: "35px", "@bp2": { lineHeight: "55px" } },
+    3: { fontWeight: 700, lineHeight: "33px", "@bp2": { lineHeight: "41px" } },
+    4: { fontWeight: 700, lineHeight: "35px", "@bp2": { lineHeight: "55px" } },
   };
 
   return (
@@ -42,9 +47,9 @@ export const Heading = React.forwardRef<
       {...textProps}
       ref={forwardedRef}
       size={textSize[size]}
+      variant={variant}
       css={{
         fontVariantNumeric: "proportional-nums",
-        color: "",
         ...textCss[size],
         ...props.css,
       }}

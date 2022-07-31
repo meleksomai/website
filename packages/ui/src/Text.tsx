@@ -55,6 +55,9 @@ export const Text = styled("span", {
       red: {
         color: "$red11",
       },
+      black: {
+        color: "$blackA12",
+      },
       // crimson: {
       //   color: "$crimson11",
       // },
