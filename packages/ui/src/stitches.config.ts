@@ -25,7 +25,7 @@ export const {
 
       // Semantic colors
       hiContrast: "$mauve11",
-      loContrast: "$mauve1",
+      loContrast: "$mauve5",
     },
     fonts: {
       sans: "Inter, -apple-system, system-ui, sans-serif",
@@ -143,6 +143,10 @@ export const {
       userSelect: (value: Stitches.PropertyValue<"userSelect">) => ({
         WebkitUserSelect: value,
         userSelect: value,
+      }),
+      // A property to apply linear gradient
+      linearGradient: (value: string) => ({
+        backgroundImage: `linear-gradient(${value})`,
       }),
       size: (value: Stitches.PropertyValue<"width">) => ({
         width: value,

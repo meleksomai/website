@@ -117,6 +117,7 @@ importers:
   packages/ui:
     specifiers:
       '@radix-ui/colors': 0.1.8
+      '@radix-ui/react-avatar': ^1.0.0
       '@radix-ui/react-popover': 1.0.0
       '@radix-ui/react-separator': ^1.0.0
       '@stitches/react': 1.2.8
@@ -130,6 +131,7 @@ importers:
       typescript: ^4.5.2
     dependencies:
       '@radix-ui/colors': 0.1.8
+      '@radix-ui/react-avatar': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
       '@radix-ui/react-popover': 1.0.0_nn45z5sr7igu7sfun6tiae5hx4
       '@radix-ui/react-separator': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
     devDependencies:
@@ -620,6 +622,21 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       '@radix-ui/react-primitive': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /@radix-ui/react-avatar/1.0.0_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-pCN+bXAjhuGt7xkDh8MgdB2wN09XhLKpzPMJR9aVVS0tz0oTCy8wkbFOAmLotjBwZBHMJ9acpsVh7/JIuDSCtw==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@radix-ui/react-context': 1.0.0_react@17.0.2
+      '@radix-ui/react-primitive': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
+      '@radix-ui/react-use-callback-ref': 1.0.0_react@17.0.2
+      '@radix-ui/react-use-layout-effect': 1.0.0_react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
