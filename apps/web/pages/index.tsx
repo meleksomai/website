@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Layout, Text, Heading, Avatar, Section } from "@thugga/ui";
+import { Layout, Paragraph, Heading, Avatar, Section } from "@thugga/ui";
 
 export default function Web() {
   return (
@@ -13,18 +13,20 @@ export default function Web() {
     >
       <Section size="3">
         <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="3" />
-        <Heading size="4">Melek Somai</Heading>
-        <Heading as="h2" variant="contrast">
+        <Heading size="4" css={{ paddingTop: "$3" }}>
+          Melek Somai
+        </Heading>
+        <Heading as="h2" variant="contrast" size="1" css={{ paddingTop: "$3" }}>
           Assistant Professor of Medicine at the Medical College of Wisconsin
         </Heading>
-        <Heading as="h2" variant="contrast">
+        <Heading as="h2" variant="contrast" css={{ paddingTop: "$1" }}>
           Chief Technology Officer at Inception Health
         </Heading>
         <Section size="2">
-          <Text variant="contrast">
+          <Paragraph>
             Helping Healthcare organizations build technology-driven engineering
             team at scale.
-          </Text>
+          </Paragraph>
         </Section>
       </Section>
       <Section size="1">

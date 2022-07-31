@@ -9,5 +9,6 @@ export * from "./Layout";
 export * from "./Heading";
 export * from "./Separator";
 export * from "./Section";
+export * from "./Paragraph";
 
 export * from "./stitches.config";
