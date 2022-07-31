@@ -118,6 +118,7 @@ importers:
     specifiers:
       '@radix-ui/colors': 0.1.8
       '@radix-ui/react-popover': 1.0.0
+      '@radix-ui/react-separator': ^1.0.0
       '@stitches/react': 1.2.8
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
@@ -130,6 +131,7 @@ importers:
     dependencies:
       '@radix-ui/colors': 0.1.8
       '@radix-ui/react-popover': 1.0.0_nn45z5sr7igu7sfun6tiae5hx4
+      '@radix-ui/react-separator': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
     devDependencies:
       '@stitches/react': 1.2.8_react@17.0.2
       '@types/react': 17.0.47
@@ -772,6 +774,18 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       '@radix-ui/react-slot': 1.0.0_react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /@radix-ui/react-separator/1.0.0_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-narSsDP+CKJWEOV9Yx9aOpw4bLaNRNIvnqmfx30mAJAJ9wPKoyVmcLzFj0Hyx3yQNZx7EokMwW6KtMyxN5jDUw==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@radix-ui/react-primitive': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false

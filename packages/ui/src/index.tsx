@@ -5,5 +5,7 @@ export * from "./Container";
 export * from "./Text";
 export * from "./Flex";
 export * from "./Layout";
+export * from "./Heading";
+export * from "./Separator";
 
 export * from "./stitches.config";

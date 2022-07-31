@@ -1,4 +1,4 @@
-import { mauve, mauveA } from "@radix-ui/colors";
+import { mauve, mauveA, red, redA, black, blackA } from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
 
@@ -17,11 +17,15 @@ export const {
 } = createStitches({
   theme: {
     colors: {
+      ...black,
+      ...blackA,
       ...mauve,
       ...mauveA,
+      ...red,
+      ...redA,
 
       // Semantic colors
-      hiContrast: "$mauve12",
+      hiContrast: "$mauve11",
       loContrast: "$mauve1",
     },
     fonts: {
@@ -87,6 +91,52 @@ export const {
       light: "(prefers-color-scheme: light)",
     },
     utils: {
+      // p: (value: Stitches.PropertyValue<"padding">) => ({
+      //   padding: value,
+      // }),
+      // pt: (value: Stitches.PropertyValue<"paddingTop">) => ({
+      //   paddingTop: value,
+      // }),
+      // pr: (value: Stitches.PropertyValue<"paddingRight">) => ({
+      //   paddingRight: value,
+      // }),
+      // pb: (value: Stitches.PropertyValue<"paddingBottom">) => ({
+      //   paddingBottom: value,
+      // }),
+      // pl: (value: Stitches.PropertyValue<"paddingLeft">) => ({
+      //   paddingLeft: value,
+      // }),
+      // px: (value: Stitches.PropertyValue<"paddingLeft">) => ({
+      //   paddingLeft: value,
+      //   paddingRight: value,
+      // }),
+      // py: (value: Stitches.PropertyValue<"paddingTop">) => ({
+      //   paddingTop: value,
+      //   paddingBottom: value,
+      // }),
+      // m: (value: Stitches.PropertyValue<"margin">) => ({
+      //   margin: value,
+      // }),
+      // mt: (value: Stitches.PropertyValue<"marginTop">) => ({
+      //   marginTop: value,
+      // }),
+      // mr: (value: Stitches.PropertyValue<"marginRight">) => ({
+      //   marginRight: value,
+      // }),
+      // mb: (value: Stitches.PropertyValue<"marginBottom">) => ({
+      //   marginBottom: value,
+      // }),
+      // ml: (value: Stitches.PropertyValue<"marginLeft">) => ({
+      //   marginLeft: value,
+      // }),
+      // mx: (value: Stitches.PropertyValue<"marginLeft">) => ({
+      //   marginLeft: value,
+      //   marginRight: value,
+      // }),
+      // my: (value: Stitches.PropertyValue<"marginTop">) => ({
+      //   marginTop: value,
+      //   marginBottom: value,
+      // }),
       // us: (value: Stitches.PropertyValue<'userSelect'>) => ({
       //     WebkitUserSelect: value,
       //     userSelect: value,
