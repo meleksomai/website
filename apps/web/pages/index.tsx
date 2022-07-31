@@ -31,7 +31,7 @@ export default function Web() {
       </Section>
       <Section size="1">
         <Heading as="h3" size="3">
-          Recent Publications
+          Recent Posts
         </Heading>
       </Section>
       <Section size="1">
