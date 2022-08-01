@@ -50,6 +50,8 @@ export const Heading = React.forwardRef<
       variant={variant}
       css={{
         fontVariantNumeric: "proportional-nums",
+        paddingTop: "$1",
+        paddingBottom: "$1",
         ...textCss[size],
         ...props.css,
       }}

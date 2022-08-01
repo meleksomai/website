@@ -13,7 +13,7 @@ function App({ Component, pageProps }: AppProps) {
     <Layout
       css={{
         // TODO: perhaps move this to a variants
-        backgroundColor: "$mauve3",
+        // backgroundColor: "$loContrast",
         padding: "$4",
       }}
     >

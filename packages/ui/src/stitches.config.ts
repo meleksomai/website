@@ -1,4 +1,13 @@
-import { mauve, mauveA, red, redA, blackA } from "@radix-ui/colors";
+import {
+  mauve,
+  mauveA,
+  red,
+  redA,
+  blackA,
+  whiteA,
+  orange,
+  orangeA,
+} from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
 
@@ -22,10 +31,13 @@ export const {
       ...mauveA,
       ...red,
       ...redA,
+      ...orange,
+      ...orangeA,
+      ...whiteA,
 
       // Semantic colors
       hiContrast: "$mauve11",
-      loContrast: "$mauve5",
+      loContrast: "$mauve1",
     },
     fonts: {
       sans: "Inter, -apple-system, system-ui, sans-serif",

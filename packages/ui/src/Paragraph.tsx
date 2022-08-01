@@ -25,6 +25,8 @@ export const Paragraph = React.forwardRef<
       bp2: "4",
     }}
     css={{
+      paddingTop: "$2",
+      paddingBottom: "$2",
       lineHeight: "25px",
       ...props.css,
 

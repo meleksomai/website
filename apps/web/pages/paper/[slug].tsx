@@ -1,50 +1,73 @@
-import * as fs from "fs";
-import * as path from "path";
-
-import { globby } from "globby";
-import matter from "gray-matter";
+import Markdoc from "@markdoc/markdoc";
 import { GetStaticProps } from "next";
+import React from "react";
 
-import { Heading, Paragraph, Section } from "@thugga/ui";
+import { config, components } from "@thugga/markdoc";
+import { Button, Heading, Paragraph, Section, Text } from "@thugga/ui";
+
+import {
+  getAllPublications,
+  getPublicationBySlug,
+  Publication,
+} from "../../papers";
 
 type PaperPageProps = {
-  authors?: [];
-  publication: any;
+  publication: Publication;
 };
 
-export default function PaperPage({ authors, publication }: PaperPageProps) {
+function Author({ author }: any) {
   return (
-    <Section>
-      <Heading as="h1">{publication.meta.title}</Heading>
-      <Heading as="h2">doi {publication.meta.doi}</Heading>
-      <Paragraph>{publication.content}</Paragraph>
-    </Section>
+    <Paragraph
+      css={{
+        display: "inline",
+        paddingInlineEnd: "$1",
+      }}
+    >
+      {author.given} {author.family} /
+    </Paragraph>
+  );
+}
+
+export default function PaperPage({ publication }: PaperPageProps) {
+  const ast = Markdoc.parse(publication.content);
+  const content = Markdoc.transform(ast, config);
+  const rendered = Markdoc.renderers.react(content, React, { components });
+
+  return (
+    <>
+      <Heading as="h1" size="3">
+        {publication.citation.title}
+      </Heading>
+      <Section size="0">
+        <Text size="2">
+          {publication.publisher} / {publication.publishedAt.text}
+        </Text>
+      </Section>
+      <Section>
+        <Button>Read online</Button>
+      </Section>
+      <Section size="0">
+        <Text size="3">
+          {publication.citation.author.map((author: any) => {
+            return <Author author={author} />;
+          })}
+        </Text>
+      </Section>
+      <Section>{rendered}</Section>
+    </>
   );
 }
 
 export async function getStaticPaths() {
-  const paths = await globby(["papers/*.md"]);
-  const files = paths.map((filePath) => path.parse(filePath).name);
-
+  const papers = await getAllPublications();
   return {
-    paths: files.map((pub) => ({ params: { slug: pub } })),
+    paths: papers.map((pub) => ({ params: { slug: pub.slug } })),
     fallback: false,
   };
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // FIXME: replace in another package
-  function getDocBySlug(slug: string) {
-    const papersDirectory = path.join(process.cwd(), "papers");
-    const realSlug = slug.replace(/\.md$/, "");
-    const fullPath = path.join(papersDirectory, `${realSlug}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
-
-    return { slug: realSlug, meta: data, content };
-  }
-
-  const doc = getDocBySlug(params?.slug as string);
+  const doc = getPublicationBySlug(params?.slug as string);
   return {
     props: {
       publication: doc,

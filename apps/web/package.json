@@ -10,7 +10,12 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@citation-js/date": "^0.5.1",
+    "@markdoc/markdoc": "^0.1.2",
+    "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
+    "citation-js": "^0.6.4",
+    "dayjs": "^1.11.4",
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
     "next": "12.0.8",
