@@ -4,13 +4,7 @@ import { Layout, Paragraph, Heading, Avatar, Section } from "@thugga/ui";
 
 export default function Web() {
   return (
-    <Layout
-      css={{
-        // TODO: perhaps move this to a variants
-        backgroundColor: "$mauve3",
-        padding: "$4",
-      }}
-    >
+    <>
       <Section size="3">
         <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="3" />
         <Heading size="4" css={{ paddingTop: "$3" }}>
@@ -39,6 +33,6 @@ export default function Web() {
           Recent Publications
         </Heading>
       </Section>
-    </Layout>
+    </>
   );
 }
