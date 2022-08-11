@@ -11,10 +11,12 @@ import {
   Text,
   Box,
   Link,
+  Flex,
 } from "@thugga/ui";
 
 import { NextLink } from "../components";
 import { getAllPublications, Publication } from "../papers";
+import Head from "next/head";
 
 interface WebProps {
   recentBlogPosts?: any[];
@@ -25,20 +27,73 @@ export default function Web({ recentPublications, recentBlogPosts }: WebProps) {
   return (
     <>
       <Section>
-        <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="3" />
-        <Heading size="3" css={{ paddingTop: "$3" }}>
-          Melek Somai
-        </Heading>
-        <Heading as="h2" variant="contrast" size="1" css={{ pt: "$3" }}>
-          Assistant Professor of Medicine at the Medical College of Wisconsin
-        </Heading>
-        <Heading as="h2" variant="contrast">
-          Chief Technology Officer at Inception Health
-        </Heading>
+        <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
+          <Box css={{ mr: "$7" }}>
+            <Heading size="3" css={{ paddingTop: "$3" }}>
+              Melek Somai
+            </Heading>
+            <Heading as="h2" variant="contrast" size="1">
+              Assistant Professor of Medicine at the Medical College of
+              Wisconsin
+              <br />
+              Chief Technology Officer at Inception Health
+            </Heading>
+          </Box>
+          <Flex align="center">
+            <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="4" />
+          </Flex>
+        </Flex>
         <Section size="2">
-          <Heading as="p" size="4">
-            Operating at the intersection of Healthcare Informatics, Clinical
-            Engineering, and Data Science.
+          <Heading
+            as="p"
+            size="4"
+            css={{
+              lineHeight: "55px!important",
+              "@bp2": {
+                lineHeight: "85px!important",
+              },
+            }}
+          >
+            Operating at the intersection of{" "}
+            <Heading
+              inline
+              as="span"
+              size="4"
+              css={{
+                p: "$1",
+                color: "$loContrast",
+                backgroundColor: "$orange11",
+              }}
+            >
+              Healthcare Informatics
+            </Heading>
+            ,{" "}
+            <Heading
+              inline
+              as="span"
+              size="4"
+              css={{
+                p: "$1",
+                color: "$loContrast",
+                backgroundColor: "$orange9",
+              }}
+            >
+              Clinical Engineering
+            </Heading>
+            , and{" "}
+            <Heading
+              inline
+              as="span"
+              size="4"
+              css={{
+                p: "$1",
+                color: "$loContrast",
+                backgroundColor: "$orange8",
+              }}
+            >
+              Data Science
+            </Heading>
+            .
           </Heading>
         </Section>
       </Section>

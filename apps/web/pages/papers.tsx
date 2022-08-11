@@ -35,11 +35,39 @@ function Author({ author }: any) {
 export default function PapersPage({ publications }: PapersPageProps) {
   return (
     <>
-      <Heading as="h1" size="3">
-        Papers
+      <Heading as="h1" size="4">
+        Publications
       </Heading>
-      <Section size="0">
+      <Heading as="h2" variant="contrast" size="1" css={{ pt: "$3" }}>
+        I have spent the last decade working at exploring the intricate
+        socio-technical model of technology, medicine, and healthcare. This has
+        led me to work with brilliant colleagues and publish work in areas
+        ranging from Computing, Patient Remote Monitoring, Neuro-Epidemiology,
+        to Blockchain.
+      </Heading>
+      <Section size="2">
         <Box>
+          <Heading as="h3" size="3" css={{ py: "$3" }}> Most Popular </Heading>
+          <Grid gap="5" columns="1">
+            {publications.slice(0, 3).map((paper) => (
+              <Box key={paper.slug}>
+                {/* <Separator size="2" /> */}
+                <Heading as="h4" css={{ paddingBottom: "$2" }}>
+                  <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                    {paper.citation.title}
+                  </NextLink>
+                </Heading>
+                <Text size="2">
+                  Published in {paper.publisher} on {paper.publishedAt.text}
+                </Text>
+              </Box>
+            ))}
+          </Grid>
+        </Box>
+      </Section>
+      <Section size="2">
+        <Box>
+          <Heading as="h3" size="3" css={{ py: "$3" }}> Academic Publications </Heading>
           <Grid gap="5" columns="1">
             {publications.map((paper) => (
               <Box key={paper.slug}>
@@ -51,11 +79,11 @@ export default function PapersPage({ publications }: PapersPageProps) {
                 </Heading>
                 <Text size="2">
                   Published by{" "}
-                  {paper.citation.author?.map((author: any) => (
+                  {/* {paper.citation.author?.map((author: any) => (
                     <>
                       {author.given} {author.family},{"  "}
                     </>
-                  ))}{" "}
+                  ))}{" "} */}
                   {paper.publisher} on {paper.publishedAt.text}
                 </Text>
               </Box>

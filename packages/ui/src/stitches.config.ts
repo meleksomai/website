@@ -53,6 +53,7 @@ export const {
       7: "45px",
       8: "65px",
       9: "80px",
+      10: "95px",
     },
     sizes: {
       1: "5px",
@@ -64,6 +65,7 @@ export const {
       7: "45px",
       8: "65px",
       9: "80px",
+      10: "95px",
     },
     fontSizes: {
       1: "12px",
