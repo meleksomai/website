@@ -43,24 +43,30 @@ export default function Web({ recentPublications, recentBlogPosts }: WebProps) {
         <Section size="2">
           <Heading
             as="p"
-            size="4"
-            css={{
-              lineHeight: "55px!important",
-              "@bp2": {
-                lineHeight: "85px!important",
-              },
-            }}
+            size="3"
+            mono
+            css={
+              {
+                // lineHeight: "55px!important",
+                // "@bp2": {
+                //   lineHeight: "85px!important",
+                // },
+              }
+            }
           >
             Operating at the intersection of{" "}
             <Heading
               inline
               as="span"
-              size="4"
-              css={{
-                p: "$1",
-                color: "$loContrast",
-                backgroundColor: "$orange11",
-              }}
+              size="3"
+              mono
+              css={
+                {
+                  // p: "$1",
+                  // color: "$loContrast",
+                  // backgroundColor: "$orange11",
+                }
+              }
             >
               Healthcare Informatics
             </Heading>
@@ -68,12 +74,15 @@ export default function Web({ recentPublications, recentBlogPosts }: WebProps) {
             <Heading
               inline
               as="span"
-              size="4"
-              css={{
-                p: "$1",
-                color: "$loContrast",
-                backgroundColor: "$orange9",
-              }}
+              size="3"
+              mono
+              css={
+                {
+                  // p: "$1",
+                  // color: "$loContrast",
+                  // backgroundColor: "$orange9",
+                }
+              }
             >
               Clinical Engineering
             </Heading>
@@ -81,12 +90,15 @@ export default function Web({ recentPublications, recentBlogPosts }: WebProps) {
             <Heading
               inline
               as="span"
-              size="4"
-              css={{
-                p: "$1",
-                color: "$loContrast",
-                backgroundColor: "$orange8",
-              }}
+              size="3"
+              mono
+              css={
+                {
+                  // p: "$1",
+                  // color: "$loContrast",
+                  // backgroundColor: "$orange8",
+                }
+              }
             >
               Data Science
             </Heading>
