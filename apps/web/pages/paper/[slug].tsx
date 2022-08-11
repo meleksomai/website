@@ -56,6 +56,9 @@ export default function PaperPage({ publication }: PaperPageProps) {
           })}
         </Text>
       </Section>
+      <Section>
+        <Paragraph mono>{publication.meta.excerpt}</Paragraph>
+      </Section>
       {/* <Section>{rendered}</Section> */}
     </>
   );

@@ -47,27 +47,35 @@ export default function PapersPage({ publications }: PapersPageProps) {
       </Heading>
       <Section size="2">
         <Box>
-          <Heading as="h3" size="3" css={{ py: "$3" }}> Most Popular </Heading>
+          <Heading as="h3" size="3" css={{ py: "$3" }}>
+            Most Popular
+          </Heading>
           <Grid gap="5" columns="1">
-            {publications.slice(0, 3).map((paper) => (
-              <Box key={paper.slug}>
-                {/* <Separator size="2" /> */}
-                <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                  <NextLink href={`/paper/${paper.slug}`} variant="contrast">
-                    {paper.citation.title}
-                  </NextLink>
-                </Heading>
-                <Text size="2">
-                  Published in {paper.publisher} on {paper.publishedAt.text}
-                </Text>
-              </Box>
-            ))}
+            {publications
+              .filter((paper) => paper.meta.popular)
+              .map((paper) => (
+                <Box key={paper.slug}>
+                  {/* <Separator size="2" /> */}
+                  <Heading as="h4" css={{ paddingBottom: "$2" }}>
+                    <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                      {paper.citation.title}
+                    </NextLink>
+                  </Heading>
+                  <Text size="2">
+                    Published in {paper.publisher} on {paper.publishedAt.text}
+                  </Text>
+                  <Paragraph>{paper.meta.excerpt}</Paragraph>
+                </Box>
+              ))}
           </Grid>
         </Box>
       </Section>
       <Section size="2">
         <Box>
-          <Heading as="h3" size="3" css={{ py: "$3" }}> Academic Publications </Heading>
+          <Heading as="h3" size="3" css={{ py: "$3" }}>
+            {" "}
+            Academic Publications{" "}
+          </Heading>
           <Grid gap="5" columns="1">
             {publications.map((paper) => (
               <Box key={paper.slug}>
