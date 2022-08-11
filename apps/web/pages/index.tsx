@@ -16,7 +16,6 @@ import {
 
 import { NextLink } from "../components";
 import { getAllPublications, Publication } from "../papers";
-import Head from "next/head";
 
 interface WebProps {
   recentBlogPosts?: any[];
