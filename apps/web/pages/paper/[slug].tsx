@@ -2,7 +2,7 @@ import Markdoc from "@markdoc/markdoc";
 import { GetStaticProps } from "next";
 import React from "react";
 
-import { config, components } from "@thugga/markdoc";
+// import { config, components } from "@thugga/markdoc";
 import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink } from "../../components";
@@ -31,8 +31,8 @@ function Author({ author }: any) {
 
 export default function PaperPage({ publication }: PaperPageProps) {
   const ast = Markdoc.parse(publication.content);
-  const content = Markdoc.transform(ast, config);
-  const rendered = Markdoc.renderers.react(content, React, { components });
+  // const content = Markdoc.transform(ast, config);
+  // const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function PaperPage({ publication }: PaperPageProps) {
           })}
         </Text>
       </Section>
-      <Section>{rendered}</Section>
+      {/* <Section>{rendered}</Section> */}
     </>
   );
 }
