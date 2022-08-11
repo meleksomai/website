@@ -12,6 +12,9 @@ export const NavBar = React.forwardRef<
 >((props, forwardedRef) => {
   return (
     <Section css={{ py: "$6" }}>
+      <NextLink css={{ mr: "$5" }} variant="simple" href="/">
+        Home
+      </NextLink>
       <NextLink css={{ mr: "$5" }} variant="simple" href="/papers">
         Publications
       </NextLink>
