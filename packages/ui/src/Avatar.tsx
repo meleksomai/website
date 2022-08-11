@@ -34,6 +34,11 @@ const StyledAvatar = styled(AvatarPrimitive.Root, {
         height: "$9",
         fontSize: "$7",
       },
+      "4": {
+        width: "$10",
+        height: "$10",
+        fontSize: "$8",
+      },
     },
   },
 
