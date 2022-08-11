@@ -2,7 +2,6 @@ import { GetStaticProps } from "next";
 import * as React from "react";
 
 import {
-  Paragraph,
   Heading,
   Avatar,
   Section,
@@ -10,7 +9,6 @@ import {
   Container,
   Text,
   Box,
-  Link,
   Flex,
 } from "@thugga/ui";
 
