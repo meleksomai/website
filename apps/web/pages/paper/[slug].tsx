@@ -3,8 +3,9 @@ import { GetStaticProps } from "next";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Button, Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
+import { NextLink } from "../../components";
 import {
   getAllPublications,
   getPublicationBySlug,
@@ -44,11 +45,11 @@ export default function PaperPage({ publication }: PaperPageProps) {
         </Text>
       </Section>
       <Section>
-        <Button>Read online</Button>
+        <NextLink href={publication.url} variant="contrast">Read online</NextLink>
       </Section>
       <Section size="0">
         <Text size="3">
-          {publication.citation.author.map((author: any) => {
+          {publication.citation.author?.map((author: any) => {
             return <Author author={author} />;
           })}
         </Text>

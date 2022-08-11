@@ -82,5 +82,8 @@ export function getPublicationBySlug(slug: string): Publication {
 export async function getAllPublications(): Promise<Publication[]> {
   const paths = await globby(["papers/*.md"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
-  return files.map((slug) => getPublicationBySlug(slug));
+  const papers = files.map((slug) => getPublicationBySlug(slug));
+  return papers.sort((a, b) => {
+    return b.publishedAt.timestamp - a.publishedAt.timestamp;
+  });
 }

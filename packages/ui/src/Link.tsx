@@ -63,21 +63,35 @@ export const Link = styled("a", {
         },
       },
       contrast: {
-        color: "$hiContrast",
-        textDecoration: "underline",
+        color: "$mauve12",
+        // textDecoration: "underline",
         textDecorationColor: "$slate4",
         "@hover": {
           "&:hover": {
+            color: "$mauve12",
             textDecorationColor: "$slate7",
           },
         },
         "&:focus": {
-          outlineColor: "$slate8",
+          outlineColor: "$mauve10",
+        },
+      },
+      simple: {
+        color: "$hiContrast",
+        textDecorationColor: "$slate4",
+        "@hover": {
+          "&:hover": {
+            color: "$slate12",
+            textDecorationColor: "$slate7",
+          },
+        },
+        "&:focus": {
+          // outlineColor: "$slate8",
         },
       },
     },
   },
   defaultVariants: {
-    variant: "contrast",
+    variant: "simple",
   },
 });
