@@ -173,5 +173,5 @@ export const {
       WebkitBackgroundClip: value,
       backgroundClip: value,
     }),
-  }
+  },
 });
