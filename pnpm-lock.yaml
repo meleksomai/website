@@ -48,7 +48,7 @@ importers:
       '@babel/core': ^7.0.0
       '@citation-js/date': ^0.5.1
       '@markdoc/markdoc': ^0.1.2
-      '@thugga/markdoc': workspace:*
+      '@thugga/markdoc': workspace:0.0.0
       '@thugga/ui': workspace:*
       '@types/node': ^17.0.12
       '@types/react': 17.0.47
