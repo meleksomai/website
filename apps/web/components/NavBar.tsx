@@ -15,7 +15,11 @@ export const NavBar = React.forwardRef<
       <NextLink css={{ mr: "$5" }} variant="simple" href="/papers">
         Publications
       </NextLink>
-      <NextLink css={{ pr: "$5" }} variant="simple" href="https://twitter.com/meleksomai">
+      <NextLink
+        css={{ pr: "$5" }}
+        variant="simple"
+        href="https://twitter.com/meleksomai"
+      >
         Twitter
       </NextLink>
     </Section>
