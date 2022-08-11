@@ -45,7 +45,9 @@ export default function PaperPage({ publication }: PaperPageProps) {
         </Text>
       </Section>
       <Section>
-        <NextLink href={publication.url} variant="contrast">Read online</NextLink>
+        <NextLink href={publication.url} variant="contrast">
+          Read online
+        </NextLink>
       </Section>
       <Section size="0">
         <Text size="3">
