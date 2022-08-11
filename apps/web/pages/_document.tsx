@@ -144,8 +144,7 @@ export default function Document() {
           name="robots"
         />
       </Head>
-      {/* FIXME: the static is required because of an error by the radix-ui select which adds Overflow by default. */}
-      <body style={{ position: "static !important" as any }}>
+      <body>
         <Main />
         <NextScript />
       </body>

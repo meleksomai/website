@@ -69,15 +69,15 @@ const globalStyles = globalCss({
     MozOsxFontSmoothing: "grayscale",
     WebkitTextSizeAdjust: "100%",
   },
-  // svg: {
-  //   display: "block",
-  //   verticalAlign: "middle",
-  // },
-  // "pre, code": { margin: 0, fontFamily: "$mono" },
-  // "::selection": {
-  //   backgroundColor: "$colors$blue5",
-  //   color: "$colors$blue12",
-  // },
+  svg: {
+    display: "block",
+    verticalAlign: "middle",
+  },
+  "pre, code": { margin: 0, fontFamily: "$mono" },
+  "::selection": {
+    backgroundColor: "$colors$orange3",
+    color: "$colors$orange11",
+  },
 });
 
 export default globalStyles;
