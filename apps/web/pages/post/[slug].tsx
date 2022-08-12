@@ -3,7 +3,15 @@ import { GetStaticProps } from "next";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Heading, Paragraph, Section, Text } from "@thugga/ui";
+import {
+  Avatar,
+  Box,
+  Flex,
+  Heading,
+  Paragraph,
+  Section,
+  Text,
+} from "@thugga/ui";
 
 import { getAllPosts, getPostBySlug, Post } from "../../posts";
 
@@ -18,17 +26,27 @@ export default function PostPage({ post }: PostPageProps) {
 
   return (
     <>
-      <Heading as="h1" size="3">
+      <Heading as="h1" size="4">
         {post.meta.title}
       </Heading>
-      <Section size="0">
-        <Text size="2">
-          {post.publishedAt.text} / {post.publishedAt.relative}
-        </Text>
+      <Text size="6" variant="light">
+        {post.meta.subtitle}
+      </Text>
+      <Section>
+        <Flex direction="row">
+          <Flex align="center">
+            <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="1" />
+          </Flex>
+          <Flex align="center" css={{ pl: "$2" }}>
+            <Text size="3">Melek Somai / {post.publishedAt.text}</Text>
+          </Flex>
+        </Flex>
       </Section>
       {post.meta.excerpt && (
         <Section>
-          <Paragraph mono>{post.meta.subtitle}</Paragraph>
+          <Paragraph mono variant="light">
+            {post.meta.excerpt}
+          </Paragraph>
         </Section>
       )}
       <Section>{rendered}</Section>

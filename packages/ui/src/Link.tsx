@@ -79,9 +79,11 @@ export const Link = styled("a", {
         },
       },
       simple: {
-        color: "$hiContrast",
+        color: "$mauve12",
+        textDecoration: "none",
         "@hover": {
           "&:hover": {
+            textDecoration: "underline",
             color: "$slate12",
             textDecorationColor: "$slate7",
           },

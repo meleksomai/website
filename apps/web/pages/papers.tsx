@@ -57,7 +57,7 @@ export default function PapersPage({ publications }: PapersPageProps) {
                 <Box key={paper.slug}>
                   {/* <Separator size="2" /> */}
                   <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                    <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                    <NextLink href={`/paper/${paper.slug}`} variant="simple">
                       {paper.citation.title}
                     </NextLink>
                   </Heading>
@@ -81,7 +81,7 @@ export default function PapersPage({ publications }: PapersPageProps) {
               <Box key={paper.slug}>
                 {/* <Separator size="2" /> */}
                 <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                  <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                  <NextLink href={`/paper/${paper.slug}`} variant="simple">
                     {paper.citation.title}
                   </NextLink>
                 </Heading>

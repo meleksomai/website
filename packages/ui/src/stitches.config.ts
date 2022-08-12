@@ -36,7 +36,7 @@ export const {
       ...whiteA,
 
       // Semantic colors
-      hiContrast: "$mauve11",
+      hiContrast: "$mauve12",
       loContrast: "$mauve1",
     },
     fonts: {
