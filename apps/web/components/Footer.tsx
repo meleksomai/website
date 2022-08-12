@@ -2,6 +2,8 @@ import React from "react";
 
 import { Text, Section } from "@thugga/ui";
 
+import Spotify from "./Spotify";
+
 const DEFAULT_TAG = "div";
 
 export const Footer = React.forwardRef<
@@ -10,6 +12,7 @@ export const Footer = React.forwardRef<
 >((props, forwardedRef) => {
   return (
     <Section css={{ pt: "$8" }}>
+      <Spotify />
       <Text size="1">Made with love from Wisconsin, Illinois, and Tunis.</Text>
     </Section>
   );
