@@ -1,17 +1,7 @@
 import { GetStaticProps } from "next";
 import React from "react";
 
-import {
-  Avatar,
-  Box,
-  Button,
-  Container,
-  Grid,
-  Heading,
-  Paragraph,
-  Section,
-  Text,
-} from "@thugga/ui";
+import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink } from "../components";
 import { getAllPosts, Post } from "../posts";
