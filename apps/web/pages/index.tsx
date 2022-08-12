@@ -43,66 +43,17 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
           </Flex>
         </Flex>
         <Section size="2">
-          <Heading
-            as="p"
-            size="3"
-            mono
-            variant="light"
-            css={
-              {
-                // lineHeight: "55px!important",
-                // "@bp2": {
-                //   lineHeight: "85px!important",
-                // },
-              }
-            }
-          >
+          <Heading as="p" size="3" mono css={{ color: "$mauve9" }}>
             Operating at the intersection of{" "}
-            <Heading
-              inline
-              as="span"
-              size="3"
-              mono
-              css={
-                {
-                  // p: "$1",
-                  // color: "$loContrast",
-                  // backgroundColor: "$orange11",
-                }
-              }
-            >
+            <Heading inline as="span" size="3" mono>
               Healthcare Informatics
             </Heading>
             ,{" "}
-            <Heading
-              inline
-              as="span"
-              size="3"
-              mono
-              css={
-                {
-                  // p: "$1",
-                  // color: "$loContrast",
-                  // backgroundColor: "$orange9",
-                }
-              }
-            >
+            <Heading inline as="span" size="3" mono>
               Clinical Engineering
             </Heading>
             , and{" "}
-            <Heading
-              inline
-              as="span"
-              size="3"
-              mono
-              css={
-                {
-                  // p: "$1",
-                  // color: "$loContrast",
-                  // backgroundColor: "$orange8",
-                }
-              }
-            >
+            <Heading inline as="span" size="3" mono>
               Data Science
             </Heading>
             .
