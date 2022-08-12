@@ -45,7 +45,6 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.log(params);
   const doc = getPostBySlug(params?.slug as string);
   return {
     props: {
