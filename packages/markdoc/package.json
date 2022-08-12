@@ -1,14 +1,10 @@
 {
   "name": "@thugga/markdoc",
   "version": "0.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
   "license": "MIT",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup",
     "lint": "eslint ./src/*.ts*",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },

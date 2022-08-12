@@ -2,7 +2,7 @@ import Markdoc from "@markdoc/markdoc";
 import { GetStaticProps } from "next";
 import React from "react";
 
-// import { config, components } from "@thugga/markdoc";
+import { config, components } from "@thugga/markdoc";
 import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink } from "../../components";
@@ -23,6 +23,7 @@ function Author({ author }: any) {
         display: "inline",
         paddingInlineEnd: "$1",
       }}
+      variant="light"
     >
       {author.given} {author.family} /
     </Paragraph>
@@ -31,16 +32,16 @@ function Author({ author }: any) {
 
 export default function PaperPage({ publication }: PaperPageProps) {
   const ast = Markdoc.parse(publication.content);
-  // const content = Markdoc.transform(ast, config);
-  // const rendered = Markdoc.renderers.react(content, React, { components });
+  const content = Markdoc.transform(ast, config);
+  const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
     <>
-      <Heading as="h1" size="3">
+      <Heading as="h1" size="4">
         {publication.citation.title}
       </Heading>
       <Section size="0">
-        <Text size="2">
+        <Text size="2" variant="light">
           {publication.publisher} / {publication.publishedAt.text}
         </Text>
       </Section>
@@ -57,9 +58,11 @@ export default function PaperPage({ publication }: PaperPageProps) {
         </Text>
       </Section>
       <Section>
-        <Paragraph mono>{publication.meta.excerpt}</Paragraph>
+        <Paragraph mono variant="light">
+          {publication.meta.excerpt}
+        </Paragraph>
       </Section>
-      {/* <Section>{rendered}</Section> */}
+      <Section>{rendered}</Section>
     </>
   );
 }

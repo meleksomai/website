@@ -1,16 +1,7 @@
 import { GetStaticProps } from "next";
 import React from "react";
 
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Heading,
-  Paragraph,
-  Section,
-  Text,
-} from "@thugga/ui";
+import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink } from "../components";
 import { getAllPublications, Publication } from "../papers";
@@ -18,19 +9,6 @@ import { getAllPublications, Publication } from "../papers";
 type PapersPageProps = {
   publications: Publication[];
 };
-
-function Author({ author }: any) {
-  return (
-    <Paragraph
-      css={{
-        display: "inline",
-        paddingInlineEnd: "$1",
-      }}
-    >
-      {author.given} {author.family} /
-    </Paragraph>
-  );
-}
 
 export default function PapersPage({ publications }: PapersPageProps) {
   return (
@@ -57,7 +35,7 @@ export default function PapersPage({ publications }: PapersPageProps) {
                 <Box key={paper.slug}>
                   {/* <Separator size="2" /> */}
                   <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                    <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                    <NextLink href={`/paper/${paper.slug}`} variant="simple">
                       {paper.citation.title}
                     </NextLink>
                   </Heading>
@@ -81,18 +59,12 @@ export default function PapersPage({ publications }: PapersPageProps) {
               <Box key={paper.slug}>
                 {/* <Separator size="2" /> */}
                 <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                  <NextLink href={`/paper/${paper.slug}`} variant="contrast">
+                  <NextLink href={`/paper/${paper.slug}`} variant="simple">
                     {paper.citation.title}
                   </NextLink>
                 </Heading>
                 <Text size="2">
-                  Published by{" "}
-                  {/* {paper.citation.author?.map((author: any) => (
-                    <>
-                      {author.given} {author.family},{"  "}
-                    </>
-                  ))}{" "} */}
-                  {paper.publisher} on {paper.publishedAt.text}
+                  Published by {paper.publisher} on {paper.publishedAt.text}
                 </Text>
               </Box>
             ))}

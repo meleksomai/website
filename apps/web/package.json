@@ -12,7 +12,7 @@
   "dependencies": {
     "@citation-js/date": "^0.5.1",
     "@markdoc/markdoc": "^0.1.2",
-    "@thugga/markdoc": "workspace:0.0.0",
+    "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
     "citation-js": "^0.6.4",
     "dayjs": "^1.11.4",

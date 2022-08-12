@@ -15,6 +15,9 @@ export const NavBar = React.forwardRef<
       <NextLink css={{ mr: "$5" }} variant="simple" href="/">
         Home
       </NextLink>
+      <NextLink css={{ mr: "$5" }} variant="simple" href="/posts">
+        Posts
+      </NextLink>
       <NextLink css={{ mr: "$5" }} variant="simple" href="/papers">
         Publications
       </NextLink>
