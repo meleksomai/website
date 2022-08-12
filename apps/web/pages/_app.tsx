@@ -1,8 +1,9 @@
+import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
 
-import { Layout } from "@thugga/ui";
+import { Layout, darkTheme } from "@thugga/ui";
 
 import { Footer, NavBar } from "../components";
 import globalStyles from "../styles/globalStyles";
@@ -12,7 +13,12 @@ globalStyles();
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider
+      // disableTransitionOnChange
+      attribute="class"
+      value={{ light: "light-theme", dark: darkTheme.className }}
+      defaultTheme="system"
+    >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -27,7 +33,7 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </Layout>
-    </>
+    </ThemeProvider>
   );
 }
 
