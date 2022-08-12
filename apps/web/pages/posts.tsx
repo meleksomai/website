@@ -32,7 +32,7 @@ export default function PostPage({ posts }: PostPageProps) {
             {posts.map((post) => (
               <Box key={post.slug}>
                 {/* <Separator size="2" /> */}
-                <Heading as="h4">
+                <Heading as="h4" size="2">
                   <NextLink href={`/post/${post.slug}`} variant="simple">
                     {post.meta.title}
                   </NextLink>
