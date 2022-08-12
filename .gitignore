@@ -42,3 +42,4 @@ apps/**/dist
 
 # Snyk
 .dccache
+apps/web/.env
