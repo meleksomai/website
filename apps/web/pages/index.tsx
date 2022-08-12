@@ -66,7 +66,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             Recent Posts
           </Heading>
           <Box>
-            <Grid gap="5" columns="2">
+            <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
               {recentPosts.map((post) => (
                 <Box key={post.slug}>
                   {/* <Separator size="2" /> */}
