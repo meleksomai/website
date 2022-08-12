@@ -5,11 +5,7 @@ import React from "react";
 import { config, components } from "@thugga/markdoc";
 import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
-import {
-  getAllPosts,
-  getPostBySlug,
-  Post,
-} from "../../posts";
+import { getAllPosts, getPostBySlug, Post } from "../../posts";
 
 type PostPageProps = {
   post: Post;
@@ -30,9 +26,9 @@ export default function PostPage({ post }: PostPageProps) {
           {post.publishedAt.text} / {post.publishedAt.relative}
         </Text>
       </Section>
-      { post.meta.excerpt &&(
+      {post.meta.excerpt && (
         <Section>
-        <Paragraph mono>{post.meta.subtitle}</Paragraph>
+          <Paragraph mono>{post.meta.subtitle}</Paragraph>
         </Section>
       )}
       <Section>{rendered}</Section>
@@ -49,7 +45,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.log(params)
+  console.log(params);
   const doc = getPostBySlug(params?.slug as string);
   return {
     props: {
