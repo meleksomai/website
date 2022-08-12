@@ -8,7 +8,7 @@ export const Link = styled("a", {
   gap: "$1",
   flexShrink: 0,
   outline: "none",
-  textDecorationLine: "none",
+  // textDecorationLine: "none",
   textUnderlineOffset: "3px",
   textDecorationColor: "$slate4",
   WebkitTapHighlightColor: "rgba(0,0,0,0)",
@@ -64,7 +64,7 @@ export const Link = styled("a", {
       },
       contrast: {
         color: "$mauve12",
-        // textDecoration: "underline",
+        textDecoration: "underline",
         textDecorationColor: "$slate4",
         "@hover": {
           "&:hover": {
@@ -73,12 +73,13 @@ export const Link = styled("a", {
           },
         },
         "&:focus": {
-          outlineColor: "$mauve10",
+          color: "$mauve12",
+          textDecorationColor: "$orange7",
+          outlineColor: "$mauve12",
         },
       },
       simple: {
         color: "$hiContrast",
-        textDecorationColor: "$slate4",
         "@hover": {
           "&:hover": {
             color: "$slate12",
@@ -92,6 +93,6 @@ export const Link = styled("a", {
     },
   },
   defaultVariants: {
-    variant: "simple",
+    variant: "contrast",
   },
 });
