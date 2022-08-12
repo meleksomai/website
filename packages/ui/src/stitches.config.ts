@@ -1,13 +1,4 @@
-import {
-  mauve,
-  mauveA,
-  red,
-  redA,
-  blackA,
-  whiteA,
-  orange,
-  orangeA,
-} from "@radix-ui/colors";
+import * as colors from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
 
@@ -26,14 +17,14 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      ...blackA,
-      ...mauve,
-      ...mauveA,
-      ...red,
-      ...redA,
-      ...orange,
-      ...orangeA,
-      ...whiteA,
+      ...colors.blackA,
+      ...colors.mauve,
+      ...colors.mauveA,
+      ...colors.red,
+      ...colors.redA,
+      ...colors.orange,
+      ...colors.orangeA,
+      ...colors.whiteA,
 
       // Semantic colors
       hiContrast: "$mauve12",
@@ -175,5 +166,25 @@ export const {
       WebkitBackgroundClip: value,
       backgroundClip: value,
     }),
+  },
+});
+
+export const darkTheme = createTheme("dark-theme", {
+  colors: {
+    ...colors.mauveDark,
+    ...colors.mauveDarkA,
+    ...colors.redDark,
+    ...colors.redDarkA,
+    ...colors.orangeDark,
+    ...colors.orangeDarkA,
+
+    // Semantic colors
+    hiContrast: "$mauve12",
+    loContrast: "$mauve2",
+    // canvas: "hsl(0 0% 15%)",
+    // panel: "$slate3",
+    // transparentPanel: "hsl(0 100% 100% / 97%)",
+    // shadowLight: "hsl(206 22% 7% / 35%)",
+    // shadowDark: "hsl(206 22% 7% / 20%)",
   },
 });

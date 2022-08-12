@@ -15,5 +15,6 @@ export * from "./Section";
 export * from "./Paragraph";
 export * from "./Tag";
 export * from "./Grid";
+export * from "./IconButton";
 
 export * from "./stitches.config";
