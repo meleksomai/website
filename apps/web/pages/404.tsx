@@ -10,7 +10,7 @@ export default function Web() {
       </Heading>
       <Separator size="2" css={{ marginTop: "$5", marginBottom: "$5" }} />
       <Paragraph>
-        Every doctor that deserves to be replace by a doctor ought to be
+        Every doctor who deserves to be replace by a computer ought to be
         replaced by a computer.
       </Paragraph>
     </Section>
