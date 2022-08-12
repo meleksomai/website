@@ -19,6 +19,11 @@ export const Text = styled("span", {
         display: "inline",
       },
     },
+    bold: {
+      true: {
+        fontWeight: 500,
+      },
+    },
     size: {
       "1": {
         fontSize: "$1",
