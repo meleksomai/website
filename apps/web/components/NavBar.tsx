@@ -8,18 +8,18 @@ import { ThemeToggle } from "./ThemeToggle";
 export const NavBar = () => {
   return (
     <Flex css={{ py: "$6" }} justify="between">
-      <Flex css={{ pt: "$1" }}>
-        <NextLink css={{ mr: "$5" }} variant="simple" href="/">
+      <Flex align="center" gap="4">
+        <NextLink variant="simple" href="/">
           Home
         </NextLink>
-        <NextLink css={{ mr: "$5" }} variant="simple" href="/posts">
+        <NextLink variant="simple" href="/posts">
           Posts
         </NextLink>
-        <NextLink css={{ mr: "$5" }} variant="simple" href="/papers">
+        <NextLink variant="simple" href="/papers">
           Publications
         </NextLink>
       </Flex>
-      <Flex align="end">
+      <Flex align="center">
         <ThemeToggle />
       </Flex>
     </Flex>
