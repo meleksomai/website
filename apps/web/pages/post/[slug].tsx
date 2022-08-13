@@ -13,8 +13,8 @@ import {
   Text,
 } from "@thugga/ui";
 
-import { getAllPosts, getPostBySlug, Post } from "../../posts";
 import { Seo } from "../../components";
+import { getAllPosts, getPostBySlug, Post } from "../../posts";
 
 type PostPageProps = {
   post: Post;
