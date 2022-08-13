@@ -16,7 +16,7 @@ export default function PapersPage({ publications }: PapersPageProps) {
       <Heading as="h1" size="4">
         Publications
       </Heading>
-      <Heading as="h2" variant="contrast" size="1" css={{ pt: "$3" }}>
+      <Heading as="h2" mono variant="contrast" size="1" css={{ pt: "$3" }}>
         I have spent the last decade working at exploring the intricate
         socio-technical model of technology, medicine, and healthcare. This has
         led me to work with brilliant colleagues and publish work in areas
@@ -34,12 +34,12 @@ export default function PapersPage({ publications }: PapersPageProps) {
               .map((paper) => (
                 <Box key={paper.slug}>
                   {/* <Separator size="2" /> */}
-                  <Heading as="h4" css={{ paddingBottom: "$2" }}>
+                  <Heading as="h4" size="2" css={{ paddingBottom: "$2" }}>
                     <NextLink href={`/paper/${paper.slug}`} variant="simple">
                       {paper.citation.title}
                     </NextLink>
                   </Heading>
-                  <Text size="2">
+                  <Text size="2" variant="light">
                     Published in {paper.publisher} on {paper.publishedAt.text}
                   </Text>
                   <Paragraph>{paper.meta.excerpt}</Paragraph>
@@ -58,12 +58,12 @@ export default function PapersPage({ publications }: PapersPageProps) {
             {publications.map((paper) => (
               <Box key={paper.slug}>
                 {/* <Separator size="2" /> */}
-                <Heading as="h4" css={{ paddingBottom: "$2" }}>
+                <Heading as="h4" size="2" css={{ paddingBottom: "$2" }}>
                   <NextLink href={`/paper/${paper.slug}`} variant="simple">
                     {paper.citation.title}
                   </NextLink>
                 </Heading>
-                <Text size="2">
+                <Text size="2" variant="light">
                   Published by {paper.publisher} on {paper.publishedAt.text}
                 </Text>
               </Box>

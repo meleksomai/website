@@ -16,7 +16,7 @@ export default function PostPage({ posts }: PostPageProps) {
       <Heading as="h1" size="4">
         Thoughts and Ideas
       </Heading>
-      <Heading as="h2" variant="contrast" size="1" css={{ pt: "$3" }}>
+      <Heading as="h2" mono variant="contrast" size="1" css={{ pt: "$3" }}>
         My goal of this space is to share thoughts and ideas that are sometime
         personal, sometime reflection of my current research, and in some
         occasions deviations from my current focus areas of expertise. This is a
@@ -30,10 +30,10 @@ export default function PostPage({ posts }: PostPageProps) {
           </Heading> */}
           <Grid gap="5" columns="1">
             {posts.map((post) => (
-              <Box key={post.slug}>
+              <Box key={post.meta.slug}>
                 {/* <Separator size="2" /> */}
                 <Heading as="h4" size="2">
-                  <NextLink href={`/post/${post.slug}`} variant="simple">
+                  <NextLink href={`/post/${post.meta.slug}`} variant="simple">
                     {post.meta.title}
                   </NextLink>
                   <Text size="4" mono variant="light">
@@ -41,7 +41,8 @@ export default function PostPage({ posts }: PostPageProps) {
                   </Text>
                 </Heading>
                 <Text size="2" variant="light">
-                  Published {post.publishedAt.text}
+                  Published {post.meta.publishedAt.text} /{" "}
+                  {post.meta.readingTime.text}
                 </Text>
                 <Paragraph>{post.meta.excerpt}</Paragraph>
               </Box>
