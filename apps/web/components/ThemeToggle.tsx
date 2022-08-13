@@ -13,7 +13,7 @@ export const ThemeToggle = () => {
       onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
       aria-label="toggle a light and dark color scheme"
     >
-      {theme === "dark" ? <MoonIcon /> : <SunIcon />}
+      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </IconButton>
   );
 };
