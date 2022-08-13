@@ -1,5 +1,5 @@
 ---
-title: A Case for Universal Health in Tunisia
+title: A Case for Universal Healthcare in Tunisia
 subtitle: The path towards achieving Universal Healthcare Coverage in Tunisia
 featured: true
 image: /images/posts/universal_healthcare/hero.png

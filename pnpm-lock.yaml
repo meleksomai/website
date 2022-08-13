@@ -32,6 +32,7 @@ importers:
       gray-matter: ^4.0.3
       isomorphic-unfetch: ^3.1.0
       next: 12.2.5-canary.7
+      next-seo: ^5.5.0
       next-themes: ^0.2.0
       next-transpile-modules: 9.0.0
       react: 17.0.2
@@ -52,6 +53,7 @@ importers:
       gray-matter: 4.0.3
       isomorphic-unfetch: 3.1.0
       next: 12.2.5-canary.7_quymggomo7oodk3cofk2m5scyu
+      next-seo: 5.5.0_7fcbgcb2ipw7lbmkxwlue44uwu
       next-themes: 0.2.0_7fcbgcb2ipw7lbmkxwlue44uwu
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -3319,6 +3321,18 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  /next-seo/5.5.0_7fcbgcb2ipw7lbmkxwlue44uwu:
+    resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.2.5-canary.7_quymggomo7oodk3cofk2m5scyu
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /next-themes/0.2.0_7fcbgcb2ipw7lbmkxwlue44uwu:
     resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}

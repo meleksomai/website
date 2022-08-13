@@ -13,6 +13,7 @@ import {
   Text,
 } from "@thugga/ui";
 
+import { Seo } from "../../components";
 import { getAllPosts, getPostBySlug, Post } from "../../posts";
 
 type PostPageProps = {
@@ -26,6 +27,7 @@ export default function PostPage({ post }: PostPageProps) {
 
   return (
     <>
+      <Seo title={`${post.meta.title}`} description={post.meta.excerpt} />
       <Heading as="h1" size="4">
         {post.meta.title}
       </Heading>
