@@ -6,20 +6,26 @@ import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
 import { globby } from "globby";
 import matter from "gray-matter";
+import readingtime, { ReadTimeResults } from "reading-time";
 
 dayjs.extend(relativeTime);
 dayjs.extend(localizedFormat);
 
 export type Post = {
-  content: any;
-  meta: any;
-  publishedAt: {
-    iso: string;
-    relative: string;
-    text: string;
-    timestamp: number;
+  content: string;
+  meta: {
+    [key: string]: any;
+    excerpt: string;
+    image: string;
+    publishedAt: {
+      iso: string;
+      relative: string;
+      text: string;
+      timestamp: number;
+    };
+    readingTime: ReadTimeResults;
+    slug: string;
   };
-  slug: string;
 };
 
 export function getPostBySlug(slug: string): Post {
@@ -34,17 +40,24 @@ export function getPostBySlug(slug: string): Post {
   // Step 2: date
   const issuedDate = data.publishedAt;
   const publishedAt = {
-    text: dayjs(issuedDate).format("LL"),
+    text: dayjs(issuedDate).format("MMMM, YYYY"),
     iso: dayjs(issuedDate).toISOString(),
     timestamp: dayjs(issuedDate).valueOf(),
     relative: dayjs(issuedDate).fromNow(),
   };
 
+  // Step 3: word count and reading time
+  // readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
+  const readingTime = readingtime(content);
+
   return {
-    slug: realSlug,
-    meta: data,
+    meta: {
+      ...data,
+      readingTime,
+      publishedAt,
+      slug: realSlug,
+    } as any,
     content,
-    publishedAt: publishedAt,
   };
 }
 
@@ -53,6 +66,6 @@ export async function getAllPosts(): Promise<Post[]> {
   const files = paths.map((filePath) => path.parse(filePath).name);
   const papers = files.map((slug) => getPostBySlug(slug));
   return papers.sort((a, b) => {
-    return b.publishedAt.timestamp - a.publishedAt.timestamp;
+    return b.meta.publishedAt.timestamp - a.meta.publishedAt.timestamp;
   });
 }
