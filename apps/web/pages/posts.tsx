@@ -3,8 +3,11 @@ import React from "react";
 
 import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
-import { NextLink } from "../components";
+import { NextLink, Seo } from "../components";
 import { getAllPosts, Post } from "../posts";
+
+const DEFAULT_DESCRIPTION =
+  "My goal of this space is to share thoughts and ideas that are sometime personal, sometime reflection of my current research, and in some occasions deviations from my current focus areas of expertise. This is a domain of reflection and none of the materials herein are meant to be pure logical or cohesive.";
 
 type PostPageProps = {
   posts: Post[];
@@ -13,17 +16,17 @@ type PostPageProps = {
 export default function PostPage({ posts }: PostPageProps) {
   return (
     <>
+      <Seo
+        title="Ideas and Thoughts about Medicine, Technology, and Public Health"
+        description={DEFAULT_DESCRIPTION}
+      />
       <Heading as="h1" size="4">
         Thoughts and Ideas
       </Heading>
       <Heading as="h2" mono variant="contrast" size="1" css={{ pt: "$3" }}>
-        My goal of this space is to share thoughts and ideas that are sometime
-        personal, sometime reflection of my current research, and in some
-        occasions deviations from my current focus areas of expertise. This is a
-        domain of reflection and none of the materials herein are meant to be
-        pure logical or cohesive.
+        {DEFAULT_DESCRIPTION}
       </Heading>
-      <Section size="2">
+      <Section size="3">
         <Box>
           {/* <Heading as="h3" size="3" css={{ py: "$3" }}>
             Recent

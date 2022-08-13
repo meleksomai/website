@@ -5,7 +5,7 @@ import React from "react";
 import { config, components } from "@thugga/markdoc";
 import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
-import { NextLink } from "../../components";
+import { NextLink, Seo } from "../../components";
 import {
   getAllPublications,
   getPublicationBySlug,
@@ -37,6 +37,10 @@ export default function PaperPage({ publication }: PaperPageProps) {
 
   return (
     <>
+      <Seo
+        title={`${publication.citation.title}`}
+        description={publication.meta.excerpt}
+      />
       <Heading as="h1" size="4">
         {publication.citation.title}
       </Heading>

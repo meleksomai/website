@@ -13,7 +13,7 @@ import {
   Paragraph,
 } from "@thugga/ui";
 
-import { NextLink } from "../components";
+import { NextLink, Seo } from "../components";
 import { getAllPublications, Publication } from "../papers";
 import { getAllPosts, Post } from "../posts";
 
@@ -25,6 +25,7 @@ interface WebProps {
 export default function Web({ recentPublications, recentPosts }: WebProps) {
   return (
     <>
+      <Seo title="Clinical Computing and Data Science" />
       <Section>
         <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
           <Box css={{ mr: "$7" }}>
@@ -74,7 +75,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
                       {post.meta.title}
                     </NextLink>
                   </Heading>
-                  <Paragraph css={{ py: "0" }} variant="light">
+                  <Paragraph css={{ pt: "0", pb: "$2" }} variant="light">
                     {post.meta.subtitle}
                   </Paragraph>
                   <Text size="2" variant="light">
