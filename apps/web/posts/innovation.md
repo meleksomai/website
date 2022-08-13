@@ -2,6 +2,7 @@
 title: On the Game Theory of Innovation in Healthcare
 subtitle: Why Digital Transformation Often Misses The Mark In Healthcare
 featured: true
+image: /images/posts/innovation/hero.png
 authors:
   - melek-somai
 publishedAt: 08-01-2022

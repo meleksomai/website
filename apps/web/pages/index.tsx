@@ -28,7 +28,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
       <Section>
         <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
           <Box css={{ mr: "$7" }}>
-            <Heading size="3" css={{ paddingTop: "$3" }}>
+            <Heading size="4" css={{ paddingTop: "$3" }}>
               Melek Somai
             </Heading>
             <Heading as="h2" variant="light" size="1">
@@ -68,10 +68,9 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
           <Box>
             <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
               {recentPosts.map((post) => (
-                <Box key={post.slug}>
-                  {/* <Separator size="2" /> */}
+                <Box key={post.meta.slug}>
                   <Heading as="h4" css={{ pb: "0" }}>
-                    <NextLink href={`/post/${post.slug}`} variant="simple">
+                    <NextLink href={`/post/${post.meta.slug}`} variant="simple">
                       {post.meta.title}
                     </NextLink>
                   </Heading>
@@ -79,7 +78,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
                     {post.meta.subtitle}
                   </Paragraph>
                   <Text size="2" variant="light">
-                    Published {post.publishedAt.text}
+                    Published {post.meta.publishedAt.text}
                   </Text>
                 </Box>
               ))}

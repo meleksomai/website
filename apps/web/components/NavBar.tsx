@@ -8,7 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 export const NavBar = () => {
   return (
     <Flex css={{ py: "$6" }} justify="between">
-      <Flex>
+      <Flex css={{ pt: "$1" }}>
         <NextLink css={{ mr: "$5" }} variant="simple" href="/">
           Home
         </NextLink>
