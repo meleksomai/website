@@ -44,7 +44,6 @@ export interface SeoProps {
 export const Seo = (props: SeoProps) => {
   const { asPath } = useRouter();
 
-
   const title = `${DEFAULT_TITLE_PREFIX} ${props.title}`;
   const description = props.description ?? DEFAULT_DESCRIPTION;
   const canonical = `${props.canonicalUrl ?? DEFAULT_DOMAIN_URL}${asPath}`;
