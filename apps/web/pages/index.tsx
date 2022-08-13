@@ -25,7 +25,7 @@ interface WebProps {
 export default function Web({ recentPublications, recentPosts }: WebProps) {
   return (
     <>
-      <Seo title="Clinical Computing and Data Science" />
+      <Seo title="Assistant Professor Medicine and Chief Technology Officer" />
       <Section>
         <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
           <Box css={{ mr: "$7" }}>
