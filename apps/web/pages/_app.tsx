@@ -30,7 +30,6 @@ function App({ Component, pageProps }: AppProps) {
   // Google Analytics
   // - page views
   usePageViews();
-  // - NextJS Web Vitals
 
   return (
     <ThemeProvider
