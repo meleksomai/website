@@ -19,8 +19,7 @@ const CurrentSong = (props: any) => {
           {`${data.title} - ${data.artist}`}
         </NextLink>
         <Text inline variant="light">
-          {" "}
-          - Spotify{" "}
+          {` - Spotify`}
         </Text>
       </Text>
     </Flex>
