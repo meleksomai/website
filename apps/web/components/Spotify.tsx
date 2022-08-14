@@ -16,8 +16,7 @@ const CurrentSong = (props: any) => {
     <Flex wrap="wrap">
       <Text inline bold>
         <NextLink href={data.songUrl ?? ""} variant="simple">
-          {data.title}
-          {data.artist}
+          {`${data.title} - ${data.artist}`}
         </NextLink>
         <Text inline variant="light">
           {" "}
