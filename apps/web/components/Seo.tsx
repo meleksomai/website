@@ -55,7 +55,6 @@ export const Seo = (props: SeoProps) => {
   const ogImage = `${OG_IMAGE_URL}/${encodeURI(
     props.title
   )}.png?theme=dark&md=1&fontSize=100px`;
-  console.log(ogImage);
 
   return (
     <NextSeo
