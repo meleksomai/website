@@ -62,6 +62,9 @@ export const Text = styled("span", {
       },
     },
     variant: {
+      hightlight: {
+        color: "$highlight",
+      },
       red: {
         color: "$red11",
       },

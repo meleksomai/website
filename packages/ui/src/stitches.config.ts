@@ -25,10 +25,13 @@ export const {
       ...colors.orange,
       ...colors.orangeA,
       ...colors.whiteA,
+      ...colors.green,
+      ...colors.greenA,
 
       // Semantic colors
       hiContrast: "$mauve12",
       loContrast: "$mauve1",
+      highlight: "$green9",
     },
     fonts: {
       sans: "Inter, -apple-system, system-ui, sans-serif",
@@ -177,10 +180,13 @@ export const darkTheme = createTheme("dark-theme", {
     ...colors.redDarkA,
     ...colors.orangeDark,
     ...colors.orangeDarkA,
+    ...colors.greenDark,
+    ...colors.greenDarkA,
 
     // Semantic colors
     hiContrast: "$mauve12",
     loContrast: "$mauve2",
+    highlight: "$green11",
     // canvas: "hsl(0 0% 15%)",
     // panel: "$slate3",
     // transparentPanel: "hsl(0 100% 100% / 97%)",

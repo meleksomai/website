@@ -62,6 +62,13 @@ export const Link = styled("a", {
           outlineColor: "$slate8",
         },
       },
+      highlighted: {
+        color: "$highlight",
+        textDecorationColor: "$highlight",
+        "&:focus": {
+          outlineColor: "$highlight",
+        },
+      },
       contrast: {
         color: "$mauve12",
         textDecoration: "underline",
