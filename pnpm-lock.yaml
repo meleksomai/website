@@ -35,6 +35,7 @@ importers:
       next-seo: ^5.5.0
       next-themes: ^0.2.0
       next-transpile-modules: 9.0.0
+      nextjs-google-analytics: ^2.0.0
       react: 17.0.2
       react-dom: 17.0.2
       reading-time: ^1.5.0
@@ -55,6 +56,7 @@ importers:
       next: 12.2.5-canary.7_quymggomo7oodk3cofk2m5scyu
       next-seo: 5.5.0_7fcbgcb2ipw7lbmkxwlue44uwu
       next-themes: 0.2.0_7fcbgcb2ipw7lbmkxwlue44uwu
+      nextjs-google-analytics: 2.0.0_fkwkxmnkd7hithplwwiabt2lk4
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       reading-time: 1.5.0
@@ -3396,6 +3398,16 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nextjs-google-analytics/2.0.0_fkwkxmnkd7hithplwwiabt2lk4:
+    resolution: {integrity: sha512-ugOcdGTa1gM4ZLT1RACniAgOG7syOUIX4Iw8nkC14JhfBEVfwDdZHVG5WiQGJOQKt7TkXeExJ0vIFGR9jf+vwQ==}
+    peerDependencies:
+      next: '>=11.0.0'
+      react: '>=17.0.0'
+    dependencies:
+      next: 12.2.5-canary.7_quymggomo7oodk3cofk2m5scyu
+      react: 17.0.2
     dev: false
 
   /node-fetch/2.6.1:
