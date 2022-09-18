@@ -8,7 +8,7 @@ const DEFAULT_TAG = "a";
 type LinkVariants = VariantProps<typeof Link>;
 
 // Heading Props
-type NextLinkProps = React.ComponentProps<typeof DEFAULT_TAG> &
+export type NextLinkProps = React.ComponentProps<typeof DEFAULT_TAG> &
   LinkVariants & { as?: any; css?: CSS };
 
 export const NextLink = React.forwardRef<

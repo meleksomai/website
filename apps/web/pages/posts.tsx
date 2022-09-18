@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
-import { getAllPosts, Post } from "../posts";
+import { getAllPosts, Post } from "../lib/posts";
 
 const DEFAULT_DESCRIPTION =
   "My goal of this space is to share thoughts and ideas that are sometime personal, sometime reflection of my current research, and in some occasions deviations from my current focus areas of expertise. This is a domain of reflection and none of the materials herein are meant to be pure logical or cohesive.";

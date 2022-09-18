@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { GetStaticProps } from "next";
 import * as React from "react";
 
@@ -14,8 +15,8 @@ import {
 } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
-import { getAllPublications, Publication } from "../papers";
-import { getAllPosts, Post } from "../posts";
+import { getAllPublications, Publication } from "../lib/papers";
+import { getAllPosts, Post } from "../lib/posts";
 
 interface WebProps {
   recentPosts?: Post[];
@@ -26,17 +27,15 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
   return (
     <>
       <Seo title="Assistant Professor Medicine and Chief Technology Officer" />
-      <Section>
+      <Box>
         <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
           <Box css={{ mr: "$7" }}>
-            <Heading size="4" css={{ paddingTop: "$3" }}>
-              Melek Somai
-            </Heading>
+            <Heading size="4">Melek Somai</Heading>
             <Heading as="h2" variant="light" size="1">
+              Chief Technology Officer at Inception Health
+              <br />
               Assistant Professor of Medicine at the Medical College of
               Wisconsin
-              <br />
-              Chief Technology Officer at Inception Health
             </Heading>
           </Box>
           <Flex align="center">
@@ -60,7 +59,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             .
           </Heading>
         </Section>
-      </Section>
+      </Box>
       {recentPosts && recentPosts.length > 0 && (
         <Section size="1">
           <Heading as="h3" size="3" css={{ pb: "$5" }}>
@@ -86,7 +85,9 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             </Grid>
           </Box>
           <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/posts">Check all posts</NextLink>
+            <NextLink href="/posts">
+              Check all posts <ArrowRightIcon style={{ display: "inline" }} />
+            </NextLink>
           </Container>
         </Section>
       )}
@@ -119,7 +120,10 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             </Grid>
           </Box>
           <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/papers">Check all publications</NextLink>
+            <NextLink href="/papers">
+              Check all publications{" "}
+              <ArrowRightIcon style={{ display: "inline" }} />
+            </NextLink>
           </Container>
         </Section>
       )}
