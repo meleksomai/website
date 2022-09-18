@@ -10,7 +10,7 @@ import {
   getAllPublications,
   getPublicationBySlug,
   Publication,
-} from "../../papers";
+} from "../../lib/papers";
 
 type PaperPageProps = {
   publication: Publication;

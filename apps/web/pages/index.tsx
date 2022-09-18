@@ -14,7 +14,7 @@ import {
 } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
-import { getAllPublications, Publication } from "../papers";
+import { getAllPublications, Publication } from "../lib/papers";
 import { getAllPosts, Post } from "../posts";
 
 interface WebProps {

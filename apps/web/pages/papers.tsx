@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
-import { getAllPublications, Publication } from "../papers";
+import { getAllPublications, Publication } from "../lib/papers";
 
 type PapersPageProps = {
   publications: Publication[];
