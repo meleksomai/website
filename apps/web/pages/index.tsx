@@ -26,17 +26,15 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
   return (
     <>
       <Seo title="Assistant Professor Medicine and Chief Technology Officer" />
-      <Section>
+      <Box>
         <Flex direction={{ "@initial": "columnReverse", "@bp2": "row" }}>
           <Box css={{ mr: "$7" }}>
-            <Heading size="4" css={{ paddingTop: "$3" }}>
-              Melek Somai
-            </Heading>
+            <Heading size="4">Melek Somai</Heading>
             <Heading as="h2" variant="light" size="1">
+              Chief Technology Officer at Inception Health
+              <br />
               Assistant Professor of Medicine at the Medical College of
               Wisconsin
-              <br />
-              Chief Technology Officer at Inception Health
             </Heading>
           </Box>
           <Flex align="center">
@@ -60,7 +58,7 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             .
           </Heading>
         </Section>
-      </Section>
+      </Box>
       {recentPosts && recentPosts.length > 0 && (
         <Section size="1">
           <Heading as="h3" size="3" css={{ pb: "$5" }}>

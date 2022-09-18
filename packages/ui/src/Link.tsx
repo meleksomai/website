@@ -36,11 +36,11 @@ export const Link = styled("a", {
     size: {
       small: {
         fontSize: "$2",
-        height: "$4",
+        height: "$3",
       },
       medium: {
         fontSize: "$3",
-        height: "$7",
+        height: "$4",
       },
       large: {
         fontSize: "$6",
