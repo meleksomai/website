@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { GetStaticProps } from "next";
 import * as React from "react";
 
@@ -84,7 +85,9 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             </Grid>
           </Box>
           <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/posts">Check all posts</NextLink>
+            <NextLink href="/posts">
+              Check all posts <ArrowRightIcon style={{ display: "inline" }} />
+            </NextLink>
           </Container>
         </Section>
       )}
@@ -117,7 +120,10 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             </Grid>
           </Box>
           <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/papers">Check all publications</NextLink>
+            <NextLink href="/papers">
+              Check all publications{" "}
+              <ArrowRightIcon style={{ display: "inline" }} />
+            </NextLink>
           </Container>
         </Section>
       )}
