@@ -15,7 +15,7 @@ import {
 
 import { NextLink, Seo } from "../components";
 import { getAllPublications, Publication } from "../lib/papers";
-import { getAllPosts, Post } from "../posts";
+import { getAllPosts, Post } from "../lib/posts";
 
 interface WebProps {
   recentPosts?: Post[];

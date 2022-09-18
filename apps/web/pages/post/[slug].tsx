@@ -14,7 +14,7 @@ import {
 } from "@thugga/ui";
 
 import { Seo } from "../../components";
-import { getAllPosts, getPostBySlug, Post } from "../../posts";
+import { getAllPosts, getPostBySlug, Post } from "../../lib/posts";
 
 type PostPageProps = {
   post: Post;
