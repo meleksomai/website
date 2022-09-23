@@ -28,7 +28,7 @@ export const Footer = () => {
               General
             </Text>
             <FooterMenuLink href="/">Home</FooterMenuLink>
-            <FooterMenuLink href="/posts">Posts</FooterMenuLink>
+            <FooterMenuLink href="/essays">Essays</FooterMenuLink>
             <FooterMenuLink href="/papers">Publications</FooterMenuLink>
           </Flex>
           <Flex direction="column" justify="start">

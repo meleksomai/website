@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
-import { getAllPosts, Post } from "../lib/posts";
+import { getAllPosts, Post } from "../lib/essays";
 
 const DEFAULT_DESCRIPTION =
   "My goal of this space is to share thoughts and ideas that are sometime personal, sometime reflection of my current research, and in some occasions deviations from my current focus areas of expertise. This is a domain of reflection and none of the materials herein are meant to be pure logical or cohesive.";
@@ -21,7 +21,7 @@ export default function PostPage({ posts }: PostPageProps) {
         description={DEFAULT_DESCRIPTION}
       />
       <Heading as="h1" size="4">
-        Thoughts and Ideas
+        Essays
       </Heading>
       <Heading as="h2" mono variant="contrast" size="1" css={{ pt: "$3" }}>
         {DEFAULT_DESCRIPTION}
@@ -36,7 +36,7 @@ export default function PostPage({ posts }: PostPageProps) {
               <Box key={post.meta.slug}>
                 {/* <Separator size="2" /> */}
                 <Heading as="h4" size="2">
-                  <NextLink href={`/post/${post.meta.slug}`} variant="simple">
+                  <NextLink href={`/essay/${post.meta.slug}`} variant="simple">
                     {post.meta.title}
                   </NextLink>
                   <Text size="4" mono variant="light">
