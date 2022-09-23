@@ -15,8 +15,8 @@ import {
 } from "@thugga/ui";
 
 import { NextLink, Seo } from "../components";
+import { getAllPosts, Post } from "../lib/essays";
 import { getAllPublications, Publication } from "../lib/papers";
-import { getAllPosts, Post } from "../lib/posts";
 
 interface WebProps {
   recentPosts?: Post[];
@@ -70,7 +70,10 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
               {recentPosts.map((post) => (
                 <Box key={post.meta.slug}>
                   <Heading as="h4" css={{ pb: "0" }}>
-                    <NextLink href={`/post/${post.meta.slug}`} variant="simple">
+                    <NextLink
+                      href={`/essay/${post.meta.slug}`}
+                      variant="simple"
+                    >
                       {post.meta.title}
                     </NextLink>
                   </Heading>
@@ -85,8 +88,8 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
             </Grid>
           </Box>
           <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/posts">
-              Check all posts <ArrowRightIcon style={{ display: "inline" }} />
+            <NextLink href="/essays">
+              Check all essays <ArrowRightIcon style={{ display: "inline" }} />
             </NextLink>
           </Container>
         </Section>

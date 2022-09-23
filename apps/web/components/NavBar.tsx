@@ -12,8 +12,8 @@ export const NavBar = () => {
         <NextLink variant="simple" href="/">
           Home
         </NextLink>
-        <NextLink variant="simple" href="/posts">
-          Posts
+        <NextLink variant="simple" href="/essays">
+          Essays
         </NextLink>
         <NextLink variant="simple" href="/papers">
           Publications
