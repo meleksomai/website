@@ -3,7 +3,6 @@ import React from "react";
 import { Text, Section, Box } from "@thugga/ui";
 
 export const Footer = () => {
-
   const year = new Date().getFullYear();
 
   return (

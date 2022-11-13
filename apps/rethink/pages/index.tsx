@@ -26,7 +26,7 @@ interface WebProps {
 export default function Web({ recentPublications, recentPosts }: WebProps) {
   return (
     <>
-      <Box css={{ minHeight: '400px' }}>
+      <Box css={{ minHeight: "400px" }}>
         <Section size="2">
           <Heading as="p" size="3" mono css={{ color: "$mauve9" }}>
             Operating at the intersection of{" "}
