@@ -1,29 +1,8 @@
-import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { GetStaticProps } from "next";
 import * as React from "react";
 
-import {
-  Heading,
-  Avatar,
-  Section,
-  Grid,
-  Container,
-  Text,
-  Box,
-  Flex,
-  Paragraph,
-} from "@thugga/ui";
+import { Heading, Section, Box } from "@thugga/ui";
 
-import { NextLink } from "../components";
-import { getAllPosts, Post } from "../lib/essays";
-import { getAllPublications, Publication } from "../lib/papers";
-
-interface WebProps {
-  recentPosts?: Post[];
-  recentPublications?: Publication[];
-}
-
-export default function Web({ recentPublications, recentPosts }: WebProps) {
+export default function Index() {
   return (
     <>
       <Box css={{ minHeight: "400px" }}>
@@ -48,14 +27,3 @@ export default function Web({ recentPublications, recentPosts }: WebProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const papers = (await getAllPublications()).slice(0, 3);
-  const posts = (await getAllPosts()).filter((post) => post.meta.featured);
-  return {
-    props: {
-      recentPublications: papers,
-      recentPosts: posts,
-    },
-  };
-};
