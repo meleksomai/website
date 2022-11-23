@@ -1,9 +1,8 @@
-import Image from "next/legacy/image";
 import React from "react";
 
 import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
 
-import { NextLink, NextLinkProps } from "./NextLink";
+import { NextLink } from "./NextLink";
 import Spotify from "./Spotify";
 
 // eslint-disable-next-line react/display-name
