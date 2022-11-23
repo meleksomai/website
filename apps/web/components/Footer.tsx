@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 
 import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
