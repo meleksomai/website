@@ -3,7 +3,7 @@ import React from "react";
 import { styled } from "./stitches.config";
 import { Text } from "./Text";
 
-export const Link = styled("a", {
+export const Link = styled("span", {
   alignItems: "center",
   gap: "$1",
   flexShrink: 0,
