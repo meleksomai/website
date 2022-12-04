@@ -4,9 +4,9 @@ import Head from "next/head";
 import { GoogleAnalytics, usePageViews, event } from "nextjs-google-analytics";
 import React from "react";
 
-import { Layout, darkTheme } from "@thugga/ui";
+import { darkTheme } from "@thugga/ui";
 
-import { Footer, NavBar } from "../components";
+import { Footer, NavBar, Layout } from "../components";
 import globalStyles from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995
@@ -45,7 +45,6 @@ function App({ Component, pageProps }: AppProps) {
       <Layout
         css={{
           // TODO: perhaps move this to a variants
-          // backgroundColor: "$loContrast",
           padding: "$4",
         }}
       >

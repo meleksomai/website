@@ -25,6 +25,8 @@ export const {
       ...colors.orange,
       ...colors.orangeA,
       ...colors.whiteA,
+      ...colors.blue,
+      ...colors.blueA,
 
       // Semantic colors
       hiContrast: "$mauve12",
@@ -177,6 +179,8 @@ export const darkTheme = createTheme("dark-theme", {
     ...colors.redDarkA,
     ...colors.orangeDark,
     ...colors.orangeDarkA,
+    ...colors.blueDark,
+    ...colors.blueDarkA,
 
     // Semantic colors
     hiContrast: "$mauve12",

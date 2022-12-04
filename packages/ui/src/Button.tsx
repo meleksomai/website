@@ -15,6 +15,11 @@ export const Button = styled("button", {
   height: 35,
 
   variants: {
+    mono: {
+      true: {
+        fontFamily: "$mono",
+      },
+    },
     variant: {
       simple: {
         backgroundColor: "$mauve2",
@@ -36,6 +41,18 @@ export const Button = styled("button", {
         boxShadow: "0 2px 10px $blackA7",
         "&:hover": { backgroundColor: "$colors$mauve3" },
         "&:focus": { boxShadow: `0 0 0 2px black` },
+      },
+      blue: {
+        backgroundColor: "$blue11",
+        color: "$loContrast",
+        boxShadow: "0 2px 10px $blackA7",
+        "&:hover": {
+          backgroundColor: "$colors$blue9",
+        },
+        "&:focus": {
+          boxShadow: `0 0 0 2px black`,
+          backgroundColor: "$colors$blue12",
+        },
       },
       green: {
         backgroundColor: "$green4",
