@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Heading, Section, Box, Button, Paragraph } from "@thugga/ui";
+import { Heading, Section, Box, Button, Paragraph, Grid } from "@thugga/ui";
 
 export default function Index() {
   return (
@@ -42,39 +42,45 @@ export default function Index() {
           <Heading as="h3" size="1" bold>
             Services
           </Heading>
-          <Box css={{ py: "$3", mr: "700px" }}>
-            <Heading as="p" size="3">
-              Engineering
-            </Heading>
-            <Paragraph>
-              We deliver state-of-the-art engineering capabilities ranging from
-              cloud, micro-services architecture, to CI/CD. We help build the
-              entire lifecycle of the sofware development from team topology,
-              development best practices, to observability and deployment in the
-              cloud.
-            </Paragraph>
-          </Box>
-          <Box css={{ py: "$3", mr: "700px" }}>
-            <Heading as="p" size="3">
-              Product Design
-            </Heading>
-            <Paragraph>
-              We help define the product strategy and the product philosophy of
-              your organization. We follow the Product methodology of the
-              Silicon Valley Product Group (SVPG) and adhere to the principles
-              of consumer-driven discovery and experimentation.
-            </Paragraph>
-          </Box>
-          <Box css={{ py: "$3", mr: "700px" }}>
-            <Heading as="p" size="3">
-              Data Science
-            </Heading>
-            <Paragraph>
-              Our expertise in clinical informatics and evaluation of digital
-              health intervention can help you evaluate the clinical
-              effectiveness of the digital health interventions.
-            </Paragraph>
-          </Box>
+          <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
+            <Box css={{ py: "$3" }}>
+              <Heading as="p" size="3">
+                Engineering
+              </Heading>
+              <Paragraph>
+                We deliver state-of-the-art engineering capabilities ranging
+                from cloud, micro-services architecture, to CI/CD. We help build
+                the entire lifecycle of the sofware development from team
+                topology, development best practices, to observability and
+                deployment in the cloud.
+              </Paragraph>
+            </Box>
+          </Grid>
+          <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
+            <Box css={{ py: "$3" }}>
+              <Heading as="p" size="3">
+                Product Design
+              </Heading>
+              <Paragraph>
+                We help define the product strategy and the product philosophy
+                of your organization. We follow the Product methodology of the
+                Silicon Valley Product Group (SVPG) and adhere to the principles
+                of consumer-driven discovery and experimentation.
+              </Paragraph>
+            </Box>
+          </Grid>
+          <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
+            <Box css={{ py: "$3" }}>
+              <Heading as="p" size="3">
+                Data Science
+              </Heading>
+              <Paragraph>
+                Our expertise in clinical informatics and evaluation of digital
+                health intervention can help you evaluate the clinical
+                effectiveness of the digital health interventions.
+              </Paragraph>
+            </Box>
+          </Grid>
         </Section>
       </Box>
     </>
