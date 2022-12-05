@@ -57,9 +57,4 @@ const LogoSVG = (props: LogoProps) => {
   );
 };
 
-const StyledSvg = styled(LogoSVG, {
-  pb: "$2",
-});
-
-export const Logo = StyledSvg;
-Logo.displayName = "Logo";
+export const Logo = LogoSVG;
