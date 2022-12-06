@@ -5,7 +5,7 @@ import React from "react";
 import { Providers } from "./providers";
 
 import { Footer, NavBar, Layout } from "../components";
-import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
+import globalStyles, { darkTheme } from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995
 globalStyles();

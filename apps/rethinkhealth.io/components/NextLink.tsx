@@ -1,5 +1,4 @@
 import NxLink from "next/link";
-import React from "react";
 
 import { LinkStyle, styled } from "@thugga/ui";
 
