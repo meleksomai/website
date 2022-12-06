@@ -4,7 +4,7 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 import React from "react";
 
-import { Flex, Box, Text, Button } from "@thugga/ui";
+import { Flex, Box, Text, Button, Link } from "@thugga/ui";
 
 import { Logo } from "./Logo";
 import { NextLink } from "./NextLink";
@@ -19,15 +19,9 @@ const LoginNavLink = () => {
   if (user) {
     return (
       <>
-        <Button
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = "/dashboard";
-          }}
-          variant="blue"
-        >
+        <NextLink href="/dashboard" variant="blue">
           Dashboard
-        </Button>
+        </NextLink>
         <NextLink href="/api/auth/logout" variant="subtle" size="small">
           Logout
         </NextLink>
@@ -35,15 +29,9 @@ const LoginNavLink = () => {
     );
   } else {
     return (
-      <Button
-        onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "/api/auth/login";
-        }}
-        variant="blue"
-      >
+      <Link href="/api/auth/login" variant="blue" as="a">
         Login
-      </Button>
+      </Link>
     );
   }
 };

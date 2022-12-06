@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google";
+import { Inter, IBM_Plex_Mono } from "@next/font/google";
 import { ServerThemeProvider } from "next-themes";
 import React from "react";
 
@@ -11,6 +11,7 @@ import globalStyles, { darkTheme } from "../styles/globalStyles";
 globalStyles();
 
 const inter = Inter({ subsets: ["latin"] });
+const ibmPlex = IBM_Plex_Mono({ weight: "400", subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -26,7 +27,7 @@ export default function RootLayout({
     >
       <html
         lang="en"
-        className={inter.className}
+        className={ibmPlex.className}
         // data-theme='dark'
         // style={htmlStyle}
       >
