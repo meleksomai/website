@@ -2,7 +2,7 @@
 
 module.exports = {
   experimental: {
-    // appDir: true,
+    appDir: true,
     transpilePackages: ["@thugga/ui", "@thugga/markdoc"],
   },
   reactStrictMode: true,

@@ -1,3 +1,5 @@
+"use client";
+
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Image from "next/image";
 import React from "react";
@@ -56,12 +58,12 @@ export const NavBar = () => {
         <NextLink variant="simple" href="/">
           Home
         </NextLink>
-        <NextLink variant="simple" href="/">
+        {/* <NextLink variant="simple" href="/">
           Products
-        </NextLink>
-        <NextLink variant="simple" href="/">
+        </NextLink> */}
+        {/* <NextLink variant="simple" href="/">
           Services
-        </NextLink>
+        </NextLink> */}
         <LoginNavLink />
         <ThemeToggle />
       </Flex>

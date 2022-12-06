@@ -1,42 +1,58 @@
-import * as React from "react";
-
 import { Heading, Section, Box, Button, Paragraph, Grid } from "@thugga/ui";
 
-export default function Index() {
+export default function MainPage() {
   return (
     <>
       <Box css={{ minHeight: "400px" }}>
         <Section size="2">
-          <Heading as="p" size="4" css={{ pb: "$5" }}>
-            Assisting healthcare systems achieve their{" "}
-            <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
-              Digital Transformation{" "}
-            </Heading>
-            at scale by leveraging{" "}
-            <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
-              Clinical Engineering
-            </Heading>
-            ,{" "}
-            <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
-              Product Design
-            </Heading>
-            , and{" "}
-            <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
-              Data Science
-            </Heading>
-            .
-          </Heading>
-          <Button
-            variant="blue"
-            mono
-            css={{ fontSize: 23, fontWeight: 500, height: 50 }}
-            onClick={(e) => {
-              window.location.href = "mailto:contact@rethinkhealth.io";
-              e.preventDefault();
-            }}
-          >
-            Contact us
-          </Button>
+          <Grid gap="5" columns={{ "@initial": "2", "@bp3": "3" }}>
+            <Box css={{ gridColumn: "span 2" }}>
+              <Heading as="p" size="4" css={{ pb: "$5" }}>
+                Assisting healthcare systems achieve their{" "}
+                <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
+                  Digital Transformation{" "}
+                </Heading>
+                at scale by leveraging{" "}
+                <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
+                  Clinical Engineering
+                </Heading>
+                ,{" "}
+                <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
+                  Product Design
+                </Heading>
+                , and{" "}
+                <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
+                  Data Science
+                </Heading>
+                .
+              </Heading>
+              {/* <Button
+                variant="blue"
+                css={{ fontSize: 23, fontWeight: 500, height: 50 }}
+                onClick={(e) => {
+                  window.location.href = "mailto:contact@rethinkhealth.io";
+                  e.preventDefault();
+                }}
+              >
+                Contact us
+              </Button> */}
+            </Box>
+            {/* <Flex
+              css={{
+                // width: "$3",
+                mr: "$1",
+                minWidth: "$5",
+                zIndex: "-999999",
+              }}
+            >
+              <Image
+                src={HeroLandingSvg}
+                alt="hero image for the landing page"
+                // layout="fill"
+                // objectFit="contain"
+              />
+            </Flex> */}
+          </Grid>
         </Section>
         <Section size="2">
           <Heading as="h3" size="1" bold>
@@ -44,7 +60,7 @@ export default function Index() {
           </Heading>
           <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
             <Box css={{ py: "$3" }}>
-              <Heading as="p" size="3">
+              <Heading as="p" size="3" mono>
                 Engineering
               </Heading>
               <Paragraph>
@@ -58,7 +74,7 @@ export default function Index() {
           </Grid>
           <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
             <Box css={{ py: "$3" }}>
-              <Heading as="p" size="3">
+              <Heading as="p" size="3" mono>
                 Product Design
               </Heading>
               <Paragraph>
@@ -71,7 +87,7 @@ export default function Index() {
           </Grid>
           <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
             <Box css={{ py: "$3" }}>
-              <Heading as="p" size="3">
+              <Heading as="p" size="3" mono>
                 Data Science
               </Heading>
               <Paragraph>

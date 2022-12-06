@@ -1,4 +1,8 @@
-import { globalCss } from "@thugga/ui";
+import {
+  globalCss,
+  darkTheme as rootDarkTheme,
+  getCssText as rootGetCssText,
+} from "@thugga/ui/src/stitches.config";
 
 const globalStyles = globalCss({
   "@font-face": [
@@ -81,3 +85,5 @@ const globalStyles = globalCss({
 });
 
 export default globalStyles;
+export const darkTheme = rootDarkTheme;
+export const getCssText = rootGetCssText;
