@@ -1,3 +1,4 @@
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { ThemeProvider } from "next-themes";
 import { AppProps, NextWebVitalsMetric } from "next/app";
 import Head from "next/head";
@@ -32,27 +33,32 @@ function App({ Component, pageProps }: AppProps) {
   usePageViews();
 
   return (
-    <ThemeProvider
-      // disableTransitionOnChange
-      attribute="class"
-      value={{ light: "light-theme", dark: darkTheme.className }}
-      defaultTheme="system"
-    >
-      <GoogleAnalytics />
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-      <Layout
-        css={{
-          // TODO: perhaps move this to a variants
-          padding: "$4",
-        }}
+    <UserProvider>
+      <ThemeProvider
+        // disableTransitionOnChange
+        attribute="class"
+        value={{ light: "light-theme", dark: darkTheme.className }}
+        defaultTheme="system"
       >
-        <NavBar />
-        <Component {...pageProps} />
-        <Footer />
-      </Layout>
-    </ThemeProvider>
+        <GoogleAnalytics />
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </Head>
+        <Layout
+          css={{
+            // TODO: perhaps move this to a variants
+            padding: "$4",
+          }}
+        >
+          <NavBar />
+          <Component {...pageProps} />
+          <Footer />
+        </Layout>
+      </ThemeProvider>
+    </UserProvider>
   );
 }
 

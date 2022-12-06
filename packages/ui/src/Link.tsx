@@ -3,7 +3,7 @@ import React from "react";
 import { styled } from "./stitches.config";
 import { Text } from "./Text";
 
-export const Link = styled("span", {
+export const LinkStyle = {
   alignItems: "center",
   gap: "$1",
   flexShrink: 0,
@@ -50,7 +50,14 @@ export const Link = styled("span", {
     variant: {
       blue: {
         color: "$blue11",
-        textDecorationColor: "$blue4",
+        textDecoration: "none",
+        "@hover": {
+          "&:hover": {
+            textDecoration: "underline",
+            color: "$blue11",
+            textDecorationColor: "$blue11",
+          },
+        },
         "&:focus": {
           outlineColor: "$blue8",
         },
@@ -97,4 +104,6 @@ export const Link = styled("span", {
   defaultVariants: {
     variant: "contrast",
   },
-});
+};
+
+export const Link = styled("p", LinkStyle);

@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^2.0.0",
     "@markdoc/markdoc": "^0.1.2",
     "@radix-ui/react-icons": "^1.1.1",
     "@thugga/markdoc": "workspace:*",
@@ -17,7 +19,7 @@
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
     "isomorphic-unfetch": "^3.1.0",
-    "next": "12.2.5-canary.7",
+    "next": "13.0.5",
     "next-seo": "^5.5.0",
     "next-themes": "^0.2.0",
     "nextjs-google-analytics": "^2.0.0",

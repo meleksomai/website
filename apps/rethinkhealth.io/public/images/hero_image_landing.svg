@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1171.33 755.81" height="100%" width="100%" >
+    <defs>
+        <style>
+            .cls-1 {
+                filter: url(#luminosity-noclip-6);
+            }
+
+            .cls-2 {
+                filter: url(#luminosity-noclip-7);
+            }
+
+            .cls-3 {
+                filter: url(#luminosity-noclip-2);
+            }
+
+            .cls-4 {
+                filter: url(#luminosity-noclip-3);
+            }
+
+            .cls-5 {
+                filter: url(#luminosity-noclip-4);
+            }
+
+            .cls-6 {
+                filter: url(#luminosity-noclip-5);
+            }
+
+            .cls-7 {
+                mask: url(#mask);
+            }
+
+            .cls-8 {
+                filter: url(#luminosity-noclip);
+            }
+
+            .cls-9 {
+                filter: url(#luminosity-invert);
+            }
+
+            .cls-10 {
+                fill: #009245;
+            }
+
+            .cls-11 {
+                fill: #000445;
+            }
+
+            .cls-12 {
+                fill: #fff;
+            }
+
+            .cls-13 {
+                mask: url(#mask-3);
+            }
+
+            .cls-14 {
+                mask: url(#mask-2);
+            }
+
+            .cls-15 {
+                mask: url(#mask-5);
+            }
+
+            .cls-16 {
+                mask: url(#mask-4);
+            }
+
+            .cls-17 {
+                mask: url(#mask-1);
+            }
+
+            .cls-18 {
+                mask: url(#mask-6);
+            }
+        </style>
+        <filter id="luminosity-invert" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" />
+        </filter>
+        <mask id="mask" x="71" y="71" width="144" height="144" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-8">
+                    <g>
+                        <circle class="cls-12" cx="107" cy="107" r="36" />
+                        <circle class="cls-12" cx="179" cy="179" r="36" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-1" x="562.11" y="254.01" width="135.17" height="135.17" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-3">
+                    <g>
+                        <circle class="cls-12" cx="663.49" cy="287.8" r="33.79" />
+                        <circle class="cls-12" cx="595.91" cy="355.39" r="33.79" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-2" x="562.11" y="119.77" width="135.17" height="135.17" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-4">
+                    <g>
+                        <circle class="cls-12" cx="663.49" cy="221.15" r="33.79" />
+                        <circle class="cls-12" cx="595.91" cy="153.56" r="33.79" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-3" x="899.11" y="119.77" width="135.17" height="135.17" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-5">
+                    <g>
+                        <circle class="cls-12" cx="1000.49" cy="153.56" r="33.79" />
+                        <circle class="cls-12" cx="932.9" cy="221.15" r="33.79" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-4" x="265.04" y="529.65" width="87.04" height="87.04" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-6">
+                    <g>
+                        <circle class="cls-12" cx="330.32" cy="594.93" r="21.76" />
+                        <circle class="cls-12" cx="286.8" cy="551.41" r="21.76" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-5" x="930.21" y="524.87" width="51.24" height="51.24" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-1">
+                    <g>
+                        <circle class="cls-12" cx="943.02" cy="563.3" r="12.81" />
+                        <circle class="cls-12" cx="968.64" cy="537.68" r="12.81" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="mask-6" x="930.21" y="652.62" width="51.24" height="51.24" maskUnits="userSpaceOnUse">
+            <g class="cls-9">
+                <g class="cls-2">
+                    <g>
+                        <circle class="cls-12" cx="968.64" cy="691.05" r="12.81" />
+                        <circle class="cls-12" cx="943.02" cy="665.43" r="12.81" />
+                    </g>
+                </g>
+            </g>
+        </mask>
+    </defs>
+    <g id="Layer_1">
+        <rect class="cls-11" y="143" width="143" height="217" rx="20" ry="20" />
+        <rect class="cls-11" x="143" width="287" height="143" rx="20" ry="20" />
+    </g>
+    <g id="Layer_2">
+        <g class="cls-7">
+            <rect class="cls-11" x="107" y="107" width="72" height="72" />
+        </g>
+        <g>
+            <rect class="cls-10" x="426" y="187.36" width="203.7" height="134.23" rx="20" ry="20" />
+            <rect class="cls-10" x="629.7" y="321.59" width="134.23" height="269.41" rx="20" ry="20" />
+            <g class="cls-17">
+                <rect class="cls-10" x="595.91" y="287.8" width="67.59" height="67.59"
+                    transform="translate(951.29 -308.11) rotate(90)" />
+            </g>
+            <rect class="cls-10" x="627.82" y="55" width="338.87" height="132.36" rx="20" ry="20" />
+            <g class="cls-14">
+                <rect class="cls-10" x="595.91" y="153.56" width="67.59" height="67.59"
+                    transform="translate(1259.4 374.71) rotate(180)" />
+            </g>
+            <rect class="cls-10" x="966.69" y="187.36" width="204.64" height="201.82" rx="20" ry="20" />
+            <g class="cls-13">
+                <rect class="cls-10" x="932.9" y="153.56" width="67.59" height="67.59"
+                    transform="translate(1154.05 -779.34) rotate(90)" />
+            </g>
+        </g>
+        <rect class="cls-11" x="308.56" y="442" width="86.44" height="131.17" rx="20" ry="20" />
+        <rect class="cls-11" x="178" y="573.17" width="130.56" height="86.44" rx="20" ry="20" />
+        <g class="cls-16">
+            <rect class="cls-11" x="286.8" y="551.41" width="43.52" height="43.52"
+                transform="translate(617.13 1146.33) rotate(180)" />
+        </g>
+        <rect class="cls-10" x="904.94" y="473.28" width="50.88" height="77.22" rx="20" ry="20" />
+        <rect class="cls-10" x="955.83" y="549.78" width="50.17" height="128.46" rx="20" ry="20" />
+        <g class="cls-15">
+            <rect class="cls-10" x="943.02" y="537.68" width="25.62" height="25.62"
+                transform="translate(405.34 1506.32) rotate(-90)" />
+        </g>
+        <rect class="cls-10" x="879.32" y="678.24" width="76.5" height="77.57" rx="20" ry="20" />
+        <g class="cls-18">
+            <rect class="cls-10" x="943.02" y="665.43" width="25.62" height="25.62"
+                transform="translate(1911.66 1356.47) rotate(180)" />
+        </g>
+    </g>
+</svg>
