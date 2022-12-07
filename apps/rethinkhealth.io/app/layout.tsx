@@ -2,9 +2,11 @@ import { Inter, IBM_Plex_Mono } from "@next/font/google";
 import { ServerThemeProvider } from "next-themes";
 import React from "react";
 
+import { Flex, Container } from "@thugga/ui";
+
 import { Providers } from "./providers";
 
-import { Footer, NavBar, Layout } from "../components";
+import { Footer, NavBar } from "../components";
 import globalStyles, { darkTheme } from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995
@@ -27,7 +29,7 @@ export default function RootLayout({
     >
       <html
         lang="en"
-        className={ibmPlex.className}
+        className={inter.className}
         // data-theme='dark'
         // style={htmlStyle}
       >
@@ -47,16 +49,28 @@ export default function RootLayout({
         </head>
         <body>
           <Providers>
-            <Layout
+            <Flex
               css={{
-                // TODO: perhaps move this to a variants
-                padding: "$4",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                p: "$4",
+                position: "absolute",
+                zIndex: "-1",
               }}
             >
-              <NavBar />
-              {children}
-              <Footer />
-            </Layout>
+              <Container
+                size="3"
+                css={{
+                  flex: 1,
+                }}
+              >
+                <NavBar />
+                {children}
+                <Footer />
+              </Container>
+            </Flex>
           </Providers>
         </body>
       </html>
