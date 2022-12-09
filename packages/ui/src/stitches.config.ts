@@ -25,14 +25,18 @@ export const {
       ...colors.orange,
       ...colors.orangeA,
       ...colors.whiteA,
+      ...colors.blue,
+      ...colors.blueA,
+      ...colors.slate,
+      ...colors.slateA,
 
       // Semantic colors
       hiContrast: "$mauve12",
       loContrast: "$mauve1",
     },
     fonts: {
-      sans: "Inter, -apple-system, system-ui, sans-serif",
-      mono: "Ibm Plex Mono, menlo, monospace",
+      sans: "var(--font-inter)",
+      mono: "var(--font-mono)",
     },
     space: {
       1: "5px",
@@ -177,6 +181,10 @@ export const darkTheme = createTheme("dark-theme", {
     ...colors.redDarkA,
     ...colors.orangeDark,
     ...colors.orangeDarkA,
+    ...colors.blueDark,
+    ...colors.blueDarkA,
+    ...colors.slateDark,
+    ...colors.slateDarkA,
 
     // Semantic colors
     hiContrast: "$mauve12",
