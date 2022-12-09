@@ -53,10 +53,12 @@ const globalStyles = globalCss({
   ],
 
   // ...other styles
-  // html: {
-  //   overflowX: "hidden",
-  //   scrollPaddingTop: "6rem",
-  // },
+  html: {
+    "--font-inter": "Inter",
+    "--font-mono": "Ibm Plex Mono",
+    // overflowX: "hidden",
+    // scrollPaddingTop: "6rem",
+  },
   // "*, *::before, *::after": {
   //   boxSizing: "border-box",
   // },

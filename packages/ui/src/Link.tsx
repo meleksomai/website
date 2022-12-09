@@ -5,6 +5,7 @@ import { Text } from "./Text";
 
 export const LinkStyle = {
   alignItems: "center",
+  display: "inline",
   gap: "$1",
   flexShrink: 0,
   outline: "none",
@@ -16,6 +17,7 @@ export const LinkStyle = {
   "@hover": {
     "&:hover": {
       textDecorationLine: "underline",
+      cursor: "pointer",
     },
   },
   "&:focus": {

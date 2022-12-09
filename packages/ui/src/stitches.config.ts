@@ -35,8 +35,8 @@ export const {
       loContrast: "$mauve1",
     },
     fonts: {
-      sans: "Inter, -apple-system, system-ui, sans-serif",
-      mono: "Ibm Plex Mono, menlo, monospace",
+      sans: "var(--font-inter)",
+      mono: "var(--font-mono)",
     },
     space: {
       1: "5px",

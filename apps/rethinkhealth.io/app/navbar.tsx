@@ -1,14 +1,13 @@
 "use client";
 
 import { useUser } from "@auth0/nextjs-auth0/client";
-import Image from "next/image";
 import React from "react";
 
-import { Flex, Box, Text, Button, Link } from "@thugga/ui";
+import { Flex, Link } from "@thugga/ui";
 
-import { Logo } from "./Logo";
-import { NextLink } from "./NextLink";
-import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "../components/Logo";
+import { NextLink } from "../components/NextLink";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 const LoginNavLink = () => {
   const { user, error, isLoading } = useUser();
@@ -52,7 +51,7 @@ export const NavBar = () => {
         {/* <NextLink variant="simple" href="/">
           Services
         </NextLink> */}
-        <LoginNavLink />
+        {/* <LoginNavLink /> */}
         <ThemeToggle />
       </Flex>
     </Flex>

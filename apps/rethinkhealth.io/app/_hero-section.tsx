@@ -7,7 +7,7 @@ export default function HeroSection() {
     <Section size="2">
       <Grid gap="5" columns={{ "@initial": "2", "@bp3": "3" }}>
         <Box css={{ gridColumn: "span 2" }}>
-          <Heading as="p" size="4" css={{ pb: "$5" }}>
+          <Heading as="p" size="4" css={{ pb: "$5" }} mono>
             Assisting healthcare systems achieve their{" "}
             <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
               Digital Transformation{" "}
@@ -30,7 +30,6 @@ export default function HeroSection() {
             href="mailto:contact@rethinkhealth.io"
             variant="blue"
             size="large"
-            mono
           >
             Contact us
           </NextLink>

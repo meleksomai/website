@@ -1,19 +1,24 @@
-import { Inter, IBM_Plex_Mono } from "@next/font/google";
+import { Inter, Lora } from "@next/font/google";
 import { ServerThemeProvider } from "next-themes";
 import React from "react";
 
 import { Flex, Container } from "@thugga/ui";
 
+import { Footer } from "./footer";
+import { NavBar } from "./navbar";
 import { Providers } from "./providers";
 
-import { Footer, NavBar } from "../components";
-import globalStyles, { darkTheme } from "../styles/globalStyles";
+import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995
 globalStyles();
 
-const inter = Inter({ subsets: ["latin"] });
-const ibmPlex = IBM_Plex_Mono({ weight: "400", subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const ibmPlex = Lora({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export default function RootLayout({
   children,
@@ -29,7 +34,7 @@ export default function RootLayout({
     >
       <html
         lang="en"
-        className={inter.className}
+        className={`${inter.variable} ${ibmPlex.variable}`}
         // data-theme='dark'
         // style={htmlStyle}
       >
@@ -45,6 +50,10 @@ export default function RootLayout({
           <meta
             content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
             name="robots"
+          />
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </head>
         <body>

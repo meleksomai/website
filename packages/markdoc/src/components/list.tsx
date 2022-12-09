@@ -11,7 +11,7 @@ const StyledOl = styled("ol", {
 });
 
 const li = ({ children }: any) => (
-  <li>
+  <li key={children}>
     <Paragraph>{children}</Paragraph>
   </li>
 );

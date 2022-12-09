@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { Text, Section, Box, Grid, Flex } from "@thugga/ui";

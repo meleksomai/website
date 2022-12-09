@@ -4,7 +4,11 @@ import { Link } from "@thugga/ui";
 
 function LinkMarkdoc({ children, href }: any) {
   // FIXME
-  return <Link variant="blue">{children}</Link>;
+  return (
+    <Link as="span" variant="blue">
+      {children}
+    </Link>
+  );
 }
 LinkMarkdoc.displayName = "Link";
 
