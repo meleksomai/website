@@ -51,7 +51,7 @@ export const NavBar = () => {
         {/* <NextLink variant="simple" href="/">
           Services
         </NextLink> */}
-        {/* <LoginNavLink /> */}
+        <LoginNavLink />
         <ThemeToggle />
       </Flex>
     </Flex>
