@@ -5,8 +5,8 @@ import React from "react";
 import { Flex, Container } from "@thugga/ui";
 
 import { Footer } from "./footer";
-import { NavBar } from "./navbar";
-import { Providers } from "./providers";
+import NavBar from "./navbar";
+import { ThemeProvider } from "./theme.provider";
 
 import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
 
@@ -57,7 +57,7 @@ export default function RootLayout({
           />
         </head>
         <body>
-          <Providers>
+          <ThemeProvider>
             <Flex
               css={{
                 top: 0,
@@ -75,12 +75,13 @@ export default function RootLayout({
                   flex: 1,
                 }}
               >
+                {/** @ts-expect-error */}
                 <NavBar />
                 {children}
                 <Footer />
               </Container>
             </Flex>
-          </Providers>
+          </ThemeProvider>
         </body>
       </html>
     </ServerThemeProvider>

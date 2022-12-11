@@ -1,41 +1,17 @@
-"use client";
-
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { unstable_getServerSession } from "next-auth/next";
 import React from "react";
 
-import { Flex, Link } from "@thugga/ui";
+import { Flex } from "@thugga/ui";
+
+import { GoToDashboard, SignIn } from "./actions";
 
 import { Logo } from "../components/Logo";
 import { NextLink } from "../components/NextLink";
 import { ThemeToggle } from "../components/ThemeToggle";
 
-const LoginNavLink = () => {
-  const { user, error, isLoading } = useUser();
+export default async function NavBar() {
+  const session = await unstable_getServerSession();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
-
-  if (user) {
-    return (
-      <>
-        <NextLink href="/dashboard" variant="blue">
-          Dashboard
-        </NextLink>
-        <NextLink href="/api/auth/logout" variant="subtle" size="small">
-          Logout
-        </NextLink>
-      </>
-    );
-  } else {
-    return (
-      <Link href="/api/auth/login" variant="blue" as="a">
-        Login
-      </Link>
-    );
-  }
-};
-
-export const NavBar = () => {
   return (
     <Flex justify="between">
       <Flex css={{ my: "$4" }}>
@@ -45,13 +21,10 @@ export const NavBar = () => {
         <NextLink variant="simple" href="/">
           Home
         </NextLink>
-        {/* <NextLink variant="simple" href="/">
-          Products
-        </NextLink> */}
-        {/* <NextLink variant="simple" href="/">
-          Services
-        </NextLink> */}
-        {/* <LoginNavLink /> */}
+
+        {session?.user && <GoToDashboard />}
+        {!session?.user && <SignIn />}
+
         <ThemeToggle />
       </Flex>
     </Flex>
