@@ -8,11 +8,10 @@ export default function ServicesSection() {
       </Heading>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
         <Heading as="p" size="1">
-          Our team of experts has a proven track record of delivering
-          technology-driven solutions that help healthcare organizations achieve
-          their digital transformation goals. We are committed to staying at the
-          forefront of innovation in these fields, and to providing our
-          customers with exceptional service and support.
+          Leveraging clinical engineering, product design, and data science, we
+          help healthcare organizations improve patient care, reduce costs, and
+          increase efficiency. With our expertise and innovative approach, we
+          are transforming the way healthcare is delivered.
         </Heading>
       </Grid>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>

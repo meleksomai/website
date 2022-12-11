@@ -1,3 +1,5 @@
+"use client";
+
 import NxLink from "next/link";
 
 import { LinkStyle, styled } from "@thugga/ui";
