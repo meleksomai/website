@@ -6,6 +6,7 @@
     "dev": "node ./dist/index.js",
     "build": "npx tsc",
     "lint": "eslint ./src/*.ts*",
+    "lint:fix": "eslint ./src/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {

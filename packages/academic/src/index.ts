@@ -1,5 +1,5 @@
-import figlet from "figlet";
 import { Command } from "commander";
+import figlet from "figlet";
 
 import { listAllPublications, cacheAllPublications } from "./papers";
 
@@ -18,10 +18,9 @@ program
 
 const options = program.opts();
 
-
 async function listPublications(filepath: string) {
   try {
-    const papers= await listAllPublications(filepath)
+    const papers = await listAllPublications(filepath);
     console.table(papers);
   } catch (error) {
     console.error("Error occurred while reading the directory!", error);
@@ -30,7 +29,7 @@ async function listPublications(filepath: string) {
 
 async function cachePublications(filepath: string) {
   try {
-    const papers= await cacheAllPublications(filepath)
+    const papers = await cacheAllPublications(filepath);
     console.table(papers);
   } catch (error) {
     console.error("Error occurred while reading the directory!", error);
@@ -42,6 +41,7 @@ if (options.ls) {
   const filepath = typeof options.ls === "string" ? options.ls : __dirname;
   listPublications(filepath);
 } else if (options.cache) {
-  const filepath = typeof options.cache === "string" ? options.cache : __dirname;
+  const filepath =
+    typeof options.cache === "string" ? options.cache : __dirname;
   cachePublications(filepath);
 }
