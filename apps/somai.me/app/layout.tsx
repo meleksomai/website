@@ -1,4 +1,4 @@
-import { Inter, Lora } from "@next/font/google";
+import { Inter, IBM_Plex_Mono } from "@next/font/google";
 import React from "react";
 
 import { Flex, Container, Layout } from "@thugga/ui";
@@ -13,7 +13,7 @@ import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
 globalStyles();
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const ibmPlex = Lora({
+const ibmPlex = IBM_Plex_Mono({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-mono",
