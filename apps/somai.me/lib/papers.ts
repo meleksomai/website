@@ -34,7 +34,6 @@ export async function getAllPapers(): Promise<Publication[]> {
   const paths = await globby(["papers/cache/*.json"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
   const papers = files.map((slug) => getPaperBySlug(slug));
-  console.log(papers.map((a) => a.publishedAt.timestamp));
   return papers.sort((a, b) => {
     return b.publishedAt.timestamp - a.publishedAt.timestamp;
   });

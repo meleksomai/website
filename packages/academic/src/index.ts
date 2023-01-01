@@ -40,10 +40,8 @@ async function cachePublications(filepath: string) {
 // check if the option has been used the user
 if (options.ls) {
   const filepath = typeof options.ls === "string" ? options.ls : __dirname;
-  console.log(filepath);
   listPublications(filepath);
 } else if (options.cache) {
   const filepath = typeof options.cache === "string" ? options.cache : __dirname;
-  console.log(filepath);
   cachePublications(filepath);
 }

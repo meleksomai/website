@@ -83,10 +83,8 @@ export async function listAllPublications(filepath: string = "papers", extension
 export async function cacheAllPublications(filepath: string = "papers", extension: string = "*.md") {
   const paths = await globby([path.join(__dirname, filepath, extension)]);
   paths.map((file) => {
-    console.log(file);
     const slug = path.parse(file).name;
     const publication = getPublication(file);
-    // console.log(oub);
     fs.writeFileSync(
       path.join(`${path.dirname(file)}/cache`, `${slug}.json`),
       JSON.stringify(publication),
