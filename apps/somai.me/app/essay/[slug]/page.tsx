@@ -1,33 +1,19 @@
 import Markdoc from "@markdoc/markdoc";
-import { GetStaticProps } from "next";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import {
-  Avatar,
-  Box,
-  Flex,
-  Heading,
-  Paragraph,
-  Section,
-  Text,
-} from "@thugga/ui";
+import { Avatar, Flex, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
-import { Seo } from "../../components";
-import { getAllPosts, getPostBySlug, Post } from "../../lib/essays";
+import { getAllPosts, getPostBySlug } from "../../../lib/essays";
 
-type PostPageProps = {
-  post: Post;
-};
-
-export default function PostPage({ post }: PostPageProps) {
+export default function EssayPage({ params }: any) {
+  const post = getPostBySlug(params?.slug as string);
   const ast = Markdoc.parse(post.content);
   const content = Markdoc.transform(ast, config);
   const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
     <>
-      <Seo title={`${post.meta.title}`} description={post.meta.excerpt} />
       <Heading as="h1" size="4">
         {post.meta.title}
       </Heading>
@@ -72,19 +58,9 @@ export default function PostPage({ post }: PostPageProps) {
   );
 }
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   const posts = await getAllPosts();
-  return {
-    paths: posts.map((post) => ({ params: { slug: post.meta.slug } })),
-    fallback: false,
-  };
+  return posts.map((post) => ({
+    slug: post.meta.slug,
+  }));
 }
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const doc = getPostBySlug(params?.slug as string);
-  return {
-    props: {
-      post: doc,
-    },
-  };
-};

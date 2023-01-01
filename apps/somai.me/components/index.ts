@@ -1,6 +1,6 @@
 "use client";
 
 export * from "./NextLink";
-export * from "./Footer";
-export * from "./NavBar";
-export * from "./Seo";
+export * from "./ThemeToggle";
+export * as Spotify from "./Spotify";
+export * as Seo from "./Seo";

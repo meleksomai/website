@@ -2,12 +2,11 @@
 
 import React from "react";
 
-import { Flex, Section } from "@thugga/ui";
+import { Flex } from "@thugga/ui";
 
-import { NextLink } from "./NextLink";
-import { ThemeToggle } from "./ThemeToggle";
+import { NextLink, ThemeToggle } from "../components";
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
     <Flex css={{ py: "$6" }} justify="between">
       <Flex align="center" gap="4">
@@ -29,3 +28,5 @@ export const NavBar = () => {
 };
 
 NavBar.displayName = "NavBar";
+
+export default NavBar;

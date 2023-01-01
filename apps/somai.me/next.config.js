@@ -1,9 +1,9 @@
-const withTM = require("next-transpile-modules")(["@thugga/ui", "@thugga/markdoc"]);
+// const withTM = require("next-transpile-modules")(["@thugga/ui", "@thugga/markdoc"]);
 
-module.exports = withTM({
+module.exports = {
   experimental: {
-    // appDir: true,
-    transpilePackages: ["@thugga/ui", "@thugga/markdoc"],
+    appDir: true,
   },
+  transpilePackages: ["@thugga/ui", "@thugga/markdoc"],
   reactStrictMode: true,
-});
+};

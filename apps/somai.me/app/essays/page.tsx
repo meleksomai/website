@@ -1,25 +1,17 @@
-import { GetStaticProps } from "next";
 import React from "react";
 
 import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
-import { NextLink, Seo } from "../components";
-import { getAllPosts, Post } from "../lib/essays";
+import { NextLink } from "../../components";
+import { getAllPosts } from "../../lib/essays";
 
 const DEFAULT_DESCRIPTION =
   "My goal of this space is to share thoughts and ideas that are sometime personal, sometime reflection of my current research, and in some occasions deviations from my current focus areas of expertise. This is a domain of reflection and none of the materials herein are meant to be pure logical or cohesive.";
 
-type PostPageProps = {
-  posts: Post[];
-};
-
-export default function PostPage({ posts }: PostPageProps) {
+export default async function EssayPage() {
+  const posts = await getAllPosts();
   return (
     <>
-      <Seo
-        title="Ideas and Thoughts about Medicine, Technology, and Public Health"
-        description={DEFAULT_DESCRIPTION}
-      />
       <Heading as="h1" size="4">
         Essays
       </Heading>
@@ -56,12 +48,3 @@ export default function PostPage({ posts }: PostPageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
-  return {
-    props: {
-      posts: posts,
-    },
-  };
-};

@@ -4,8 +4,7 @@ import React from "react";
 
 import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
 
-import { NextLink } from "./NextLink";
-import Spotify from "./Spotify";
+import { Spotify, NextLink } from "../components";
 
 // eslint-disable-next-line react/display-name
 const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
@@ -16,12 +15,10 @@ const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
   );
 };
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <Section css={{ pt: "$8" }}>
-      <Box css={{ py: "$5" }}>
-        <Spotify />
-      </Box>
+      <Box css={{ py: "$5" }}>{/* <Spotify /> */}</Box>
       <Box css={{ py: "$5" }}>
         <Grid gap="5" columns={{ "@initial": "1", "@bp2": "3" }}>
           <Flex direction="column" justify="start">
@@ -71,3 +68,5 @@ export const Footer = () => {
 };
 
 Footer.displayName = "Footer";
+
+export default Footer;
