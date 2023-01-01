@@ -122,7 +122,7 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.4
 
-  packages/cli:
+  packages/academic:
     specifiers:
       '@citation-js/date': ^0.5.1
       '@types/figlet': ^1.5.5
