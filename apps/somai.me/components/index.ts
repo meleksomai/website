@@ -2,5 +2,5 @@
 
 export * from "./NextLink";
 export * from "./ThemeToggle";
-export * as Spotify from "./Spotify";
+export * from "./Spotify";
 export * as Seo from "./Seo";

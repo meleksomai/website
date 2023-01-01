@@ -17,7 +17,7 @@ const NavBar = () => {
           Essays
         </NextLink>
         <NextLink variant="simple" href="/papers">
-          Publications
+          Papers
         </NextLink>
       </Flex>
       <Flex align="center">

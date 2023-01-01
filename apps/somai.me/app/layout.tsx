@@ -1,5 +1,4 @@
 import { Inter, Lora } from "@next/font/google";
-import { ServerThemeProvider } from "next-themes";
 import React from "react";
 
 import { Flex, Container, Layout } from "@thugga/ui";
@@ -26,52 +25,46 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ServerThemeProvider
-      disableTransitionOnChange
-      defaultTheme="system"
-      value={{ light: "light-theme", dark: darkTheme.className }}
-      attribute="class"
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={`${inter.variable} ${ibmPlex.variable}`}
+      // data-theme='dark'
+      // style={htmlStyle}
     >
-      <html
-        lang="en"
-        className={`${inter.variable} ${ibmPlex.variable}`}
-        // data-theme='dark'
-        // style={htmlStyle}
-      >
-        <head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <meta content="#ffffff" name="theme-color" />
-          <meta content="#ffffff" name="msapplication-TileColor" />
-          <meta
-            content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-            name="robots"
-          />
-          <style
-            id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssText() }}
-          />
-        </head>
-        <body>
-          <ThemeProvider>
-            <Layout
-              css={{
-                // TODO: perhaps move this to a variants
-                // backgroundColor: "$loContrast",
-                padding: "$4",
-              }}
-            >
-              <NavBar />
-              {children}
-              <Footer />
-            </Layout>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ServerThemeProvider>
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta content="#ffffff" name="theme-color" />
+        <meta content="#ffffff" name="msapplication-TileColor" />
+        <meta
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          name="robots"
+        />
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
+      </head>
+      <body>
+        <ThemeProvider>
+          <Layout
+            css={{
+              // TODO: perhaps move this to a variants
+              // backgroundColor: "$loContrast",
+              padding: "$4",
+            }}
+          >
+            <NavBar />
+            {children}
+            <Footer />
+          </Layout>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

@@ -18,7 +18,9 @@ const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
 const Footer = () => {
   return (
     <Section css={{ pt: "$8" }}>
-      <Box css={{ py: "$5" }}>{/* <Spotify /> */}</Box>
+      <Box css={{ py: "$5" }}>
+        <Spotify />
+      </Box>
       <Box css={{ py: "$5" }}>
         <Grid gap="5" columns={{ "@initial": "1", "@bp2": "3" }}>
           <Flex direction="column" justify="start">
