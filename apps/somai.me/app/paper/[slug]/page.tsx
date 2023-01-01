@@ -1,15 +1,11 @@
 import Markdoc from "@markdoc/markdoc";
-import { GetStaticProps } from "next";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Box, Flex, Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
 import { NextLink } from "../../../components";
-import {
-  getAllPapers,
-  getPaperBySlug,
-} from "../../../lib/papers";
+import { getAllPapers, getPaperBySlug } from "../../../lib/papers";
 
 function Author({ author }: any) {
   return (
