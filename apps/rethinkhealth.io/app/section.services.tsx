@@ -3,9 +3,6 @@ import { Heading, Section, Box, Grid, Paragraph } from "@thugga/ui";
 export default function ServicesSection() {
   return (
     <Section size="2">
-      <Heading as="h3" size="1" bold>
-        Services
-      </Heading>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
         <Heading as="p" size="1">
           Leveraging clinical engineering, product design, and data science, we
