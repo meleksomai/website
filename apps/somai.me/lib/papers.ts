@@ -26,7 +26,13 @@ export type Publication = {
 };
 
 export function getPaperBySlug(slug: string): Publication {
-  const filepath = path.join(process.cwd(), "content", "papers", "cache", `${slug}.json`);
+  const filepath = path.join(
+    process.cwd(),
+    "content",
+    "papers",
+    "cache",
+    `${slug}.json`
+  );
   return JSON.parse(fs.readFileSync(filepath, "utf-8"));
 }
 

@@ -29,6 +29,6 @@ export default async function NavBar() {
       </Flex>
     </Flex>
   );
-};
+}
 
 NavBar.displayName = "NavBar";
