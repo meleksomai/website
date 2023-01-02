@@ -3,19 +3,19 @@ import * as React from "react";
 import { Heading } from "@thugga/ui";
 
 const h1 = ({ children, ...props }: React.PropsWithChildren<any>) => (
-  <Heading size="3" as="h1" css={{ pt: "$3" }} {...props}>
+  <Heading size="3" as="h1" css={{ pt: "$6" }} {...props}>
     {children}
   </Heading>
 );
 
 const h2 = ({ children, ...props }: React.PropsWithChildren<any>) => (
-  <Heading size="2" as="h2" css={{ pt: "$2" }} {...props}>
+  <Heading size="2" as="h2" css={{ pt: "$5" }} {...props}>
     {children}
   </Heading>
 );
 
 const h3 = ({ children, ...props }: React.PropsWithChildren<any>) => (
-  <Heading size="1" as="h3" css={{ pt: "$2" }} {...props}>
+  <Heading size="1" as="h3" css={{ pt: "$5" }} {...props}>
     {children}
   </Heading>
 );

@@ -7,3 +7,4 @@ export { default as InlineCode } from "./inlineCode";
 export { default as Link } from "./link";
 export { default as List } from "./list";
 export { default as Paragraph } from "./paragraph";
+export { default as Blockquote } from "./blockquote";
