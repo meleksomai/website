@@ -4,6 +4,8 @@ import React from "react";
 import { config, components } from "@thugga/markdoc";
 import { Heading, Paragraph, Section, Text } from "@thugga/ui";
 
+import Title from "./title";
+
 import { NextLink } from "../../../components";
 import { getAllPapers, getPaperBySlug } from "../../../lib/papers";
 
@@ -30,9 +32,8 @@ export default function PaperPage({ params }: any) {
 
   return (
     <>
-      <Heading as="h1" size="4">
-        {publication.citation.title}
-      </Heading>
+      {/* @ts-expect-error Server Component */}
+      <Title paper={publication} />
       <Section size="0">
         <Text size="2" variant="light">
           {publication.publisher} / {publication.publishedAt.text}
