@@ -4,7 +4,9 @@ import React from "react";
 import { config, components } from "@thugga/markdoc";
 import { Avatar, Flex, Heading, Paragraph, Section, Text } from "@thugga/ui";
 
+import HeroSection from "../../../components/Hero";
 import { getAllPosts, getPostBySlug } from "../../../lib/essays";
+
 
 export default function EssayPage({ params }: any) {
   const post = getPostBySlug(params?.slug as string);
@@ -14,9 +16,8 @@ export default function EssayPage({ params }: any) {
 
   return (
     <>
-      <Heading as="h1" size="4">
-        {post.meta.title}
-      </Heading>
+      {/* @ts-expect-error Server Component */}
+      <HeroSection>| {post.meta.title}</HeroSection>
       <Text size="6" variant="light">
         {post.meta.subtitle}
       </Text>

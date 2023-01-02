@@ -9,7 +9,8 @@ import { getAllPapers, getPaperBySlug } from "../../../lib/papers";
 
 function Author({ author }: any) {
   return (
-    <Paragraph
+    <Text
+      as="span"
       css={{
         display: "inline",
         paddingInlineEnd: "$1",
@@ -17,7 +18,7 @@ function Author({ author }: any) {
       variant="light"
     >
       {author.given} {author.family} /
-    </Paragraph>
+    </Text>
   );
 }
 
