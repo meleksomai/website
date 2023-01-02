@@ -1,4 +1,12 @@
-import { Heading, Grid, Section, Box, Paragraph, Text, Container } from "@thugga/ui";
+import {
+  Heading,
+  Grid,
+  Section,
+  Box,
+  Paragraph,
+  Text,
+  Container,
+} from "@thugga/ui";
 
 import { getAllPosts } from "../lib/essays";
 
@@ -38,7 +46,7 @@ export default async function EssaysSection() {
           </Box>
           <Container css={{ paddingTop: "$7" }}>
             <NextLink href="/essays">
-              Check all essays 
+              Check all essays
               {/* <ArrowRightIcon style={{ display: "inline" }} /> */}
             </NextLink>
           </Container>

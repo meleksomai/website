@@ -7,11 +7,16 @@ import { NextLink } from "../../components";
 const CURRENT_ROLE = [
   {
     id: 1,
+    tile: "Founder and Chief Executive Officer",
+    organization: "Rethink Health",
+  },
+  {
+    id: 2,
     tile: "Chief Technology Officer",
     organization: "Inception Health",
   },
   {
-    id: 2,
+    id: 3,
     tile: "Assistant Professor of Medicine",
     organization: "Medical College of Wisconsin",
   },
@@ -22,7 +27,7 @@ export default async function RoleSection() {
   return (
     <Section size="2">
       <Heading as="h3" size="2" css={{ pb: "$5" }}>
-        Current Positions
+        Current Roles
       </Heading>
       <Grid gap="5" columns="1">
         {roles.map((role) => (
@@ -33,7 +38,7 @@ export default async function RoleSection() {
                 {role.organization}
               </Heading>
             </Heading>
-            <Paragraph>
+            {/* <Paragraph>
               Melek Somai is the Chief Technology Officer at Inception Health.
               He holds also the position of Assistant Professor of Medicine at
               Medical College of Wisconsin. Dr Somai’s expertise is in health
@@ -49,8 +54,7 @@ export default async function RoleSection() {
               approaches to public and global health using data science. As part
               of his global health activities, Dr Somai is the founder and the
               current president of the Tunisian Center for Public Health.
-            </Paragraph>
-            
+            </Paragraph> */}
           </Box>
         ))}
       </Grid>
