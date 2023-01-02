@@ -39,7 +39,7 @@ const NotPlaying = () => {
   );
 };
 
-export default function Spotify() {
+export function Spotify() {
   const { data } = useSWR<any>("/api/spotify", fetcher);
 
   return (

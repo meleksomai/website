@@ -1,0 +1,30 @@
+{
+  "name": "@thugga/academic",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node ./dist/index.js",
+    "build": "npx tsc",
+    "lint": "eslint ./src/*.ts*",
+    "lint:fix": "eslint ./src/*.ts* --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
+  "dependencies": {
+    "@citation-js/date": "^0.5.1",
+    "citation-js": "0.6.5",
+    "commander": "^9.4.1",
+    "dayjs": "^1.11.4",
+    "figlet": "^1.5.2",
+    "globby": "^13.1.2",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.5",
+    "eslint": "^7.32.0",
+    "eslint-config-thugga": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsx": "^3.12.1",
+    "typescript": "^4.5.2",
+    "@types/node": "^17.0.12"
+  }
+}
