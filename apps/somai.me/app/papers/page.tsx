@@ -10,7 +10,7 @@ export default async function PapersPage() {
     <>
       {/* @ts-expect-error Server Component */}
       <HeroSection>
-        | Research in areas ranging from Clinical Computing, Patient Remote
+        Research in areas ranging from Clinical Computing, Patient Remote
         Monitoring, Neuro-Epidemiology, to Blockchain.
       </HeroSection>
       {/* @ts-expect-error Server Component */}

@@ -11,8 +11,9 @@ export default function MainPage() {
       <Box>
         {/* @ts-expect-error Server Component */}
         <HeroSection>
-          works at the intersection of Healthcare Informatics, Clinical
-          Engineering, and Data Science.
+          Clinical Informatician. Data Scientist. Innovator. Works at the
+          intersection of Healthcare Informatics, Clinical Computing, and Data
+          Science.
         </HeroSection>
         {/* @ts-expect-error Server Component */}
         <EssaysSection />
