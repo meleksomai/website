@@ -1,5 +1,5 @@
-import HeroSection from "./_hero-section";
-import ServicesSection from "./_services-section";
+import HeroSection from "./section.hero";
+import ServicesSection from "./section.services";
 
 export default function MainPage() {
   return (

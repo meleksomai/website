@@ -10,7 +10,7 @@ export default function HeroSection() {
           <Heading as="p" size="4" css={{ pb: "$5" }} mono>
             We help healthcare systems through their{"  "}
             <Heading inline as="span" size="4" css={{ color: "$blue11" }}>
-              Digital Transformation{"  "}
+              digital transformation{"  "}
             </Heading>
             journey.
           </Heading>

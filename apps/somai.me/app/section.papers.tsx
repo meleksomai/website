@@ -1,11 +1,10 @@
-import { Heading, Grid, Section, Box, Paragraph, Text, Container } from "@thugga/ui";
-
-import { getAllPapers } from "../lib/papers";
+import { Heading, Grid, Section, Box, Text, Container } from "@thugga/ui";
 
 import { NextLink } from "../components";
+import { getAllPapers } from "../lib/papers";
 
 export default async function PapersSection() {
-  const recentPublications = await (await getAllPapers()).slice(0,3);
+  const recentPublications = await (await getAllPapers()).slice(0, 3);
 
   return (
     <>

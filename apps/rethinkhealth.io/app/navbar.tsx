@@ -18,17 +18,17 @@ export default async function NavBar() {
         <Logo width="200px" height="100%" />
       </Flex>
       <Flex align="center" gap="4">
-        <NextLink variant="simple" href="/">
+        {/* <NextLink variant="simple" href="/">
           Home
-        </NextLink>
+        </NextLink> */}
 
-        {session?.user && <GoToDashboard />}
-        {!session?.user && <SignIn />}
+        {/* {session?.user && <GoToDashboard />}
+        {!session?.user && <SignIn />} */}
 
         <ThemeToggle />
       </Flex>
     </Flex>
   );
-};
+}
 
 NavBar.displayName = "NavBar";

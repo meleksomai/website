@@ -11,25 +11,26 @@ import readingtime, { ReadTimeResults } from "reading-time";
 dayjs.extend(relativeTime);
 dayjs.extend(localizedFormat);
 
-export type Post = {
-  content: string;
+export type Role = {
+  content: any;
   meta: {
-    [key: string]: any;
-    excerpt: string;
-    image: string;
-    publishedAt: {
+    isCurrent: boolean;
+    organization: string;
+    readingTime: ReadTimeResults;
+    role: string;
+    slug: string;
+    startAt: {
       iso: string;
       relative: string;
       text: string;
       timestamp: number;
     };
-    readingTime: ReadTimeResults;
-    slug: string;
+    url: string;
   };
 };
 
-export function getPostBySlug(slug: string): Post {
-  const postsDirectory = path.join(process.cwd(), "content", "posts");
+export function getRoleBySlug(slug: string): Role {
+  const postsDirectory = path.join(process.cwd(), "content", "roles");
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -38,12 +39,12 @@ export function getPostBySlug(slug: string): Post {
   const { data, content } = matter(fileContents);
 
   // Step 2: date
-  const issuedDate = data.publishedAt;
-  const publishedAt = {
-    text: dayjs(issuedDate).format("MMMM, YYYY"),
-    iso: dayjs(issuedDate).toISOString(),
-    timestamp: dayjs(issuedDate).valueOf(),
-    relative: dayjs(issuedDate).fromNow(),
+  const startDate = data.startAt;
+  const startAt = {
+    text: dayjs(startDate).format("MMMM, YYYY"),
+    iso: dayjs(startDate).toISOString(),
+    timestamp: dayjs(startDate).valueOf(),
+    relative: dayjs(startDate).fromNow(),
   };
 
   // Step 3: word count and reading time
@@ -54,18 +55,18 @@ export function getPostBySlug(slug: string): Post {
     meta: {
       ...data,
       readingTime,
-      publishedAt,
+      startAt,
       slug: realSlug,
     } as any,
     content,
   };
 }
 
-export async function getAllPosts(): Promise<Post[]> {
-  const paths = await globby(["content/posts/*.md"]);
+export async function getAllRoles(): Promise<Role[]> {
+  const paths = await globby(["content/roles/*.md"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
-  const papers = files.map((slug) => getPostBySlug(slug));
+  const papers = files.map((slug) => getRoleBySlug(slug));
   return papers.sort((a, b) => {
-    return b.meta.publishedAt.timestamp - a.meta.publishedAt.timestamp;
+    return b.meta.startAt.timestamp - a.meta.startAt.timestamp;
   });
 }

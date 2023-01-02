@@ -8,9 +8,8 @@ import {
   Container,
 } from "@thugga/ui";
 
-import { getAllPosts } from "../lib/essays";
-
 import { NextLink } from "../components";
+import { getAllPosts } from "../lib/essays";
 
 export default async function EssaysSection() {
   const recentPosts = await getAllPosts();

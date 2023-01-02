@@ -1,8 +1,8 @@
-'use client';
-import { useEffect } from 'react';
+"use client";
+
+import { useEffect } from "react";
 
 import { Paragraph, Heading, Section, Separator } from "@thugga/ui";
-
 
 export default function Error({
   error,

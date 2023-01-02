@@ -26,12 +26,18 @@ export type Publication = {
 };
 
 export function getPaperBySlug(slug: string): Publication {
-  const filepath = path.join(process.cwd(), "papers", "cache", `${slug}.json`);
+  const filepath = path.join(
+    process.cwd(),
+    "content",
+    "papers",
+    "cache",
+    `${slug}.json`
+  );
   return JSON.parse(fs.readFileSync(filepath, "utf-8"));
 }
 
 export async function getAllPapers(): Promise<Publication[]> {
-  const paths = await globby(["papers/cache/*.json"]);
+  const paths = await globby(["content/papers/cache/*.json"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
   const papers = files.map((slug) => getPaperBySlug(slug));
   return papers.sort((a, b) => {
