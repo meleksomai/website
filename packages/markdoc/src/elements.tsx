@@ -6,6 +6,7 @@ import {
   Link,
   List,
   Paragraph,
+  Blockquote,
 } from "./components";
 
 export const components = {
@@ -16,4 +17,5 @@ export const components = {
   List,
   Paragraph,
   Callout,
+  Blockquote,
 };
