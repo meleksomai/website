@@ -29,7 +29,7 @@ export type Post = {
 };
 
 export function getPostBySlug(slug: string): Post {
-  const postsDirectory = path.join(process.cwd(), "posts");
+  const postsDirectory = path.join(process.cwd(), "content", "posts");
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -62,7 +62,7 @@ export function getPostBySlug(slug: string): Post {
 }
 
 export async function getAllPosts(): Promise<Post[]> {
-  const paths = await globby(["posts/*.md"]);
+  const paths = await globby(["content/posts/*.md"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
   const papers = files.map((slug) => getPostBySlug(slug));
   return papers.sort((a, b) => {
