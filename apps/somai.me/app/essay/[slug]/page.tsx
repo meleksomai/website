@@ -2,10 +2,11 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Avatar, Flex, Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Section } from "@thugga/ui";
 
-import DetailsSection from "./details";
-import Title from "./title";
+import DetailsSection from "./section.details";
+import Title from "./section.title";
+import Excerpt from "./section.excerpt";
 
 import { getAllPosts, getPostBySlug } from "../../../lib/essays";
 
@@ -21,13 +22,8 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       <Title post={post} />
       {/* @ts-expect-error Server Component */}
       <DetailsSection post={post} />
-      {post.meta.excerpt && (
-        <Section>
-          <Paragraph mono variant="light">
-            {post.meta.excerpt}
-          </Paragraph>
-        </Section>
-      )}
+      {/* @ts-expect-error Server Component */}
+      <Excerpt post={post} />
       <Section>{rendered}</Section>
     </>
   );

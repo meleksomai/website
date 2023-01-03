@@ -2,27 +2,27 @@
 import { NextSeo, NextSeoProps } from "next-seo";
 
 import { NEXT_SEO_DEFAULT } from "../../../next-seo.config";
-import { getPostBySlug } from "../../../lib/essays";
+import { getPaperBySlug } from "../../../lib/papers";
 
 export default function Head({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params?.slug as string);
+  const paper = getPaperBySlug(params?.slug as string);
 
   const updateMeta: NextSeoProps = {
     ...NEXT_SEO_DEFAULT,
-    title: post.meta.title,
-    description: post.meta.excerpt,
+    title: paper.citation.title,
+    description: paper.meta.excerpt,
     openGraph: {
       type: "website",
       locale: "en_US",
       url: "https://www.somai.me/",
-      title: `${post.meta.title} - by Melek Somai`,
-      description: post.meta.subtitle,
+      title: paper.citation.title,
+      description: paper.citation.subtitle,
       images: [
         {
-          url: `https://somai.me/api/og?title=${post.meta.title}.`,
+          url: `https://me-git-feat-og-melek.vercel.app/api/og?title=${paper.citation.title}.`,
           width: 800,
           height: 600,
-          alt: `Melek Somai essay: ${post.meta.title}`,
+          alt: `Melek Somai essay: ${paper.citation.title}`,
           type: "image/jpeg",
         },
       ],
