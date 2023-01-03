@@ -9,11 +9,11 @@ export default async function HeroSection({
 }: PropsWithChildren<undefined>) {
   return (
     <Section size="2">
-      <Heading as="p" size={TEXT_SIZE}>
+      <Heading as="h1" size={TEXT_SIZE} inline>
         Melek Somai.{" "}
-        <Heading inline as="span" size={TEXT_SIZE} css={{ color: "$slate10" }}>
-          {children}
-        </Heading>
+      </Heading>
+      <Heading inline as="h2" size={TEXT_SIZE} css={{ color: "$slate10" }}>
+        {children}
       </Heading>
     </Section>
   );

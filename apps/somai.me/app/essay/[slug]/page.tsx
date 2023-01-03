@@ -9,7 +9,7 @@ import Title from "./title";
 
 import { getAllPosts, getPostBySlug } from "../../../lib/essays";
 
-export default function EssayPage({ params }: any) {
+export default function EssayPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params?.slug as string);
   const ast = Markdoc.parse(post.content);
   const content = Markdoc.transform(ast, config);

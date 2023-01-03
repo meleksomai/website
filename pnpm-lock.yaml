@@ -31,9 +31,8 @@ importers:
       isomorphic-unfetch: ^3.1.0
       next: 13.1.0
       next-auth: ^4.18.5
-      next-seo: ^5.5.0
+      next-seo: 5.15.0
       next-themes: npm:@wits/next-themes@^0.2.14
-      next-transpile-modules: 10.0.0
       nextjs-google-analytics: ^2.0.0
       react: 18.2.0
       react-dom: 18.2.0
@@ -52,7 +51,7 @@ importers:
       isomorphic-unfetch: 3.1.0
       next: 13.1.0_qugu52izettqdqqm5qcjcltcia
       next-auth: 4.18.5_s75y6mxmikaw2mhqmuko6w7njm
-      next-seo: 5.5.0_s75y6mxmikaw2mhqmuko6w7njm
+      next-seo: 5.15.0_s75y6mxmikaw2mhqmuko6w7njm
       next-themes: /@wits/next-themes/0.2.14_s75y6mxmikaw2mhqmuko6w7njm
       nextjs-google-analytics: 2.0.0_next@13.1.0+react@18.2.0
       react: 18.2.0
@@ -65,7 +64,6 @@ importers:
       '@types/react': 17.0.47
       eslint: 7.32.0
       eslint-config-thugga: link:../../packages/eslint-config
-      next-transpile-modules: 10.0.0
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.4
 
@@ -87,7 +85,7 @@ importers:
       gray-matter: ^4.0.3
       isomorphic-unfetch: ^3.1.0
       next: 13.1.0
-      next-seo: ^5.5.0
+      next-seo: 5.15.0
       next-themes: npm:@wits/next-themes@^0.2.14
       nextjs-google-analytics: ^2.0.0
       react: 18.2.0
@@ -108,7 +106,7 @@ importers:
       gray-matter: 4.0.3
       isomorphic-unfetch: 3.1.0
       next: 13.1.0_qugu52izettqdqqm5qcjcltcia
-      next-seo: 5.5.0_s75y6mxmikaw2mhqmuko6w7njm
+      next-seo: 5.15.0_s75y6mxmikaw2mhqmuko6w7njm
       next-themes: /@wits/next-themes/0.2.14_s75y6mxmikaw2mhqmuko6w7njm
       nextjs-google-analytics: 2.0.0_next@13.1.0+react@18.2.0
       react: 18.2.0
@@ -2026,14 +2024,6 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: false
 
-  /enhanced-resolve/5.10.0:
-    resolution: {integrity: sha512-T0yTFjdpldGY8PmuXXR0PyQ1ufZpEGiHVrp7zHKB7jdR4qlmZHhONVM5AQOAWXuF/w3dnHbEQVrNptJgt7F+cQ==}
-    engines: {node: '>=10.13.0'}
-    dependencies:
-      graceful-fs: 4.2.10
-      tapable: 2.2.1
-    dev: true
-
   /enquirer/2.3.6:
     resolution: {integrity: sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==}
     engines: {node: '>=8.6'}
@@ -3797,8 +3787,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-seo/5.5.0_s75y6mxmikaw2mhqmuko6w7njm:
-    resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
+  /next-seo/5.15.0_s75y6mxmikaw2mhqmuko6w7njm:
+    resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
@@ -3808,13 +3798,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
-
-  /next-transpile-modules/10.0.0:
-    resolution: {integrity: sha512-FyeJ++Lm2Fq31gbThiRCrJlYpIY9QaI7A3TjuhQLzOix8ChQrvn5ny4MhfIthS5cy6+uK1AhDRvxVdW17y3Xdw==}
-    deprecated: All features of next-transpile-modules are now natively built-in Next.js 13.1. Please use Next's transpilePackages option :)
-    dependencies:
-      enhanced-resolve: 5.10.0
-    dev: true
 
   /next/13.1.0_qugu52izettqdqqm5qcjcltcia:
     resolution: {integrity: sha512-lQMZH1V94L5IL/WaihQkTYabSY73aqgrkGPJB5uz+2O3ES4I3losV/maXLY7l7x5e+oNyE9N81upNQ8uRsR5/A==}
@@ -4615,11 +4598,6 @@ packages:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-
-  /tapable/2.2.1:
-    resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
-    engines: {node: '>=6'}
-    dev: true
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
