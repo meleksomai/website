@@ -45,6 +45,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
         {/* 
+          This is for the Favicon configuration.
+        */}
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        {/* 
           Anything we add in layout will appear on EVERY PAGE. At present it can not be overridden lower down the tree.
           This can be useful for things like favicons, or other meta tags that are the same on every page.
         */}
