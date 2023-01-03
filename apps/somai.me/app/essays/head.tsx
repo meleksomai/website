@@ -18,7 +18,7 @@ export default function Head() {
         "A space to share thoughts and ideas that are often reflections on mycurrent research.",
       images: [
         {
-          url: "https://me-git-feat-og-melek.vercel.app/api/og?title=A space to share thoughts and ideas that are often reflections on mycurrent research.",
+          url: "https://somai.me/api/og?title=A space to share thoughts and ideas that are often reflections on mycurrent research.",
           width: 800,
           height: 600,
           alt: "Melek Somai Essays",

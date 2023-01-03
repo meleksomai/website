@@ -18,7 +18,7 @@ export default function Head() {
         "Born in Tunis. Studied in Boston. Worked in London and Wisconsin.",
       images: [
         {
-          url: "https://me-git-feat-og-melek.vercel.app/api/og?title=Born in Tunis. Studied in Boston. Worked in London and Wisconsin.",
+          url: "https://somai.me/api/og?title=Born in Tunis. Studied in Boston. Worked in London and Wisconsin.",
           width: 800,
           height: 600,
           alt: "Melek Somai About Page",

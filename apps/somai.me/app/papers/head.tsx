@@ -18,7 +18,7 @@ export default function Head() {
         "Research in areas ranging from Clinical Computing, Patient Remote Monitoring, Neuro-Epidemiology, to Blockchain.",
       images: [
         {
-          url: "https://me-git-feat-og-melek.vercel.app/api/og?title=Research in areas ranging from Clinical Computing, Patient Remote Monitoring, Neuro-Epidemiology, to Blockchain.",
+          url: "https://somai.me/api/og?title=Research in areas ranging from Clinical Computing, Patient Remote Monitoring, Neuro-Epidemiology, to Blockchain.",
           width: 800,
           height: 600,
           alt: "Melek Somai Academic Publications",

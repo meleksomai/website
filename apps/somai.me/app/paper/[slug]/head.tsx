@@ -19,7 +19,7 @@ export default function Head({ params }: { params: { slug: string } }) {
       description: paper.citation.subtitle,
       images: [
         {
-          url: `https://me-git-feat-og-melek.vercel.app/api/og?title=${paper.citation.title}.`,
+          url: `https://somai.me/api/og?title=${paper.citation.title}.`,
           width: 800,
           height: 600,
           alt: `Melek Somai essay: ${paper.citation.title}`,
