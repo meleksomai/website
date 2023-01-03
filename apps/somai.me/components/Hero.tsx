@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import { Heading, Avatar, Section, Box, Flex } from "@thugga/ui";
+import { Heading, Section } from "@thugga/ui";
 
 const TEXT_SIZE = "3";
 

@@ -19,7 +19,7 @@ export default async function EssaysSection() {
       {recentPosts && recentPosts.length > 0 && (
         <Section size="2">
           <Heading as="h3" size="2" css={{ pb: "$5" }}>
-            Recent Posts
+            Recent Essays
           </Heading>
           <Box>
             <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
