@@ -14,11 +14,11 @@ export default async function Title(props: PropsWithChildren<TitleProps>) {
   const { paper } = props;
   return (
     <Section size="2">
-      <Heading as="p" size={TEXT_SIZE}>
+      <Heading as="h1" size={TEXT_SIZE} inline>
         {paper.citation.title}.{" "}
-        <Heading inline as="span" size={TEXT_SIZE} css={{ color: "$slate10" }}>
-          {paper.citation.subtitle}
-        </Heading>
+      </Heading>
+      <Heading inline as="h2" size={TEXT_SIZE} css={{ color: "$slate10" }}>
+        {paper.citation.subtitle}
       </Heading>
     </Section>
   );

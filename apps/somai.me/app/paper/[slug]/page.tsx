@@ -24,7 +24,7 @@ function Author({ author }: any) {
   );
 }
 
-export default function PaperPage({ params }: any) {
+export default function PaperPage({ params }: { params: { slug: string } }) {
   const publication = getPaperBySlug(params?.slug as string);
   const ast = Markdoc.parse(publication.content);
   const content = Markdoc.transform(ast, config);
