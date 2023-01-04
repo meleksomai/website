@@ -40,7 +40,7 @@ export default function UpcomingAnnouncement() {
       <Section>
         <Box>
           <Heading inline size="1" as="p" bold>
-            🍕 Dinner.{" "}
+            🍽️ Dinner.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
             6:30pm
