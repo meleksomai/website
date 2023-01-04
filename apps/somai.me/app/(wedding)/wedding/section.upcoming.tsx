@@ -9,7 +9,7 @@ export default function UpcomingAnnouncement() {
       <Section>
         <Box>
           <Heading inline size="1" as="p" bold>
-            Engagement Ceremony.{" "}
+            🎊 Engagement Ceremony.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
             5:30pm
@@ -26,7 +26,7 @@ export default function UpcomingAnnouncement() {
       <Section>
         <Box>
           <Heading inline size="1" as="p" bold>
-            Break.{" "}
+            🥂 Break.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
             6:15pm
@@ -40,19 +40,22 @@ export default function UpcomingAnnouncement() {
       <Section>
         <Box>
           <Heading inline size="1" as="p" bold>
-            Dinner.{" "}
+            🍕 Dinner.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
             6:30pm
           </Heading>
         </Box>
         <Box>
-          <Paragraph variant="light">Note: if you have any dietary restrictions, please contact Melek Somai asap.</Paragraph>
+          <Paragraph variant="light">
+            Note: if you have any dietary restrictions, please contact Melek
+            Somai asap.
+          </Paragraph>
           <Paragraph>Appetizers - Traditional Hors d'Oeuvres</Paragraph>
           <Paragraph>Entrée - Fish</Paragraph>
           <Paragraph>Break - Sorbet</Paragraph>
           <Paragraph>Entrée - Veal</Paragraph>
-          <Paragraph>Desert</Paragraph>
+          <Paragraph>Dessert</Paragraph>
         </Box>
       </Section>
     </>
