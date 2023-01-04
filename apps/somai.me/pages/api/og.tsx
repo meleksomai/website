@@ -9,6 +9,12 @@ export default function handler(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
 
+    // ?header=<title>
+    const hasHeader = searchParams.has("header");
+    const header = hasHeader
+      ? searchParams.get("header")?.slice(0, 255)
+      : "Melek Somai.";
+
     // ?title=<title>
     const hasTitle = searchParams.has("title");
     const title = hasTitle
@@ -85,7 +91,7 @@ export default function handler(req: NextRequest) {
                 justifyContent: "flex-start",
               }}
             >
-              Melek Somai.
+              {header}
             </span>
             <span
               style={{
