@@ -1,4 +1,4 @@
-import { Inter, IBM_Plex_Mono } from "@next/font/google";
+import { Cinzel, Great_Vibes } from "@next/font/google";
 import React from "react";
 import { NextSeo } from "next-seo";
 
@@ -8,12 +8,13 @@ import { ThemeProvider } from "./theme.provider";
 
 import globalStyles, { darkTheme, getCssText } from "../../styles/globalStyles";
 import NavBar from "./navbar";
+import Footer from "./footer";
 
 // https://github.com/modulz/stitches/issues/995
 globalStyles();
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const ibmPlex = IBM_Plex_Mono({
+const inter = Cinzel({ weight: "500", subsets: ["latin"], variable: "--font-inter" });
+const ibmPlex = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-mono",
@@ -80,6 +81,7 @@ export default function RootLayout({
           <Layout css={{ padding: "$4" }}>
             <NavBar />
             {children}
+            <Footer />
           </Layout>
         </ThemeProvider>
       </body>

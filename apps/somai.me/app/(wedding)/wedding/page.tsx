@@ -6,7 +6,8 @@ import profileImage from "./image.png";
 import { Section, Heading, Box } from "@thugga/ui";
 
 import HeroSection from "./section.hero";
-import UpcomingAnnouncement from "./section.upcoming";
+import Schedule from "./section.schedule";
+import FAQs from "./section.faq";
 
 const ENGAGEMENT_DATE = "07 Jan 2023 17:30:00 GMT+1";
 
@@ -31,7 +32,8 @@ export default function PaperPage() {
       </Section>
       {/* @ts-expect-error Server Component */}
       <HeroSection />
-      <Section>{isUpcoming && <UpcomingAnnouncement />}</Section>
+      <Schedule />
+      <FAQs />
     </>
   );
 }

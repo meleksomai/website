@@ -2,13 +2,13 @@ import { Heading, Box, Section, Paragraph } from "@thugga/ui";
 
 export default function UpcomingAnnouncement() {
   return (
-    <>
+    <Section>
       <Section>
         <Heading size="2">Schedule</Heading>
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p">
+          <Heading inline size="1" as="p" bold>
             🎊 Engagement Ceremony.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
@@ -25,7 +25,7 @@ export default function UpcomingAnnouncement() {
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p">
+          <Heading inline size="1" as="p" bold>
             🥂 Break.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
@@ -39,7 +39,7 @@ export default function UpcomingAnnouncement() {
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p">
+          <Heading inline size="1" as="p" bold>
             🍽️ Dinner.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
@@ -58,6 +58,6 @@ export default function UpcomingAnnouncement() {
           <Paragraph>Dessert</Paragraph>
         </Box>
       </Section>
-    </>
+    </Section>
   );
 }

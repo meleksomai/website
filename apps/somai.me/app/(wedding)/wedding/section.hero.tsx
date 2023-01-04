@@ -4,7 +4,6 @@ import { Heading, Section, Box } from "@thugga/ui";
 import CountdownTimer from "./countdown";
 
 const ENGAGEMENT_DATE = "07 Jan 2023 17:00:00 GMT+1";
-const TEXT_SIZE = "3";
 
 export default async function HeroSection({
   children,
@@ -12,11 +11,11 @@ export default async function HeroSection({
   return (
     <>
       <Section size="2">
-        <Heading as="h1" size={TEXT_SIZE}>
+        <Heading as="h1" size="3">
           Melek Somai. Imen Ben Abid.{" "}
         </Heading>
         <Box>
-          <Heading as="h2" size={TEXT_SIZE} css={{ color: "$slate10" }}>
+          <Heading as="h2" size="3" css={{ color: "$slate10" }} mono>
             Engagement Dinner.
           </Heading>
         </Box>
