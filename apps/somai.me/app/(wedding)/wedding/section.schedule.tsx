@@ -52,9 +52,9 @@ export default function UpcomingAnnouncement() {
             Somai asap.
           </Paragraph>
           <Paragraph>Appetizers - Traditional Hors d'Oeuvres</Paragraph>
-          <Paragraph>Entrée - Fish</Paragraph>
-          <Paragraph>Break - Sorbet</Paragraph>
-          <Paragraph>Entrée - Veal</Paragraph>
+          <Paragraph>Entrée - Loup farci en feuilleté</Paragraph>
+          <Paragraph>Break - Sorbet au citron</Paragraph>
+          <Paragraph>Entrée - Aknaf</Paragraph>
           <Paragraph>Dessert</Paragraph>
         </Box>
       </Section>
