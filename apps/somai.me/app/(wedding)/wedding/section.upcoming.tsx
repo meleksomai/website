@@ -8,7 +8,7 @@ export default function UpcomingAnnouncement() {
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p" bold>
+          <Heading inline size="1" as="p">
             🎊 Engagement Ceremony.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
@@ -25,7 +25,7 @@ export default function UpcomingAnnouncement() {
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p" bold>
+          <Heading inline size="1" as="p">
             🥂 Break.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
@@ -39,7 +39,7 @@ export default function UpcomingAnnouncement() {
       </Section>
       <Section>
         <Box>
-          <Heading inline size="1" as="p" bold>
+          <Heading inline size="1" as="p">
             🍽️ Dinner.{" "}
           </Heading>
           <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
