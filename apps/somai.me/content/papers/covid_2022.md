@@ -1,5 +1,6 @@
 ---
 doi: 10.1001/jamanetworkopen.2022.21050
+popular: true
 authors:
   - melek-somai
   - brad-crotty

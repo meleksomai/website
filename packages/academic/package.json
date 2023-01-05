@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "node ./dist/index.js",
-    "build": "npx tsc",
+    "cache": "npx tsx ./src/index.ts",
     "lint": "eslint ./src/*.ts*",
     "lint:fix": "eslint ./src/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules"
