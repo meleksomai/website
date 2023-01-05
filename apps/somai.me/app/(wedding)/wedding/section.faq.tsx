@@ -13,9 +13,9 @@ export default function FAQs() {
           </Heading>
           <Box>
             <Paragraph>
-              It is recommended to park on the Place de la République. There is
-              an underground garage which we do not recommend unless you are
-              used to park there.
+              It is recommended to park on Avenue Bab Bnet close to the Place de
+              la République. There is an underground garage which we do not
+              recommend unless you are used to park there.
             </Paragraph>
           </Box>
         </Box>
@@ -27,7 +27,8 @@ export default function FAQs() {
           </Heading>
           <Box>
             <Paragraph>
-              Dress code is formal attire. You are also welcome to wear traditional dress.
+              Dress code is formal attire. You are also welcome to wear
+              traditional dress.
             </Paragraph>
           </Box>
         </Box>
@@ -39,7 +40,8 @@ export default function FAQs() {
           </Heading>
           <Box>
             <Paragraph>
-              There is no help desk; but you should definitely call Melek or Imen.
+              There is no help desk; but you should definitely call Melek or
+              Imen.
             </Paragraph>
           </Box>
         </Box>
