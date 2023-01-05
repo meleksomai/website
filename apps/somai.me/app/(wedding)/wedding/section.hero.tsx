@@ -22,7 +22,7 @@ export default async function HeroSection({
       </Section>
       <Section size="2">
         <Heading inline size="2" as="p">
-          Dar El Jeld.{"  "}
+          Hotel Dar El Jeld.{"  "}
         </Heading>
         <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
           5-10 Rue Dar El Jeld Street 1005. Tunis. Tunisia.
