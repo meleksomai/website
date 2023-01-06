@@ -20,6 +20,8 @@ importers:
       '@markdoc/markdoc': ^0.1.2
       '@next/font': 13.1.0
       '@radix-ui/react-icons': ^1.1.1
+      '@splinetool/react-spline': ^2.2.5
+      '@splinetool/runtime': ^0.9.175
       '@thugga/markdoc': workspace:*
       '@thugga/ui': workspace:*
       '@types/node': ^17.0.12
@@ -34,6 +36,7 @@ importers:
       next-seo: 5.15.0
       next-themes: npm:@wits/next-themes@^0.2.14
       nextjs-google-analytics: ^2.0.0
+      postgres: ^3.3.3
       react: 18.2.0
       react-dom: 18.2.0
       reading-time: ^1.5.0
@@ -44,6 +47,8 @@ importers:
       '@markdoc/markdoc': 0.1.4
       '@next/font': 13.1.0
       '@radix-ui/react-icons': 1.1.1_react@18.2.0
+      '@splinetool/react-spline': 2.2.5_5cxo7d3zhziayhpgt7ylsa6bl4
+      '@splinetool/runtime': 0.9.175
       '@thugga/markdoc': link:../../packages/markdoc
       '@thugga/ui': link:../../packages/ui
       globby: 13.1.2
@@ -54,6 +59,7 @@ importers:
       next-seo: 5.15.0_s75y6mxmikaw2mhqmuko6w7njm
       next-themes: /@wits/next-themes/0.2.14_s75y6mxmikaw2mhqmuko6w7njm
       nextjs-google-analytics: 2.0.0_next@13.1.0+react@18.2.0
+      postgres: 3.3.3
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       reading-time: 1.5.0
@@ -1150,6 +1156,25 @@ packages:
     dependencies:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
+    dev: false
+
+  /@splinetool/react-spline/2.2.5_5cxo7d3zhziayhpgt7ylsa6bl4:
+    resolution: {integrity: sha512-eAD6+GteOT9S7Z3OdsT/6o6WNYk5NLx48zmHXathdNVdfW/P3npTxEGzEhiM+aMsf2+HbRZx0pX0WHt59HDjlg==}
+    peerDependencies:
+      '@splinetool/runtime': '*'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@splinetool/runtime': 0.9.175
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-merge-refs: 1.1.0
+    dev: false
+
+  /@splinetool/runtime/0.9.175:
+    resolution: {integrity: sha512-bXSVP1NLtvGC0G3/sXnykvMoNqD/AoJ25IsUg9dNU7q7kiAf9ns01aE39kcZCnEK5qzxtcTdGT7nBh4EHQDrEQ==}
+    dependencies:
+      on-change: 4.0.2
     dev: false
 
   /@stitches/react/1.2.8_react@18.2.0:
@@ -3944,6 +3969,11 @@ packages:
     engines: {node: ^10.13.0 || >=12.0.0}
     dev: false
 
+  /on-change/4.0.2:
+    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -4084,6 +4114,10 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
+  /postgres/3.3.3:
+    resolution: {integrity: sha512-FGLZOpZSXePRIQu6LJpJUDikzuhplWI80uyyfmKBiljpfO+Z4nuClwpq3/dsRnitxVDsgFN5duJ7eUTaC0meQQ==}
+    dev: false
+
   /preact-render-to-string/5.2.6_preact@10.11.3:
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
@@ -4155,6 +4189,10 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-merge-refs/1.1.0:
+    resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
     dev: false
 
   /react-remove-scroll-bar/2.3.3_issp6eja53bx2taimj6tb2noxy:
