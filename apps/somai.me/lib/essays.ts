@@ -16,8 +16,8 @@ export type Post = {
   meta: {
     [key: string]: any;
     excerpt: string;
-    image: string;
     featured: boolean;
+    image: string;
     publishedAt: {
       iso: string;
       relative: string;
