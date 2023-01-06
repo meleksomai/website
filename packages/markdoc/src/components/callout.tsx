@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Banner, Box, Heading } from "@thugga/ui";
+import { Banner, Box, Heading, Text } from "@thugga/ui";
 
 export interface CalloutProps {
   title: string;
@@ -8,7 +8,7 @@ export interface CalloutProps {
 }
 
 function Callout({ title, type, children }: any) {
-  let variant;
+  let variant = "gray";
   switch (type) {
     case "note":
       variant = "blue";
@@ -31,11 +31,13 @@ function Callout({ title, type, children }: any) {
     <Banner variant={variant as any} rounded css={{ my: "$2" }}>
       <Box css={{ py: "$2" }}>
         {title && (
-          <Heading as="h4" size="1">
+          <Heading as="p" size="1" variant={variant as any}>
             {title}
           </Heading>
         )}
-        {children}
+        <Text as="span" variant={variant as any}>
+          {children}
+        </Text>
       </Box>
     </Banner>
   );

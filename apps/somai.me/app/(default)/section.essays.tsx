@@ -12,14 +12,14 @@ import { NextLink } from "../../components";
 import { getAllPosts } from "../../lib/essays";
 
 export default async function EssaysSection() {
-  const recentPosts = await getAllPosts();
+  const recentPosts = await (await getAllPosts()).filter((a)=> a.meta.featured);
 
   return (
     <>
       {recentPosts && recentPosts.length > 0 && (
         <Section size="2">
           <Heading as="h3" size="2" css={{ pb: "$5" }}>
-            Recent Essays
+            Essays.
           </Heading>
           <Box>
             <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>

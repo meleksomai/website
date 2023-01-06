@@ -17,6 +17,7 @@ export type Post = {
     [key: string]: any;
     excerpt: string;
     image: string;
+    featured: boolean;
     publishedAt: {
       iso: string;
       relative: string;

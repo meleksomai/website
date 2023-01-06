@@ -27,6 +27,10 @@ export const {
       ...colors.whiteA,
       ...colors.blue,
       ...colors.blueA,
+      ...colors.green,
+      ...colors.greenA,
+      ...colors.yellow,
+      ...colors.yellowA,
       ...colors.slate,
       ...colors.slateA,
 
@@ -183,6 +187,10 @@ export const darkTheme = createTheme("dark-theme", {
     ...colors.orangeDarkA,
     ...colors.blueDark,
     ...colors.blueDarkA,
+    ...colors.greenDark,
+    ...colors.greenDarkA,
+    ...colors.yellowDark,
+    ...colors.yellowDarkA,
     ...colors.slateDark,
     ...colors.slateDarkA,
 

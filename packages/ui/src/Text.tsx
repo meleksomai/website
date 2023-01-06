@@ -83,24 +83,24 @@ export const Text = styled("span", {
       // indigo: {
       //   color: "$indigo11",
       // },
-      // blue: {
-      //   color: "$blue11",
-      // },
+      blue: {
+        color: "$blue11",
+      },
       // cyan: {
       //   color: "$cyan11",
       // },
       // teal: {
       //   color: "$teal11",
       // },
-      // green: {
-      //   color: "$green11",
-      // },
+      green: {
+        color: "$green11",
+      },
       // lime: {
       //   color: "$lime11",
       // },
-      // yellow: {
-      //   color: "$yellow11",
-      // },
+      yellow: {
+        color: "$yellow11",
+      },
       orange: {
         color: "$orange11",
       },
@@ -110,9 +110,9 @@ export const Text = styled("span", {
       // bronze: {
       //   color: "$bronze11",
       // },
-      // gray: {
-      //   color: "$slate11",
-      // },
+      gray: {
+        color: "$slate11",
+      },
       contrast: {
         color: "$hiContrast",
       },
@@ -120,6 +120,5 @@ export const Text = styled("span", {
   },
   defaultVariants: {
     size: "3",
-    variant: "contrast",
   },
 });

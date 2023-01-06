@@ -11,7 +11,7 @@ export default async function PapersSection() {
       {recentPublications && recentPublications.length > 0 && (
         <Section size="2">
           <Heading as="h3" size="2" css={{ pb: "$5" }}>
-            Recent Publications
+            Publications.
           </Heading>
           <Box>
             <Grid gap="5" columns="1">

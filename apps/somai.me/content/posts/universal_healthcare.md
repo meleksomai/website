@@ -1,7 +1,7 @@
 ---
 title: A Case for Universal Healthcare in Tunisia
 subtitle: The path towards achieving Universal Healthcare Coverage in Tunisia
-featured: true
+featured: false
 image: /images/posts/universal_healthcare/hero.png
 authors:
   - melek-somai
