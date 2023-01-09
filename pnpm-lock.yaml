@@ -122,6 +122,61 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.4
 
+  apps/wedding:
+    specifiers:
+      '@babel/core': ^7.0.0
+      '@markdoc/markdoc': ^0.1.2
+      '@next/font': 13.1.0
+      '@radix-ui/react-icons': ^1.1.1
+      '@thugga/markdoc': workspace:*
+      '@thugga/ui': workspace:*
+      '@types/node': ^17.0.12
+      '@types/react': 17.0.47
+      '@vercel/og': ^0.0.21
+      dayjs: ^1.11.4
+      eslint: 7.32.0
+      eslint-config-thugga: workspace:*
+      globby: ^13.1.2
+      gray-matter: ^4.0.3
+      isomorphic-unfetch: ^3.1.0
+      next: 13.1.0
+      next-seo: 5.15.0
+      next-themes: npm:@wits/next-themes@^0.2.14
+      nextjs-google-analytics: ^2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0
+      reading-time: ^1.5.0
+      swr: ^1.3.0
+      tsconfig: workspace:*
+      typescript: ^4.5.3
+    dependencies:
+      '@markdoc/markdoc': 0.1.4
+      '@next/font': 13.1.0
+      '@radix-ui/react-icons': 1.1.1_react@18.2.0
+      '@thugga/markdoc': link:../../packages/markdoc
+      '@thugga/ui': link:../../packages/ui
+      '@vercel/og': 0.0.21
+      dayjs: 1.11.4
+      globby: 13.1.2
+      gray-matter: 4.0.3
+      isomorphic-unfetch: 3.1.0
+      next: 13.1.0_qugu52izettqdqqm5qcjcltcia
+      next-seo: 5.15.0_s75y6mxmikaw2mhqmuko6w7njm
+      next-themes: /@wits/next-themes/0.2.14_s75y6mxmikaw2mhqmuko6w7njm
+      nextjs-google-analytics: 2.0.0_next@13.1.0+react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      reading-time: 1.5.0
+      swr: 1.3.0_react@18.2.0
+    devDependencies:
+      '@babel/core': 7.18.9
+      '@types/node': 17.0.45
+      '@types/react': 17.0.47
+      eslint: 7.32.0
+      eslint-config-thugga: link:../../packages/eslint-config
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.7.4
+
   packages/academic:
     specifiers:
       '@citation-js/date': ^0.5.1
