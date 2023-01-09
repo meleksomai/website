@@ -8,7 +8,6 @@ export default function Head() {
     <>
       <title>Melek Somai | Personal Website</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/favicon.ico" />
       <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
     </>
   );
