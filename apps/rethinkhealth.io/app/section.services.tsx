@@ -4,7 +4,7 @@ export default function ServicesSection() {
   return (
     <Section size="2">
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
-        <Heading as="p" size="1">
+        <Heading as="h2" size="1">
           Leveraging clinical engineering, product design, and data science, we
           help healthcare organizations improve patient care, reduce costs, and
           increase efficiency. With our expertise and innovative approach, we
@@ -13,7 +13,7 @@ export default function ServicesSection() {
       </Grid>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
         <Box css={{ py: "$3" }}>
-          <Heading as="p" size="3" mono>
+          <Heading as="h2" size="3" mono>
             Engineering
           </Heading>
           <Paragraph>
@@ -27,7 +27,7 @@ export default function ServicesSection() {
       </Grid>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
         <Box css={{ py: "$3" }}>
-          <Heading as="p" size="3" mono>
+          <Heading as="h2" size="3" mono>
             Product Design
           </Heading>
           <Paragraph>
@@ -40,7 +40,7 @@ export default function ServicesSection() {
       </Grid>
       <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
         <Box css={{ py: "$3" }}>
-          <Heading as="p" size="3" mono>
+          <Heading as="h2" size="3" mono>
             Data Science
           </Heading>
           <Paragraph>

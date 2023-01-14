@@ -1,32 +1,32 @@
 {
   "name": "@thugga/markdoc",
   "version": "0.0.0",
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
   "license": "MIT",
+  "main": "./src/index.tsx",
   "scripts": {
-    "lint": "eslint ./src/*.ts*",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "eslint ./src/*.ts*"
   },
   "peerDependencies": {
-    "react-dom": "^18.2.0",
     "@markdoc/markdoc": "^0.1.2",
-    "@thugga/ui": "workspace:*"
+    "@thugga/ui": "workspace:*",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "prism-react-renderer": "1.3.3"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "18.0.9",
-    "eslint": "^7.32.0",
-    "eslint-config-thugga": "workspace:*",
+    "@markdoc/markdoc": "0.1.2",
     "@thugga/ui": "workspace:*",
+    "@types/react": "17.0.47",
+    "@types/react-dom": "18.0.9",
+    "eslint": "7.32.0",
+    "eslint-config-thugga": "0.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsconfig": "workspace:*",
-    "tsup": "^5.10.1",
-    "@markdoc/markdoc": "^0.1.2",
-    "typescript": "^4.5.2"
+    "tsup": "5.10.1",
+    "typescript": "4.7.4"
   },
-  "dependencies": {
-    "prism-react-renderer": "^1.3.3"
-  }
+  "types": "./src/index.tsx"
 }
