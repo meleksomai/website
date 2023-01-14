@@ -1,8 +1,8 @@
 {
   "dev": true,
-  "filter": "/^(?!thugga)$/",
+  "filter": ".",
   "indent": "  ",
-  "overrides": true,
+  "overrides": false,
   "peer": false,
   "prod": true,
   "resolutions": true,
@@ -18,7 +18,21 @@
     "resolutions",
     "scripts"
   ],
-  "sortFirst": ["name", "description", "version", "author"],
+  "sortFirst": [
+    "name",
+    "description",
+    "version",
+    "license",
+    "author",
+    "keywords",
+    "main",
+    "scripts",
+    "peerDependencies",
+    "dependencies",
+    "devDependencies",
+    "engines",
+    "repository"
+  ],
   "source": [],
   "versionGroups": []
 }
