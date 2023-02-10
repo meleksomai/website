@@ -2,6 +2,7 @@ import React from "react";
 
 import { Flex } from "@thugga/ui";
 
+import { NextLink } from "../components";
 import { Logo } from "../components/Logo";
 import { ThemeToggle } from "../components/ThemeToggle";
 
@@ -14,14 +15,17 @@ export default async function NavBar() {
         <Logo width="200px" height="100%" />
       </Flex>
       <Flex align="center" gap="4">
-        {/* <NextLink variant="simple" href="/">
+        <NextLink variant="simple" href="/">
           Home
-        </NextLink> */}
+        </NextLink>
+        <NextLink variant="simple" href="/services">
+          Services
+        </NextLink>
 
         {/* {session?.user && <GoToDashboard />}
         {!session?.user && <SignIn />} */}
 
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </Flex>
     </Flex>
   );
