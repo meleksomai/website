@@ -3,8 +3,9 @@ import React from "react";
 import { styled } from "./stitches.config";
 import { Text } from "./Text";
 
-export const Link = styled("a", {
+export const LinkStyle = {
   alignItems: "center",
+  display: "inline",
   gap: "$1",
   flexShrink: 0,
   outline: "none",
@@ -16,12 +17,13 @@ export const Link = styled("a", {
   "@hover": {
     "&:hover": {
       textDecorationLine: "underline",
+      cursor: "pointer",
     },
   },
   "&:focus": {
-    outlineWidth: "2px",
-    outlineStyle: "solid",
-    outlineOffset: "2px",
+    // outlineWidth: "2px",
+    // outlineStyle: "solid",
+    // outlineOffset: "2px",
     textDecorationLine: "none",
   },
   [`& ${Text}`]: {
@@ -36,11 +38,11 @@ export const Link = styled("a", {
     size: {
       small: {
         fontSize: "$2",
-        height: "$4",
+        height: "$3",
       },
       medium: {
         fontSize: "$3",
-        height: "$7",
+        height: "$4",
       },
       large: {
         fontSize: "$6",
@@ -50,7 +52,14 @@ export const Link = styled("a", {
     variant: {
       blue: {
         color: "$blue11",
-        textDecorationColor: "$blue4",
+        textDecoration: "none",
+        "@hover": {
+          "&:hover": {
+            textDecoration: "underline",
+            color: "$blue11",
+            textDecorationColor: "$blue11",
+          },
+        },
         "&:focus": {
           outlineColor: "$blue8",
         },
@@ -104,4 +113,6 @@ export const Link = styled("a", {
   defaultVariants: {
     variant: "contrast",
   },
-});
+};
+
+export const Link = styled("p", LinkStyle);
