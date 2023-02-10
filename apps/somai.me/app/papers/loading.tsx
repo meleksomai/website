@@ -1,6 +1,6 @@
-import { Text } from "@thugga/ui";
+import Skeleton from "./skeleton";
 
 export default function Loading() {
   // You can add any UI inside Loading, including a Skeleton.
-  return <Text>Loading...</Text>;
+  return <Skeleton />;
 }
