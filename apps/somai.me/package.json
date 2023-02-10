@@ -24,6 +24,7 @@
     "next-themes": "npm:@wits/next-themes@^0.2.14",
     "nextjs-google-analytics": "2.0.0",
     "react": "18.2.0",
+    "react-content-loader": "^6.2.0",
     "react-dom": "18.2.0",
     "reading-time": "1.5.0",
     "swr": "1.3.0"
