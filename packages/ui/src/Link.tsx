@@ -21,9 +21,9 @@ export const LinkStyle = {
     },
   },
   "&:focus": {
-    outlineWidth: "2px",
-    outlineStyle: "solid",
-    outlineOffset: "2px",
+    // outlineWidth: "2px",
+    // outlineStyle: "solid",
+    // outlineOffset: "2px",
     textDecorationLine: "none",
   },
   [`& ${Text}`]: {
