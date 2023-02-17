@@ -1,4 +1,4 @@
-# Turborepo starter with pnpm
+# Melek Somai personal website
 
 This is an official starter turborepo.
 
