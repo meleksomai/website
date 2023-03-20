@@ -16,7 +16,7 @@ export default function CountdownTimer({
   if (days + hours + minutes <= 0) {
     return (
       <>
-        <Heading>Thank you for attending the event</Heading>
+        <Heading serif>Thank you for attending the event</Heading>
       </>
     );
   } else {
@@ -26,6 +26,7 @@ export default function CountdownTimer({
           as="span"
           size="2"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           {days}
@@ -34,6 +35,7 @@ export default function CountdownTimer({
           as="span"
           size="1"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           days
@@ -42,6 +44,7 @@ export default function CountdownTimer({
           as="span"
           size="2"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           {hours}
@@ -50,6 +53,7 @@ export default function CountdownTimer({
           as="span"
           size="1"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           hours
@@ -58,6 +62,7 @@ export default function CountdownTimer({
           as="span"
           size="2"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           {minutes}
@@ -66,6 +71,7 @@ export default function CountdownTimer({
           as="span"
           size="1"
           inline
+          serif
           css={{ pr: "$1", color: "$slate10" }}
         >
           minutes

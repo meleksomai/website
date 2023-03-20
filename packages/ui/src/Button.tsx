@@ -16,6 +16,12 @@ export const Button = styled("button", {
   "&:hover": { cursor: "pointer" },
 
   variants: {
+    disabled: {
+      true: {
+        opacity: 0.9,
+        pointerEvents: "none",
+      },
+    },
     mono: {
       true: {
         fontFamily: "$mono",

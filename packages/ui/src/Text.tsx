@@ -14,6 +14,11 @@ export const Text = styled("span", {
         fontFamily: "$mono",
       },
     },
+    serif: {
+      true: {
+        fontFamily: "$serif",
+      },
+    },
     inline: {
       true: {
         display: "inline",

@@ -51,6 +51,7 @@ export const {
     fonts: {
       sans: "var(--font-inter)",
       mono: "var(--font-mono)",
+      serif: "var(--font-serif)",
     },
     space: {
       1: "5px",

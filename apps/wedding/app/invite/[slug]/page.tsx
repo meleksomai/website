@@ -58,15 +58,15 @@ export default async function WelcomePage({ params }: PageProps) {
     <Box>
       <HeroSection />
       <Separator size="2" />
-      <Section>
-        <Heading as="h1" size="3">
+      <Section size="3">
+        <Heading as="h1" size="3" serif>
           Dear {(invite as any)?.properties.Name.title[0].plain_text},
         </Heading>
-        <Paragraph css={{ maxWidth: "400px" }}>
+        <Paragraph css={{ maxWidth: "400px" }} serif>
           We are so excited to celebrate our wedding with you!
         </Paragraph>
         <Button variant="dark" disabled>
-          RSVP is not available yet.
+          RSVP coming soon
         </Button>
       </Section>
       <Separator size="2" />

@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react";
-
 import { Heading, Section, Box } from "@thugga/ui";
 
 import CountdownTimer from "./countdown";
@@ -10,7 +8,7 @@ export default function HeroSection() {
   return (
     <Box css={{ mb: "$8" }}>
       <Section size="2">
-        <Heading as="h1" size="3">
+        <Heading as="h1" size="3" serif>
           Melek Somai. <br /> Imen Ben Abid.
         </Heading>
         <Box>
@@ -28,7 +26,7 @@ export default function HeroSection() {
         </Heading>
       </Section> */}
       <Section size="2">
-        <Heading size="2" as="p">
+        <Heading size="2" as="p" serif>
           Saturday. 17th June 2023. 5pm.
         </Heading>
         <CountdownTimer targetDateTime={ENGAGEMENT_DATE} />
