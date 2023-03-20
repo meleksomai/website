@@ -34,9 +34,11 @@ export async function generateStaticParams() {
   //       }`
   //   )
   // );
-  return invites.results.map((invite) => {
-    return { slug: invite.id.split("-")[0] };
-  });
+  return invites.results
+    .filter((invite) => (invite as any)?.properties?.Name?.title[0]?.plain_text)
+    .map((invite) => {
+      return { slug: invite.id.split("-")[0] };
+    });
 }
 
 async function getInvite(id: string) {
