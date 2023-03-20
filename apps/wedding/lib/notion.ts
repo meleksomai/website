@@ -1,10 +1,11 @@
-import fetcher from "./fetcher";
 import type { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints";
+
+import fetcher from "./fetcher";
 
 export type Database = QueryDatabaseResponse;
 
 export const getDatabase = async (databaseId: string) => {
-  return await fetcher(
+  return (await fetcher(
     `https://api.notion.com/v1/databases/${databaseId}/query`,
     {
       method: "POST",
@@ -14,5 +15,5 @@ export const getDatabase = async (databaseId: string) => {
         "Notion-Version": "2022-02-22",
       },
     }
-  ) as Database;
+  )) as Database;
 };

@@ -26,14 +26,14 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const invites = await getDatabase(databaseId);
-  console.log(
-    invites.results.map(
-      (invite) =>
-        `${invite.id.split("-")[0]} - ${
-          (invite as any)?.properties?.Name?.title[0]?.plain_text || ''
-        }`
-    )
-  );
+  // console.log(
+  //   invites.results.map(
+  //     (invite) =>
+  //       `${invite.id.split("-")[0]} - ${
+  //         (invite as any)?.properties?.Name?.title[0]?.plain_text || ''
+  //       }`
+  //   )
+  // );
   return invites.results.map((invite) => {
     return { slug: invite.id.split("-")[0] };
   });
@@ -52,7 +52,6 @@ async function getInvite(id: string) {
 
 export default async function WelcomePage({ params }: PageProps) {
   const invite = await getInvite(params.slug);
-  console.log(invite);
   return (
     <Box>
       <HeroSection />
