@@ -2,7 +2,7 @@
 
 import { Heading } from "@thugga/ui";
 
-import { useCountdown } from "../../hooks/useCountdown";
+import { useCountdown } from "../hooks/useCountdown";
 
 export interface CountdownTimerProps {
   targetDateTime: string;
@@ -11,9 +11,9 @@ export interface CountdownTimerProps {
 export default function CountdownTimer({
   targetDateTime,
 }: CountdownTimerProps) {
-  const [days, hours, minutes, seconds] = useCountdown(targetDateTime);
+  const [days, hours, minutes] = useCountdown(targetDateTime);
 
-  if (days + hours + minutes + seconds <= 0) {
+  if (days + hours + minutes <= 0) {
     return (
       <>
         <Heading>Thank you for attending the event</Heading>
@@ -69,22 +69,6 @@ export default function CountdownTimer({
           css={{ pr: "$1", color: "$slate10" }}
         >
           minutes
-        </Heading>
-        <Heading
-          as="span"
-          size="2"
-          inline
-          css={{ pr: "$1", color: "$slate10" }}
-        >
-          {seconds}
-        </Heading>
-        <Heading
-          as="span"
-          size="1"
-          inline
-          css={{ pr: "$1", color: "$slate10" }}
-        >
-          seconds
         </Heading>
       </>
     );
