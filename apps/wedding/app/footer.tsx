@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
@@ -13,7 +11,7 @@ const Footer = () => {
         <Spotify />
       </Box>
       <Box css={{ py: "$2" }}>
-        <Text size="1">Made with love from Chicago, Milwaukee, and Tunis.</Text>
+        <Text size="1">Made with love from Tunis.</Text>
       </Box>
     </Section>
   );
