@@ -19,14 +19,14 @@ export default function HeroSection() {
           </Heading>
         </Box>
       </Section>
-      <Section size="2">
+      {/* <Section size="2">
         <Heading size="2" as="p">
           Dar Zarrouk
         </Heading>
         <Heading inline size="1" as="p" css={{ color: "$slate10" }}>
           Sidi Bou Said. Tunis. Tunisia.
         </Heading>
-      </Section>
+      </Section> */}
       <Section size="2">
         <Heading size="2" as="p">
           Saturday. 17th June 2023. 5pm.

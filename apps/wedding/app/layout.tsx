@@ -2,13 +2,14 @@ import { Cinzel, Great_Vibes } from "@next/font/google";
 import { NextSeo } from "next-seo";
 import React from "react";
 
-import { Flex, Container, Layout } from "@thugga/ui";
+import { Layout } from "@thugga/ui";
 
 import Footer from "./footer";
 import NavBar from "./navbar";
 import { ThemeProvider } from "./theme.provider";
 
-import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
+import { FancyBackground } from "../components/FancyBackground";
+import globalStyles, { getCssText } from "../styles/globalStyles";
 
 // https://github.com/modulz/stitches/issues/995
 globalStyles();
@@ -83,6 +84,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <Layout css={{ padding: "$4" }}>
+            <FancyBackground />
             <NavBar />
             {children}
             <Footer />

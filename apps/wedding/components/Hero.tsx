@@ -1,3 +1,5 @@
+"use client";
+
 import { PropsWithChildren } from "react";
 
 import { Heading, Section } from "@thugga/ui";
