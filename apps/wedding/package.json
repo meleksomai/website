@@ -11,6 +11,7 @@
   "dependencies": {
     "@markdoc/markdoc": "0.1.2",
     "@next/font": "13.1.0",
+    "@notionhq/client": "^2.2.3",
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
@@ -34,6 +35,7 @@
     "@types/react": "17.0.47",
     "eslint": "7.32.0",
     "eslint-config-thugga": "0.0.0",
+    "notion-types": "^6.16.0",
     "tsconfig": "workspace:*",
     "typescript": "4.7.4"
   },

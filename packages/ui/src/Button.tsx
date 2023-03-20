@@ -29,6 +29,16 @@ export const Button = styled("button", {
         "&:hover": { backgroundColor: "$colors$mauve5" },
         "&:focus": { boxShadow: `0 0 0 2px $colors$mauve10` },
       },
+      dark: {
+        backgroundColor: "$slate12",
+        color: "$loContrast",
+        boxShadow: "0 2px 10px $blackA7",
+        "&:hover": { backgroundColor: "$slate11" },
+        "&:focus": {
+          boxShadow: `0 0 0 2px $colors$slate9`,
+          backgroundColor: "$slate8",
+        },
+      },
       orange: {
         backgroundColor: "$orange3",
         color: "$orange10",
