@@ -43,3 +43,6 @@ apps/**/dist
 
 # Snyk
 .dccache
+
+# ENV
+.env
