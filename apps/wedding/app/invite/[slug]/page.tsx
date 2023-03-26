@@ -7,6 +7,7 @@ import {
   Button,
 } from "@thugga/ui";
 
+import RSVPButton from "./rsvp";
 import DetailsSection from "./section.details";
 import HeroSection from "./section.hero";
 
@@ -26,24 +27,18 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const invites = await getDatabase(databaseId);
-  // console.log(
-  //   invites.results.map(
-  //     (invite) =>
-  //       `${invite.id.split("-")[0]} - ${
-  //         (invite as any)?.properties?.Name?.title[0]?.plain_text || ''
-  //       }`
-  //   )
-  // );
-  return invites.results
+  return invites?.results
     .filter((invite) => (invite as any)?.properties?.Name?.title[0]?.plain_text)
     .map((invite) => {
-      return { slug: invite.id.split("-")[0] };
+      return { slug: (invite as any).properties.ID.formula.string };
     });
 }
 
 async function getInvite(id: string) {
   const invites = await getDatabase(databaseId);
-  return invites.results.find((invite) => invite.id.startsWith(id));
+  return invites.results.find(
+    (invite) => (invite as any).properties.ID.formula.string === id
+  );
 }
 // export async function generateMetadata({
 //   params,
@@ -65,9 +60,7 @@ export default async function WelcomePage({ params }: PageProps) {
         <Paragraph css={{ maxWidth: "400px" }} serif>
           We are so excited to celebrate our wedding with you!
         </Paragraph>
-        <Button variant="dark" disabled>
-          RSVP coming soon
-        </Button>
+        <RSVPButton />
       </Section>
       <Separator size="2" />
       <DetailsSection />
