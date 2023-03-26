@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <Box css={{ mb: "$2" }}>
       <Section size="2">
-        <Heading as="h1" size="3" serif>
+        <Heading as="h1" size="4" serif>
           Melek Somai. <br /> Imen Ben Abid.
         </Heading>
         <Box>

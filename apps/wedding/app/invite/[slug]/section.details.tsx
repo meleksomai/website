@@ -1,5 +1,7 @@
 import { Heading, Section, Box, Text } from "@thugga/ui";
 
+import ShareCalendar from "./shareCalendar";
+
 import { NextLink } from "../../../components";
 import CountdownTimer from "../../countdown";
 
@@ -24,6 +26,9 @@ export default function DetailsSection() {
           Saturday. 17th June 2023. 5pm.
         </Heading>
         <CountdownTimer targetDateTime={ENGAGEMENT_DATE} />
+        <Box css={{ mt: "$2" }}>
+          <ShareCalendar />
+        </Box>
       </Section>
     </Box>
   );
