@@ -11,9 +11,7 @@ import RSVPButton from "./rsvp";
 import DetailsSection from "./section.details";
 import HeroSection from "./section.hero";
 
-import { getDatabase, Database } from "../../../lib/notion";
-
-const databaseId = "31eb05392edd47cf9b757da2af184187";
+import { allInvites, findInviteByCode } from "@/lib/notion";
 
 type Params = {
   slug: string;
@@ -26,20 +24,12 @@ type PageProps = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const invites = await getDatabase(databaseId);
-  return invites?.results
-    .filter((invite) => (invite as any)?.properties?.Name?.title[0]?.plain_text)
-    .map((invite) => {
-      return { slug: (invite as any).properties.ID.formula.string };
-    });
+  const invites = await allInvites();
+  return invites.map((invite) => {
+    return { slug: invite.code };
+  });
 }
 
-async function getInvite(id: string) {
-  const invites = await getDatabase(databaseId);
-  return invites.results.find(
-    (invite) => (invite as any).properties.ID.formula.string === id
-  );
-}
 // export async function generateMetadata({
 //   params,
 // }: PageProps): Promise<Metadata> {
@@ -48,19 +38,23 @@ async function getInvite(id: string) {
 // }
 
 export default async function WelcomePage({ params }: PageProps) {
-  const invite = await getInvite(params.slug);
+  const invite = await findInviteByCode(params.slug);
+
+  if (!invite) return <></>;
+
   return (
     <Box>
       <HeroSection />
       <Separator size="2" />
       <Section size="3">
         <Heading as="h1" size="3" serif>
-          Dear {(invite as any)?.properties.Name.title[0].plain_text},
+          Dear {invite.name},
         </Heading>
         <Paragraph css={{ maxWidth: "400px" }} serif>
           We are so excited to celebrate our wedding with you!
         </Paragraph>
-        <RSVPButton />
+        {/* @ts-expect-error Server Component */}
+        <RSVPButton code={invite.code} />
       </Section>
       <Separator size="2" />
       <DetailsSection />

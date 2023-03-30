@@ -1,11 +1,22 @@
 {
   "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/lib/*": [
+        "lib/*"
+      ]
+    },
+    "strictNullChecks": true
+  },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "../../packages/academic/src/papers.ts", "../../packages/academic/global.d.ts"  ],
+    ".next/types/**/*.ts",
+    "../../packages/academic/src/papers.ts",
+    "../../packages/academic/global.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

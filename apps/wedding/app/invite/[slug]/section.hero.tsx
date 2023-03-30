@@ -1,7 +1,5 @@
 import { Heading, Section, Box } from "@thugga/ui";
 
-const ENGAGEMENT_DATE = "17 June 2023 17:00:00 GMT+1";
-
 export default function HeroSection() {
   return (
     <Box css={{ mb: "$2" }}>
