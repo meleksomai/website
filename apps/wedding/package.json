@@ -11,7 +11,7 @@
   "dependencies": {
     "@markdoc/markdoc": "0.1.2",
     "@next/font": "13.1.0",
-    "@notionhq/client": "^2.2.3",
+    "@notionhq/client": "2.2.3",
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
@@ -20,7 +20,7 @@
     "globby": "13.1.2",
     "gray-matter": "4.0.3",
     "isomorphic-unfetch": "3.1.0",
-    "next": "13.1.0",
+    "next": "13.2.4",
     "next-seo": "5.15.0",
     "next-themes": "npm:@wits/next-themes@^0.2.14",
     "nextjs-google-analytics": "2.0.0",
@@ -35,7 +35,7 @@
     "@types/react": "17.0.47",
     "eslint": "7.32.0",
     "eslint-config-thugga": "0.0.0",
-    "notion-types": "^6.16.0",
+    "notion-types": "6.16.0",
     "tsconfig": "workspace:*",
     "typescript": "4.7.4"
   },
