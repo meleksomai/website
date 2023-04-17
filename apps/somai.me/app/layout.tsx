@@ -1,5 +1,5 @@
-import { Inter, IBM_Plex_Mono } from "@next/font/google";
 import { NextSeo } from "next-seo";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
 import React from "react";
 
 import { Flex, Container, Layout } from "@thugga/ui";

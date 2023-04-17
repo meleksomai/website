@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Heading, Section, Box } from "@thugga/ui";
 
 export default function HeroSection() {

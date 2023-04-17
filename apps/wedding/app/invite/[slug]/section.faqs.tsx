@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Heading, Section, Box, Paragraph } from "@thugga/ui";
 
 export default function FAQsSection() {

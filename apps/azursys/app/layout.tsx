@@ -1,4 +1,4 @@
-import { Inter, Lora } from "@next/font/google";
+import { Inter, Lora } from "next/font/google";
 import React from "react";
 
 import { Flex, Container } from "@thugga/ui";

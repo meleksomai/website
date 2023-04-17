@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Button, Tag, Flex, Box } from "@thugga/ui";
 

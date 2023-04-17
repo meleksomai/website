@@ -1,5 +1,5 @@
-import { Cinzel, Great_Vibes, Inter } from "@next/font/google";
 import { NextSeo } from "next-seo";
+import { Cinzel, Great_Vibes, Inter } from "next/font/google";
 import React from "react";
 
 import { Layout } from "@thugga/ui";

@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
 
 export default function ErrorPage() {

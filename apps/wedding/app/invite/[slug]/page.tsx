@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 
 import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
 
