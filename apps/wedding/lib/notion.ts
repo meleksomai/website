@@ -72,8 +72,8 @@ export const allInvites = async (filter?: any): Promise<WeddingInvite[]> => {
   };
   const pages = await getDatabase(NOTION_DATABASE_ID_WEDDING, queryFilter);
   return (
-    pages?.map((page) => {
-      const { code, email, guests, Name, status } = (page as any).properties;
+    pages?.map((page: any) => {
+      const { code, email, guests, Name, status } = page.properties;
       return {
         code: code.formula.string,
         email: email.email,
