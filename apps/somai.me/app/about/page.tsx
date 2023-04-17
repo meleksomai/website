@@ -3,7 +3,6 @@ import RoleSection from "./section.roles";
 import HeroSection from "../../components/Hero";
 import { getAllRoles } from "../../lib/roles";
 
-
 export default async function EssayPage() {
   const roles = await getAllRoles();
   return (

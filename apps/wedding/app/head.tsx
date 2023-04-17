@@ -7,8 +7,7 @@ export default function Head() {
   const updateMeta: NextSeoProps = {
     ...NEXT_SEO_DEFAULT,
     title: "Wedding | Imen & Melek",
-    description:
-      "Our wedding event.",
+    description: "Our wedding event.",
     openGraph: {
       type: "website",
       locale: "en_US",
