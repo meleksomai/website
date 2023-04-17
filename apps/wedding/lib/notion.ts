@@ -20,24 +20,32 @@ export const getDatabase = async (
   filter?: any,
   cache?: RequestCache
 ) => {
-  return (await fetcher(
-    `https://api.notion.com/v1/databases/${databaseId}/query`,
-    {
-      next: { revalidate: 0 },
-      cache: "no-cache",
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${NOTION_TOKEN}`,
-        "Notion-Version": "2022-02-22",
-      },
-      body:
-        filter &&
-        JSON.stringify({
+  let has_more = true;
+  let next_cursor: string | undefined = undefined;
+  let results: any = [];
+  while (has_more) {
+    const data = (await fetcher(
+      `https://api.notion.com/v1/databases/${databaseId}/query`,
+      {
+        next: { revalidate: 0 },
+        cache: "no-cache",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${NOTION_TOKEN}`,
+          "Notion-Version": "2022-02-22",
+        },
+        body: JSON.stringify({
           filter: filter,
+          start_cursor: next_cursor,
         }),
-    }
-  )) as Database;
+      }
+    )) as Database;
+    results = [...results, ...data.results];
+    has_more = data.has_more;
+    next_cursor = data.next_cursor || undefined;
+  }
+  return results;
 };
 
 /**
@@ -48,7 +56,7 @@ export const getDatabase = async (
  */
 export const allInvites = async (filter?: any): Promise<WeddingInvite[]> => {
   if (!NOTION_DATABASE_ID_WEDDING) return [];
-  const pages = await getDatabase(NOTION_DATABASE_ID_WEDDING, {
+  const queryFilter = {
     and: [
       {
         property: "status",
@@ -61,9 +69,10 @@ export const allInvites = async (filter?: any): Promise<WeddingInvite[]> => {
       },
       filter,
     ].filter((e) => e),
-  });
+  };
+  const pages = await getDatabase(NOTION_DATABASE_ID_WEDDING, queryFilter);
   return (
-    pages?.results?.map((page) => {
+    pages?.map((page) => {
       const { code, email, guests, Name, status } = (page as any).properties;
       return {
         code: code.formula.string,
