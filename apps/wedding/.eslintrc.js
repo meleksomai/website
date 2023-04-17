@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["thugga"],
+  extends: ["thugga", "plugin:import/typescript"],
 };

@@ -1,8 +1,8 @@
 // app/head.js
 import { NextSeo, NextSeoProps } from "next-seo";
 
-import { NEXT_SEO_DEFAULT } from "../../next-seo.config";
 import { getPaperBySlug } from "../../lib/papers";
+import { NEXT_SEO_DEFAULT } from "../../next-seo.config";
 
 export default function Head({ params }: { params: { slug: string } }) {
   const paper = getPaperBySlug(params?.slug as string);

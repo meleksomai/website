@@ -7,8 +7,6 @@ import {
 const globalStyles = globalCss({
   // ...other styles
   html: {
-    "--font-inter": "Inter",
-    "--font-mono": "Ibm Plex Mono",
     // overflowX: "hidden",
     // scrollPaddingTop: "6rem",
   },

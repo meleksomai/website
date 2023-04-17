@@ -1,4 +1,5 @@
 import { Inter, Lora } from "@next/font/google";
+import { NextSeo } from "next-seo";
 import React from "react";
 
 import { Flex, Container } from "@thugga/ui";
@@ -8,7 +9,6 @@ import NavBar from "./navbar";
 import { ThemeProvider } from "./theme.provider";
 
 import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
-import { NextSeo } from "next-seo";
 
 // https://github.com/modulz/stitches/issues/995
 globalStyles();

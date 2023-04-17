@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import { Heading, Section} from "@thugga/ui";
+import { Heading, Section } from "@thugga/ui";
 
 import { Publication } from "../../lib/papers";
 
