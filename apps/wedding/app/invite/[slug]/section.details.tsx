@@ -26,9 +26,9 @@ export default function DetailsSection() {
           Saturday. 17th June 2023. 5pm.
         </Heading>
         <CountdownTimer targetDateTime={ENGAGEMENT_DATE} />
-        <Box css={{ mt: "$2" }}>
+        {/* <Box css={{ mt: "$2" }}>
           <ShareCalendar />
-        </Box>
+        </Box> */}
       </Section>
     </Box>
   );
