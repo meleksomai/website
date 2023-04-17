@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { findInviteByCode } from "@/lib/notion";
+import { updateInvite, findInviteByCode } from "@/lib/notion";
 
 export const dynamic = "force-dynamic";
 export const dynamicParams = true;
@@ -16,13 +16,14 @@ export async function GET(
     return NextResponse.error();
   }
   // Find invite by code
-  const invite = await findInviteByCode(params.slug);
+  const invite = await updateInvite(params.slug, "NOT ATTENDING");
   if (!invite) {
     return NextResponse.error();
   }
+  const refreshedInvite = await findInviteByCode(params.slug);
   // Return the invite confirmation page
   return NextResponse.json({
-    message: "Invite found",
-    status: invite.status,
+    message: "Update completed",
+    status: refreshedInvite?.status,
   });
 }

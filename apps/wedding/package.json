@@ -16,6 +16,7 @@
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
     "@vercel/og": "0.0.21",
+    "calendar-link": "^2.4.0",
     "dayjs": "1.11.4",
     "globby": "13.1.2",
     "gray-matter": "4.0.3",

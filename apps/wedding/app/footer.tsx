@@ -11,7 +11,7 @@ const Footer = () => {
         <Spotify />
       </Box>
       <Box css={{ py: "$2" }}>
-        <Text size="1">Made with love from Tunis.</Text>
+        <Text size="1">Made with ❤️ from Milwaukee. Chicago. Bizerte.</Text>
       </Box>
     </Section>
   );
