@@ -12,9 +12,9 @@ export default function Head() {
       type: "website",
       locale: "en_US",
       url: "https://wedding.somai.me/",
-      title: "Engagement Dinner | Imen & Melek",
+      title: "Wedding | Imen & Melek",
       description:
-        "Our engagement dinner is an intimate event that will bring family and close friends together to celebrate our engagement.",
+        "Our wedding is an intimate event that will bring family and close friends together to celebrate our engagement.",
       images: [
         {
           url: "https://somai.me/api/og?title=Wedding.&header=Melek Somai. Imen Ben Abid.",
