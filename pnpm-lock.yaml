@@ -275,7 +275,7 @@ importers:
         specifier: 0.0.21
         version: 0.0.21
       calendar-link:
-        specifier: ^2.4.0
+        specifier: 2.4.0
         version: 2.4.0
       dayjs:
         specifier: 1.11.4
