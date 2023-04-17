@@ -27,7 +27,6 @@ export const getDatabase = async (
     const data = (await fetcher(
       `https://api.notion.com/v1/databases/${databaseId}/query`,
       {
-        next: { revalidate: 0 },
         cache: "no-cache",
         method: "POST",
         headers: {
