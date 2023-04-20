@@ -14,6 +14,7 @@ dayjs.extend(localizedFormat);
 export type Role = {
   content: any;
   meta: {
+    active: boolean;
     isCurrent: boolean;
     organization: string;
     readingTime: ReadTimeResults;
@@ -66,7 +67,9 @@ export async function getAllRoles(): Promise<Role[]> {
   const paths = await globby(["content/roles/*.md"]);
   const files = paths.map((filePath) => path.parse(filePath).name);
   const papers = files.map((slug) => getRoleBySlug(slug));
-  return papers.sort((a, b) => {
-    return b.meta.startAt.timestamp - a.meta.startAt.timestamp;
-  });
+  return papers
+    .filter((a) => a.meta.active)
+    .sort((a, b) => {
+      return b.meta.startAt.timestamp - a.meta.startAt.timestamp;
+    });
 }
