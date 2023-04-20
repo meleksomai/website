@@ -21,7 +21,7 @@ export default async function DetailsSection(
       >
         <Flex direction="row">
           <Flex align="center">
-            <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="1" />
+            {/* <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="1" /> */}
           </Flex>
           <Flex align="center" css={{ pl: "$2" }}>
             <Text size="3">Melek Somai / {post.meta.publishedAt.text}</Text>
