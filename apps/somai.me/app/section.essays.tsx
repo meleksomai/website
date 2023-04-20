@@ -1,3 +1,4 @@
+"use client";
 import {
   Heading,
   Grid,
@@ -9,21 +10,22 @@ import {
 } from "@thugga/ui";
 
 import { NextLink } from "../components";
-import { getAllPosts } from "../lib/essays";
 
-export default async function EssaysSection() {
-  const recentPosts = await getAllPosts();
+export interface EssaySectionProps {
+  posts: any[];
+}
 
+export default function EssaysSection({ posts }: EssaySectionProps) {
   return (
     <>
-      {recentPosts && recentPosts.length > 0 && (
+      {posts && posts.length > 0 && (
         <Section size="2">
           <Heading as="h3" size="2" css={{ pb: "$5" }}>
             Recent Essays
           </Heading>
           <Box>
             <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
-              {recentPosts.map((post) => (
+              {posts.map((post) => (
                 <Box key={post.meta.slug}>
                   <Heading as="h4" css={{ pb: "0" }}>
                     <NextLink

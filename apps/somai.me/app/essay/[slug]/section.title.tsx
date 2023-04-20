@@ -1,13 +1,13 @@
+"use client";
+
 import { PropsWithChildren } from "react";
 
-import { Heading, Avatar, Section, Box, Flex } from "@thugga/ui";
-
-import { Post } from "../../../lib/essays";
+import { Heading, Section } from "@thugga/ui";
 
 const TEXT_SIZE = "3";
 
 export interface TitleProps {
-  post: Post;
+  post: any;
 }
 
 export default async function Title(props: PropsWithChildren<TitleProps>) {

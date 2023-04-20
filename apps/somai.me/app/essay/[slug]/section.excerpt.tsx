@@ -1,3 +1,5 @@
+"use client";
+
 import { PropsWithChildren } from "react";
 
 import { Paragraph, Section, Text } from "@thugga/ui";

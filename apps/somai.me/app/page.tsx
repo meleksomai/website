@@ -4,21 +4,22 @@ import EssaysSection from "./section.essays";
 import PapersSection from "./section.papers";
 
 import HeroSection from "../components/Hero";
+import { getAllPosts } from "../lib/essays";
+import { getAllPapers } from "../lib/papers";
 
-export default function MainPage() {
+export default async function MainPage() {
+  const publications = await (await getAllPapers()).slice(0, 3);
+  const posts = await getAllPosts();
   return (
     <>
       <Box>
-        {/* @ts-expect-error Server Component */}
         <HeroSection>
           Physician. Clinical Informatician. Data Scientist. Innovator. Works at
           the intersection of Healthcare Informatics, Clinical Computing, and
           Data Science.
         </HeroSection>
-        {/* @ts-expect-error Server Component */}
-        <EssaysSection />
-        {/* @ts-expect-error Server Component */}
-        <PapersSection />
+        <EssaysSection posts={posts || []} />
+        <PapersSection publications={publications || []} />
       </Box>
     </>
   );

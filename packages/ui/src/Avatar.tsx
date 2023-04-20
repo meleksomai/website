@@ -1,3 +1,4 @@
+"use client";
 import { violet, blackA } from "@radix-ui/colors";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import React from "react";

@@ -1,3 +1,4 @@
+"use client";
 import { PropsWithChildren } from "react";
 
 import { Avatar, Flex, Section, Text } from "@thugga/ui";
@@ -20,9 +21,9 @@ export default async function DetailsSection(
         gap="2"
       >
         <Flex direction="row">
-          <Flex align="center">
+          {/* <Flex align="center">
             <Avatar src="/images/profile.jpeg" alt="" fallback="MS" size="1" />
-          </Flex>
+          </Flex> */}
           <Flex align="center" css={{ pl: "$2" }}>
             <Text size="3">Melek Somai / {post.meta.publishedAt.text}</Text>
           </Flex>
