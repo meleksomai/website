@@ -21,6 +21,9 @@ export default function FAQsSection() {
             room rates for our guests at two beautiful hotels in the area: Dar
             Said and Maison Blue.
           </Paragraph>
+          <Heading as="p" size="1" serif>
+            How to make a reservation?
+          </Heading>
           <Paragraph>
             To make a reservation at either hotel, we kindly ask that you
             contact them directly and specify that you are attending the wedding
@@ -36,7 +39,7 @@ export default function FAQsSection() {
             Dar Said, Sidi Bou Saïd
           </Heading>
           <Paragraph css={{ py: "$1" }}>
-            Rue Toumi 2026, Carthage - 5 minutes walk from the venue.
+            Rue Toumi 2026, Carthage - 2 minutes walk from the venue.
             <NextLink href="https://goo.gl/maps/wjtZkX2hsuxF2DNF7">
               <Text>Learn more</Text>
             </NextLink>
@@ -54,9 +57,29 @@ export default function FAQsSection() {
             Luxury Suite - 600TND (approx. $200) per night.
           </Paragraph>
           <Paragraph css={{ py: "$1" }}>
-            Contact information:
             <NextLink href="mailto:hotel@darsaid.tn">
-              <Text>hotel@darsaid.tn</Text>
+              Booking emai lby :
+              <Text>Makram Abdel Moumen - hotel@darsaid.tn</Text>
+            </NextLink>
+          </Paragraph>
+          <Heading as="p" size="1" serif css={{ pt: "$4" }}>
+            La Villa Bleue
+          </Heading>
+          <Paragraph css={{ py: "$1" }}>
+            68 rue Kennedy - Sidi Bou Said 2026 - 5 minutes walk to the venue.
+            <NextLink href="https://www.lavillableuesidibousaid.com/">
+              <Text>Learn more</Text>
+            </NextLink>
+          </Paragraph>
+          <Paragraph css={{ py: "$2" }}>
+            <Text variant="light">Option A</Text>
+            Double Room with sea view (with swimming pool depending on
+            availability)- 800TND (approx. $260) per night.
+          </Paragraph>
+          <Paragraph css={{ py: "$1" }}>
+            <NextLink href="mailto:sales@lavillableuesidibousaid.com">
+              Booking emai lby :
+              <Text>Hajer Bouassida - sales@lavillableuesidibousaid.com</Text>
             </NextLink>
           </Paragraph>
         </Box>
