@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { NextSeo } from "next-seo";
 import { Cinzel, Great_Vibes, Inter } from "next/font/google";
 import React from "react";
@@ -94,6 +95,7 @@ export default function RootLayout({
             <Footer />
           </Layout>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
