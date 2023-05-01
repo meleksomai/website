@@ -2,13 +2,13 @@ import React, { Suspense } from "react";
 
 import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
 
-import { allInvites, findInviteByCode } from "@/lib/notion";
-
 import ErrorPage from "./errorPage";
 import RSVPButton from "./rsvp";
 import DetailsSection from "./section.details";
 import FAQs from "./section.faqs";
 import HeroSection from "./section.hero";
+
+import { allInvites, findInviteByCode } from "@/lib/notion";
 
 type Params = {
   slug: string;
@@ -23,6 +23,11 @@ export async function generateStaticParams() {
   return invites.map((invite) => {
     return { slug: invite.code };
   });
+}
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const invitation = await findInviteByCode(params.slug);
+  return { title: `Melek & Imen - Wedding invitation to ${invitation?.name}` };
 }
 
 async function getData(code: string) {
