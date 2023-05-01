@@ -1,4 +1,5 @@
-import React, { Suspense } from "react";
+import type { Metadata } from "next";
+import React from "react";
 
 import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
 
@@ -18,6 +19,10 @@ type PageProps = {
   params: Params;
 };
 
+async function getData(code: string) {
+  return await findInviteByCode(code);
+}
+
 export async function generateStaticParams() {
   const invites = await allInvites();
   return invites.map((invite) => {
@@ -25,13 +30,23 @@ export async function generateStaticParams() {
   });
 }
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const invitation = await findInviteByCode(params.slug);
-  return { title: `Melek & Imen - Wedding invitation to ${invitation?.name}` };
-}
-
-async function getData(code: string) {
-  return await findInviteByCode(code);
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const invite = await getData(params.slug);
+  return {
+    title: `Melek & Imen - Wedding invitation to ${invite?.name}`,
+    description: `We are excited to invite you to join us as we celebrate our special day in the beautiful city of Sidi Bou Said, Tunisia. It is an honor for us to share this joyous occasion with our loved ones, and we hope that you can join us in celebrating our love and commitment.`,
+    openGraph: {
+      type: "website",
+      url: `https://wedding.thugga.org/invite/${invite?.code}`,
+      title: `Melek & Imen - Wedding invitation to ${invite?.name}`,
+      description: `We are excited to invite you to join us as we celebrate our special day in the beautiful city of Sidi Bou Said, Tunisia. It is an honor for us to share this joyous occasion with our loved ones, and we hope that you can join us in celebrating our love and commitment.`,
+      siteName: "Melek & Imen - Wedding",
+    },
+  };
 }
 
 export default async function WelcomePage({ params }: PageProps) {
