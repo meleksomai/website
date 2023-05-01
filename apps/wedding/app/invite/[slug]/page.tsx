@@ -46,6 +46,7 @@ export async function generateMetadata({
       title: `Melek & Imen - Wedding invitation to ${invite?.name}`,
       description: `We are excited to invite you to join us as we celebrate our special day in the beautiful city of Sidi Bou Said, Tunisia. It is an honor for us to share this joyous occasion with our loved ones, and we hope that you can join us in celebrating our love and commitment.`,
       siteName: "Melek & Imen - Wedding",
+      images: ["/images/opengraph-image.png"],
     },
   };
 }
