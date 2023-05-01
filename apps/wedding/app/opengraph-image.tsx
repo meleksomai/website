@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/server";
 
 export const size = { width: 1200, height: 600 };
-export const alt = "About Acme";
+export const alt = "Melek and Imen Wedding";
 export const contentType = "image/png";
 
 export default function og() {
@@ -89,10 +89,6 @@ export default function og() {
         </div>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    size
   );
-  // ...
 }
