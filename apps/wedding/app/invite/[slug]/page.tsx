@@ -3,6 +3,7 @@ import React from "react";
 
 import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
 
+// eslint-disable-next-line import/order, import/no-unresolved
 import { allInvites, findInviteByCode } from "@/lib/notion";
 
 import ErrorPage from "./errorPage";
