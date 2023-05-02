@@ -27,16 +27,7 @@ export const Paragraph = React.forwardRef<
     css={{
       paddingTop: "$2",
       paddingBottom: "$2",
-      lineHeight: "1.68em",
       ...props.css,
-
-      when: {
-        ...(props.css?.when as any),
-        bp2: {
-          lineHeight: "1.8em",
-          ...((props.css?.when as any)?.bp2 as any),
-        },
-      },
     }}
   />
 ));
