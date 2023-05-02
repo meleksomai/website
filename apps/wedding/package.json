@@ -14,6 +14,7 @@
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
+    "@vercel/analytics": "^1.0.0",
     "@vercel/og": "0.0.21",
     "calendar-link": "2.4.0",
     "dayjs": "1.11.4",

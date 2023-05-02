@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 import { Cinzel, Great_Vibes, Inter } from "next/font/google";
 import React from "react";
 
@@ -75,15 +75,6 @@ export default function RootLayout({
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        {/* 
-          Anything we add in layout will appear on EVERY PAGE. At present it can not be overridden lower down the tree.
-          This can be useful for things like favicons, or other meta tags that are the same on every page.
-        */}
-        <NextSeo
-          useAppDir={true}
-          themeColor="hsl(206, 5.2%, 49.5%)"
-          titleTemplate="%s | Melek Somai"
-        />
       </head>
       <body>
         <ThemeProvider>
@@ -94,6 +85,7 @@ export default function RootLayout({
             <Footer />
           </Layout>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

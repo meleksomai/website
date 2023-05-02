@@ -16,7 +16,7 @@ export async function GET(
     return NextResponse.error();
   }
   // Find invite by code
-  const invite = await updateInvite(params.slug, "NOT ATTENDING", "status");
+  const invite = await updateInvite(params.slug, "NOT ATTENDING", "outeya");
   if (!invite) {
     return NextResponse.error();
   }
@@ -24,6 +24,6 @@ export async function GET(
   // Return the invite confirmation page
   return NextResponse.json({
     message: "Update completed",
-    status: refreshedInvite?.status,
+    status: refreshedInvite?.outeya,
   });
 }

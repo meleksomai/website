@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import React from "react";
 
-import { Box, Heading, Separator, Paragraph, Section } from "@thugga/ui";
-
-// eslint-disable-next-line import/order, import/no-unresolved
-import { allInvites, findInviteByCode } from "@/lib/notion";
+import { Box, Text, Separator, Paragraph, Section } from "@thugga/ui";
 
 import ErrorPage from "./errorPage";
 import RSVPButton from "./rsvp";
 import DetailsSection from "./section.details";
-import FAQs from "./section.faqs";
+import FAQsSection from "./section.faqs";
 import HeroSection from "./section.hero";
+
+// eslint-disable-next-line import/order, import/no-unresolved
+import { allInvites, findInviteByCode } from "@/lib/notion";
 
 type Params = {
   slug: string;
@@ -53,42 +53,57 @@ export async function generateMetadata({
 
 export default async function WelcomePage({ params }: PageProps) {
   const invite = await getData(params.slug);
-
-  return invite ? (
+  return invite && invite?.outeya !== "NOT INVITED" ? (
     <Box>
       <HeroSection />
       <Separator size="2" />
       <Section size="2">
-        <Heading as="h1" size="3" serif>
-          Dear {invite.name},
-        </Heading>
         <Paragraph>
-          We are excited to invite you to join us as we celebrate our special
-          day in the beautiful city of Sidi Bou Said, Tunisia. It is an honor
-          for us to share this joyous occasion with our loved ones, and we hope
-          that you can join us in celebrating our love and commitment.
+          We are delighted to extend a cordial invitation to you to attend our
+          traditional wedding ceremony known as{" "}
+          <Text as="span" variant="orange" inline italic>
+            Outeya
+          </Text>{" "}
+          which promises to be a truly captivating experience.
         </Paragraph>
         <Paragraph>
-          Our wedding will be a unique and unforgettable experience, set against
-          the backdrop of rich history, beautiful landscapes, and warm Tunisian
-          hospitality. From the ancient ruins of Carthage to the bustling
-          markets of the medina, there is so much to explore and discover in
-          Tunis. We have also planned special events and activities to make this
-          wedding celebration truly memorable.
+          At the ceremony, we would be honored to share with you the rich
+          cultural heritage of our community as we encourage you to wear our
+          traditional attires and immerse yourselves in the mystical and
+          captivating rhythms of the{" "}
+          <Text as="span" variant="orange" inline italic>
+            Tijaniyya
+          </Text>{" "}
+          and{" "}
+          <Text as="span" variant="orange" inline italic>
+            Hadra
+          </Text>
+          .
         </Paragraph>
         <Paragraph>
-          We sincerely hope that you can join us in celebrating our love and
-          making precious memories together. Your presence is the greatest gift,
-          and we look forward to sharing this special day with you.
+          We have arranged for a variety of dance performances to further
+          enchant you, including the mahdaouis{" "}
+          <Text as="span" variant="orange" inline italic>
+            Nûba
+          </Text>{" "}
+          and punic païen{" "}
+          <Text as="span" variant="orange" inline italic>
+            Jelwa
+          </Text>
+          .
+        </Paragraph>
+        <Paragraph>
+          We hope that you will find time to join us and enjoy this
+          unforgettable experience together with our family and friends.
         </Paragraph>
       </Section>
       <Section size="2">
-        <RSVPButton code={invite.code} initialStatus={invite.status} />
+        <RSVPButton code={invite.code} initialStatus={invite.outeya} />
       </Section>
       <Separator size="2" />
       <DetailsSection />
       <Separator size="2" />
-      <FAQs />
+      <FAQsSection />
     </Box>
   ) : (
     <ErrorPage />

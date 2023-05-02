@@ -16,7 +16,7 @@ export async function GET(
     return NextResponse.error();
   }
   // Find invite by code
-  const invite = await updateInvite(params.slug, "CONFIRMED");
+  const invite = await updateInvite(params.slug, "CONFIRMED", "status");
   if (!invite) {
     return NextResponse.error();
   }

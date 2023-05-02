@@ -12,6 +12,7 @@ export interface WeddingInvite {
   guests: number | null;
   id: string;
   name: string | undefined;
+  outeya: string;
   status: string;
 }
 
@@ -72,13 +73,14 @@ export const allInvites = async (filter?: any): Promise<WeddingInvite[]> => {
   const pages = await getDatabase(NOTION_DATABASE_ID_WEDDING, queryFilter);
   return (
     pages?.map((page: any) => {
-      const { code, email, guests, Name, status } = page.properties;
+      const { code, email, guests, Name, status, outeya } = page.properties;
       return {
         code: code.formula.string,
         email: email.email,
         guests: guests.number,
         id: page.id,
         name: Name.title[0]?.plain_text,
+        outeya: outeya.status.name,
         status: status.status.name,
       } as WeddingInvite;
     }) || []
@@ -102,7 +104,8 @@ export const findInviteByCode = async (
 
 export const updateInvite = async (
   code: string,
-  status: string
+  status: string,
+  column: string
 ): Promise<WeddingInvite | undefined> => {
   const invite = await findInviteByCode(code);
   if (!invite) {
@@ -121,7 +124,7 @@ export const updateInvite = async (
       },
       body: JSON.stringify({
         properties: {
-          status: {
+          [column]: {
             status: {
               name: status,
             },
