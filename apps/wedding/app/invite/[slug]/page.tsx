@@ -24,12 +24,12 @@ async function getData(code: string) {
   return await findInviteByCode(code);
 }
 
-export async function generateStaticParams() {
-  const invites = await allInvites();
-  return invites.map((invite) => {
-    return { slug: invite.code };
-  });
-}
+// export async function generateStaticParams() {
+//   const invites = await allInvites();
+//   return invites.map((invite) => {
+//     return { slug: invite.code };
+//   });
+// }
 
 export async function generateMetadata({
   params,
