@@ -10,13 +10,10 @@ const OuteyaCostume = () => (
       Costume
     </Heading>
     <Paragraph>
-      If you are interested in wearing Mehdaoui traditional clothing, please
-      contact us.
+      If you are interested in wearing Mehdaoui traditional clothing, we are
+      offering traditional costumes to our guests for rent. The price is around
+      50$. Please contact us.
     </Paragraph>
-    <Heading as="p" size="1" serif>
-      How to make a reservation?
-    </Heading>
-    <Paragraph>TBD</Paragraph>
   </Box>
 );
 
