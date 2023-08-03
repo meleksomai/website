@@ -1,9 +1,9 @@
 "use client";
+import { RxArrowTopRight } from "react-icons/rx";
 
-import { Grid, Heading, Paragraph, Section } from "@thugga/ui";
+import { Grid, Heading, Stack, Text, Link } from "@thugga/ui";
 
-import { NextLink } from "../../components";
-import { Role } from "../../lib/roles";
+import { Role } from "@/lib/roles";
 
 export interface RoleSectionProps {
   roles?: Role[] | undefined;
@@ -11,24 +11,24 @@ export interface RoleSectionProps {
 
 export default function RoleSection(props: RoleSectionProps) {
   return (
-    <Section size="2">
-      <Heading as="h3" size="2" css={{ pb: "$5" }}>
-        Current Positions
-      </Heading>
-      <Grid gap="5" columns="1">
-        {props.roles?.map((role) => (
-          <Section key={role.meta.slug}>
-            <Heading as="span" size="1" inline>
-              {role.meta.role}.{" "}
-            </Heading>
-            <Heading inline as="span" size="1" css={{ color: "$slate10" }}>
-              {role.meta.organization}
-            </Heading>
-            <Paragraph>{role.content}</Paragraph>
-            <NextLink href={role.meta.url}>Learn more</NextLink>
-          </Section>
-        ))}
+    <Stack space="800">
+      <Heading size="h3">Current Positions</Heading>
+      <Grid gap="50" columns={1}>
+        <Stack space="800">
+          {props.roles?.map((role) => (
+            <Stack key={role.meta.slug} justify="flex-start" align="flex-start">
+              <Heading size="h4">
+                {role.meta.role}.{" "}
+                <Heading size="h4" as="span" color="slate11">
+                  {role.meta.organization}
+                </Heading>
+              </Heading>
+              <Text>{role.content}</Text>
+              <Link suffix={<RxArrowTopRight />} href={role.meta.url}>Learn more</Link>
+            </Stack>
+          ))}
+        </Stack>
       </Grid>
-    </Section>
+    </Stack>
   );
 }
