@@ -20,10 +20,10 @@
   "devDependencies": {
     "@types/figlet": "1.5.5",
     "@types/node": "17.0.12",
-    "eslint": "7.32.0",
+    "eslint": "8.36.0",
     "eslint-config-thugga": "0.0.0",
     "tsconfig": "workspace:*",
     "tsx": "3.12.1",
-    "typescript": "4.7.4"
+    "typescript": "4.9.5"
   }
 }
