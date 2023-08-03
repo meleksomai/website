@@ -2,13 +2,13 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Section } from "@thugga/ui";
+import { Stack } from "@thugga/ui";
+
+import { getAllPosts, getPostBySlug } from "@/lib/essays";
 
 import DetailsSection from "./section.details";
 import Excerpt from "./section.excerpt";
 import Title from "./section.title";
-
-import { getAllPosts, getPostBySlug } from "../../../lib/essays";
 
 export default function EssayPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params?.slug as string);
@@ -17,15 +17,12 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
   const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
-    <>
-      {/* @ts-expect-error Server Component */}
+    <Stack space="800">
       <Title post={post} />
-      {/* @ts-expect-error Server Component */}
       <DetailsSection post={post} />
-      {/* @ts-expect-error Server Component */}
       <Excerpt post={post} />
-      <Section>{rendered}</Section>
-    </>
+      <Stack>{rendered}</Stack>
+    </Stack>
   );
 }
 
