@@ -9,10 +9,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vanilla-extract/css": "1.11.0",
+    "@vanilla-extract/next-plugin": "2.1.3",
     "@markdoc/markdoc": "0.1.2",
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
+    "@vercel/analytics": "0.1.11",
     "@vercel/og": "0.0.21",
     "dayjs": "1.11.4",
     "globby": "13.1.2",
@@ -21,6 +24,7 @@
     "next": "13.4.10",
     "next-seo": "5.15.0",
     "next-themes": "0.2.1",
+    "react-icons": "4.10.1",
     "nextjs-google-analytics": "2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

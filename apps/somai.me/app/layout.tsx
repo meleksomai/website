@@ -7,6 +7,7 @@ import { Box, Stack } from "@thugga/ui";
 
 import { Providers } from "./providers";
 import NavBar from "./navbar";
+import Footer from "./footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -109,6 +110,7 @@ export default function RootLayout({
             <Stack space="1200">
               <NavBar />
               {children}
+              <Footer />
             </Stack>
             {/* <Analytics /> */}
           </Box>

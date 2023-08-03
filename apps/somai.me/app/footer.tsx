@@ -8,35 +8,45 @@ import { Spotify } from "./spotify";
 
 // eslint-disable-next-line react/display-name
 const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
-  return <Link {...props}>{props.children}</Link>;
+  return (
+    <Link size="small" {...props}>
+      {props.children}
+    </Link>
+  );
 };
 
 const Footer = () => {
   return (
-    <Box>
+    <Stack space="800">
       <Box>
         <Spotify />
       </Box>
       <Box>
-        <Grid>
-          <Stack direction="column" justify="flex-start">
-            <Text as="p" bold>
-              General
-            </Text>
+        <Grid columns={3}>
+          <Stack
+            space="200"
+            direction="column"
+            justify="flex-start"
+            align="flex-start"
+          >
+            <Text bold>General</Text>
             <FooterMenuLink href="/">Home</FooterMenuLink>
             <FooterMenuLink href="/essays">Essays</FooterMenuLink>
             <FooterMenuLink href="/papers">Publications</FooterMenuLink>
           </Stack>
-          <Stack direction="column" justify="flex-start">
-            <Text as="p" bold>
-              Profile
-            </Text>
+          <Stack
+            space="200"
+            direction="column"
+            justify="flex-start"
+            align="flex-start"
+          >
+            <Text bold>Profile</Text>
             <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
               Google Scholar
             </FooterMenuLink>
-            <FooterMenuLink href="https://twitter.com/meleksomai">
+            {/* <FooterMenuLink href="https://twitter.com/meleksomai">
               Twitter
-            </FooterMenuLink>
+            </FooterMenuLink> */}
             <FooterMenuLink href="https://www.linkedin.com/in/msomai/">
               LinkedIn
             </FooterMenuLink>
@@ -44,10 +54,13 @@ const Footer = () => {
               GitHub
             </FooterMenuLink>
           </Stack>
-          <Stack direction="column" justify="flex-start">
-            <Text as="p" bold>
-              Affiliations
-            </Text>
+          <Stack
+            space="200"
+            direction="column"
+            justify="flex-start"
+            align="flex-start"
+          >
+            <Text bold>Affiliations</Text>
             <FooterMenuLink href="https://www.inceptionhealth.com/">
               Inception Health
             </FooterMenuLink>
@@ -59,11 +72,11 @@ const Footer = () => {
         </Grid>
       </Box>
       <Box>
-        <Text variant="small">
+        <Text variant="extraSmall">
           Made with love from Chicago, Milwaukee, and Tunis.
         </Text>
       </Box>
-    </Box>
+    </Stack>
   );
 };
 
