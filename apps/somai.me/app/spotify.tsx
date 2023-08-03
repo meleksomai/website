@@ -3,7 +3,7 @@
 import Image from "next/image";
 import useSWR from "swr";
 
-import { Text, Stack, Link } from "@thugga/ui";
+import { Text, Stack, Link, Box } from "@thugga/ui";
 
 import fetcher from "../lib/fetcher";
 import spotifyLogo from "../public/images/spotify.svg";
@@ -12,7 +12,7 @@ const CurrentSong = (props: any) => {
   const { data } = props;
 
   return (
-    <>
+    <Box flexWrap="wrap">
       <Link
         size="small"
         bold
@@ -21,7 +21,7 @@ const CurrentSong = (props: any) => {
       <Text variant="small" as="span">
         - on Spotify
       </Text>
-    </>
+    </Box>
   );
 };
 
