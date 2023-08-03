@@ -21,56 +21,54 @@ const Footer = () => {
       <Box>
         <Spotify />
       </Box>
-      <Box>
-        <Grid columns={3}>
-          <Stack
-            space="200"
-            direction="column"
-            justify="flex-start"
-            align="flex-start"
-          >
-            <Text bold>General</Text>
-            <FooterMenuLink href="/">Home</FooterMenuLink>
-            <FooterMenuLink href="/essays">Essays</FooterMenuLink>
-            <FooterMenuLink href="/papers">Publications</FooterMenuLink>
-          </Stack>
-          <Stack
-            space="200"
-            direction="column"
-            justify="flex-start"
-            align="flex-start"
-          >
-            <Text bold>Profile</Text>
-            <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
-              Google Scholar
-            </FooterMenuLink>
-            {/* <FooterMenuLink href="https://twitter.com/meleksomai">
+      <Grid columns={3} gap="400">
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>General</Text>
+          <FooterMenuLink href="/">Home</FooterMenuLink>
+          <FooterMenuLink href="/essays">Essays</FooterMenuLink>
+          <FooterMenuLink href="/papers">Publications</FooterMenuLink>
+        </Stack>
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>Profile</Text>
+          <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
+            Google Scholar
+          </FooterMenuLink>
+          {/* <FooterMenuLink href="https://twitter.com/meleksomai">
               Twitter
             </FooterMenuLink> */}
-            <FooterMenuLink href="https://www.linkedin.com/in/msomai/">
-              LinkedIn
-            </FooterMenuLink>
-            <FooterMenuLink href="https://github.com/meleksomai">
-              GitHub
-            </FooterMenuLink>
-          </Stack>
-          <Stack
-            space="200"
-            direction="column"
-            justify="flex-start"
-            align="flex-start"
-          >
-            <Text bold>Affiliations</Text>
-            <FooterMenuLink href="https://www.inceptionhealth.com/">
-              Inception Health
-            </FooterMenuLink>
-            <FooterMenuLink href="https://www.mcw.edu/departments/medicine/divisions/general-internal-medicine/people/melek-somai-md">
-              Medical College of Wisconsin
-            </FooterMenuLink>
-            <FooterMenuLink href="https://tuncph.org">TunCPH</FooterMenuLink>
-          </Stack>
-        </Grid>
-      </Box>
+          <FooterMenuLink href="https://www.linkedin.com/in/msomai/">
+            LinkedIn
+          </FooterMenuLink>
+          <FooterMenuLink href="https://github.com/meleksomai">
+            GitHub
+          </FooterMenuLink>
+        </Stack>
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>Affiliations</Text>
+          <FooterMenuLink href="https://www.inceptionhealth.com/">
+            Inception Health
+          </FooterMenuLink>
+          <FooterMenuLink href="https://www.mcw.edu/departments/medicine/divisions/general-internal-medicine/people/melek-somai-md">
+            Medical College of Wisconsin
+          </FooterMenuLink>
+          <FooterMenuLink href="https://tuncph.org">TunCPH</FooterMenuLink>
+        </Stack>
+      </Grid>
       <Box>
         <Text variant="extraSmall">
           Made with love from Chicago, Milwaukee, and Tunis.
