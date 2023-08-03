@@ -3,7 +3,7 @@ import { Box } from "@thugga/ui";
 import EssaysSection from "./section.essays";
 import PapersSection from "./section.papers";
 
-import HeroSection from "../components/Hero";
+import HeroSection from "./hero";
 
 export default function MainPage() {
   return (
@@ -16,9 +16,9 @@ export default function MainPage() {
           Data Science.
         </HeroSection>
         {/* @ts-expect-error Server Component */}
-        <EssaysSection />
+        {/* <EssaysSection /> */}
         {/* @ts-expect-error Server Component */}
-        <PapersSection />
+        {/* <PapersSection /> */}
       </Box>
     </>
   );
