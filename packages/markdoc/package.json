@@ -8,7 +8,7 @@
     "lint": "eslint ./src/*.ts*"
   },
   "peerDependencies": {
-    "@markdoc/markdoc": "^0.1.2",
+    "@markdoc/markdoc": "0.2.2",
     "@thugga/ui": "workspace:*",
     "react-dom": "^18.2.0"
   },

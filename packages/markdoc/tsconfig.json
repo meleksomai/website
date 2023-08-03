@@ -2,7 +2,7 @@
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
     "baseUrl": "src",
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
