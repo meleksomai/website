@@ -1,8 +1,6 @@
-"use client";
-
 import { useEffect } from "react";
 
-import { Paragraph, Heading, Section, Separator } from "@thugga/ui";
+import { Text, Heading, Stack } from "@thugga/ui";
 
 export default function Error({
   error,
@@ -17,15 +15,15 @@ export default function Error({
   }, [error]);
 
   return (
-    <Section size="3">
-      <Heading as="h1" size="3" mono>
+    <Stack>
+      <Heading as="h1" mono>
         404 - Idea is not found
       </Heading>
-      <Separator size="2" css={{ marginTop: "$5", marginBottom: "$5" }} />
-      <Paragraph>
+      {/* <Separator size="2" css={{ marginTop: "$5", marginBottom: "$5" }} /> */}
+      <Text>
         Every doctor who deserves to be replace by a computer ought to be
         replaced by a computer.
-      </Paragraph>
-    </Section>
+      </Text>
+    </Stack>
   );
 }
