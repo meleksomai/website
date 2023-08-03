@@ -106,7 +106,16 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          <Box maxWidth="750px" margin="auto" paddingY="1200">
+          <Box
+            maxWidth="750px"
+            margin="auto"
+            paddingY="1200"
+            paddingX={{
+              desktop: "0",
+              tablet: "400",
+              mobile: "400",
+            }}
+          >
             <Stack space="1200">
               <NavBar />
               {children}

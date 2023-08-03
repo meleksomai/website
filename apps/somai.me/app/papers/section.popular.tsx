@@ -1,35 +1,29 @@
 import React from "react";
 
-import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Box, Grid, Heading, Link, Stack, Text } from "@thugga/ui";
 
-import { NextLink } from "../../components";
 import { getAllPapers } from "../../lib/papers";
 
-export default async function MostPopularSection() {
+export default async function MostPopularStack() {
   const publications = (await getAllPapers()).filter(
     (paper) => paper.meta.popular
   );
   return (
-    <Section size="2">
-      <Heading as="h3" size="2" css={{ pb: "$5" }}>
-        Most Popular
-      </Heading>
-      <Grid gap="5" columns="1">
-        {publications.map((paper) => (
-          <Box key={paper.slug}>
-            {/* <Separator size="2" /> */}
-            <Heading as="h4" css={{ paddingBottom: "$2" }}>
-              <NextLink href={`/paper/${paper.slug}`} variant="simple">
-                {paper.citation.title}
-              </NextLink>
-            </Heading>
-            <Text size="2" variant="light">
+    <Stack space="800">
+      <Heading size="h3">Most Popular</Heading>
+      {publications.map((paper) => (
+        <Stack space="200" key={paper.slug} align="flex-start">
+          <Box>
+            <Link size="large" bold href={`/paper/${paper.slug}`}>
+              {paper.citation.title}
+            </Link>
+            <Text color="slate11" variant="small">
               Published in {paper.publisher} on {paper.publishedAt.text}
             </Text>
-            <Paragraph>{paper.meta.excerpt}</Paragraph>
           </Box>
-        ))}
-      </Grid>
-    </Section>
+          <Text>{paper.meta.excerpt}</Text>
+        </Stack>
+      ))}
+    </Stack>
   );
 }

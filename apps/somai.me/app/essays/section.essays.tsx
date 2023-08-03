@@ -12,7 +12,6 @@ export default async function EssaysSection() {
         <Stack space="1200">
           {posts.map((post) => (
             <Stack key={post.meta.slug} align="flex-start" space="200">
-              {/* <Separator size="2" /> */}
               <Box>
                 <Link size="large" bold href={`/essay/${post.meta.slug}`}>
                   {post.meta.title}
