@@ -2,70 +2,79 @@
 
 import React from "react";
 
-import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
+import { Text, Box, Grid, Stack, Link } from "@thugga/ui";
 
-import { Spotify, NextLink } from "../components";
+import { Spotify } from "./spotify";
 
 // eslint-disable-next-line react/display-name
 const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
   return (
-    <NextLink variant="simple" size="medium" css={{ py: "$1" }} {...props}>
+    <Link size="small" {...props}>
       {props.children}
-    </NextLink>
+    </Link>
   );
 };
 
 const Footer = () => {
   return (
-    <Section css={{ pt: "$8" }}>
-      <Box css={{ py: "$5" }}>
+    <Stack space="800">
+      <Box>
         <Spotify />
       </Box>
-      <Box css={{ py: "$5" }}>
-        <Grid gap="5" columns={{ "@initial": "1", "@bp2": "3" }}>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
-              General
-            </Text>
-            <FooterMenuLink href="/">Home</FooterMenuLink>
-            <FooterMenuLink href="/essays">Essays</FooterMenuLink>
-            <FooterMenuLink href="/papers">Publications</FooterMenuLink>
-          </Flex>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
-              Profile
-            </Text>
-            <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
-              Google Scholar
-            </FooterMenuLink>
-            <FooterMenuLink href="https://twitter.com/meleksomai">
+      <Grid columns={3} gap="400">
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>General</Text>
+          <FooterMenuLink href="/">Home</FooterMenuLink>
+          <FooterMenuLink href="/essays">Essays</FooterMenuLink>
+          <FooterMenuLink href="/papers">Publications</FooterMenuLink>
+        </Stack>
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>Profile</Text>
+          <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
+            Google Scholar
+          </FooterMenuLink>
+          {/* <FooterMenuLink href="https://twitter.com/meleksomai">
               Twitter
-            </FooterMenuLink>
-            <FooterMenuLink href="https://www.linkedin.com/in/msomai/">
-              LinkedIn
-            </FooterMenuLink>
-            <FooterMenuLink href="https://github.com/meleksomai">
-              GitHub
-            </FooterMenuLink>
-          </Flex>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
-              Affiliations
-            </Text>
-            <FooterMenuLink href="https://www.inceptionhealth.com/">
-              Inception Health
-            </FooterMenuLink>
-            <FooterMenuLink href="https://www.mcw.edu/departments/medicine/divisions/general-internal-medicine/people/melek-somai-md">
-              Medical College of Wisconsin
-            </FooterMenuLink>
-            <FooterMenuLink href="https://tuncph.org">TunCPH</FooterMenuLink>
-          </Flex>
-        </Grid>
+            </FooterMenuLink> */}
+          <FooterMenuLink href="https://www.linkedin.com/in/msomai/">
+            LinkedIn
+          </FooterMenuLink>
+          <FooterMenuLink href="https://github.com/meleksomai">
+            GitHub
+          </FooterMenuLink>
+        </Stack>
+        <Stack
+          space="200"
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+        >
+          <Text bold>Affiliations</Text>
+          <FooterMenuLink href="https://www.inceptionhealth.com/">
+            Inception Health
+          </FooterMenuLink>
+          <FooterMenuLink href="https://www.mcw.edu/departments/medicine/divisions/general-internal-medicine/people/melek-somai-md">
+            Medical College of Wisconsin
+          </FooterMenuLink>
+          <FooterMenuLink href="https://tuncph.org">TunCPH</FooterMenuLink>
+        </Stack>
+      </Grid>
+      <Box>
+        <Text variant="extraSmall">
+          Made with love from Chicago, Milwaukee, and Tunis.
+        </Text>
       </Box>
-      <Box css={{ py: "$2" }}>
-        <Text size="1">Made with love from Chicago, Milwaukee, and Tunis.</Text>
-      </Box>
-    </Section>
+    </Stack>
   );
 };
 

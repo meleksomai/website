@@ -1,6 +1,7 @@
-import { Heading, Grid, Section, Box, Text, Container } from "@thugga/ui";
+import { RxArrowTopRight } from "react-icons/rx";
 
-import { NextLink } from "../components";
+import { Heading, Grid, Box, Text, Link, Stack } from "@thugga/ui";
+
 import { getAllPapers } from "../lib/papers";
 
 export default async function PapersSection() {
@@ -9,21 +10,19 @@ export default async function PapersSection() {
   return (
     <>
       {recentPublications && recentPublications.length > 0 && (
-        <Section size="2">
-          <Heading as="h3" size="2" css={{ pb: "$5" }}>
-            Recent Publications
-          </Heading>
+        <Stack>
+          <Heading size="h3">Recent Publications</Heading>
           <Box>
-            <Grid gap="5" columns="1">
+            <Stack space="800">
               {recentPublications.map((paper) => (
                 <Box key={paper.slug}>
                   {/* <Separator size="2" /> */}
-                  <Heading as="h4" css={{ paddingBottom: "$2" }}>
-                    <NextLink href={`/paper/${paper.slug}`} variant="simple">
+                  <Heading size="h4">
+                    <Link href={`/paper/${paper.slug}`}>
                       {paper.citation.title}
-                    </NextLink>
+                    </Link>
                   </Heading>
-                  <Text size="2" variant="light">
+                  <Text color="slate11" variant="small">
                     Published by{" "}
                     {paper.citation.author?.map((author: any) => (
                       <>
@@ -34,15 +33,15 @@ export default async function PapersSection() {
                   </Text>
                 </Box>
               ))}
-            </Grid>
+            </Stack>
           </Box>
-          <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/papers">
+          <Box>
+            <Link suffix={<RxArrowTopRight />} href="/papers">
               Check all publications{" "}
               {/* <ArrowRightIcon style={{ display: "inline" }} /> */}
-            </NextLink>
-          </Container>
-        </Section>
+            </Link>
+          </Box>
+        </Stack>
       )}
     </>
   );

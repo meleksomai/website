@@ -1,7 +1,8 @@
 // app/head.js
 import { NextSeo, NextSeoProps } from "next-seo";
 
-import { getPostBySlug } from "../../../lib/essays";
+import { getPostBySlug } from "@/lib/essays";
+
 import { NEXT_SEO_DEFAULT } from "../../../next-seo.config";
 
 export default function Head({ params }: { params: { slug: string } }) {

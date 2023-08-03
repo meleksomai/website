@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import { Heading, Avatar, Section, Box, Flex } from "@thugga/ui";
+import { Heading, Stack } from "@thugga/ui";
 
 import { Publication } from "../../../lib/papers";
 
@@ -13,13 +13,13 @@ export interface TitleProps {
 export default async function Title(props: PropsWithChildren<TitleProps>) {
   const { paper } = props;
   return (
-    <Section size="2">
-      <Heading as="h1" size={TEXT_SIZE} inline>
+    <Stack>
+      <Heading as="h1" size="h2">
         {paper.citation.title}.{" "}
+        <Heading as="span" size="h2" color="slate11">
+          {paper.citation.subtitle}
+        </Heading>
       </Heading>
-      <Heading inline as="h2" size={TEXT_SIZE} css={{ color: "$slate10" }}>
-        {paper.citation.subtitle}
-      </Heading>
-    </Section>
+    </Stack>
   );
 }

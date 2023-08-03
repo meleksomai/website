@@ -1,24 +1,68 @@
-import { NextSeo } from "next-seo";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+// import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
+import { Inter, Lora, JetBrains_Mono } from "next/font/google";
 import React from "react";
 
-import { Flex, Container, Layout } from "@thugga/ui";
+import { Box, Stack } from "@thugga/ui";
 
 import Footer from "./footer";
 import NavBar from "./navbar";
-import { ThemeProvider } from "./theme.provider";
+import { Providers } from "./providers";
 
-import globalStyles, { darkTheme, getCssText } from "../styles/globalStyles";
-
-// https://github.com/modulz/stitches/issues/995
-globalStyles();
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const ibmPlex = IBM_Plex_Mono({
-  weight: "400",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const serif = Lora({
+  weight: ["400", "600"],
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+const mono = JetBrains_Mono({
+  weight: ["400", "600"],
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
 });
+
+const MetadataTitle = `Melek Somai, MD, MPH | Clinical Computing, Data Science, and Digital Health`;
+const MetadataDescription = `Physician. Clinical Informatician. Data Scientist. Innovator. Works at the intersection of Healthcare Informatics, Clinical Computing, and Data Science.`;
+
+export const metadata: Metadata = {
+  title: MetadataTitle,
+  description: MetadataDescription,
+  keywords: [
+    "digital transformation",
+    "health systems",
+    "healthcare",
+    "healthcare consulting",
+    "healthcare consulting firms",
+    "healthcare consulting companies",
+    "healthcare consulting services",
+    "healthcare consulting firms in usa",
+    "digital health",
+    "global health technology",
+    "healthcare technology",
+  ],
+  openGraph: {
+    type: "website",
+    title: MetadataTitle,
+    description: MetadataDescription,
+    locale: "en_US",
+    url: "https://somai.me",
+    siteName: "Rethink Health",
+    images: `/og`,
+  },
+  twitter: {
+    title: MetadataTitle,
+    description: MetadataDescription,
+    images: "/og",
+    card: "summary",
+    site: "@meleksomai",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -27,11 +71,8 @@ export default function RootLayout({
 }) {
   return (
     <html
-      suppressHydrationWarning
       lang="en"
-      className={`${inter.variable} ${ibmPlex.variable}`}
-      // data-theme='dark'
-      // style={htmlStyle}
+      className={`${inter.variable} ${serif.variable} ${mono.variable}`}
     >
       <head>
         <meta charSet="utf-8" />
@@ -39,10 +80,6 @@ export default function RootLayout({
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <style
-          id="stitches"
-          dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
         {/* 
           This is for the Favicon configuration.
@@ -66,24 +103,27 @@ export default function RootLayout({
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        {/* 
-          Anything we add in layout will appear on EVERY PAGE. At present it can not be overridden lower down the tree.
-          This can be useful for things like favicons, or other meta tags that are the same on every page.
-        */}
-        <NextSeo
-          useAppDir={true}
-          themeColor="hsl(206, 5.2%, 49.5%)"
-          titleTemplate="%s | Melek Somai"
-        />
       </head>
       <body>
-        <ThemeProvider>
-          <Layout css={{ padding: "$4" }}>
-            <NavBar />
-            {children}
-            <Footer />
-          </Layout>
-        </ThemeProvider>
+        <Providers>
+          <Box
+            maxWidth="750px"
+            margin="auto"
+            paddingY="1200"
+            paddingX={{
+              desktop: "0",
+              tablet: "400",
+              mobile: "400",
+            }}
+          >
+            <Stack space="1200">
+              <NavBar />
+              {children}
+              <Footer />
+            </Stack>
+            {/* <Analytics /> */}
+          </Box>
+        </Providers>
       </body>
     </html>
   );

@@ -2,7 +2,9 @@
 
 import { useEffect } from "react";
 
-import { Paragraph, Heading, Section, Separator } from "@thugga/ui";
+import { Text, Heading, Stack, Box } from "@thugga/ui";
+
+import Head from "./head";
 
 export default function Error({
   error,
@@ -17,15 +19,22 @@ export default function Error({
   }, [error]);
 
   return (
-    <Section size="3">
-      <Heading as="h1" size="3" mono>
-        404 - Idea is not found
-      </Heading>
-      <Separator size="2" css={{ marginTop: "$5", marginBottom: "$5" }} />
-      <Paragraph>
-        Every doctor who deserves to be replace by a computer ought to be
-        replaced by a computer.
-      </Paragraph>
-    </Section>
+    <Box paddingY="2000">
+      <Stack align="flex-start" space="1200">
+        <Heading size="h1" mono>
+          404 - Idea not found
+        </Heading>
+        {/* <Separator size="2" css={{ marginTop: "$5", marginBottom: "$5" }} /> */}
+        <Stack>
+          <Heading size="h2" mono>
+            Every doctor who deserves to be replaced by a computer ought to be
+            replaced by a computer.
+          </Heading>
+          <Heading size="h3" mono color="slate11">
+            Dr. Warner Slack
+          </Heading>
+        </Stack>
+      </Stack>
+    </Box>
   );
 }
