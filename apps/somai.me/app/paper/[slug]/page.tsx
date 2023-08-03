@@ -37,7 +37,9 @@ export default function PaperPage({ params }: { params: { slug: string } }) {
       >
         Read original article
       </Link>
-      <Text color="slate11" variant="large">{publication.meta.excerpt}</Text>
+      <Text color="slate11" variant="large">
+        {publication.meta.excerpt}
+      </Text>
       <Stack>{rendered}</Stack>
     </Stack>
   );

@@ -24,7 +24,9 @@ export default function RoleSection(props: RoleSectionProps) {
                 </Heading>
               </Heading>
               <Text>{role.content}</Text>
-              <Link suffix={<RxArrowTopRight />} href={role.meta.url}>Learn more</Link>
+              <Link suffix={<RxArrowTopRight />} href={role.meta.url}>
+                Learn more
+              </Link>
             </Stack>
           ))}
         </Stack>

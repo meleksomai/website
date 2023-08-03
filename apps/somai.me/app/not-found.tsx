@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 
 import { Text, Heading, Stack, Box } from "@thugga/ui";
+
 import Head from "./head";
 
 export default function Error({

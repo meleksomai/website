@@ -5,9 +5,9 @@ import React from "react";
 
 import { Box, Stack } from "@thugga/ui";
 
-import { Providers } from "./providers";
-import NavBar from "./navbar";
 import Footer from "./footer";
+import NavBar from "./navbar";
+import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
