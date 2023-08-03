@@ -1,14 +1,7 @@
-import {
-  Heading,
-  Grid,
-  Section,
-  Box,
-  Paragraph,
-  Text,
-  Container,
-} from "@thugga/ui";
+import { RxArrowTopRight } from "react-icons/rx";
 
-import { NextLink } from "../components";
+import { Heading, Grid, Box, Text, Link, Stack } from "@thugga/ui";
+
 import { getAllPosts } from "../lib/essays";
 
 export default async function EssaysSection() {
@@ -17,39 +10,31 @@ export default async function EssaysSection() {
   return (
     <>
       {recentPosts && recentPosts.length > 0 && (
-        <Section size="2">
-          <Heading as="h3" size="2" css={{ pb: "$5" }}>
-            Recent Essays
-          </Heading>
+        <Stack>
+          <Heading size="h3">Recent Essays</Heading>
           <Box>
-            <Grid gap="5" columns={{ "@initial": "1", "@bp2": "2" }}>
+            <Grid columns={2} gap="800">
               {recentPosts.map((post) => (
                 <Box key={post.meta.slug}>
-                  <Heading as="h4" css={{ pb: "0" }}>
-                    <NextLink
-                      href={`/essay/${post.meta.slug}`}
-                      variant="simple"
-                    >
+                  <Heading size="h4">
+                    <Link href={`/essay/${post.meta.slug}`}>
                       {post.meta.title}
-                    </NextLink>
+                    </Link>
                   </Heading>
-                  <Paragraph css={{ pt: "0", pb: "$2" }} variant="light">
-                    {post.meta.subtitle}
-                  </Paragraph>
-                  <Text size="2" variant="light">
+                  <Text color="slate11" variant="small">
                     Published {post.meta.publishedAt.text}
                   </Text>
+                  <Text color="slate11">{post.meta.subtitle}</Text>
                 </Box>
               ))}
             </Grid>
           </Box>
-          <Container css={{ paddingTop: "$7" }}>
-            <NextLink href="/essays">
+          <Box>
+            <Link suffix={<RxArrowTopRight />} href="/essays">
               Check all essays
-              {/* <ArrowRightIcon style={{ display: "inline" }} /> */}
-            </NextLink>
-          </Container>
-        </Section>
+            </Link>
+          </Box>
+        </Stack>
       )}
     </>
   );
