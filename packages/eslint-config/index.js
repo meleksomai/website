@@ -19,7 +19,13 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:typescript-sort-keys/recommended", // Enables sorting of object properties
   ],
-  plugins: ["@typescript-eslint", "react", "prettier", "import", "typescript-sort-keys"],
+  plugins: [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "import",
+    "typescript-sort-keys",
+  ],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
@@ -39,6 +45,11 @@ module.exports = {
           "index",
         ],
         pathGroups: [
+          {
+            group: "internal",
+            pattern: "@/**",
+            position: "before",
+          },
           {
             group: "external",
             pattern: "@thugga/**",
