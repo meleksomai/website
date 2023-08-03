@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 
 import { Heading, Box } from "@thugga/ui";
 
-export default function HeroSection({ children }: PropsWithChildren<{}>) {
+export default function HeroSection({ children }: PropsWithChildren<null>) {
   return (
     <Box>
       <Heading as="h1" size="h2" balance>
