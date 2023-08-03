@@ -1,28 +1,13 @@
 import Markdoc from "@markdoc/markdoc";
 import React from "react";
+import { RxArrowTopRight } from "react-icons/rx";
 
 import { config, components } from "@thugga/markdoc";
-import { Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Stack, Text, Link } from "@thugga/ui";
+
+import { getAllPapers, getPaperBySlug } from "@/lib/papers";
 
 import Title from "./title";
-
-import { NextLink } from "../../../components";
-import { getAllPapers, getPaperBySlug } from "../../../lib/papers";
-
-function Author({ author }: any) {
-  return (
-    <Text
-      as="span"
-      css={{
-        display: "inline",
-        paddingInlineEnd: "$1",
-      }}
-      variant="light"
-    >
-      {author.given} {author.family} /
-    </Text>
-  );
-}
 
 export default function PaperPage({ params }: { params: { slug: string } }) {
   const publication = getPaperBySlug(params?.slug as string);
@@ -31,33 +16,30 @@ export default function PaperPage({ params }: { params: { slug: string } }) {
   const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
-    <>
+    <Stack align="flex-start" space="800">
       {/* @ts-expect-error Server Component */}
       <Title paper={publication} />
-      <Section size="0">
-        <Text size="2" variant="light">
-          {publication.publisher} / {publication.publishedAt.text}
-        </Text>
-      </Section>
-      <Section>
-        <Text size="3">
-          {publication.citation.author?.map((author: any) => {
-            return <Author author={author} />;
-          })}
-        </Text>
-      </Section>
-      <Section>
-        <NextLink href={publication.url} variant="simple" size="large">
-          Read original article{" "}
-        </NextLink>
-      </Section>
-      <Section>
-        <Paragraph mono variant="light">
-          {publication.meta.excerpt}
-        </Paragraph>
-      </Section>
-      <Section>{rendered}</Section>
-    </>
+      <Text variant="small">
+        {publication.publisher} / {publication.publishedAt.text}
+      </Text>
+      <Text variant="small">
+        {publication.citation.author
+          ?.map((author: any) => {
+            return `${author.given} ${author.family}`;
+          })
+          .join(" / ")}
+      </Text>
+      <Link
+        variant="secondary"
+        suffix={<RxArrowTopRight size="20" />}
+        href={publication.url}
+        size="large"
+      >
+        Read original article
+      </Link>
+      <Text color="slate11" variant="large">{publication.meta.excerpt}</Text>
+      <Stack>{rendered}</Stack>
+    </Stack>
   );
 }
 
