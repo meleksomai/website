@@ -39,7 +39,6 @@ const NotPlaying = () => {
 
 export function Spotify() {
   const { data } = useSWR<any>("/api/spotify", fetcher);
-  console.log(data);
   return (
     <Stack space="200" direction="row" align="center" justify="flex-start">
       <Image width="20" height="20" src={spotifyLogo} alt="spotify logo" />
