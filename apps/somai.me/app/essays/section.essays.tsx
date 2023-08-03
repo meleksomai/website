@@ -1,35 +1,32 @@
 import React from "react";
 
-import { Box, Grid, Heading, Paragraph, Section, Text } from "@thugga/ui";
+import { Box, Heading, Link, Stack, Text } from "@thugga/ui";
 
-import { NextLink } from "../../components";
 import { getAllPosts } from "../../lib/essays";
 
 export default async function EssaysSection() {
   const posts = await getAllPosts();
   return (
-    <Section size="2">
+    <Stack>
       <Box>
-        <Grid gap="5" columns="1">
+        <Stack space="1200">
           {posts.map((post) => (
-            <Box key={post.meta.slug}>
+            <Stack key={post.meta.slug} align="flex-start" space="200">
               {/* <Separator size="2" /> */}
-              <Heading as="h4" css={{ pb: "0" }}>
-                <NextLink href={`/essay/${post.meta.slug}`} variant="simple">
+              <Box>
+                <Link size="large" bold href={`/essay/${post.meta.slug}`}>
                   {post.meta.title}
-                </NextLink>
-              </Heading>
-              <Paragraph css={{ pt: "0", pb: "$2" }} variant="light">
-                {post.meta.subtitle}
-              </Paragraph>
-              <Text size="2" variant="light">
-                Published {post.meta.publishedAt.text}
-              </Text>
-              <Paragraph>{post.meta.excerpt}</Paragraph>
-            </Box>
+                </Link>
+                <Text color="slate11">{post.meta.subtitle}</Text>
+                <Text color="slate11" variant="small">
+                  Published {post.meta.publishedAt.text}
+                </Text>
+              </Box>
+              <Text>{post.meta.excerpt}</Text>
+            </Stack>
           ))}
-        </Grid>
+        </Stack>
       </Box>
-    </Section>
+    </Stack>
   );
 }

@@ -21,10 +21,10 @@ export default async function EssaysSection() {
                       {post.meta.title}
                     </Link>
                   </Heading>
+                  <Text color="slate11">{post.meta.subtitle}</Text>
                   <Text color="slate11" variant="small">
                     Published {post.meta.publishedAt.text}
                   </Text>
-                  <Text color="slate11">{post.meta.subtitle}</Text>
                 </Box>
               ))}
             </Grid>

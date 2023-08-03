@@ -3,7 +3,7 @@
 import Image from "next/image";
 import useSWR from "swr";
 
-import { Text, Stack, Box, Link } from "@thugga/ui";
+import { Text, Stack, Link } from "@thugga/ui";
 
 import fetcher from "../lib/fetcher";
 import spotifyLogo from "../public/images/spotify.svg";
@@ -13,14 +13,14 @@ const CurrentSong = (props: any) => {
 
   return (
     <>
-      <Text variant="small" as="span">
-        Listening to
-      </Text>
       <Link
         size="small"
         bold
         href={data.songUrl ?? ""}
       >{`${data.title} - ${data.artist}`}</Link>
+      <Text variant="small" as="span">
+        - on Spotify
+      </Text>
     </>
   );
 };
