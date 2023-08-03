@@ -2,37 +2,33 @@
 
 import React from "react";
 
-import { Text, Section, Box, Grid, Flex } from "@thugga/ui";
+import { Text, Box, Grid, Stack, Link } from "@thugga/ui";
 
-import { Spotify, NextLink } from "../components";
+import { Spotify } from "./spotify";
 
 // eslint-disable-next-line react/display-name
 const FooterMenuLink = (props: React.PropsWithChildren<{ href: string }>) => {
-  return (
-    <NextLink variant="simple" size="medium" css={{ py: "$1" }} {...props}>
-      {props.children}
-    </NextLink>
-  );
+  return <Link {...props}>{props.children}</Link>;
 };
 
 const Footer = () => {
   return (
-    <Section css={{ pt: "$8" }}>
-      <Box css={{ py: "$5" }}>
+    <Box>
+      <Box>
         <Spotify />
       </Box>
-      <Box css={{ py: "$5" }}>
-        <Grid gap="5" columns={{ "@initial": "1", "@bp2": "3" }}>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
+      <Box>
+        <Grid>
+          <Stack direction="column" justify="flex-start">
+            <Text as="p" bold>
               General
             </Text>
             <FooterMenuLink href="/">Home</FooterMenuLink>
             <FooterMenuLink href="/essays">Essays</FooterMenuLink>
             <FooterMenuLink href="/papers">Publications</FooterMenuLink>
-          </Flex>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
+          </Stack>
+          <Stack direction="column" justify="flex-start">
+            <Text as="p" bold>
               Profile
             </Text>
             <FooterMenuLink href="https://scholar.google.com/citations?hl=en&user=5MdxFjAAAAAJ">
@@ -47,9 +43,9 @@ const Footer = () => {
             <FooterMenuLink href="https://github.com/meleksomai">
               GitHub
             </FooterMenuLink>
-          </Flex>
-          <Flex direction="column" justify="start">
-            <Text as="p" size="3" bold css={{ py: "$1" }}>
+          </Stack>
+          <Stack direction="column" justify="flex-start">
+            <Text as="p" bold>
               Affiliations
             </Text>
             <FooterMenuLink href="https://www.inceptionhealth.com/">
@@ -59,13 +55,15 @@ const Footer = () => {
               Medical College of Wisconsin
             </FooterMenuLink>
             <FooterMenuLink href="https://tuncph.org">TunCPH</FooterMenuLink>
-          </Flex>
+          </Stack>
         </Grid>
       </Box>
-      <Box css={{ py: "$2" }}>
-        <Text size="1">Made with love from Chicago, Milwaukee, and Tunis.</Text>
+      <Box>
+        <Text variant="small">
+          Made with love from Chicago, Milwaukee, and Tunis.
+        </Text>
       </Box>
-    </Section>
+    </Box>
   );
 };
 
