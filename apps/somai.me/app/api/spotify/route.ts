@@ -2,10 +2,6 @@ import { type NextRequest } from "next/server";
 
 import { getNowPlaying } from "../../../lib/spotify";
 
-export const config = {
-  runtime: "edge",
-};
-
 export async function GET() {
   const response = await getNowPlaying();
   if (response.status === 204 || response.status > 400) {
