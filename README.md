@@ -14,6 +14,7 @@ Welcome to the GitHub repository for my personal website [somai.me](https://soma
 - [What I listed to in Spotify](): Inspired by and copied from [leerob.io](https://github.com/leerob/leerob.io).
 - [Vercel](https://vercel.com/): For hosting and deployment.
 - [Citation JS](https://citation.js.org/): a format-independent, modular bibliography tool to manage my academic publications.
+- [Open Graph Image Generator] using [Vercel OG](https://vercel.com/templates/next.js/og-image-generation).
 
 ## Getting Started
 
