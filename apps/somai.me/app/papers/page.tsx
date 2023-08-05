@@ -5,7 +5,6 @@ import HeroSection from "@/components/Hero";
 import MostPopularSection from "./section.popular";
 import PublicationsSection from "./section.publications";
 
-
 export default async function PapersPage() {
   return (
     <>

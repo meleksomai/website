@@ -3,7 +3,6 @@ import { getAllRoles } from "@/lib/roles";
 
 import RoleSection from "./section.roles";
 
-
 export default async function EssayPage() {
   const roles = await getAllRoles();
   return (
