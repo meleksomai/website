@@ -1,10 +1,10 @@
 ---
-role: Founder - Chief Executive Officer
+role: Founder
 organization: Rethink Health
 url: https://rethinkhealth.io
 startAt: 01-01-2023
 isCurrent: true
-active: false
+active: true
 ---
 
-Rethink Health is an engineering and research studio that focuses on digital transformation in healthcare. Its mission is to help healthcare organization build their technology stack beyond the Electronic Health Records. 
+Rethink Health is an engineering and research studio that focuses on digital transformation in healthcare. Its mission is to build the next generation of technology platforms in Healthcare.
