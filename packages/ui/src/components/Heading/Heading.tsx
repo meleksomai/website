@@ -23,6 +23,7 @@ export type HeadingProps = {
   children?: React.ReactNode;
   color?: BoxProps["color"];
   id?: BoxProps["id"];
+  inline?: boolean;
   mono?: boolean;
   responsive?: boolean;
   serif?: boolean;
@@ -41,6 +42,7 @@ export const Heading = ({
   color,
   size = "h2",
   mono = false,
+  inline = false,
   serif = false,
   responsive,
   transform,
@@ -61,6 +63,7 @@ export const Heading = ({
         responsive,
         serif,
         size,
+        inline,
       })}
       color={color}
       // id={id}
