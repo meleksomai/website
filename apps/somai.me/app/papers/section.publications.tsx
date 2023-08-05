@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Box, Grid, Heading, Stack, Text, Link } from "@thugga/ui";
+import { Heading, Stack } from "@thugga/ui";
 
+import { Title } from "@/components/Title";
 import { getAllPapers } from "@/lib/papers";
 
 export default async function PublicationsSection() {
@@ -21,15 +22,18 @@ export default async function PublicationsSection() {
             {publications
               .filter((a) => new Date(a.publishedAt.iso).getFullYear() === year)
               .map((paper) => (
-                <Box>
-                  {/* <Separator size="2" /> */}
-                  <Link size="large" bold href={`/paper/${paper.slug}`}>
-                    {paper.citation.title}
-                  </Link>
-                  <Text variant="small" color="slate11">
-                    Published by {paper.publisher} on {paper.publishedAt.text}
-                  </Text>
-                </Box>
+                <Title
+                  key={paper.slug}
+                  href={`/paper/${paper.slug}`}
+                  title={paper.citation.title}
+                  // subtitle={paper.citation.author
+                  //   ?.map((author: any) => {
+                  //     return `${author.given} ${author.family}`;
+                  //   })
+                  //   .join(" / ")}
+                  info={`Published in ${paper.publisher} on ${paper.publishedAt.text}`}
+                  description={paper.meta.excerpt}
+                />
               ))}
           </Stack>
         </Stack>

@@ -28,6 +28,7 @@ const NavBar = () => {
       </Stack>
       <Button
         onClick={onToggle}
+        variant="simple"
         size="small"
         prefix={theme === "dark" ? <RxSun /> : <RxMoon />}
       />

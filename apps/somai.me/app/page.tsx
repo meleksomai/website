@@ -1,6 +1,7 @@
 import { Stack } from "@thugga/ui";
 
-import HeroSection from "./hero";
+import HeroSection from "@/components/hero";
+
 import EssaysSection from "./section.essays";
 import PapersSection from "./section.papers";
 
@@ -8,9 +9,9 @@ export default function MainPage() {
   return (
     <Stack space="1200">
       <HeroSection>
-        Physician. Clinical Informatician. Data Scientist. Innovator. Works at
-        the intersection of Healthcare Informatics, Clinical Computing, and Data
-        Science.
+        Physician. Clinical Informatician. Statistician. Works at the
+        intersection of Healthcare Informatics, Data Science, and Product
+        Engineering.
       </HeroSection>
       {/* @ts-expect-error Server Component */}
       <EssaysSection />

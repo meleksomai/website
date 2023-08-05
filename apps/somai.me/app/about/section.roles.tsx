@@ -18,9 +18,9 @@ export default function RoleSection(props: RoleSectionProps) {
           {props.roles?.map((role) => (
             <Stack key={role.meta.slug} justify="flex-start" align="flex-start">
               <Heading size="h4">
-                {role.meta.role}.{" "}
+                {role.meta.organization}.{" "}
                 <Heading size="h4" as="span" color="slate11">
-                  {role.meta.organization}
+                  {role.meta.role}.
                 </Heading>
               </Heading>
               <Text>{role.content}</Text>
