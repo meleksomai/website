@@ -106,6 +106,7 @@ export const Link = React.forwardRef<HTMLElement, LinkProps>(
           disabled,
         })}
         // {...nativeProps}
+        {...externalProps}
         {...restProps}
       >
         {childContent}
