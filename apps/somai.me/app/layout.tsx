@@ -1,9 +1,10 @@
 // import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
 import { Inter, Lora, JetBrains_Mono } from "next/font/google";
 import React from "react";
 
 import { Box, Stack } from "@thugga/ui";
+
+import { Seo } from "@/lib/seo";
 
 import Footer from "./footer";
 import NavBar from "./navbar";
@@ -27,42 +28,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const MetadataTitle = `Melek Somai, MD, MPH | Clinical Computing, Data Science, and Digital Health`;
-const MetadataDescription = `Physician. Clinical Informatician. Data Scientist. Innovator. Works at the intersection of Healthcare Informatics, Clinical Computing, and Data Science.`;
-
-export const metadata: Metadata = {
-  title: MetadataTitle,
-  description: MetadataDescription,
-  keywords: [
-    "digital transformation",
-    "health systems",
-    "healthcare",
-    "healthcare consulting",
-    "healthcare consulting firms",
-    "healthcare consulting companies",
-    "healthcare consulting services",
-    "healthcare consulting firms in usa",
-    "digital health",
-    "global health technology",
-    "healthcare technology",
-  ],
-  openGraph: {
-    type: "website",
-    title: MetadataTitle,
-    description: MetadataDescription,
-    locale: "en_US",
-    url: "https://somai.me",
-    siteName: "Rethink Health",
-    images: `/og`,
-  },
-  twitter: {
-    title: MetadataTitle,
-    description: MetadataDescription,
-    images: "/og",
-    card: "summary",
-    site: "@meleksomai",
-  },
-};
+export const metadata = Seo();
 
 export default function RootLayout({
   children,

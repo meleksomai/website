@@ -71,6 +71,11 @@ export const variants = recipe({
         fontFamily: "serif",
       }),
     },
+    inline: {
+      true: atoms({
+        display: "inline",
+      }),
+    },
   },
   compoundVariants: [
     {

@@ -10,7 +10,7 @@ export default function MainPage() {
     <Stack space="1200">
       <HeroSection>
         Physician. Clinical Informatician. Statistician. Works at the
-        intersection of Healthcare Informatics, Data Science, and Product
+        intersection of Healthcare Informatics, Data Science, and Product.
         Engineering.
       </HeroSection>
       {/* @ts-expect-error Server Component */}
