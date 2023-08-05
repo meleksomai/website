@@ -27,12 +27,18 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const MetadataTitle = `Melek Somai, MD, MPH | Clinical Computing, Data Science, and Digital Health`;
-const MetadataDescription = `Physician. Clinical Informatician. Data Scientist. Innovator. Works at the intersection of Healthcare Informatics, Clinical Computing, and Data Science.`;
+const MetadataTitle = `Melek Somai, MD, MPH | Physician. Clinical Informatician. Data Scientist.`;
+const MetadataDescription = `Physician. Clinical Informatician. Statistician. Works at the intersection of Healthcare Informatics, Data Science, and Product`;
 
 export const metadata: Metadata = {
   title: MetadataTitle,
   description: MetadataDescription,
+  authors: [
+    {
+      name: "Melek Somai",
+      url: "https://somai.me",
+    },
+  ],
   keywords: [
     "digital transformation",
     "health systems",
