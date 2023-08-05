@@ -10,12 +10,12 @@ export default function HeroSection({
   title?: string;
 }) {
   return (
-    <Box>
-      <Heading as="h1" size="h2" balance>
+    <Box display="inline">
+      <Heading as="h1" size="h2" inline>
         {`${title}. `}
-        <Heading size="h2" as="span" color="slate11">
-          {children}
-        </Heading>
+      </Heading>
+      <Heading size="h2" as="h2" color="slate11" inline>
+        {children}
       </Heading>
     </Box>
   );
