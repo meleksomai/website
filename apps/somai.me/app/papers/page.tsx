@@ -1,9 +1,9 @@
 import React from "react";
 
+import HeroSection from "@/components/Hero";
+
 import MostPopularSection from "./section.popular";
 import PublicationsSection from "./section.publications";
-
-import HeroSection from "../hero";
 
 export default async function PapersPage() {
   return (

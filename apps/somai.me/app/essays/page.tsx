@@ -1,8 +1,8 @@
 import React from "react";
 
-import EssaysSection from "./section.essays";
+import HeroSection from "@/components/Hero";
 
-import HeroSection from "../hero";
+import EssaysSection from "./section.essays";
 
 export default async function EssayPage() {
   return (
