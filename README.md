@@ -13,6 +13,7 @@ Welcome to the GitHub repository for my personal website [somai.me](https://soma
 - [Markdoc](https://markdoc.dev/): Powerful, flexible, Markdown-based authoring framework open sourced by Stripe team.
 - [What I listed to in Spotify](): Inspired by and copied from [leerob.io](https://github.com/leerob/leerob.io).
 - [Vercel](https://vercel.com/): For hosting and deployment.
+- [Citation JS](https://citation.js.org/): a format-independent, modular bibliography tool to manage my academic publications.
 
 ## Getting Started
 
