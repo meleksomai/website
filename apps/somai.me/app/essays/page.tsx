@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeroSection from "@/components/hero";
+import HeroSection from "@/components/Hero";
 
 import EssaysSection from "./section.essays";
 

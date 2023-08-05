@@ -1,4 +1,4 @@
-import HeroSection from "@/components/hero";
+import HeroSection from "@/components/Hero";
 import { getAllRoles } from "@/lib/roles";
 
 import RoleSection from "./section.roles";

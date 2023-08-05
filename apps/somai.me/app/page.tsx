@@ -1,6 +1,6 @@
 import { Stack } from "@thugga/ui";
 
-import HeroSection from "@/components/hero";
+import HeroSection from "@/components/Hero";
 
 import EssaysSection from "./section.essays";
 import PapersSection from "./section.papers";
