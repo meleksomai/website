@@ -1,4 +1,4 @@
-// import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter, Lora, JetBrains_Mono } from "next/font/google";
 import React from "react";
 
@@ -87,7 +87,7 @@ export default function RootLayout({
               {children}
               <Footer />
             </Stack>
-            {/* <Analytics /> */}
+            <Analytics />
           </Box>
         </Providers>
       </body>
