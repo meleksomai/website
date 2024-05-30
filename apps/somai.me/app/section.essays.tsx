@@ -5,7 +5,7 @@ import { Heading, Grid, Box, Text, Link, Stack } from "@thugga/ui";
 import { getAllPosts } from "../lib/essays";
 
 export default async function EssaysSection() {
-  const recentPosts = await getAllPosts();
+  const recentPosts = (await getAllPosts()).filter((a) => a.meta.featured);
 
   return (
     <>
