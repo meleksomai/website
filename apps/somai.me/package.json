@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@markdoc/markdoc": "0.1.2",
+    "@markdoc/markdoc": "0.2.2",
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
