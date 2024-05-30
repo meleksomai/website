@@ -34,6 +34,9 @@ const config: Config = {
         content: { type: String },
       },
     },
+    blockquote: {
+      render: "Blockquote",
+    },
     link: {
       render: "Link",
       attributes: {
@@ -109,6 +112,15 @@ const config: Config = {
 };
 
 const components = {
+  Blockquote: ({ children }: any) => {
+    return (
+      <Box paddingY="500">
+        <Text as="div" color="slate11" variant="large">
+          {children.props.children}
+        </Text>
+      </Box>
+    );
+  },
   Document: ({ children }: any) => {
     return (
       <Stack as="article" space="500" align="flex-start">

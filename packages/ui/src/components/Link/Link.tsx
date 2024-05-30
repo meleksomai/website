@@ -38,23 +38,16 @@ export const Link = React.forwardRef<HTMLElement, LinkProps>(
       underline,
       nextLink = true,
       disabled,
-      size = "base",
+      size,
       ...restProps
     },
     ref
   ) => {
-    const externalProps = external
-      ? {
-          rel: "noopener norefferer",
-          target: "_blank",
-        }
-      : null;
-
     const labelContent = (
       <Text
         as="span"
         bold={bold}
-        variant={size}
+        variant={undefined}
         color="inherit"
         font={mono ? "mono" : undefined}
         display="initial"
@@ -105,8 +98,6 @@ export const Link = React.forwardRef<HTMLElement, LinkProps>(
           underline,
           disabled,
         })}
-        // {...nativeProps}
-        {...externalProps}
         {...restProps}
       >
         {childContent}

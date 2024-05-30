@@ -21,7 +21,9 @@ Product-market fit (PMF) is a concept in the business and startup world that ref
 
 With those challenges in sight, digital health startups are trying to adopt a few tactics to achieve success. Two distinct models are the most common, each representing a distinct approach to achieving a true PMF: a Software-as-a-Service (SaaS) model and a Services-as-a-Software model. 
 
-> Side-note: there is a trend of companies claiming to be platforms, but many fail to meet the true definition of [platform](https://online.hbs.edu/blog/post/what-is-a-digital-platform), and as such, we are not including Platform as a Service (PaaS) models in this discussion
+{% callout variant="note" title="Note" %}
+There is a trend of companies claiming to be platforms, but many fail to meet the true definition of [platform](https://online.hbs.edu/blog/post/what-is-a-digital-platform), and as such, we are not including Platform as a Service (PaaS) models in this discussion
+{% /callout %}
 
 ### Software-as-a-Service
 
@@ -88,3 +90,8 @@ With AI, we stand on the precipice of a new era in healthcare disruption, one wh
 The current financial climate calls for reevaluating investment strategies in health tech. The end of the once cheap and readily available capital era has led to a more conservative approach, emphasizing sustainable growth and a focus on problem-solving over-aggressive expansion. This is the right time to test the “price is what you pay, value is what you return” thesis in health tech venture investments. This slow and steady paradigm shift signals a maturation of the health tech investment landscape, where the emphasis is on building viable businesses that address tangible challenges in the healthcare sector. The market correction will likely see many startups faltering, breaking up, or consolidating. It also sets the stage for more resilient and impactful companies to emerge.
 
 The booming health tech companies of the future are expected to have common characteristics such as solving critical problems, demonstrating clear ROI, operating in complex ecosystems, focusing on attractive unit economics, and building multidisciplinary teams. As the ecosystem evolves, a new breed of health tech ventures — patient, prudent, and problem-solving — is set to lead the way.
+
+
+{% callout variant="default" title="Contributors" %}
+I would like to thank Brad Crotty, Eya Somai, and Mike Maschek for revising and reviewing early drafts of this article.
+{% /callout %}
