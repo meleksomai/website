@@ -13,7 +13,7 @@
     "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format"
   },
   "devDependencies": {
-    "eslint-config-thugga": "0.0.0",
+    "eslint-config-thugga": "workspace:*",
     "prettier": "2.7.1",
     "syncpack": "8.2.4",
     "turbo": "latest"
