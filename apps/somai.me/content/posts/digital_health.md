@@ -63,7 +63,7 @@ In parallel, emergent trends could potentially create a more strategic path for 
 
 As key players in the health tech ecosystem, healthcare providers must critically examine their role in shaping the rapidly-evolving landscape. Currently, healthcare providers are technology integrators rather than technology builders. However, recognizing the increasing importance of technology in healthcare, healthcare organizations must embark on a path to transform themselves [from integrators to technology builders](https://medium.com/inception-health/why-are-we-building-a-product-engineering-team-in-healthcare-ee76599effb3). This transition must involve establishing a dedicated product engineering team, a move that represents a significant step towards making technology an integral part of the business of healthcare. Advantageously, healthcare systems can combine in-house disciplines ranging from clinical services and engineering to marketing and user research. The immediate benefit is augmenting their capabilities to leverage non-healthcare SaaS products to develop custom digital care services and to collaborate more effectively with digital health startups.
 
-Reverse Engineering Healthcare Technology Adoption 
+### Reverse Engineering Healthcare Technology Adoption 
 
 To take matters a step further, venture funds with a healthcare focus in the likes of [General Catalyst](https://www.generalcatalyst.com/perspectives/the-future-of-health) (GC) and [Aegis Ventures](https://aegisventures.com/insights/putting-health-systems-first/) are partnering with healthcare systems directly in a new model of tech integration. 
 
