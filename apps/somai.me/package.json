@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@markdoc/markdoc": "0.1.2",
+    "@markdoc/markdoc": "0.2.2",
     "@radix-ui/react-icons": "1.1.1",
     "@thugga/markdoc": "workspace:*",
     "@thugga/ui": "workspace:*",
@@ -36,7 +36,7 @@
     "@types/node": "17.0.12",
     "@types/react": "18.0.28",
     "eslint": "8.36.0",
-    "eslint-config-thugga": "0.0.0",
+    "eslint-config-thugga": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "4.9.5",
     "webpack": "5.88.2"

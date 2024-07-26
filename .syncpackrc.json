@@ -1,13 +1,31 @@
 {
-  "dev": true,
   "filter": ".",
   "indent": "  ",
-  "overrides": false,
-  "peer": false,
-  "prod": true,
-  "resolutions": true,
+  "dependencyTypes": ["dev", "prod", "resolutions"],
   "workspace": false,
-  "semverGroups": [],
+  "semverGroups": [
+    {
+      "label": "use exact version numbers in production",
+      "packages": ["**"],
+      "dependencyTypes": ["prod"],
+      "dependencies": ["**"],
+      "range": ""
+    },
+    {
+      "label": "use exact version numbers for development",
+      "packages": ["**"],
+      "dependencyTypes": ["dev"],
+      "dependencies": ["**"],
+      "range": ""
+    },
+    {
+      "label": "use exact version numbers for resolutions",
+      "packages": ["**"],
+      "dependencyTypes": ["resolutions"],
+      "dependencies": ["**"],
+      "range": ""
+    }
+  ],
   "semverRange": "",
   "sortAz": [
     "contributors",
@@ -26,6 +44,7 @@
     "author",
     "keywords",
     "main",
+    "files",
     "scripts",
     "peerDependencies",
     "dependencies",

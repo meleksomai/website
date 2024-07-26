@@ -20,6 +20,13 @@ const variant = {
       base: "blue11",
     },
   }),
+  danger: atoms({
+    textDecorationColor: "red8",
+    color: {
+      hover: "redA11",
+      base: "red11",
+    },
+  }),
 };
 
 const underline = {

@@ -42,7 +42,7 @@ export const Text = React.forwardRef<
       font = "sans",
       weight,
       underline,
-      variant = "base",
+      variant = undefined,
     },
     ref: React.Ref<HTMLElement>
   ) => {
