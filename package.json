@@ -14,13 +14,13 @@
   },
   "devDependencies": {
     "eslint-config-thugga": "workspace:*",
-    "prettier": "2.7.1",
+    "prettier": "3.3.3",
     "syncpack": "8.2.4",
     "turbo": "latest"
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=20.0.0"
   },
   "private": true,
   "workspaces": [
