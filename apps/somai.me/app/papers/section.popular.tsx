@@ -8,7 +8,7 @@ import { getAllPapers } from "../../lib/papers";
 
 export default async function MostPopularStack() {
   const publications = (await getAllPapers()).filter(
-    (paper) => paper.meta.popular
+    (paper) => paper.meta.popular,
   );
   return (
     <Stack space="800">

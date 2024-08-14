@@ -68,7 +68,7 @@ export function getPublication(filepath: string): Publication {
 
 export async function listAllPublications(
   filepath = "papers",
-  extension = "*.md"
+  extension = "*.md",
 ): Promise<string[]> {
   const paths = await globby([path.join(__dirname, filepath, extension)]);
   return paths.map((filepath) => path.parse(filepath).name);
@@ -85,7 +85,7 @@ export async function listAllPublications(
 
 export async function cacheAllPublications(
   filepath = "papers",
-  extension = "*.md"
+  extension = "*.md",
 ) {
   const paths = await globby([path.join(__dirname, filepath, extension)]);
   paths.map((file) => {
@@ -94,7 +94,7 @@ export async function cacheAllPublications(
     fs.writeFileSync(
       path.join(`${path.dirname(file)}/cache`, `${slug}.json`),
       JSON.stringify(publication),
-      "utf8"
+      "utf8",
     );
   });
 }

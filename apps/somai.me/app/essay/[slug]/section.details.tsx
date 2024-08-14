@@ -9,7 +9,7 @@ export interface DetailsSectionProps {
 }
 
 export default function DetailsSection(
-  props: PropsWithChildren<DetailsSectionProps>
+  props: PropsWithChildren<DetailsSectionProps>,
 ) {
   const { post } = props;
   return (

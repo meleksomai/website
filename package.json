@@ -16,7 +16,7 @@
     "eslint-config-thugga": "workspace:*",
     "prettier": "3.3.3",
     "syncpack": "8.2.4",
-    "turbo": "latest"
+    "turbo": "2.0.12"
   },
   "engines": {
     "npm": ">=7.0.0",
@@ -26,5 +26,6 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "packageManager": "pnpm@9.6.0"
 }

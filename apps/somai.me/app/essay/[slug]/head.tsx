@@ -30,5 +30,5 @@ export default function Head({ params }: { params: { slug: string } }) {
       siteName: "Melek Somai",
     },
   };
-  return <NextSeo {...updateMeta} useAppDir={true} />;
+  return <NextSeo {...updateMeta} />;
 }
