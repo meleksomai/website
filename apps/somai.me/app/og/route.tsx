@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 
 // Route segment config
 export const runtime = "edge";
@@ -11,11 +11,11 @@ const size = {
 
 // Font
 const interBold = fetch(
-  new URL("../../public/fonts/Inter-Bold.ttf", import.meta.url)
+  new URL("../../public/fonts/Inter-Bold.ttf", import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const interRegular = fetch(
-  new URL("../../public/fonts/Inter-Regular.ttf", import.meta.url)
+  new URL("../../public/fonts/Inter-Regular.ttf", import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 // Image generation
@@ -81,10 +81,9 @@ export async function GET(request: Request) {
             weight: 400,
           },
         ],
-      }
+      },
     );
-  } catch (e: any) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
     return new Response(`Failed to generate the image`, {
       status: 500,
     });

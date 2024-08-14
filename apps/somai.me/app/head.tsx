@@ -8,7 +8,7 @@ export default function Head() {
     <>
       <title>Melek Somai | Personal Website</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
+      <NextSeo {...NEXT_SEO_DEFAULT} />
     </>
   );
 }

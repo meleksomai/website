@@ -26,7 +26,7 @@ export const Title = forwardRef<any, TitleProps>(
         <Text>{description}</Text>
       </Stack>
     );
-  }
+  },
 );
 
 Title.displayName = "Title";

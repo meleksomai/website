@@ -28,5 +28,5 @@ export default function Head() {
       siteName: "Melek Somai",
     },
   };
-  return <NextSeo {...updateMeta} useAppDir={true} />;
+  return <NextSeo {...updateMeta} />;
 }

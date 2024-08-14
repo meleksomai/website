@@ -11,7 +11,7 @@ export default async function PublicationsSection() {
   const years = new Set(
     publications
       .map((a) => new Date(a.publishedAt.iso).getFullYear())
-      .sort((a, b) => b - a)
+      .sort((a, b) => b - a),
   );
   return (
     <Stack space="1200">

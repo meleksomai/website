@@ -31,7 +31,7 @@ export function getPaperBySlug(slug: string): Publication {
     "content",
     "papers",
     "cache",
-    `${slug}.json`
+    `${slug}.json`,
   );
   return JSON.parse(fs.readFileSync(filepath, "utf-8"));
 }

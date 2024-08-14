@@ -27,6 +27,8 @@ module.exports = {
     "typescript-sort-keys",
   ],
   rules: {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
     "react/display-name": "warn",
