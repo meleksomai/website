@@ -79,7 +79,7 @@ const Footer = () => {
             external
             href="https://www.mcw.edu/departments/medicine/divisions/general-internal-medicine/people/melek-somai-md"
           >
-            Medical College of Wisconsin
+            MCW
           </FooterMenuLink>
           <FooterMenuLink href="https://rethinkhealth.io" external>
             Rethink Health
