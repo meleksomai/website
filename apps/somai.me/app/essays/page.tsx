@@ -23,7 +23,6 @@ export default async function EssayPage() {
         A space to share thoughts and ideas that are often reflections on my
         current research.
       </HeroSection>
-      {/* @ts-expect-error Server Component */}
       <EssaysSection />
     </>
   );

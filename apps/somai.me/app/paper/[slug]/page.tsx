@@ -23,7 +23,6 @@ export default function PaperPage({ params }: Props) {
 
   return (
     <Stack align="flex-start" space="800">
-      {/* @ts-expect-error Server Component */}
       <Title paper={publication} />
       <Text variant="small">
         {publication.publisher} / {publication.publishedAt.text}

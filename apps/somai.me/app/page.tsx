@@ -13,9 +13,7 @@ export default function MainPage() {
         intersection of Healthcare Informatics, Data Science, and Product
         Engineering.
       </HeroSection>
-      {/* @ts-expect-error Server Component */}
       <EssaysSection />
-      {/* @ts-expect-error Server Component */}
       <PapersSection />
     </Stack>
   );

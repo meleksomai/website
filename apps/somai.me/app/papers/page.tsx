@@ -24,9 +24,7 @@ export default async function PapersPage() {
         Research in areas ranging from Clinical Computing, Patient Remote
         Monitoring, Neuro-Epidemiology, to AI and Machine Learning.
       </HeroSection>
-      {/* @ts-expect-error Server Component */}
       <MostPopularSection />
-      {/* @ts-expect-error Server Component */}
       <PublicationsSection />
     </>
   );
