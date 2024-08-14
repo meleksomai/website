@@ -14,7 +14,7 @@
     "react-dom": "18.3.1"
   },
   "dependencies": {
-    "@phosphor-icons/react": "2.0.9",
+    "@phosphor-icons/react": "2.1.7",
     "@radix-ui/colors": "0.1.8",
     "@radix-ui/react-avatar": "1.0.2",
     "@radix-ui/react-dialog": "1.0.4",
