@@ -46,3 +46,4 @@ apps/**/dist
 
 # ENV
 .env
+.vercel

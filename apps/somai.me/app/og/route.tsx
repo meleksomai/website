@@ -10,10 +10,6 @@ const size = {
 };
 
 // Font
-const interBold = fetch(
-  new URL("../../public/fonts/Inter-Bold.ttf", import.meta.url),
-).then((res) => res.arrayBuffer());
-
 const interRegular = fetch(
   new URL("../../public/fonts/Inter-Regular.ttf", import.meta.url),
 ).then((res) => res.arrayBuffer());
@@ -68,12 +64,6 @@ export async function GET(request: Request) {
         // size config to also set the ImageResponse's width and height.
         ...size,
         fonts: [
-          {
-            name: "Inter",
-            data: await interBold,
-            style: "normal",
-            weight: 700,
-          },
           {
             name: "Inter",
             data: await interRegular,

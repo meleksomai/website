@@ -2,6 +2,8 @@ import { PropsWithChildren } from "react";
 
 import { Stack, Text } from "@thugga/ui";
 
+import ViewsCounter from "./counter";
+
 import { Post } from "../../../lib/essays";
 
 export interface DetailsSectionProps {
@@ -13,20 +15,35 @@ export default function DetailsSection(
 ) {
   const { post } = props;
   return (
-    <Stack
-      align="flex-start"
-      direction={{
-        desktop: "row",
-        tablet: "row",
-        mobile: "column",
-      }}
-      justify="space-between"
-      space="200"
-    >
-      <Text variant="small">Melek Somai / {post.meta.publishedAt.text}</Text>
-      <Text variant="small">
-        {post.meta.readingTime.words} words / {post.meta.readingTime.text}
-      </Text>
+    <Stack space="100">
+      <Stack
+        align="flex-start"
+        direction={{
+          desktop: "row",
+          tablet: "row",
+          mobile: "column",
+        }}
+        justify="space-between"
+        space="200"
+      >
+        <Text variant="small">{post.meta.publishedAt.text}</Text>
+        <Text variant="small">
+          {post.meta.readingTime.words} words / {post.meta.readingTime.text}
+        </Text>
+      </Stack>
+      <Stack
+        align="flex-start"
+        direction={{
+          desktop: "row",
+          tablet: "row",
+          mobile: "column",
+        }}
+        justify="space-between"
+        space="200"
+      >
+        <Text variant="small">By Melek Somai</Text>
+        <ViewsCounter essay={post.meta.slug} />
+      </Stack>
     </Stack>
   );
 }
