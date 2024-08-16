@@ -16,6 +16,8 @@ type Props = {
   params: { slug: string };
 };
 
+export const revalidate = 0;
+
 export default function EssayPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   const ast = Markdoc.parse(post.content);
