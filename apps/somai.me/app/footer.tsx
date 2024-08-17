@@ -1,10 +1,11 @@
-"use client";
-
 import React from "react";
 import { RxArrowTopRight } from "react-icons/rx";
 
 import { Text, Box, Grid, Stack, Link } from "@thugga/ui";
 
+import { getAllPosts } from "@/lib/essays";
+
+import Cmd from "./cmd";
 import { Spotify } from "./spotify";
 
 // eslint-disable-next-line react/display-name
@@ -24,12 +25,24 @@ const FooterMenuLink = ({
   );
 };
 
-const Footer = () => {
+const Footer = async () => {
+  const recentPosts = (await getAllPosts()).filter((a) => a.meta.featured);
+
   return (
     <Stack space="800">
-      <Box>
+      <Stack
+        space="800"
+        direction={{
+          desktop: "row",
+          tablet: "row",
+          mobile: "column",
+        }}
+        justify="space-between"
+        align="flex-start"
+      >
         <Spotify />
-      </Box>
+        <Cmd essays={recentPosts} />
+      </Stack>
       <Grid columns={3} gap="400">
         <Stack
           space="200"
