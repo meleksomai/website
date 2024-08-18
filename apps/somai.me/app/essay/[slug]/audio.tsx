@@ -70,7 +70,7 @@ export default function AudioPlayer({ audio }: { audio: string }) {
     } else {
       setStatus(AudioPlayerStatus.Play);
     }
-  }, [isLoading, playing]);
+  }, [playing]);
 
   const handlePlay = () => {
     if (isLoading) {
