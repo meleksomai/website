@@ -15,6 +15,7 @@ export type Post = {
   content: string;
   meta: {
     [key: string]: any;
+    audio?: string | undefined;
     excerpt: string;
     image: string;
     publishedAt: {

@@ -13,7 +13,7 @@ export interface BoxProps extends Omit<Atoms, "reset"> {
 export const Box = forwardRef<HTMLElement, BoxProps>(
   (
     { as: Component = "div", asChild = false, width = "full", ...other },
-    ref
+    ref,
   ) => {
     const [atomsProps, propsToForward] = extractAtoms(other);
     const className = atoms({
@@ -26,7 +26,7 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
     const Comp = asChild ? Slot : Component;
 
     return <Comp {...propsToForward} className={className} ref={ref} />;
-  }
+  },
 );
 
 Box.displayName = "Box";
