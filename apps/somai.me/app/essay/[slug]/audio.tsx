@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play } from "@phosphor-icons/react";
+import { Pause, Play, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
@@ -32,6 +32,8 @@ export default function AudioPlayer({ audio }: { audio: string }) {
     isReady,
     duration,
     getPosition,
+    muted,
+    mute,
   } = useGlobalAudioPlayer();
   const [pos, setPos] = useState(0);
   const [status, setStatus] = useState<AudioPlayerStatus>(
@@ -84,6 +86,14 @@ export default function AudioPlayer({ audio }: { audio: string }) {
     }
   };
 
+  const handleMute = () => {
+    if (muted) {
+      mute(false);
+    } else {
+      mute(true);
+    }
+  };
+
   return (
     <Box
       borderColor="slate7"
@@ -94,7 +104,7 @@ export default function AudioPlayer({ audio }: { audio: string }) {
         mobile: "full",
       }}
       paddingLeft="300"
-      paddingRight="600"
+      paddingRight="300"
       borderRadius="full"
       minHeight="1000"
       alignItems="center"
@@ -118,6 +128,13 @@ export default function AudioPlayer({ audio }: { audio: string }) {
               {new Date(duration * 1000).toISOString().substring(14, 19)}
             </Text>
             <Progress progress={(pos / duration) * 100} />
+            <Button onClick={handleMute} variant="simple" size="small">
+              {muted ? (
+                <SpeakerSlash weight="fill" />
+              ) : (
+                <SpeakerHigh weight="fill" />
+              )}
+            </Button>
           </>
         )}
         {!playing && !isReady && (
