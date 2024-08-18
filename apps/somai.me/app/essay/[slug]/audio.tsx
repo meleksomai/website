@@ -1,35 +1,41 @@
 "use client";
 
-import { DotsThree, PauseCircle, PlayCircle } from "@phosphor-icons/react";
-import React, { useEffect, useRef } from "react";
-import { useAudioPlayer } from "react-use-audio-player";
+import { Pause, Play } from "@phosphor-icons/react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 import { Button, Stack, Text, Box, Progress } from "@thugga/ui";
 
 // Enum Statuses for the audio player
 enum AudioPlayerStatus {
-  Loading = "Loading",
   Pause = "Pause",
   Play = "Play",
 }
 
 function PlayIcon({ status }: { status: AudioPlayerStatus }) {
   switch (status) {
-    case AudioPlayerStatus.Loading:
-      return <DotsThree size={25} />;
     case AudioPlayerStatus.Pause:
-      return <PauseCircle size={25} />;
+      return <Pause weight="fill" />;
     case AudioPlayerStatus.Play:
-      return <PlayCircle size={25} />;
+      return <Play weight="fill" />;
   }
 }
 
 export default function AudioPlayer({ audio }: { audio: string }) {
-  const { load, play, pause, playing, isReady, duration, getPosition } =
-    useAudioPlayer();
-  const [pos, setPos] = React.useState(0);
-  const [status, setStatus] = React.useState<AudioPlayerStatus>(
-    AudioPlayerStatus.Loading,
+  const {
+    src,
+    load,
+    play,
+    pause,
+    playing,
+    isLoading,
+    isReady,
+    duration,
+    getPosition,
+  } = useGlobalAudioPlayer();
+  const [pos, setPos] = useState(0);
+  const [status, setStatus] = useState<AudioPlayerStatus>(
+    AudioPlayerStatus.Play,
   );
 
   const frameRef = useRef<number>();
@@ -49,25 +55,25 @@ export default function AudioPlayer({ audio }: { audio: string }) {
     };
   }, []);
 
-  useEffect(() => {
-    load(audio, {
-      autoplay: false,
-      format: "mp3",
-    });
-  }, [audio, load]);
+  useMemo(() => {
+    if (audio !== src) {
+      load(audio, {
+        autoplay: false,
+        format: "mp3",
+      });
+    }
+  }, [audio, load, src]);
 
   useEffect(() => {
-    if (!isReady) {
-      setStatus(AudioPlayerStatus.Loading);
-    } else if (playing) {
+    if (playing) {
       setStatus(AudioPlayerStatus.Pause);
     } else {
       setStatus(AudioPlayerStatus.Play);
     }
-  }, [isReady, playing]);
+  }, [isLoading, playing]);
 
   const handlePlay = () => {
-    if (!isReady) {
+    if (isLoading) {
       return;
     }
 
@@ -80,7 +86,8 @@ export default function AudioPlayer({ audio }: { audio: string }) {
 
   return (
     <Box
-      backgroundColor="slate4"
+      borderColor="slate7"
+      borderWidth="0.375"
       width={{
         desktop: "9600",
         tablet: "9600",
@@ -93,11 +100,16 @@ export default function AudioPlayer({ audio }: { audio: string }) {
       alignItems="center"
     >
       <Stack justify="flex-start" align="center" direction="row" space="100">
-        {status !== AudioPlayerStatus.Loading && (
+        <Button
+          onClick={handlePlay}
+          variant="simple"
+          size="small"
+          disabled={isLoading}
+        >
+          <PlayIcon status={status} />
+        </Button>
+        {(playing || pos !== 0) && isReady && (
           <>
-            <Button onClick={handlePlay} variant="simple" size="small">
-              <PlayIcon status={status} />
-            </Button>
             <Text variant="small" as="span">
               {new Date(pos * 1000).toISOString().substring(14, 19)}
             </Text>
@@ -107,6 +119,16 @@ export default function AudioPlayer({ audio }: { audio: string }) {
             </Text>
             <Progress progress={(pos / duration) * 100} />
           </>
+        )}
+        {!playing && !isReady && (
+          <Text variant="small" color="slate10">
+            Loading audio...
+          </Text>
+        )}
+        {!playing && isReady && !isLoading && pos === 0 && (
+          <Text variant="small" color="slate12">
+            Read aloud
+          </Text>
         )}
       </Stack>
     </Box>

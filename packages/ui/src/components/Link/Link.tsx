@@ -41,13 +41,13 @@ export const Link = React.forwardRef<HTMLElement, LinkProps>(
       size,
       ...restProps
     },
-    ref
+    ref,
   ) => {
     const labelContent = (
       <Text
         as="span"
         bold={bold}
-        variant={undefined}
+        variant={size}
         color="inherit"
         font={mono ? "mono" : undefined}
         display="initial"
@@ -98,12 +98,13 @@ export const Link = React.forwardRef<HTMLElement, LinkProps>(
           underline,
           disabled,
         })}
+        target={external ? "_blank" : undefined}
         {...restProps}
       >
         {childContent}
       </CustomLink>
     );
-  }
+  },
 );
 
 Link.displayName = "Link";

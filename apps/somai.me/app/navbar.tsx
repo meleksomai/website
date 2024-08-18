@@ -21,10 +21,18 @@ const NavBar = () => {
   return (
     <Stack direction="row" justify="space-between">
       <Stack align="center" justify="flex-start" direction="row">
-        <Link href="/">Home</Link>
-        <Link href="/essays">Essays</Link>
-        <Link href="/papers">Papers</Link>
-        <Link href="/about">About</Link>
+        <Link href="/" size="small">
+          Home
+        </Link>
+        <Link href="/essays" size="small">
+          Essays
+        </Link>
+        <Link href="/papers" size="small">
+          Papers
+        </Link>
+        <Link href="/about" size="small">
+          About
+        </Link>
       </Stack>
       <Button
         onClick={onToggle}

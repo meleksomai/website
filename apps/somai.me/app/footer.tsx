@@ -29,7 +29,7 @@ const Footer = async () => {
   const recentPosts = (await getAllPosts()).filter((a) => a.meta.featured);
 
   return (
-    <Stack space="800">
+    <Stack space="1200">
       <Stack
         space="800"
         direction={{
@@ -101,7 +101,7 @@ const Footer = async () => {
       </Grid>
       <Box>
         <Text variant="extraSmall">
-          Made with love from Milwaukee, and Tunis.
+          Made with love from New York, Milwaukee, and Tunis.
         </Text>
       </Box>
     </Stack>

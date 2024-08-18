@@ -26,8 +26,8 @@ export type Theme = {
 const lightTheme: Theme = {
   mode: "light",
   color: {
-    background: tokens.colors.light.mauve2,
-    primary: tokens.colors.light.slate12,
+    background: tokens.colors.light.slate1,
+    primary: tokens.colors.light.blackA12,
     ...tokens.colors.light,
     ...tokens.colors.base,
   },
