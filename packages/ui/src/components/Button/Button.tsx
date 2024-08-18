@@ -59,7 +59,7 @@ export const Button = React.forwardRef(
       minWidth,
       ...boxProps
     }: ButtonProps,
-    ref: React.Ref<HTMLButtonElement>
+    ref: React.Ref<HTMLButtonElement>,
   ) => {
     // if (shape) {
     //   childContent = loading ? <Spinner color="current" /> : labelContent;
@@ -104,7 +104,7 @@ export const Button = React.forwardRef(
         {childContent}
       </Box>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

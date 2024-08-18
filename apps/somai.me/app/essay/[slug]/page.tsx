@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import React from "react";
 
 import { config, components } from "@thugga/markdoc";
-import { Stack } from "@thugga/ui";
+import { Stack, Box } from "@thugga/ui";
 
 import { getAllPosts, getPostBySlug } from "@/lib/essays";
 import { Seo } from "@/lib/seo";
 
+import AudioPlayer from "./audio";
 import DetailsSection from "./section.details";
 import Excerpt from "./section.excerpt";
 import Title from "./section.title";
@@ -25,9 +26,10 @@ export default function EssayPage({ params }: Props) {
   const rendered = Markdoc.renderers.react(content, React, { components });
 
   return (
-    <Stack space="800">
+    <Stack space="800" align="flex-start">
       <Title post={post} />
       <DetailsSection post={post} />
+      {post.meta.audio && <AudioPlayer audio={post.meta.audio} />}
       <Excerpt post={post} />
       <Stack>{rendered}</Stack>
     </Stack>

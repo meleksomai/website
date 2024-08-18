@@ -2,6 +2,7 @@
 title: Digital Healthcare Innovation
 subtitle: Challenges and Lessons for Digital Health Startups
 featured: true
+audio: /audio/essays/digital_health.mp3
 image: /images/posts/universal_healthcare/hero.png
 authors:
   - melek-somai
