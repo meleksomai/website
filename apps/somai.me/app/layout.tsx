@@ -32,7 +32,7 @@ const mono = JetBrains_Mono({
 
 export const metadata = Seo();
 
-export const viewpoint: Viewport = {
+export const viewport: Viewport = {
   themeColor: vars.color.background,
 };
 
