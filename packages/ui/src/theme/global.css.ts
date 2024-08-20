@@ -23,9 +23,12 @@ globalStyle("a", {
 });
 
 globalStyle("body", {
-  lineHeight: 1.5,
   WebkitFontSmoothing: "antialiased",
   backgroundColor: vars.color.background,
+  lineHeight: vars.typography.lineHeights["1.5"],
+  overflow: "auto",
+  height: vars.spacing.viewHeight,
+  width: vars.spacing.viewWidth,
 });
 
 globalStyle("input, button, textarea, select", {

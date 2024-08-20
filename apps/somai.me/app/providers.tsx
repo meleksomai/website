@@ -11,6 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       attribute="class"
       value={{ light: lightThemeClass, dark: darkThemeClass }}
       defaultTheme="dark"
+      enableColorScheme={true}
     >
       <Tooltip.Provider>{children}</Tooltip.Provider>
     </NextThemeProvider>

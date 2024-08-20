@@ -1,8 +1,10 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Viewport } from "next";
 import { Inter, Lora, JetBrains_Mono } from "next/font/google";
 import React from "react";
 
-import { Box, Stack } from "@thugga/ui";
+import { Box, Stack, vars } from "@thugga/ui";
 
 import { Seo } from "@/lib/seo";
 
@@ -30,6 +32,10 @@ const mono = JetBrains_Mono({
 
 export const metadata = Seo();
 
+export const viewpoint: Viewport = {
+  themeColor: vars.color.background,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,12 +47,6 @@ export default function RootLayout({
       className={`${inter.variable} ${serif.variable} ${mono.variable}`}
     >
       <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
         {/* 
           This is for the Favicon configuration.
         */}
@@ -70,12 +70,12 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Providers>
           <Box
             maxWidth="750px"
             margin="auto"
-            paddingY="1200"
+            paddingY="400"
             paddingX={{
               desktop: "0",
               tablet: "400",
@@ -87,8 +87,9 @@ export default function RootLayout({
               {children}
               <Footer />
             </Stack>
-            <Analytics />
           </Box>
+          <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>

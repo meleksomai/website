@@ -59,7 +59,7 @@ export const spaces = {
   inherit: "inherit",
   max: "max-content",
   min: "min-content",
-  viewHeight: "100vh",
+  viewHeight: "100dvh",
   viewWidth: "100vw",
   maxScreen: "1200px",
   unset: "unset",

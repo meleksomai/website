@@ -44,9 +44,11 @@ const block = resetStyles({
 });
 
 const body = resetStyles({
-  lineHeight: vars.typography.lineHeights.none,
-  minHeight: vars.spacing.viewHeight,
+  lineHeight: vars.typography.lineHeights["1.5"],
   overflow: "auto",
+  height: vars.spacing.viewHeight,
+  width: vars.spacing.viewWidth,
+  backgroundColor: vars.color.background,
 });
 
 const list = resetStyles({
