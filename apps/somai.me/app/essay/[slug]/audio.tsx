@@ -1,6 +1,12 @@
 "use client";
 
-import { Info, Pause, Play, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react";
+import {
+  Info,
+  Pause,
+  Play,
+  SpeakerHigh,
+  SpeakerSlash,
+} from "@phosphor-icons/react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
