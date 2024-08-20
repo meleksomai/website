@@ -39,7 +39,7 @@ export const Tooltip = ({
           className={styles.content}
           sideOffset={2}
         >
-          <Text variant="small">{content}</Text>
+          <Text variant="extraSmall">{content}</Text>
           <TooltipPrimitives.Arrow className={styles.tooltipArrow} />
         </TooltipPrimitives.Content>
       </TooltipPrimitives.Portal>

@@ -1,10 +1,10 @@
 "use client";
 
-import { Pause, Play, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react";
+import { Info, Pause, Play, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-import { Button, Stack, Text, Box, Progress } from "@thugga/ui";
+import { Button, Stack, Text, Box, Progress, Tooltip } from "@thugga/ui";
 
 // Enum Statuses for the audio player
 enum AudioPlayerStatus {
@@ -143,9 +143,16 @@ export default function AudioPlayer({ audio }: { audio: string }) {
           </Text>
         )}
         {!playing && isReady && !isLoading && pos === 0 && (
-          <Text variant="small" color="slate12">
-            Read aloud
-          </Text>
+          <Stack justify="space-between" direction="row">
+            <Text variant="small" color="slate12">
+              Read aloud
+            </Text>
+            <Tooltip
+              content="Audio generated using OpenAI Text-to-Speech engine."
+              trigger={<Info weight="fill" />}
+              side="right"
+            />
+          </Stack>
         )}
       </Stack>
     </Box>
