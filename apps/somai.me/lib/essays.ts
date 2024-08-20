@@ -6,6 +6,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
 import { globby } from "globby";
 import matter from "gray-matter";
+import { notFound } from "next/navigation";
 import readingtime, { ReadTimeResults } from "reading-time";
 
 dayjs.extend(relativeTime);
@@ -33,6 +34,11 @@ export function getPostBySlug(slug: string): Post {
   const postsDirectory = path.join(process.cwd(), "content", "posts");
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(postsDirectory, `${realSlug}.md`);
+
+  if (!fs.existsSync(fullPath)) {
+    notFound();
+  }
+
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Step 1: Gray matter

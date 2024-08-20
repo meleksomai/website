@@ -25,7 +25,7 @@ export type Publication = {
   url: string;
 };
 
-export function getPaperBySlug(slug: string): Publication {
+export function getPaperBySlug(slug: string): Publication | undefined {
   const filepath = path.join(
     process.cwd(),
     "content",
@@ -33,6 +33,11 @@ export function getPaperBySlug(slug: string): Publication {
     "cache",
     `${slug}.json`,
   );
+
+  if (!fs.existsSync(filepath)) {
+    return undefined;
+  }
+
   return JSON.parse(fs.readFileSync(filepath, "utf-8"));
 }
 

@@ -1,5 +1,6 @@
 import Markdoc from "@markdoc/markdoc";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import React from "react";
 import { RxArrowTopRight } from "react-icons/rx";
 
@@ -17,6 +18,11 @@ type Props = {
 
 export default function PaperPage({ params }: Props) {
   const publication = getPaperBySlug(params?.slug as string);
+
+  if (!publication) {
+    notFound();
+  }
+
   const ast = Markdoc.parse(publication.content);
   const content = Markdoc.transform(ast, config);
   const rendered = Markdoc.renderers.react(content, React, { components });
@@ -56,6 +62,10 @@ export function generateMetadata({ params }: Props): Metadata {
 
   // fetch data
   const paper = getPaperBySlug(id);
+
+  if (!paper) {
+    notFound();
+  }
 
   return Seo({
     title: paper.citation.title,
