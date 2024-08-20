@@ -7,6 +7,10 @@ import { NEXT_SEO_DEFAULT } from "../../../next-seo.config";
 export default function Head({ params }: { params: { slug: string } }) {
   const paper = getPaperBySlug(params?.slug as string);
 
+  if (!paper) {
+    return null;
+  }
+
   const updateMeta: NextSeoProps = {
     ...NEXT_SEO_DEFAULT,
     title: paper.citation.title,
