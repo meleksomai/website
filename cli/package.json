@@ -2,17 +2,17 @@
   "name": "cli",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "./src/index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage && rm -rf cdk-out",
-    "cmd": "npx ts-node ./src/index.ts",
+    "cmd": "npx ts-node src/index.ts",
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint:fix": "eslint 'src/**/*.{js,ts}' --fix",
     "test": "jest --forceExit",
     "test:u": "jest -u --forceExit"
   },
   "dependencies": {
+    "@thugga/academic": "workspace:*",
     "@inquirer/prompts": "4.1.0",
     "@markdoc/markdoc": "0.4.0",
     "chalk": "4.1.2",
@@ -29,6 +29,7 @@
     "zx": "7.2.3"
   },
   "devDependencies": {
+    "tsup": "8.3.5",
     "@thugga/jest": "workspace:*",
     "@types/figlet": "1.5.8",
     "@types/fluent-ffmpeg": "2.1.25",
