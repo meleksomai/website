@@ -1,0 +1,10 @@
+---
+doi: 10.1016/j.ipemt.2022.100010
+popular: false
+authors:
+  - melek-somai
+  - brad-crotty
+excerpt: Telemedicine widens care disparities, with vulnerable groups using it less and relying on lower-quality alternatives like phone messaging, highlighting the need for equitable access and improved healthcare solutions.
+---
+
+Telemedicine has been an essential form of care since the onset of the COVID-19 pandemic. However, telemedicine may exacerbate disparities for populations with limited digital literacy or access, such as older adults, racial minorities, patients of low income, rural residences, or limited English proficiency. From March 2020 to March 2022, this retrospective cohort study analyzed the use of in-person, phone/message, and telemedical care at a single tertiary care center in an oncology department. We investigated the association between economic, racial, ethnic, socioeconomic factors and forms of care, including in-person visits, telemedicine-based visits, and telephone/messages. The study results show that telemedicine utilization is lower among patients 65 and older, female patients, American Indian or Alaska Native patients, uninsured patients, and patients who require interpreters during clinical visits. As a result, it is unlikely that telemedicine will provide equal access to clinical care for all populations. On the other hand, in-person care utilization remains low in low-income and rural-living patients compared to the general population, while telephone and message use remains high in low-income and rural-living patients. We conclude that telemedicine is currently unable to close the utilization gap for populations of low socioeconomic status. Patients with low socioeconomic status use in-person care less frequently. For the disadvantaged, unusually high telephone or message utilization is unlikely to provide the same quality as in-person or telemedical care. Understanding the causes of disparity and promoting a solution to improve equal access to care for all patients is critical.

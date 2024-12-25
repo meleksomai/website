@@ -8,7 +8,7 @@ import Ffmpeg from "fluent-ffmpeg";
 import { convert } from "html-to-text";
 import OpenAI from "openai";
 
-import { chunkText } from "../utils/chunkText";
+import { chunkText } from "./utils/chunkText";
 
 const TEMP_FOLDER = path.resolve(process.cwd(), "temp");
 const TEMP_SUBFOLDER = new Date().getTime().toString();

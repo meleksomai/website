@@ -2,9 +2,15 @@
   "name": "@thugga/academic",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "cache": "npx tsx ./src/index.ts",
-    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "eslint ./src/*.ts*",
     "lint:fix": "eslint ./src/*.ts* --fix"
   },
@@ -14,7 +20,7 @@
     "commander": "12.0.0",
     "dayjs": "1.11.12",
     "figlet": "1.7.0",
-    "globby": "14.0.2",
+    "globby": "11.0.4",
     "gray-matter": "4.0.3"
   },
   "devDependencies": {
@@ -23,6 +29,7 @@
     "eslint": "8.57.0",
     "eslint-config-thugga": "workspace:*",
     "tsconfig": "workspace:*",
+    "tsup": "8.3.5",
     "tsx": "3.12.1",
     "typescript": "5.2.2"
   }

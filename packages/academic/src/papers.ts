@@ -7,10 +7,12 @@ import Cite from "citation-js";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
-import { globby } from "globby";
 import matter from "gray-matter";
 
 import { Publication } from "./schema";
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const globby = require("globby");
 
 dayjs.extend(relativeTime);
 dayjs.extend(localizedFormat);
@@ -67,11 +69,11 @@ export function getPublication(filepath: string): Publication {
 }
 
 export async function listAllPublications(
-  filepath = "papers",
+  filepath: string,
   extension = "*.md",
 ): Promise<string[]> {
-  const paths = await globby([path.join(__dirname, filepath, extension)]);
-  return paths.map((filepath) => path.parse(filepath).name);
+  const paths = await globby([path.join(filepath, extension)]);
+  return paths.map((filepath: string) => path.parse(filepath).name);
 }
 
 // export async function getAllPublications(): Promise<Publication[]> {
@@ -84,11 +86,11 @@ export async function listAllPublications(
 // }
 
 export async function cacheAllPublications(
-  filepath = "papers",
+  filepath: string,
   extension = "*.md",
 ) {
-  const paths = await globby([path.join(__dirname, filepath, extension)]);
-  paths.map((file) => {
+  const paths = await globby([path.join(filepath, extension)]);
+  paths.map((file: string) => {
     const slug = path.parse(file).name;
     const publication = getPublication(file);
     fs.writeFileSync(

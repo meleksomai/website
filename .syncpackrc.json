@@ -2,7 +2,7 @@
   "filter": ".",
   "indent": "  ",
   "dependencyTypes": ["dev", "prod", "resolutions"],
-  "workspace": false,
+  "workspace": false,  
   "semverGroups": [
     {
       "label": "use exact version numbers in production",
@@ -41,9 +41,13 @@
     "description",
     "version",
     "license",
+    "private",
     "author",
     "keywords",
     "main",
+    "module",
+    "types",
+    "exports",
     "files",
     "scripts",
     "peerDependencies",

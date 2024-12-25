@@ -3,12 +3,10 @@
   "display": "Library",
   "extends": "./base.json",
   "compilerOptions": {
-    "baseUrl": "src",
     "lib": ["dom", "esnext"],
     "module": "commonjs",
     "target": "es2018",
     "declaration": true,
     "resolveJsonModule": true
   },
-  "include": ["src"]
 }
