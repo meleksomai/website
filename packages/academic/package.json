@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@types/figlet": "1.5.8",
-    "@types/node": "22.2.0",
-    "eslint": "8.57.0",
+    "@types/node": "22.10.2",
+    "eslint": "8.57.1",
     "eslint-config-thugga": "workspace:*",
     "tsconfig": "workspace:*",
     "tsup": "8.3.5",
     "tsx": "3.12.1",
-    "typescript": "5.2.2"
+    "typescript": "5.7.2"
   }
 }

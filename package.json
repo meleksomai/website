@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "sync:papers": "cd cli && pnpm cmd academic -c ../../apps/somai.me/content/papers/",
     "build": "turbo run build",
     "ci:install": "pnpm install --no-frozen-lockfile",
     "clean": "turbo run clean && rm -rf node_modules",
@@ -11,6 +10,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
+    "sync:papers": "cd cli && pnpm cmd academic -c ../../apps/somai.me/content/papers/",
     "syncpack": "npx syncpack",
     "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format"
   },
