@@ -69,10 +69,10 @@ export function getPublication(filepath: string): Publication {
 }
 
 export async function listAllPublications(
-  filepath = "papers",
+  filepath: string,
   extension = "*.md",
 ): Promise<string[]> {
-  const paths = await globby([path.join(__dirname, filepath, extension)]);
+  const paths = await globby([path.join(filepath, extension)]);
   return paths.map((filepath: string) => path.parse(filepath).name);
 }
 
@@ -86,10 +86,10 @@ export async function listAllPublications(
 // }
 
 export async function cacheAllPublications(
-  filepath = "papers",
+  filepath: string,
   extension = "*.md",
 ) {
-  const paths = await globby([path.join(__dirname, filepath, extension)]);
+  const paths = await globby([path.join(filepath, extension)]);
   paths.map((file: string) => {
     const slug = path.parse(file).name;
     const publication = getPublication(file);

@@ -44,12 +44,18 @@ program
   .option("-l, --ls <value>", "List available publications")
   // .option("-m, --mkdir <value>", "Create a directory")
   // .option("-t, --touch <value>", "Create a file")
-  .action(async () => {
-    const options = program.opts();
-
+  .action(async (options) => {
     async function listPublications(filepath: string) {
       try {
         const papers = await listAllPublications(filepath);
+
+        // check if there are no publications
+        if (papers.length === 0) {
+          console.log("No publications found in the directory!");
+          return;
+        }
+
+        // display the publications
         console.table(papers);
       } catch (error) {
         console.error("Error occurred while reading the directory!", error);
@@ -68,11 +74,15 @@ program
     // check if the option has been used the user
     if (options.ls) {
       const filepath = typeof options.ls === "string" ? options.ls : __dirname;
-      listPublications(filepath);
+      const filepathLocation = path.join(__dirname, filepath);
+      console.log(`Listing publications in the location ${filepathLocation}`);
+      listPublications(filepathLocation);
     } else if (options.cache) {
       const filepath =
         typeof options.cache === "string" ? options.cache : __dirname;
-      cachePublications(filepath);
+      const filepathLocation = path.join(__dirname, filepath);
+      console.log(`Caching publications in the location ${filepathLocation}`);
+      cachePublications(filepathLocation);
     }
   });
 
