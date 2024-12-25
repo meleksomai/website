@@ -1,7 +1,10 @@
 {
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
+    "rootDir": ".",
     "jsx": "react-jsx"
   },
   "include": ["."],

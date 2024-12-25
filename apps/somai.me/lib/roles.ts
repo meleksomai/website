@@ -4,9 +4,12 @@ import path from "path";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
-import { globby } from "globby";
 import matter from "gray-matter";
 import readingtime, { ReadTimeResults } from "reading-time";
+
+// For some reason, the import statement is not working: https://github.com/sindresorhus/globby/issues/193
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const globby = require("globby");
 
 dayjs.extend(relativeTime);
 dayjs.extend(localizedFormat);
@@ -65,11 +68,11 @@ export function getRoleBySlug(slug: string): Role {
 
 export async function getAllRoles(): Promise<Role[]> {
   const paths = await globby(["content/roles/*.md"]);
-  const files = paths.map((filePath) => path.parse(filePath).name);
-  const papers = files.map((slug) => getRoleBySlug(slug));
+  const files = paths.map((filePath: string) => path.parse(filePath).name);
+  const papers = files.map((slug: string) => getRoleBySlug(slug));
   return papers
-    .filter((a) => a.meta.active)
-    .sort((a, b) => {
+    .filter((a: Role) => a.meta.active)
+    .sort((a: Role, b: Role) => {
       return b.meta.startAt.timestamp - a.meta.startAt.timestamp;
     });
 }

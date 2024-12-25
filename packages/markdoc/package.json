@@ -2,8 +2,14 @@
   "name": "@thugga/markdoc",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "./src/index.tsx",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "eslint ./src/*.ts*"
   },
@@ -25,8 +31,7 @@
     "react": "18.3.0",
     "react-dom": "18.3.0",
     "tsconfig": "workspace:*",
-    "tsup": "5.10.1",
+    "tsup": "8.3.5",
     "typescript": "5.2.2"
-  },
-  "types": "./src/index.tsx"
+  }
 }
