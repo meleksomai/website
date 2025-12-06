@@ -1,13 +1,13 @@
 {
-  "extends": "tsconfig/react-library.json",
+  "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "declaration": true,
-    "declarationDir": "dist",
-    "rootDir": ".",
-    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@workspace/ui/*": ["../ui/src/*"]
+    },
     "strictNullChecks": true
   },
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["node_modules"]
 }

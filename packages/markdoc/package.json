@@ -9,12 +9,12 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "eslint ./src/*.ts*"
   },
   "peerDependencies": {
     "@markdoc/markdoc": "0.4.0",
+    "@workspace/ui": "workspace:*",
     "react-dom": "18.3.1"
   },
   "dependencies": {
@@ -24,8 +24,8 @@
     "@markdoc/markdoc": "0.4.0",
     "@types/react": "19.1.9",
     "@types/react-dom": "19.1.7",
-    "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
+    "@workspace/ui": "workspace:*",
     "eslint": "9.32.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",

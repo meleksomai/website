@@ -1,3 +1,4 @@
+// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: fine
 export function chunkText(text: string, chunkSize: number): string[] {
   const chunks: string[] = [];
 

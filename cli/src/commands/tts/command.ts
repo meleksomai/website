@@ -1,16 +1,16 @@
+import fs from "node:fs";
+import path from "node:path";
 import { input } from "@inquirer/prompts";
 import Markdoc from "@markdoc/markdoc";
 import chalk from "chalk";
 import Ffmpeg from "fluent-ffmpeg";
-import fs from "fs";
 import { convert } from "html-to-text";
 import OpenAI from "openai";
-import path from "path";
 
-import { chunkText } from "./utils/chunkText";
+import { chunkText } from "./utils/chunk-text";
 
 const TEMP_FOLDER = path.resolve(process.cwd(), "temp");
-const TEMP_SUBFOLDER = new Date().getTime().toString();
+const TEMP_SUBFOLDER = Date.now().toString();
 
 const tts = async () => {
   try {

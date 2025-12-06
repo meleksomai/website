@@ -1,17 +1,16 @@
 // import chalk from "chalk";
 
+import path from "node:path";
 import { cacheAllPublications, listAllPublications } from "@thugga/academic";
-
 import { Command } from "commander";
-import * as dotenv from "dotenv";
+import { config } from "dotenv";
 import figlet from "figlet";
-import path from "path";
 
 import tts from "./commands/tts/command";
 
 const program = new Command();
 
-dotenv.config({
+config({
   path: path.resolve(__dirname, "../.env"),
 });
 
@@ -44,7 +43,7 @@ program
   .option("-l, --ls <value>", "List available publications")
   // .option("-m, --mkdir <value>", "Create a directory")
   // .option("-t, --touch <value>", "Create a file")
-  .action(async (options) => {
+  .action((options) => {
     async function listPublications(filepath: string) {
       try {
         const papers = await listAllPublications(filepath);
