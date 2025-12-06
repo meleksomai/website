@@ -8,10 +8,6 @@
   "files": [
     "dist/**"
   ],
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "eslint ./src/*.ts*"
-  },
   "peerDependencies": {
     "@markdoc/markdoc": "0.4.0",
     "@workspace/ui": "workspace:*",
