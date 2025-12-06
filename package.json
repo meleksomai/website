@@ -5,6 +5,7 @@
   "scripts": {
     "build": "turbo build",
     "check": "ultracite check",
+    "check-types": "turbo check-types",
     "dev": "turbo dev",
     "fix": "ultracite fix",
     "prepare": "husky",

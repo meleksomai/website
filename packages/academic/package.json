@@ -9,10 +9,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "eslint ./src/*.ts*",
-    "lint:fix": "eslint ./src/*.ts* --fix"
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@citation-js/date": "0.5.1",
@@ -28,7 +25,6 @@
     "@types/figlet": "1.5.8",
     "@types/node": "22.10.2",
     "@workspace/typescript-config": "workspace:*",
-    "eslint": "9.32.0",
     "tsup": "8.3.5",
     "tsx": "3.12.1",
     "typescript": "5.9.2"
