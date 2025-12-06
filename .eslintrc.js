@@ -1,10 +1,10 @@
+// This configuration only applies to the package manager root.
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  root: true,
-  // This tells ESLint to load the config from the package `eslint-config-thugga`
-  extends: ["thugga"],
-  settings: {
-    next: {
-      rootDir: ["apps/*/"],
-    },
+  ignorePatterns: ["apps/**", "packages/**"],
+  extends: ["@workspace/eslint-config/library.js"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
   },
-};
+}

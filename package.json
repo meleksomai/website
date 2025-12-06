@@ -1,33 +1,24 @@
 {
-  "name": "thugga",
-  "version": "0.0.0",
+  "name": "somai.me",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "ci:install": "pnpm install --no-frozen-lockfile",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "dev": "turbo run dev --parallel",
+    "build": "turbo build",
+    "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
-    "sync:papers": "cd cli && pnpm cmd academic -c ../../apps/somai.me/content/papers/",
+    "lint": "turbo lint",
     "syncpack": "npx syncpack",
     "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format"
   },
   "devDependencies": {
-    "@thugga/academic": "workspace:*",
-    "eslint-config-thugga": "workspace:*",
-    "prettier": "3.3.3",
-    "syncpack": "8.2.4",
-    "turbo": "2.0.12"
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "prettier": "3.6.2",
+    "turbo": "2.5.5",
+    "typescript": "5.9.2"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=20.0.0"
+    "node": ">=20"
   },
-  "packageManager": "pnpm@9.6.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@10.4.1"
 }

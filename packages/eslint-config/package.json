@@ -1,31 +1,26 @@
 {
-  "name": "eslint-config-thugga",
+  "name": "@workspace/eslint-config",
   "version": "0.0.0",
-  "license": "MIT",
-  "main": "index.js",
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "7.18.0",
-    "@typescript-eslint/parser": "7.18.0",
-    "eslint": "8.57.1",
-    "eslint-config-next": "14.2.5",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-markdown": "5.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-react": "7.35.0",
-    "eslint-plugin-simple-import-sort": "12.1.1",
-    "eslint-plugin-sonarjs": "1.0.4",
-    "eslint-plugin-tsdoc": "0.3.0",
-    "eslint-plugin-typescript-sort-keys": "3.2.0",
-    "eslint-plugin-yaml": "1.0.3"
+  "private": true,
+  "exports": {
+    "./base": "./base.js",
+    "./next-js": "./next.js",
+    "./react-internal": "./react-internal.js"
   },
   "devDependencies": {
-    "@types/node": "22.10.2",
-    "eslint": "8.57.1",
-    "prettier": "3.3.3",
-    "typescript": "5.7.2"
+    "@eslint/js": "9.39.1",
+    "@next/eslint-plugin-next": "15.4.5",
+    "@typescript-eslint/eslint-plugin": "8.39.0",
+    "@typescript-eslint/parser": "8.39.0",
+    "eslint": "9.32.0",
+    "eslint-config-prettier": "9.1.2",
+    "eslint-plugin-only-warn": "1.1.0",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-turbo": "2.5.5",
+    "globals": "15.15.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.39.0"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "type": "module"
 }
