@@ -21,7 +21,7 @@ export default function Navbar() {
         },
         {
           title: "Research",
-          href: "/research",
+          href: "/papers",
         },
         {
           title: "About",

@@ -1,6 +1,7 @@
 "use client";
 import { Heading2, Heading3 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
+import Link from "next/link";
 import type { Essay } from "@/app/(blog)/utils";
 
 export function EssaySection({ essays }: { essays?: Omit<Essay, "Essay">[] }) {
@@ -58,8 +59,9 @@ function EssayCard({
   };
 
   return (
-    <div
+    <Link
       className={`group flex cursor-pointer items-center justify-between border-foreground/10 border-b py-4 transition-all duration-700 hover:border-foreground/20 md:py-6 ${getRevealClass()}`}
+      href={`/essay/${essay.slug}`}
       style={{
         transitionDelay: `${index * 150}ms`,
       }}
@@ -78,6 +80,6 @@ function EssayCard({
       <span className="font-mono text-foreground/30 text-xs md:text-sm">
         {essay.metadata.publishedAt}
       </span>
-    </div>
+    </Link>
   );
 }
