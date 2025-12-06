@@ -4,25 +4,29 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check-types": "tsc --noEmit",
     "dev": "next dev --turbopack",
-    "start": "next start",
-    "check-types": "tsc --noEmit"
+    "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.0.7",
+    "@types/mdx": "^2.0.13",
     "@workspace/ui": "workspace:*",
-    "lucide-react": "0.475.0",
-    "next": "15.4.5",
+    "lucide-react": "0.556.0",
+    "next": "16.0.7",
     "next-themes": "0.4.6",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.1.11",
-    "@types/node": "22.10.2",
+    "@tailwindcss/postcss": "4.1.17",
+    "@types/node": "22.19.1",
     "@types/react": "19.1.9",
     "@types/react-dom": "19.1.7",
     "@workspace/typescript-config": "workspace:*",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "type": "module"
 }
