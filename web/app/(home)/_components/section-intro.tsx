@@ -39,10 +39,23 @@ export default function IntroSection() {
             <span className="text-foreground"> Product Engineering</span>.
           </p>
 
-          <div className="flex flex-col gap-3 font-mono text-muted-foreground text-sm sm:flex-row sm:items-center sm:gap-4">
-            <div>New York</div>
-            <div>Milwaukee</div>
-            <div>San Francisco</div>
+          <div
+            className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "500ms" }}
+          >
+            {["Twitter", "Instagram", "LinkedIn"].map((social) => (
+              <a
+                className="border-transparent border-b font-mono text-foreground/60 text-xs transition-all hover:border-foreground/60 hover:text-foreground/90"
+                href="/"
+                key={social}
+              >
+                {social}
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -21,7 +21,8 @@ export function EssaySection() {
             Essays
           </h2>
           <p className="font-mono text-muted-foreground text-sm uppercase tracking-wider">
-            / Recent explorations
+            / A space to share thoughts and ideas that are often reflections on
+            my current research.
           </p>
         </div>
 
