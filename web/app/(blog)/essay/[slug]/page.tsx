@@ -1,7 +1,5 @@
 import { Heading1, Heading2 } from "@workspace/ui/blocks/headings";
-import { globby } from "globby";
-
-const mdxRegex = /\.mdx$/;
+import { getBlogPost, getBlogPosts } from "../../utils";
 
 export default async function Page({
   params,
@@ -9,9 +7,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { default: Post, metadata } = await import(
-    `../../_content/${slug}.mdx`
-  );
+  const { Essay, metadata, readingTime } = await getBlogPost(slug);
 
   return (
     <div>
@@ -19,16 +15,19 @@ export default async function Page({
       <Heading2 className="py-6 font-mono text-foreground/60 uppercase">
         {metadata.subtitle}
       </Heading2>
-      <Post />
+      <p className="font-mono text-foreground/60 text-xs uppercase md:text-sm">
+        / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
+        words
+      </p>
+      <Essay />
     </div>
   );
 }
 
 export async function generateStaticParams() {
-  const files = await globby("@/app/(blog)/_content/*.mdx");
-  const slugs = files.map((file) => file.replace(mdxRegex, ""));
+  const essays = await getBlogPosts();
 
-  return slugs.map((slug) => ({ slug }));
+  return essays.map((essay) => ({ slug: essay.slug }));
 }
 
 export const dynamicParams = false;

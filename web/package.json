@@ -25,6 +25,7 @@
     "remark-frontmatter": "5.0.0",
     "remark-gfm": "4.0.1",
     "remark-mdx-frontmatter": "5.2.0",
+    "remark-reading-time": "^2.0.2",
     "remark-toc": "9.0.0"
   },
   "devDependencies": {

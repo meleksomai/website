@@ -16,6 +16,8 @@ const withMDX = createMDX({
       ["remark-toc", { heading: "The Table" }],
       "remark-frontmatter",
       ["remark-mdx-frontmatter", { name: "metadata" }],
+      "remark-reading-time",
+      "remark-reading-time/mdx",
     ],
     rehypePlugins: [
       // Without options

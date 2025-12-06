@@ -3,7 +3,7 @@ import ThemeToggle from "./theme-toggle";
 export default function Footer() {
   return (
     <footer className="border-border border-t py-12 sm:py-16">
-      <div className="flex flex-col items-start justify-between gap-6 sm:gap-8 lg:flex-row lg:items-center">
+      <div className="flex flex-row items-start justify-between gap-6 sm:gap-8 lg:items-center">
         <div className="space-y-2">
           <div className="text-muted-foreground text-sm">
             © 2025 Melek Somai. All rights reserved.
