@@ -30,7 +30,7 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      "text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800";
+      "text-blue-500 hover:text-blue-700 dark:text-blue-400 hover:dark:text-blue-300";
     if (href?.startsWith("/")) {
       return (
         <Link className={className} href={href} {...props}>
