@@ -15,7 +15,6 @@
   },
   "peerDependencies": {
     "@markdoc/markdoc": "0.4.0",
-    "@thugga/ui": "workspace:*",
     "react-dom": "18.3.1"
   },
   "dependencies": {
@@ -23,15 +22,14 @@
   },
   "devDependencies": {
     "@markdoc/markdoc": "0.4.0",
-    "@thugga/ui": "workspace:*",
-    "@types/react": "18.3.18",
-    "@types/react-dom": "18.3.0",
-    "eslint": "8.57.1",
-    "eslint-config-thugga": "workspace:*",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "tsconfig": "workspace:*",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "9.32.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "tsup": "8.3.5",
-    "typescript": "5.7.2"
+    "typescript": "5.9.2"
   }
 }

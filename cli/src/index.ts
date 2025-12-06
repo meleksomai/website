@@ -1,11 +1,11 @@
 // import chalk from "chalk";
-import path from "path";
+
+import { cacheAllPublications, listAllPublications } from "@thugga/academic";
 
 import { Command } from "commander";
 import * as dotenv from "dotenv";
 import figlet from "figlet";
-
-import { cacheAllPublications, listAllPublications } from "@thugga/academic";
+import path from "path";
 
 import tts from "./commands/tts/command";
 

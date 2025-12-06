@@ -26,11 +26,11 @@
   "devDependencies": {
     "@types/figlet": "1.5.8",
     "@types/node": "22.10.2",
-    "eslint": "8.57.1",
-    "eslint-config-thugga": "workspace:*",
-    "tsconfig": "workspace:*",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "9.32.0",
     "tsup": "8.3.5",
     "tsx": "3.12.1",
-    "typescript": "5.7.2"
+    "typescript": "5.9.2"
   }
 }

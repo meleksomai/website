@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import fs from "fs";
-import path from "path";
 
 import { format as edtfFormat } from "@citation-js/date";
 import Cite from "citation-js";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
+import fs from "fs";
 import matter from "gray-matter";
+import path from "path";
 
-import { Publication } from "./schema";
+import type { Publication } from "./schema";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const globby = require("globby");
@@ -62,15 +62,15 @@ export function getPublication(filepath: string): Publication {
     meta: data,
     content,
     citation: article,
-    publishedAt: publishedAt,
-    publisher: publisher,
-    url: url,
+    publishedAt,
+    publisher,
+    url,
   };
 }
 
 export async function listAllPublications(
   filepath: string,
-  extension = "*.md",
+  extension = "*.md"
 ): Promise<string[]> {
   const paths = await globby([path.join(filepath, extension)]);
   return paths.map((filepath: string) => path.parse(filepath).name);
@@ -87,7 +87,7 @@ export async function listAllPublications(
 
 export async function cacheAllPublications(
   filepath: string,
-  extension = "*.md",
+  extension = "*.md"
 ) {
   const paths = await globby([path.join(filepath, extension)]);
   paths.map((file: string) => {
@@ -96,7 +96,7 @@ export async function cacheAllPublications(
     fs.writeFileSync(
       path.join(`${path.dirname(file)}/cache`, `${slug}.json`),
       JSON.stringify(publication),
-      "utf8",
+      "utf8"
     );
   });
 }

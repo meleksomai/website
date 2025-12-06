@@ -12,7 +12,6 @@
     "test:u": "jest -u --forceExit"
   },
   "dependencies": {
-    "@thugga/academic": "workspace:*",
     "@inquirer/prompts": "4.1.0",
     "@markdoc/markdoc": "0.4.0",
     "chalk": "4.1.2",
@@ -30,7 +29,6 @@
   },
   "devDependencies": {
     "tsup": "8.3.5",
-    "@thugga/jest": "workspace:*",
     "@types/figlet": "1.5.8",
     "@types/fluent-ffmpeg": "2.1.25",
     "@types/html-to-text": "9.0.4",
@@ -38,11 +36,11 @@
     "@types/node": "22.2.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
-    "eslint-config-thugga": "workspace:*",
     "jest": "29.7.0",
     "ts-jest": "29.1.4",
     "ts-node": "10.9.2",
-    "tsconfig": "workspace:*",
+    "@workspace/eslint-config": "workspace:^",
+    "@workspace/typescript-config": "workspace:*",
     "tsx": "3.12.1",
     "typescript": "5.2.2"
   },

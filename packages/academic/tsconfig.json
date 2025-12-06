@@ -5,7 +5,8 @@
     "declaration": true,
     "declarationDir": "dist",
     "module": "commonjs",
-    "rootDir": "."
+    "rootDir": ".",
+    "strictNullChecks": true
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]

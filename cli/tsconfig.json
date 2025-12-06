@@ -4,6 +4,7 @@
     "outDir": "dist",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "strictNullChecks": true
   },
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"]

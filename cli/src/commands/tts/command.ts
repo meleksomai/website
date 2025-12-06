@@ -1,12 +1,11 @@
-import fs from "fs";
-import path from "path";
-
 import { input } from "@inquirer/prompts";
 import Markdoc from "@markdoc/markdoc";
 import chalk from "chalk";
 import Ffmpeg from "fluent-ffmpeg";
+import fs from "fs";
 import { convert } from "html-to-text";
 import OpenAI from "openai";
+import path from "path";
 
 import { chunkText } from "./utils/chunkText";
 

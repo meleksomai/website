@@ -5,20 +5,29 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo lint",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "test": "turbo test",
     "syncpack": "npx syncpack",
-    "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format"
+    "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*",
+    "@biomejs/biome": "2.3.8",
     "@workspace/typescript-config": "workspace:*",
-    "prettier": "3.6.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "turbo": "2.5.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "ultracite": "6.3.9"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@10.4.1"
+  "packageManager": "pnpm@10.4.1",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "pnpm dlx ultracite fix"
+    ]
+  }
 }

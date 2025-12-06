@@ -5,7 +5,8 @@
     "declaration": true,
     "declarationDir": "dist",
     "rootDir": ".",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "strictNullChecks": true
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
