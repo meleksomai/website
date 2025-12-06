@@ -1,5 +1,6 @@
 "use client";
 
+import { Heading2, Heading3 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export function ResearchSection() {
@@ -15,9 +16,7 @@ export function ResearchSection() {
               : "-translate-y-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-light font-sans text-4xl text-foreground tracking-tight md:text-5xl lg:text-6xl">
-            Research
-          </h2>
+          <Heading2>Research</Heading2>
           <p className="font-mono text-foreground/60 text-sm uppercase md:text-base">
             / Research in areas ranging from Clinical Computing, Patient Remote
             Monitoring, Neuro-Epidemiology, to AI and Machine Learning.
@@ -112,9 +111,7 @@ function ServiceCard({
           0{index + 1}
         </span>
       </div>
-      <h3 className="mb-2 font-light font-sans text-2xl text-foreground md:text-3xl">
-        {service.title}
-      </h3>
+      <Heading3>{service.title}</Heading3>
       <p className="max-w-sm text-foreground/80 text-sm leading-relaxed md:text-base">
         {service.description}
       </p>

@@ -1,4 +1,5 @@
 "use client";
+import { Heading1 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export default function IntroSection() {
@@ -17,11 +18,11 @@ export default function IntroSection() {
           <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">
             / Hi, I AM
           </p>
-          <h1 className="font-light text-5xl tracking-tight sm:text-6xl lg:text-7xl">
+          <Heading1>
             Melek
             <br />
             <span className="text-muted-foreground">Somai</span>
-          </h1>
+          </Heading1>
         </div>
 
         <div

@@ -1,4 +1,5 @@
 "use client";
+import { Heading2, Heading3 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export function EssaySection() {
@@ -17,9 +18,7 @@ export function EssaySection() {
               : "-translate-x-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-light font-sans text-4xl text-foreground tracking-tight md:text-5xl lg:text-6xl">
-            Essays
-          </h2>
+          <Heading2>Essays</Heading2>
           <p className="font-mono text-muted-foreground text-sm uppercase tracking-wider">
             / A space to share thoughts and ideas that are often reflections on
             my current research.
@@ -99,9 +98,10 @@ function ProjectCard({
           {project.number}
         </span>
         <div>
-          <h3 className="mr-12 mb-1 font-light font-sans text-2xl text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">
+          {/*<h3 className="mr-12 mb-1 font-light font-sans text-2xl text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">*/}
+          <Heading3 className="mr-12 mb-1 transition-transform duration-300 group-hover:translate-x-2">
             {project.title}
-          </h3>
+          </Heading3>
           <p className="font-mono text-foreground/50 text-xs md:text-sm">
             {project.category}
           </p>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Heading2 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 import { Mail, MapPin } from "lucide-react";
 
@@ -17,9 +18,7 @@ export function ContactSection() {
                 : "-translate-x-12 opacity-0"
             }`}
           >
-            <h2 className="mb-2 font-light font-sans text-3xl text-foreground tracking-tight md:text-4xl lg:text-5xl">
-              Let's talk
-            </h2>
+            <Heading2>Let's talk</Heading2>
             <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">
               / Get in touch
             </p>

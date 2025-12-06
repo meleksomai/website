@@ -7,8 +7,23 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
   extension: /\.(md|mdx)$/,
+  options: {
+    remarkPlugins: [
+      // Without options
+      "remark-gfm",
+      // With options
+      ["remark-toc", { heading: "The Table" }],
+      "remark-frontmatter",
+      ["remark-mdx-frontmatter", { name: "metadata" }],
+    ],
+    rehypePlugins: [
+      // Without options
+      "rehype-slug",
+      // With options
+      ["rehype-katex", { strict: true, throwOnError: true }],
+    ],
+  },
 });
 
 // Merge MDX config with Next.js config
