@@ -3,7 +3,7 @@
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export function ResearchSection() {
-  const { ref, isVisible } = useReveal(0.7);
+  const { ref, isVisible } = useReveal(0.4);
 
   return (
     <section className="flex shrink-0 snap-start items-center" ref={ref}>

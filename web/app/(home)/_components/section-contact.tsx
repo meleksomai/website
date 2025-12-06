@@ -17,7 +17,7 @@ export function ContactSection() {
                 : "-translate-x-12 opacity-0"
             }`}
           >
-            <h2 className="mb-2 font-light font-sans text-4xl text-foreground tracking-tight md:text-5xl lg:text-6xl">
+            <h2 className="mb-2 font-light font-sans text-3xl text-foreground tracking-tight md:text-4xl lg:text-5xl">
               Let's talk
             </h2>
             <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">

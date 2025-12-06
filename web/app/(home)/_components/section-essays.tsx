@@ -2,7 +2,7 @@
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export function EssaySection() {
-  const { ref, isVisible } = useReveal(0.7);
+  const { ref, isVisible } = useReveal(0.4);
 
   return (
     <section

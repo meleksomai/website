@@ -14,9 +14,9 @@ export default function IntroSection() {
               : "-translate-y-12 opacity-0"
           }`}
         >
-          <div className="font-mono text-muted-foreground text-sm tracking-wider">
-            HEALTH TECHNOLOGIST / 2025
-          </div>
+          <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">
+            / Hi, I AM
+          </p>
           <h1 className="font-light text-5xl tracking-tight sm:text-6xl lg:text-7xl">
             Melek
             <br />
@@ -43,9 +43,9 @@ export default function IntroSection() {
             className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
               isVisible
                 ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
+                : "translate-y-5 opacity-0"
             }`}
-            style={{ transitionDelay: "500ms" }}
+            style={{ transitionDelay: "300ms" }}
           >
             {["Twitter", "Instagram", "LinkedIn"].map((social) => (
               <a
