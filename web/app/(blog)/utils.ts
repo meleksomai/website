@@ -1,18 +1,20 @@
+"use server";
+
 import fs from "node:fs";
 import path from "node:path";
 import type { JSX } from "react";
 
-type Metadata = {
+export type Metadata = {
   title: string;
   subtitle: string;
   featured: boolean;
   publishedAt: string;
   audio?: string;
   image?: string;
-  tags?: string[];
+  category: string;
 };
 
-type Post = {
+export type Essay = {
   slug: string;
   metadata: Metadata;
   readingTime: {
@@ -32,8 +34,9 @@ function getMDXSlugs(dir: string) {
     .map((file) => file.replace(mdxRegex, ""));
 }
 
-async function readMDXFile(slug: string): Promise<Post> {
+async function readMDXFile(slug: string): Promise<Essay> {
   const {
+    // biome-ignore lint/nursery/noShadow: fine
     default: Essay,
     metadata,
     readingTime,
@@ -58,12 +61,14 @@ function getMDXData(dir: string) {
   return posts;
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), "app", "(blog)", "_content"));
+export async function getBlogEssays() {
+  return await getMDXData(
+    path.join(process.cwd(), "app", "(blog)", "_content")
+  );
 }
 
-export async function getBlogPost(slug: string) {
-  const posts = await getBlogPosts();
+export async function getBlogEssay(slug: string) {
+  const posts = await getBlogEssays();
   const post = posts.find((p) => p.slug === slug);
   if (!post) {
     throw new Error(`Post not found: ${slug}`);
@@ -71,7 +76,7 @@ export async function getBlogPost(slug: string) {
   return post;
 }
 
-export function formatDate(date: string, includeRelative = false) {
+function formatDate(date: string, includeRelative = false) {
   const currentDate = new Date();
   const targetDate = new Date(date);
 

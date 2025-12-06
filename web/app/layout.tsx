@@ -8,6 +8,7 @@ import { Providers } from "@/components/providers";
 const fontSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
 const fontMono = Geist_Mono({

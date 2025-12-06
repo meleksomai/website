@@ -17,7 +17,7 @@ export function ResearchSection() {
           }`}
         >
           <Heading2>Research</Heading2>
-          <p className="font-mono text-foreground/60 text-sm uppercase md:text-base">
+          <p className="font-mono text-muted-foreground text-sm uppercase md:text-base">
             / Research in areas ranging from Clinical Computing, Patient Remote
             Monitoring, Neuro-Epidemiology, to AI and Machine Learning.
           </p>
@@ -100,14 +100,14 @@ function ServiceCard({
 
   return (
     <div
-      className={`group transition-all duration-700 ${getRevealClass()}`}
+      className={`group cursor-pointer transition-all duration-700 ${getRevealClass()}`}
       style={{
         transitionDelay: `${index * 150}ms`,
       }}
     >
       <div className="mb-3 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
-        <span className="font-mono text-foreground/60 text-xs">
+        <span className="font-mono text-muted-foreground text-xs">
           0{index + 1}
         </span>
       </div>

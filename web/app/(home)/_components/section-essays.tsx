@@ -1,9 +1,10 @@
 "use client";
 import { Heading2, Heading3 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
+import type { Essay } from "@/app/(blog)/utils";
 
-export function EssaySection() {
-  const { ref, isVisible } = useReveal(0.4);
+export function EssaySection({ essays }: { essays?: Omit<Essay, "Essay">[] }) {
+  const { ref, isVisible } = useReveal(0.2);
 
   return (
     <section
@@ -26,34 +27,12 @@ export function EssaySection() {
         </div>
 
         <div className="space-y-6 md:space-y-8">
-          {[
-            {
-              number: "01",
-              title: "Digital Healthcare Innovation",
-              category: "Digital Health",
-              year: "2024",
-              direction: "left",
-            },
-            {
-              number: "02",
-              title: "On the Game Theory of Innovation in Healthcare",
-              category: "Digital Health",
-              year: "2024",
-              direction: "left",
-            },
-            {
-              number: "03",
-              title: "A Case for Universal Healthcare in Tunisia",
-              category: "Global Health",
-              year: "2023",
-              direction: "left",
-            },
-          ].map((project, i) => (
-            <ProjectCard
+          {essays?.map((essay, i) => (
+            <EssayCard
+              essay={essay}
               index={i}
               isVisible={isVisible}
-              key={project.number}
-              project={project}
+              key={essay.slug}
             />
           ))}
         </div>
@@ -62,53 +41,42 @@ export function EssaySection() {
   );
 }
 
-function ProjectCard({
-  project,
+function EssayCard({
+  essay,
   index,
   isVisible,
 }: {
-  project: {
-    number: string;
-    title: string;
-    category: string;
-    year: string;
-    direction: string;
-  };
+  essay: Omit<Essay, "Essay">;
   index: number;
   isVisible: boolean;
 }) {
   const getRevealClass = () => {
     if (!isVisible) {
-      return project.direction === "left"
-        ? "-translate-x-16 opacity-0"
-        : "translate-x-16 opacity-0";
+      return "-translate-x-16 opacity-0";
     }
     return "translate-x-0 opacity-100";
   };
 
   return (
     <div
-      className={`group flex cursor-pointer items-center justify-between border-foreground/10 border-b py-6 transition-all duration-700 hover:border-foreground/20 md:py-8 ${getRevealClass()}`}
+      className={`group flex cursor-pointer items-center justify-between border-foreground/10 border-b py-4 transition-all duration-700 hover:border-foreground/20 md:py-6 ${getRevealClass()}`}
       style={{
         transitionDelay: `${index * 150}ms`,
       }}
     >
       <div className="flex items-baseline gap-4 md:gap-8">
-        <span className="font-mono text-foreground/30 text-sm transition-colors group-hover:text-foreground/50 md:text-base">
-          {project.number}
-        </span>
         <div>
           {/*<h3 className="mr-12 mb-1 font-light font-sans text-2xl text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">*/}
           <Heading3 className="mr-12 mb-1 transition-transform duration-300 group-hover:translate-x-2">
-            {project.title}
+            {essay.metadata.title}
           </Heading3>
           <p className="font-mono text-foreground/50 text-xs md:text-sm">
-            {project.category}
+            {essay.metadata.subtitle}
           </p>
         </div>
       </div>
       <span className="font-mono text-foreground/30 text-xs md:text-sm">
-        {project.year}
+        {essay.metadata.publishedAt}
       </span>
     </div>
   );

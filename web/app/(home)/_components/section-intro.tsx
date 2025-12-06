@@ -15,7 +15,7 @@ export default function IntroSection() {
               : "-translate-y-12 opacity-0"
           }`}
         >
-          <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">
+          <p className="font-mono text-muted-foreground text-xs uppercase md:text-base">
             / Hi, I AM
           </p>
           <Heading1>
@@ -50,7 +50,7 @@ export default function IntroSection() {
           >
             {["Twitter", "Instagram", "LinkedIn"].map((social) => (
               <a
-                className="border-transparent border-b font-mono text-foreground/60 text-xs transition-all hover:border-foreground/60 hover:text-foreground/90"
+                className="border-transparent border-b font-mono text-muted-foreground text-xs transition-all hover:border-foreground/60 hover:text-foreground/90"
                 href="/"
                 key={social}
               >

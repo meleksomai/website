@@ -1,5 +1,5 @@
-import { Heading1, Heading2 } from "@workspace/ui/blocks/headings";
-import { getBlogPost, getBlogPosts } from "../../utils";
+import { Heading1, Heading3 } from "@workspace/ui/blocks/headings";
+import { getBlogEssay, getBlogEssays } from "../../utils";
 
 export default async function Page({
   params,
@@ -7,15 +7,15 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { Essay, metadata, readingTime } = await getBlogPost(slug);
+  const { Essay, metadata, readingTime } = await getBlogEssay(slug);
 
   return (
     <div>
       <Heading1>{metadata.title}</Heading1>
-      <Heading2 className="py-6 font-mono text-foreground/60 uppercase">
-        {metadata.subtitle}
-      </Heading2>
-      <p className="font-mono text-foreground/60 text-xs uppercase md:text-sm">
+      <Heading3 className="py-6 font-mono text-muted-foreground uppercase">
+        / {metadata.subtitle}
+      </Heading3>
+      <p className="font-mono text-muted-foreground text-xs uppercase md:text-sm">
         / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
         words
       </p>
@@ -25,7 +25,7 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const essays = await getBlogPosts();
+  const essays = await getBlogEssays();
 
   return essays.map((essay) => ({ slug: essay.slug }));
 }

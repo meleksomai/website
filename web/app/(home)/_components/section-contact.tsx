@@ -19,7 +19,7 @@ export function ContactSection() {
             }`}
           >
             <Heading2>Let's talk</Heading2>
-            <p className="font-mono text-foreground/60 text-xs uppercase md:text-base">
+            <p className="font-mono text-muted-foreground text-xs uppercase md:text-base">
               / Get in touch
             </p>
           </div>
@@ -35,8 +35,8 @@ export function ContactSection() {
               style={{ transitionDelay: "200ms" }}
             >
               <div className="mb-1 flex items-center gap-2">
-                <Mail className="h-3 w-3 text-foreground/60" />
-                <span className="font-mono text-foreground/60 text-xs">
+                <Mail className="h-3 w-3 text-muted-foreground" />
+                <span className="font-mono text-muted-foreground text-xs">
                   Email
                 </span>
               </div>
@@ -54,8 +54,8 @@ export function ContactSection() {
               style={{ transitionDelay: "350ms" }}
             >
               <div className="mb-1 flex items-center gap-2">
-                <MapPin className="h-3 w-3 text-foreground/60" />
-                <span className="font-mono text-foreground/60 text-xs">
+                <MapPin className="h-3 w-3 text-muted-foreground" />
+                <span className="font-mono text-muted-foreground text-xs">
                   Location
                 </span>
               </div>
