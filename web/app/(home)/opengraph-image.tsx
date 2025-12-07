@@ -13,6 +13,6 @@ export default function Image() {
   return GenerateImage({
     size,
     title: "Hi, I am Melek Somai.",
-    subtitle: "Physician. Developer. Innovator.",
+    subtitle: "Physician. Scientist. Innovator.",
   });
 }

@@ -7,12 +7,12 @@ import IntroSection from "./_components/section-intro";
 export const metadata: Metadata = {
   title: "Melek Somai | Home",
   description:
-    "Melek Somai is a physician, developer, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
+    "Melek Somai is a physician, scientist, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
   twitter: {
     card: "summary_large_image",
     title: "Melek Somai",
     description:
-      "Melek Somai is a physician, developer, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
+      "Melek Somai is a physician, scientist, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
     creator: "@meleksomai",
     site: "https://somai.me",
   },
