@@ -14,18 +14,18 @@ jobs:
 
     steps:
       - name: check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
         with:
           fetch-depth: 2
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v4
         with:
-          version: 9.6.0
+          version: 10.4.1
 
       - name: setup node.js environment
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: "pnpm"
 
       - name: install dependencies
@@ -34,8 +34,8 @@ jobs:
       - name: build
         run: pnpm build
 
-      - name: linting
-        run: pnpm lint
-      
+      - name: formatting
+        run: pnpm check
+
       # - name: test
       #   run: pnpm test
