@@ -6,6 +6,7 @@
     "build": "turbo build",
     "check": "ultracite check",
     "check-types": "turbo check-types",
+    "ci:install": "pnpm install --frozen-lockfile",
     "dev": "turbo dev",
     "fix": "ultracite fix",
     "prepare": "husky",
