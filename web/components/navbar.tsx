@@ -23,10 +23,6 @@ export default function Navbar() {
           title: "Research",
           href: "/papers",
         },
-        {
-          title: "About",
-          href: "/about",
-        },
       ].map((item, index) => (
         <Link
           className={`group relative cursor-pointer font-medium font-sans text-sm transition-colors ${
