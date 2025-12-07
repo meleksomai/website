@@ -17,7 +17,7 @@ export const PapersSection = async () => (
         <p className="font-mono text-muted-foreground text-xs uppercase md:text-sm">
           {!!paper.doi && (
             <>
-              / DOI: <span className="text-foreground/30">{paper.doi}</span>
+              / DOI: <span className="text-muted-foreground">{paper.doi}</span>
             </>
           )}
           / {paper.published.year} / {paper.publisher}

@@ -77,7 +77,7 @@ function EssayCard({
           </p>
         </div>
       </div>
-      <span className="font-mono text-foreground/30 text-xs md:text-sm">
+      <span className="font-mono text-muted-foreground text-xs md:text-sm">
         {essay.metadata.publishedAt}
       </span>
     </Link>

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "@workspace/ui/globals.css";
+import { VercelToolbar } from "@vercel/toolbar/next";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { Providers } from "@/components/providers";
@@ -21,6 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const shouldInjectToolbar = process.env.NODE_ENV === "development";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -34,6 +37,7 @@ export default function RootLayout({
             </div>
             <Footer />
           </div>
+          {!!shouldInjectToolbar && <VercelToolbar />}
         </Providers>
       </body>
     </html>

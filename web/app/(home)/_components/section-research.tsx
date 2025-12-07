@@ -106,7 +106,7 @@ function ServiceCard({
       }}
     >
       <div className="mb-3 flex items-center gap-3">
-        <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
+        <div className="h-px w-8 bg-muted-foreground transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
         <span className="font-mono text-muted-foreground text-xs">
           0{index + 1}
         </span>
