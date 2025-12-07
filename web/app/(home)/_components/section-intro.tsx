@@ -41,20 +41,35 @@ export default function IntroSection() {
           </p>
 
           <div
-            className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
+            className={`flex gap-4 pt-2 transition-all duration-700 md:pt-4 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-5 opacity-0"
             }`}
             style={{ transitionDelay: "300ms" }}
           >
-            {["Twitter", "Instagram", "LinkedIn"].map((social) => (
+            {[
+              {
+                name: "GitHub",
+                href: "https://github.com/meleksomai",
+              },
+              {
+                name: "LinkedIn",
+                href: "https://www.linkedin.com/in/msomai/",
+              },
+              {
+                name: "Twitter",
+                href: "https://twitter.com/meleksomai",
+              },
+            ].map((social) => (
               <a
                 className="border-transparent border-b font-mono text-muted-foreground text-xs transition-all hover:border-foreground/60 hover:text-foreground/90"
-                href="/"
-                key={social}
+                href={social.href}
+                key={social.name}
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                {social}
+                {social.name}
               </a>
             ))}
           </div>

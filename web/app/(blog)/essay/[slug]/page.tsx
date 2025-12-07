@@ -31,3 +31,24 @@ export async function generateStaticParams() {
 }
 
 export const dynamicParams = false;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const { metadata } = await getBlogEssay(slug);
+
+  return {
+    title: `Melek Somai | ${metadata.title}`,
+    description: metadata.subtitle,
+    twitter: {
+      card: "summary_large_image",
+      title: `Melek Somai | ${metadata.title}`,
+      description: metadata.subtitle,
+      creator: "@meleksomai",
+      site: "https://somai.me",
+    },
+  };
+}

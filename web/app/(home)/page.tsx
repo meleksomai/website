@@ -1,10 +1,22 @@
-"use server";
-
+import type { Metadata } from "next";
 import { getBlogEssays } from "@/app/(blog)/utils";
 import { ContactSection } from "./_components/section-contact";
 import { EssaySection } from "./_components/section-essays";
 import IntroSection from "./_components/section-intro";
-import { ResearchSection } from "./_components/section-research";
+
+export const metadata: Metadata = {
+  title: "Melek Somai | Home",
+  description:
+    "Melek Somai is a physician, developer, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Melek Somai",
+    description:
+      "Melek Somai is a physician, developer, and innovator. He works at the intersection of Healthcare Informatics, Data Science, and Product Engineering.",
+    creator: "@meleksomai",
+    site: "https://somai.me",
+  },
+};
 
 export default async function Page() {
   const articles = await getBlogEssays();
@@ -15,7 +27,6 @@ export default async function Page() {
       <EssaySection
         essays={articles.map((article) => ({ ...article, Essay: undefined }))}
       />
-      <ResearchSection />
       <ContactSection />
     </div>
   );
