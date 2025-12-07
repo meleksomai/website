@@ -23,7 +23,7 @@
     "ultracite": "6.3.9"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
