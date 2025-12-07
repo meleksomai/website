@@ -1,0 +1,397 @@
+[
+  {
+    "_id": "3f21144d-eee9-059e-8b5c-287531dca9ab",
+    "abstract": "Importance: Accurate prediction of surgical case duration is critical for operating room (OR) management, as inefficient scheduling can lead to reduced patient and surgeon satisfaction while incurring considerable financial costs. Objective: To evaluate the feasibility and accuracy of large language models (LLMs) in predicting surgical case length using unstructured clinical data compared to existing estimation methods. Design, Setting, and Participants: This was a retrospective study analyzing elective surgical cases performed between January 2017 and December 2023 at a single academic medical center and affiliated community hospital ORs. Analysis included 125 493 eligible surgical cases, with 1950 used for LLM fine-tuning and 2500 for evaluation. An additional 500 cases from a community site were used for external validation. Cases were randomly sampled using strata to ensure representation across surgical specialties. Exposures: Eleven LLMs, including base models (GPT-4, GPT-3.5, Mistral, Llama-3, Phi-3) and 2 fine-tuned variants (GPT-4 fine-tuned, GPT-3.5 fine-tuned), were used to predict surgical case length based on clinical notes. Main Outcomes and Measures: The primary outcome was average error between predicted and actual surgical case length (wheels-in to wheels-out time). The secondary outcome was prediction accuracy, defined as predicted length within 20% of actual duration. Results: Fine-tuned GPT-4 achieved the best performance with a mean absolute error (MAE) of 47.64 minutes (95% CI, 45.71-49.56) and R2 of 0.61, matching the performance of current OR scheduling (MAE, 49.34 minutes; 95% CI, 47.60-51.09; R2, 0.63; P = .10). Both GPT-4 fine-tuned and GPT-3.5 fine-tuned significantly outperformed current scheduling methods in accuracy (46.12% and 46.08% vs 40.92%, respectively; P < .001). GPT-4 fine-tuned outperformed all other models during external validation with similar performance metrics (MAE, 48.66 minutes; 95% CI, 45.31-52.00; accuracy, 46.0%). Base models demonstrated variable performance, with GPT-4 showing the highest performance among non-fine-tuned models (MAE, 59.20 minutes; 95% CI, 56.88 - 61.52). Conclusion and Relevance: The findings in this study suggest that fine-tuned LLMs can predict surgical case length with accuracy comparable to or exceeding current institutional scheduling methods. This indicates potential for LLMs to enhance operating room efficiency through improved case length prediction using existing clinical documentation.",
+    "author": [
+      {
+        "first": "Adhitya",
+        "last": "Ramamurthi",
+        "initials": "A",
+        "formatted": "Ramamurthi A"
+      },
+      {
+        "first": "Bhabishya",
+        "last": "Neupane",
+        "initials": "B",
+        "formatted": "Neupane B"
+      },
+      {
+        "first": "Priya",
+        "last": "Deshpande",
+        "initials": "P",
+        "formatted": "Deshpande P"
+      },
+      {
+        "first": "Ryan",
+        "last": "Hanson",
+        "initials": "R",
+        "formatted": "Hanson R"
+      },
+      {
+        "first": "Srujan",
+        "last": "Vegesna",
+        "initials": "S",
+        "formatted": "Vegesna S"
+      },
+      {
+        "first": "Deborah",
+        "last": "Cray",
+        "initials": "D",
+        "formatted": "Cray D"
+      },
+      {
+        "first": "Bradley H",
+        "last": "Crotty",
+        "initials": "BH",
+        "formatted": "Crotty BH"
+      },
+      {
+        "first": "Melek",
+        "last": "Somai",
+        "initials": "M",
+        "formatted": "Somai M"
+      },
+      {
+        "first": "Kellie R",
+        "last": "Brown",
+        "initials": "KR",
+        "formatted": "Brown KR"
+      },
+      {
+        "first": "Sachin S",
+        "last": "Pawar",
+        "initials": "SS",
+        "formatted": "Pawar SS"
+      },
+      {
+        "first": "Bradley",
+        "last": "Taylor",
+        "initials": "B",
+        "formatted": "Taylor B"
+      },
+      {
+        "first": "Anai N",
+        "last": "Kothari",
+        "initials": "AN",
+        "formatted": "Kothari AN"
+      }
+    ],
+    "autoCleaned": 1,
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1001/jamasurg.2025.2154",
+    "citekey": "Ramamurthi2025-bj",
+    "created": 1765035831.9629998,
+    "doi": "10.1001/jamasurg.2025.2154",
+    "dup_sha1": "136e2645378a859274efcffdb1ad3968ea8d193e",
+    "folders": ["f0b1a720-fe1e-41d7-ad57-377405472763"],
+    "foldersNamed": ["Personal Papers"],
+    "id_list": [
+      "sha1:de35442a2c19e573c83ed6a5fb856be22696460d",
+      "dup_sha1:136e2645378a859274efcffdb1ad3968ea8d193e",
+      "doi:10.1001/jamasurg.2025.2154",
+      "pmc:PMC12242817",
+      "pmid:40632526",
+      "url:http://dx.doi.org/10.1001/jamasurg.2025.2154",
+      "url:https://jamanetwork.com/journals/jamasurgery/fullarticle/2835953",
+      "url:https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:ZeXyd9-uunAC",
+      "url:https://jamanetwork.com/journals/jamasurgery/article-abstract/2835953",
+      "url:https://www.ncbi.nlm.nih.gov/pubmed/40632526",
+      "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12242817"
+    ],
+    "incomplete": 0,
+    "issn": "2168-6254",
+    "issn_alt": "2168-6262",
+    "issue": "8",
+    "journal": "JAMA Surg.",
+    "journalfull": "JAMA surgery",
+    "kind": "Commentary",
+    "labels": [],
+    "language": "en",
+    "owner": "C156195C6F1E11E8B45631DAEEF500C0",
+    "pages": "894-902",
+    "pdf_restricted": 1,
+    "pmc": "PMC12242817",
+    "pmid": "40632526",
+    "published": {
+      "year": "2025",
+      "month": "8",
+      "day": "1"
+    },
+    "publisher": "American Medical Association (AMA)",
+    "pubtype": "PP_ARTICLE",
+    "sha1": "de35442a2c19e573c83ed6a5fb856be22696460d",
+    "subfolders": ["All Papers/R"],
+    "title": "Applying large language models for surgical case length prediction",
+    "url": [
+      "http://dx.doi.org/10.1001/jamasurg.2025.2154",
+      "https://jamanetwork.com/journals/jamasurgery/article-abstract/2835953",
+      "https://jamanetwork.com/journals/jamasurgery/fullarticle/2835953",
+      "https://www.ncbi.nlm.nih.gov/pubmed/40632526",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12242817",
+      "https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:ZeXyd9-uunAC"
+    ],
+    "volume": "160",
+    "xref": [
+      {
+        "type": "CommentOn",
+        "pmid": "40632543"
+      }
+    ]
+  },
+  {
+    "_id": "6536bff9-b5c1-0959-a42e-fbf962081a62",
+    "author": [
+      {
+        "initials": "N",
+        "first": "Nathan",
+        "formatted": "Wolfrath N",
+        "last": "Wolfrath"
+      },
+      {
+        "initials": "NB",
+        "first": "Nathaniel B",
+        "formatted": "Verhagen NB",
+        "last": "Verhagen"
+      },
+      {
+        "initials": "BH",
+        "first": "B H",
+        "formatted": "Crotty BH",
+        "last": "Crotty"
+      },
+      {
+        "initials": "MM",
+        "first": "Melek M",
+        "formatted": "Somai MM",
+        "last": "Somai"
+      },
+      {
+        "initials": "AN",
+        "first": "Anai N",
+        "formatted": "Kothari AN",
+        "last": "Kothari"
+      }
+    ],
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.3791/66796",
+    "citekey": "Wolfrath2024-on",
+    "created": 1735002530.204,
+    "doi": "10.3791/66796",
+    "dup_sha1": "fe4ff7111a96c1dea7a617c327c4ae957d4cfe67",
+    "folders": ["f0b1a720-fe1e-41d7-ad57-377405472763"],
+    "foldersNamed": ["Personal Papers"],
+    "id_list": [
+      "sha1:b750a12f169e6949ca30b30e1085f987943c0544",
+      "dup_sha1:fe4ff7111a96c1dea7a617c327c4ae957d4cfe67",
+      "doi:10.3791/66796",
+      "url:http://dx.doi.org/10.3791/66796",
+      "url:https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:QIV2ME_5wuYC",
+      "url:https://app.jove.com/t/66796/augmenting-large-language-models-via-vector-embeddings-to-improve"
+    ],
+    "incomplete": 0,
+    "issn": "1940-087X",
+    "issue": "214",
+    "journal": "J. Vis. Exp.",
+    "journalfull": "Journal of visualized experiments: JoVE",
+    "labels": [],
+    "owner": "C156195C6F1E11E8B45631DAEEF500C0",
+    "pages": "e66796",
+    "pdf_restricted": 1,
+    "published": {
+      "month": "12",
+      "day": "6",
+      "year": "2024"
+    },
+    "pubtype": "PP_ARTICLE",
+    "sha1": "b750a12f169e6949ca30b30e1085f987943c0544",
+    "title": "Augmenting large language models via vector embeddings to improve domain-specific responsiveness",
+    "url": [
+      "https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:QIV2ME_5wuYC",
+      "https://app.jove.com/t/66796/augmenting-large-language-models-via-vector-embeddings-to-improve",
+      "http://dx.doi.org/10.3791/66796"
+    ]
+  },
+  {
+    "_id": "631b8f96-4fe5-0f1c-a20b-bef316c6ba16",
+    "abstract": "BackgroundArtificial Intelligence (AI) is an increasingly popular research focus for multiple areas of science. The trend of using AI-based clinical research in different fields of medicine and defining the shortcomings of those trials will guide researchers and future studies.MethodsWe systematically reviewed trials registered in ClinicalTrials.gov that apply AI in clinical research. We explored the trend of AI-applied clinical research and described the design and conduct of such trials. Also, we considered high-quality trials to represent their enrollees’ and other characteristics.ResultsOur search yielded 839 trials involving a direct application of AI, among which 330 (39.3 %) trials were interventional, and the rest were observational (60.7%). Most of the studies aimed to improve diagnosis (70.2 %); in less than a quarter of trials, management was targeted (22.8 %), and AI was implemented in an acute setting (13 …",
+    "author": [
+      {
+        "initials": "MH",
+        "first": "Mohammad Hossein",
+        "formatted": "Abbasi MH",
+        "last": "Abbasi"
+      },
+      {
+        "initials": "M",
+        "first": "Melek",
+        "formatted": "Somai M",
+        "last": "Somai"
+      },
+      {
+        "initials": "H",
+        "first": "Hamidreza",
+        "formatted": "Saber H",
+        "last": "Saber"
+      }
+    ],
+    "citekey": "Abbasi2024-qn",
+    "crawl_urls": [],
+    "created": 1735002528.609,
+    "dup_sha1": "edd8ff939e5f42ecaeb5a28d20a49f2b09d73d53",
+    "folders": ["f0b1a720-fe1e-41d7-ad57-377405472763"],
+    "foldersNamed": ["Personal Papers"],
+    "id_list": [
+      "sha1:8436ec6a62de92b64e7c9a4482c12fb227ddcaf5",
+      "dup_sha1:edd8ff939e5f42ecaeb5a28d20a49f2b09d73d53",
+      "url:https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:9ZlFYXVOiuMC",
+      "url:https://www.sciencedirect.com/science/article/pii/S2666521224000462"
+    ],
+    "incomplete": 1,
+    "labels": [],
+    "owner": "C156195C6F1E11E8B45631DAEEF500C0",
+    "pages": "100179",
+    "pdf_restricted": 1,
+    "published": {
+      "month": "10",
+      "day": "28",
+      "year": "2024"
+    },
+    "publisher": "Elsevier",
+    "pubtype": "PP_ARTICLE",
+    "sha1": "8436ec6a62de92b64e7c9a4482c12fb227ddcaf5",
+    "title": "The trend of Artificial Intelligence Application in Medicine and Neurology; The state-of-the-art Systematic Scoping Review 2010-2022",
+    "url": [
+      "https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=5MdxFjAAAAAJ:9ZlFYXVOiuMC",
+      "https://www.sciencedirect.com/science/article/pii/S2666521224000462"
+    ]
+  },
+  {
+    "_id": "242549e0-4bbc-0771-8d04-b0b064a1e97d",
+    "abstract": "OBJECTIVES: Transitions of care are pivotal, vulnerable times as patients are discharged from the hospital. Telephonic care coordination is standard care, but labor intensive. We implemented a patient postdischarge digital engagement (PDDE) program to scale coordination. We hypothesized that PDDE could reduce readmissions for low-risk patients and supplement care coordination for medium- and high-risk patients. STUDY DESIGN: Pragmatic, stepped-wedge cluster randomization trial with 5 implementation waves based upon primary care clinic region. METHODS: All inpatient hospital discharges between March 2020 and November 2020 were stratified by readmission risk. Low-risk patients were offered access to PDDE, and moderate-risk and high-risk patients were offered access to PDDE and care coordination. Readmission was defined as an unplanned inpatient admission within 30 days from discharge. An intention-to-treat primary analysis was conducted using mixed-effects logistic regression clustering for wave; a treatment-on-the-treated analysis was also conducted to assess the impact among program users. RESULTS: A total of 5490 patient discharges were examined (2735 control; 2755 intervention); 1949 patients were high risk, 2032 were medium risk, and 1509 were low risk. PDDE intervention did not significantly affect readmission among low-risk (95% CI, -0.23 to 0.90; P = .23), medium-risk (95% CI, -0.14 to 0.60; P = .21), and high-risk (95% CI, -0.32 to 0.64; P = .48) groups after adjustment for time and patient factors. In a treatment-on-the-treated analysis, among patients who activated the PDDE program, readmission was also similar among the low-, medium-, and high-risk cohorts. CONCLUSIONS: Our study expanded resource-limited care coordination by offering low-risk patients a service they were unable to receive previously while having no impact on readmission. PDDE efficiently provided additional touch points between patients and providers.",
+    "affiliation": "Medical College of Wisconsin, 8701 Watertown Plank Rd, Milwaukee, WI 53226. Email: bcrotty@mcw.edu.",
+    "attachments": [
+      {
+        "_id": "c488d3c0-95cf-0091-bb6a-b24196ef9c39",
+        "article_pdf": 1,
+        "created": 1710707799.02077,
+        "filename": "All Papers/Personal Papers/Polovneff et al. 2024 - Scaling care coordination through digital engagement - stepped-wedge trial assessing readmissions.pdf",
+        "filesize": 239423,
+        "gdrive_id": "1bXaKYrubSC8-AyTh2M0DTGIj1vULzrFS",
+        "mimeType": "application/pdf",
+        "owner": "C156195C6F1E11E8B45631DAEEF500C0",
+        "pub_id": "242549e0-4bbc-0771-8d04-b0b064a1e97d",
+        "source_filename": "[article_pdf].pdf"
+      }
+    ],
+    "author": [
+      {
+        "initials": "A",
+        "first": "Alexandra",
+        "formatted": "Polovneff A",
+        "last": "Polovneff"
+      },
+      {
+        "initials": "N",
+        "first": "Neemit",
+        "formatted": "Shah N",
+        "last": "Shah"
+      },
+      {
+        "initials": "A",
+        "first": "Abhishek",
+        "formatted": "Janardan A",
+        "last": "Janardan"
+      },
+      {
+        "initials": "E",
+        "first": "Erika",
+        "formatted": "Smith E",
+        "last": "Smith"
+      },
+      {
+        "initials": "I",
+        "first": "Ivan",
+        "formatted": "Pasillas I",
+        "last": "Pasillas"
+      },
+      {
+        "initials": "N",
+        "first": "Natalie",
+        "formatted": "Mortensen N",
+        "last": "Mortensen"
+      },
+      {
+        "initials": "JM",
+        "first": "Jeana M",
+        "formatted": "Holt JM",
+        "last": "Holt"
+      },
+      {
+        "initials": "M",
+        "first": "Melek",
+        "formatted": "Somai M",
+        "last": "Somai"
+      },
+      {
+        "initials": "R",
+        "first": "Rodney",
+        "formatted": "Sparapani R",
+        "last": "Sparapani"
+      },
+      {
+        "initials": "B",
+        "first": "Bradley",
+        "formatted": "Crotty B",
+        "last": "Crotty"
+      }
+    ],
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.37765/ajmc.2024.89498",
+    "citekey": "Polovneff2024-mj",
+    "crawl_urls": [
+      "http://dx.doi.org/10.37765/ajmc.2024.89498",
+      "https://dx.doi.org/10.37765/ajmc.2024.89498",
+      "https://www.ajmc.com/view/scaling-care-coordination-through-digital-engagement-stepped-wedge-trial-assessing-readmissions"
+    ],
+    "created": 1710613399.390862,
+    "doi": "10.37765/ajmc.2024.89498",
+    "dup_sha1": "f0dcd582cc5b1e0e60ada38f0e4b66dcda070ca1",
+    "folders": ["f0b1a720-fe1e-41d7-ad57-377405472763"],
+    "foldersNamed": ["Personal Papers"],
+    "id_list": [
+      "sha1:cae09beb60e271bae8f67a66010b8af3192a274b",
+      "dup_sha1:f0dcd582cc5b1e0e60ada38f0e4b66dcda070ca1",
+      "doi:10.37765/ajmc.2024.89498",
+      "pmid:38381546",
+      "url:http://dx.doi.org/10.37765/ajmc.2024.89498",
+      "url:https://www.ncbi.nlm.nih.gov/pubmed/38381546",
+      "url:https://dx.doi.org/10.37765/ajmc.2024.89498",
+      "webimport_sha1:3b19ad3b175f45f16097b65b5d0444aa162b6a94"
+    ],
+    "incomplete": 0,
+    "issn": "1088-0224",
+    "issn_alt": "1936-2692",
+    "issue": "2",
+    "journal": "Am. J. Manag. Care",
+    "journalfull": "The American journal of managed care",
+    "kind": "Research Article",
+    "labels": [],
+    "language": "en",
+    "owner": "C156195C6F1E11E8B45631DAEEF500C0",
+    "pages": "e32-e38",
+    "pdf_restricted": 0,
+    "pii": "89498",
+    "pmid": "38381546",
+    "published": {
+      "month": "2",
+      "day": "1",
+      "year": "2024"
+    },
+    "pubtype": "PP_ARTICLE",
+    "sha1": "cae09beb60e271bae8f67a66010b8af3192a274b",
+    "title": "Scaling care coordination through digital engagement: stepped-wedge trial assessing readmissions",
+    "url": [
+      "http://dx.doi.org/10.37765/ajmc.2024.89498",
+      "https://www.ncbi.nlm.nih.gov/pubmed/38381546"
+    ],
+    "volume": "30",
+    "webimport_sha1s": ["3b19ad3b175f45f16097b65b5d0444aa162b6a94"]
+  }
+]

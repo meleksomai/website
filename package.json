@@ -1,33 +1,34 @@
 {
-  "name": "thugga",
-  "version": "0.0.0",
+  "name": "somai.me",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "ci:install": "pnpm install --no-frozen-lockfile",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "dev": "turbo run dev --parallel",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
-    "sync:papers": "cd cli && pnpm cmd academic -c ../../apps/somai.me/content/papers/",
+    "build": "turbo build",
+    "check": "ultracite check",
+    "check-types": "turbo check-types",
+    "dev": "turbo dev",
+    "fix": "ultracite fix",
+    "prepare": "husky",
     "syncpack": "npx syncpack",
-    "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format"
+    "syncpack:fix": "npx syncpack fix-mismatches && npx syncpack set-semver-ranges && npx syncpack format",
+    "test": "turbo test"
   },
   "devDependencies": {
-    "@thugga/academic": "workspace:*",
-    "eslint-config-thugga": "workspace:*",
-    "prettier": "3.3.3",
-    "syncpack": "8.2.4",
-    "turbo": "2.0.12"
+    "@biomejs/biome": "2.3.8",
+    "@workspace/typescript-config": "workspace:*",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.7",
+    "turbo": "2.5.5",
+    "typescript": "5.9.3",
+    "ultracite": "6.3.9"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=20.0.0"
+    "node": ">=20"
   },
-  "packageManager": "pnpm@9.6.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "pnpm dlx ultracite fix"
+    ]
+  },
+  "packageManager": "pnpm@10.4.1"
 }
