@@ -6,7 +6,9 @@ export const PapersSection = async () => (
     {papers.map((paper) => (
       <a
         className="group flex cursor-pointer flex-col justify-between gap-2 border-foreground/10 border-b py-6 transition-all duration-700 hover:border-foreground/20 md:py-8"
-        href={paper.url.at(0)}
+        href={
+          paper.url?.at(0) || paper.doi ? `https://doi.org/${paper.doi}` : "#"
+        }
         key={paper._id}
         rel="noopener noreferrer"
         target="_blank"
