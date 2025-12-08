@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { EB_Garamond, Geist, Geist_Mono } from "next/font/google";
 
 import "@workspace/ui/globals.css";
 import { VercelToolbar } from "@vercel/toolbar/next";
@@ -17,6 +17,11 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 });
 
+const fontSerif = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+        className={`${fontSans.variable} ${fontMono.variable} ${fontSerif.variable} font-sans antialiased`}
       >
         <Providers>
           <div className="mx-auto max-w-4xl px-6 sm:px-8 lg:px-16">

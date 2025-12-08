@@ -10,16 +10,20 @@ export default async function Page({
   const { Essay, metadata, readingTime } = await getBlogEssay(slug);
 
   return (
-    <div>
-      <Heading1>{metadata.title}</Heading1>
-      <Heading3 className="py-6 font-mono text-muted-foreground uppercase">
-        / {metadata.subtitle}
-      </Heading3>
-      <p className="font-mono text-muted-foreground text-xs uppercase md:text-sm">
-        / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
-        words
-      </p>
-      <Essay />
+    <div className="flex flex-col">
+      <div className="flex flex-col gap-2">
+        <Heading1>{metadata.title}</Heading1>
+        <Heading3 className="font-mono text-muted-foreground uppercase">
+          {metadata.subtitle}
+        </Heading3>
+        <div className="py-8 font-mono text-muted-foreground text-xs uppercase md:text-sm">
+          / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
+          words
+        </div>
+      </div>
+      <div>
+        <Essay />
+      </div>
     </div>
   );
 }

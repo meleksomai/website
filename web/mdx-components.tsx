@@ -4,7 +4,6 @@ import {
   Heading3,
   Heading4,
   Heading5,
-  Heading6,
 } from "@workspace/ui/blocks/headings";
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
@@ -21,16 +20,10 @@ const components = {
   h3: (props) => <Heading3 {...props} />,
   h4: (props) => <Heading4 {...props} />,
   h5: (props) => <Heading5 {...props} />,
-  h6: (props) => <Heading6 {...props} />,
-  p: (props: ParagraphProps) => (
-    <p
-      className="my-6 text-gray-800 leading-relaxed dark:text-zinc-300"
-      {...props}
-    />
-  ),
+  p: (props: ParagraphProps) => <p className="my-6 leading-loose" {...props} />,
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      "text-blue-500 hover:text-blue-700 dark:text-blue-400 hover:dark:text-blue-300";
+      "underline decoration-muted-foreground hover:text-muted-foreground ";
     if (href?.startsWith("/")) {
       return (
         <Link className={className} href={href} {...props}>

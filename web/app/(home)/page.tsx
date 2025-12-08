@@ -22,7 +22,7 @@ export default async function Page() {
   const articles = await getBlogEssays();
 
   return (
-    <div className="space-y-20 py-12 md:space-y-24 lg:space-y-36">
+    <div className="space-y-18 py-12 md:space-y-20 lg:space-y-24">
       <IntroSection />
       <EssaySection
         essays={articles.map((article) => ({ ...article, Essay: undefined }))}

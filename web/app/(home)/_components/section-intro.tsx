@@ -31,7 +31,7 @@ export default function IntroSection() {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <p className="text-2xl text-muted-foreground leading-relaxed md:text-3xl lg:text-4xl">
+          <p className="text-muted-foreground text-xl leading-relaxed md:text-2xl lg:text-3xl">
             <span className="text-foreground"> Physician</span>.
             <span className="text-foreground"> Clinical Informatician</span>.
             Works at the intersection of{" "}
@@ -63,7 +63,7 @@ export default function IntroSection() {
               },
             ].map((social) => (
               <a
-                className="border-transparent border-b font-mono text-muted-foreground text-xs transition-all hover:border-foreground/60 hover:text-foreground/90"
+                className="border-transparent border-b font-mono text-muted-foreground text-xs transition-all hover:border-foreground/60 hover:text-foreground/90 md:text-sm"
                 href={social.href}
                 key={social.name}
                 rel="noopener noreferrer"

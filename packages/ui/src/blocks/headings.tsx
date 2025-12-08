@@ -9,7 +9,7 @@ export const Heading1 = ({
 }) => (
   <h1
     className={cn(
-      "font-light text-3xl tracking-tight md:text-4xl lg:text-5xl",
+      "font-light text-2xl tracking-tight md:text-3xl lg:text-4xl",
       className
     )}
   >
@@ -26,7 +26,7 @@ export const Heading2 = ({
 }) => (
   <h2
     className={cn(
-      "mb-2 font-light font-sans text-2xl tracking-tight md:text-3xl lg:text-4xl",
+      "mb-2 font-light font-sans text-xl tracking-tight md:text-2xl lg:text-3xl",
       className
     )}
   >
@@ -43,7 +43,7 @@ export const Heading3 = ({
 }) => (
   <h3
     className={cn(
-      "mb-2 font-light font-sans text-xl text-foreground md:text-2xl",
+      "mb-2 font-light font-sans text-lg text-foreground md:text-xl lg:text-2xl",
       className
     )}
   >
@@ -60,7 +60,7 @@ export const Heading4 = ({
 }) => (
   <h4
     className={cn(
-      "mb-2 font-light font-sans text-lg tracking-tight md:text-xl lg:text-2xl",
+      "mb-2 font-light font-sans text-base tracking-tight md:text-lg lg:text-xl",
       className
     )}
   >
@@ -83,21 +83,4 @@ export const Heading5 = ({
   >
     {children}
   </h5>
-);
-
-export const Heading6 = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
-  <h6
-    className={cn(
-      "mb-2 font-light font-sans text-sm tracking-tight md:text-md lg:text-lg",
-      className
-    )}
-  >
-    {children}
-  </h6>
 );
