@@ -60,7 +60,7 @@ export function ContactSection() {
                 </span>
               </div>
               <p className="text-base text-foreground md:text-2xl">
-                New York, NY
+                San Francisco, CA
               </p>
             </div>
           </div>
