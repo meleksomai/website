@@ -9,7 +9,7 @@ export default function Footer() {
             © 2025 Melek Somai. All rights reserved.
           </div>
           <div className="text-muted-foreground text-xs">
-            Made with focus from New York, Milwaukee, and Tunis.
+            Made with focus from New York, San Francisco, and Tunis.
           </div>
         </div>
 
