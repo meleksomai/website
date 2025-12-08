@@ -1,6 +1,7 @@
 "use client";
 import { Heading1 } from "@workspace/ui/blocks/headings";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
+import { siteConfig } from "@/config/site";
 
 export default function IntroSection() {
   const { ref, isVisible } = useReveal(0.3);
@@ -32,12 +33,20 @@ export default function IntroSection() {
           style={{ transitionDelay: "200ms" }}
         >
           <p className="text-muted-foreground text-xl leading-relaxed md:text-2xl lg:text-3xl">
-            <span className="text-foreground"> Physician</span>.
-            <span className="text-foreground"> Clinical Informatician</span>.
-            Works at the intersection of{" "}
-            <span className="text-foreground">Healthcare Informatics</span>,
-            <span className="text-foreground"> Data Science</span>, and
-            <span className="text-foreground"> Product Engineering</span>.
+            I am a <span className="text-foreground"> physician</span>, and{" "}
+            <span className="text-foreground"> clinical informatician</span>. I
+            am currently the{" "}
+            <span className="text-foreground">
+              {" "}
+              chief product & technology officer
+            </span>
+            , at Froedtert Thedacare.
+          </p>
+          <p className="text-muted-foreground text-xl leading-relaxed md:text-2xl lg:text-3xl">
+            I work at the intersection of{" "}
+            <span className="text-foreground">digital health</span>,
+            <span className="text-foreground"> AI</span>, and
+            <span className="text-foreground"> software engineering</span>.
           </p>
 
           <div
@@ -48,20 +57,7 @@ export default function IntroSection() {
             }`}
             style={{ transitionDelay: "300ms" }}
           >
-            {[
-              {
-                name: "GitHub",
-                href: "https://github.com/meleksomai",
-              },
-              {
-                name: "LinkedIn",
-                href: "https://www.linkedin.com/in/msomai/",
-              },
-              {
-                name: "X",
-                href: "https://twitter.com/meleksomai",
-              },
-            ].map((social) => (
+            {siteConfig.social.map((social) => (
               <a
                 className="border-transparent border-b font-mono text-muted-foreground text-xs transition-all hover:border-foreground/60 hover:text-foreground/90 md:text-sm"
                 href={social.href}
