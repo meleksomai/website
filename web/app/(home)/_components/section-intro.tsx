@@ -58,7 +58,7 @@ export default function IntroSection() {
                 href: "https://www.linkedin.com/in/msomai/",
               },
               {
-                name: "Twitter",
+                name: "X",
                 href: "https://twitter.com/meleksomai",
               },
             ].map((social) => (
