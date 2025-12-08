@@ -14,7 +14,7 @@ export function EssaySection({ essays }: { essays?: Omit<Essay, "Essay">[] }) {
     >
       <div className="mx-auto w-full">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
+          className={`mb-6 transition-all duration-700 md:mb-8 ${
             isVisible
               ? "translate-x-0 opacity-100"
               : "-translate-x-12 opacity-0"
