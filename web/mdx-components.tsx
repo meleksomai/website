@@ -64,7 +64,7 @@ const components = {
       {...props}
     />
   ),
-  li: (props: ListItemProps) => <li className="my-6 pl-1" {...props} />,
+  li: (props: ListItemProps) => <li className="my-3 pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium" {...props} />
   ),
@@ -76,6 +76,15 @@ const components = {
       sizes="100vw"
       style={{ width: "100%", height: "auto" }}
       {...(props as ImageProps)}
+    />
+  ),
+  blockquote: (props: ComponentPropsWithoutRef<"blockquote">) => (
+    <blockquote className="mt-6 border-l-2 pl-6 italic" {...props} />
+  ),
+  code: (props: ComponentPropsWithoutRef<"code">) => (
+    <code
+      className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-semibold text-sm"
+      {...props}
     />
   ),
 } satisfies MDXComponents;

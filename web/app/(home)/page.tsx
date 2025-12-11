@@ -25,7 +25,9 @@ export default async function Page() {
     <div className="space-y-18 py-12 md:space-y-20 lg:space-y-24">
       <IntroSection />
       <EssaySection
-        essays={articles.map((article) => ({ ...article, Essay: undefined }))}
+        essays={articles
+          .filter((article) => article.metadata.featured)
+          .map((article) => ({ ...article, Essay: undefined }))}
       />
       <ContactSection />
     </div>

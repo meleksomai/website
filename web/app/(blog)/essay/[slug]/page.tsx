@@ -9,22 +9,25 @@ export default async function Page({
   const { slug } = await params;
   const { Essay, metadata, readingTime } = await getBlogEssay(slug);
 
+  // console.log("TOC", tableOfContents);
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col gap-4">
-        <Heading1>{metadata.title}</Heading1>
-        <Heading3 className="font-mono text-muted-foreground uppercase">
-          {metadata.subtitle}
-        </Heading3>
-        <div className="py-8 font-mono text-muted-foreground text-xs uppercase md:text-sm">
-          / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
-          words
+    <article className="prose">
+      <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
+          <Heading1>{metadata.title}</Heading1>
+          <Heading3 className="font-mono text-muted-foreground uppercase">
+            {metadata.subtitle}
+          </Heading3>
+          <div className="py-8 font-mono text-muted-foreground text-xs uppercase md:text-sm">
+            / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
+            words
+          </div>
+        </div>
+        <div>
+          <Essay />
         </div>
       </div>
-      <div>
-        <Essay />
-      </div>
-    </div>
+    </article>
   );
 }
 
