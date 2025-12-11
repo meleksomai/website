@@ -12,6 +12,8 @@ import type { ComponentPropsWithoutRef } from "react";
 
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
 type AnchorProps = ComponentPropsWithoutRef<"a">;
+type ListProps = ComponentPropsWithoutRef<"ul">;
+type ListItemProps = ComponentPropsWithoutRef<"li">;
 
 const components = {
   // Allows customizing built-in components, e.g. to add styling.
@@ -50,6 +52,25 @@ const components = {
       </a>
     );
   },
+  ol: (props: ListProps) => (
+    <ol
+      className="my-6 list-decimal space-y-2 pl-5 text-gray-800 dark:text-zinc-300"
+      {...props}
+    />
+  ),
+  ul: (props: ListProps) => (
+    <ul
+      className="my-6 list-disc space-y-1 pl-5 text-gray-800 dark:text-zinc-300"
+      {...props}
+    />
+  ),
+  li: (props: ListItemProps) => <li className="my-6 pl-1" {...props} />,
+  em: (props: ComponentPropsWithoutRef<"em">) => (
+    <em className="font-medium" {...props} />
+  ),
+  strong: (props: ComponentPropsWithoutRef<"strong">) => (
+    <strong className="font-medium" {...props} />
+  ),
   img: (props) => (
     <Image
       sizes="100vw"

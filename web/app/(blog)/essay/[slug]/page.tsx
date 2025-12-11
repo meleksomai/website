@@ -11,7 +11,7 @@ export default async function Page({
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <Heading1>{metadata.title}</Heading1>
         <Heading3 className="font-mono text-muted-foreground uppercase">
           {metadata.subtitle}
