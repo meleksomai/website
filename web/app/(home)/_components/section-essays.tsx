@@ -69,7 +69,7 @@ function EssayCard({
       <div className="flex items-baseline gap-4 md:gap-8">
         <div>
           {/*<h3 className="mr-12 mb-1 font-light font-sans text-2xl text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">*/}
-          <span className="text-right font-mono text-muted-foreground text-xs md:text-sm">
+          <span className="font-mono text-muted-foreground text-xs md:text-sm">
             {essay.metadata.publishedAt}
           </span>
           <Heading3 className="mr-12 mb-1 transition-transform duration-300 group-hover:translate-x-2">
