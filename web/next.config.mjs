@@ -1,5 +1,6 @@
 import createMDX from "@next/mdx";
 import createWithVercelToolbar from "@vercel/toolbar/plugins/next";
+import remarkTocMdx from "@workspace/remark-toc-mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,7 +13,7 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [
       "remark-gfm",
-      "remark-toc",
+      remarkTocMdx,
       "remark-frontmatter",
       ["remark-mdx-frontmatter", { name: "metadata" }],
       "remark-reading-time",
