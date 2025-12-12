@@ -4,7 +4,9 @@ import {
   Heading3,
   Heading4,
   Heading5,
+  Heading6,
 } from "@workspace/ui/blocks/headings";
+import { cn } from "@workspace/ui/lib/utils";
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
@@ -17,28 +19,33 @@ type ListItemProps = ComponentPropsWithoutRef<"li">;
 
 const components = {
   // Allows customizing built-in components, e.g. to add styling.
-  h1: (props) => <Heading1 {...props} />,
-  h2: (props) => <Heading2 {...props} />,
-  h3: (props) => <Heading3 {...props} />,
-  h4: (props) => <Heading4 {...props} />,
-  h5: (props) => <Heading5 {...props} />,
+  h1: ({ className, ...props }) => (
+    <Heading1 className={cn("-ml-2.5", className)} {...props} />
+  ),
+  h2: ({ className, ...props }) => (
+    <Heading2 className={cn("-ml-3.5 lg:-ml-4.5", className)} {...props} />
+  ),
+  h3: ({ className, ...props }) => (
+    <Heading3 className={cn("-ml-3 lg:-ml-4", className)} {...props} />
+  ),
+  h4: ({ className, ...props }) => (
+    <Heading4 className={cn("-ml-3 lg:-ml-4", className)} {...props} />
+  ),
+  h5: ({ className, ...props }) => (
+    <Heading5 className={cn("-ml-3", className)} {...props} />
+  ),
+  h6: (props: ComponentPropsWithoutRef<"h6">) => (
+    <Heading6 className={cn("-ml-3", "")} {...props} />
+  ),
   p: (props: ParagraphProps) => <p className="my-6 leading-loose" {...props} />,
-  a: ({ href, children, ...props }: AnchorProps) => {
+  a: ({ href, ...props }: AnchorProps) => {
     const className =
       "underline decoration-muted-foreground hover:text-muted-foreground ";
     if (href?.startsWith("/")) {
-      return (
-        <Link className={className} href={href} {...props}>
-          {children}
-        </Link>
-      );
+      return <Link className={className} href={href} {...props} />;
     }
     if (href?.startsWith("#")) {
-      return (
-        <a className={className} href={href} {...props}>
-          {children}
-        </a>
-      );
+      return <a className={className} href={href} {...props} />;
     }
     return (
       <a
@@ -47,9 +54,7 @@ const components = {
         rel="noopener noreferrer"
         target="_blank"
         {...props}
-      >
-        {children}
-      </a>
+      />
     );
   },
   ol: (props: ListProps) => (

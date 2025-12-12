@@ -1,7 +1,6 @@
 import { cn } from "@workspace/ui/lib/utils";
 
 export const Heading1 = ({
-  children,
   className,
   ...props
 }: {
@@ -14,13 +13,10 @@ export const Heading1 = ({
       className
     )}
     {...props}
-  >
-    {children}
-  </h1>
+  />
 );
 
 export const Heading2 = ({
-  children,
   className,
   ...props
 }: {
@@ -33,13 +29,10 @@ export const Heading2 = ({
       className
     )}
     {...props}
-  >
-    {children}
-  </h2>
+  />
 );
 
 export const Heading3 = ({
-  children,
   className,
   ...props
 }: {
@@ -52,13 +45,10 @@ export const Heading3 = ({
       className
     )}
     {...props}
-  >
-    {children}
-  </h3>
+  />
 );
 
 export const Heading4 = ({
-  children,
   className,
   ...props
 }: {
@@ -71,13 +61,10 @@ export const Heading4 = ({
       className
     )}
     {...props}
-  >
-    {children}
-  </h4>
+  />
 );
 
 export const Heading5 = ({
-  children,
   className,
   ...props
 }: {
@@ -86,11 +73,19 @@ export const Heading5 = ({
 }) => (
   <h5
     className={cn(
-      "mb-2 font-light font-sans text-base tracking-tight md:text-lg lg:text-xl",
+      "mb-2 font-medium font-sans text-base tracking-tight md:text-lg lg:text-xl",
       className
     )}
     {...props}
-  >
-    {children}
-  </h5>
+  />
+);
+
+export const Heading6 = ({ className, ...props }: { className?: string }) => (
+  <h6
+    className={cn(
+      "mb-2 font-light font-sans text-base tracking-tight md:text-base lg:text-base",
+      className
+    )}
+    {...props}
+  />
 );
