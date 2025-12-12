@@ -60,8 +60,12 @@ function getMDXData(dir: string) {
 }
 
 export async function getBlogEssays() {
-  return await getMDXData(
-    path.join(process.cwd(), "app", "(blog)", "_content")
+  return (
+    await getMDXData(path.join(process.cwd(), "app", "(blog)", "_content"))
+  ).sort(
+    (a, b) =>
+      new Date(b.metadata.publishedAt).getTime() -
+      new Date(a.metadata.publishedAt).getTime()
   );
 }
 

@@ -1,86 +1,79 @@
-import { cn } from "../lib/utils";
+import { cn } from "@workspace/ui/lib/utils";
 
 export const Heading1 = ({
-  children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+  ...props
+}: React.ComponentPropsWithoutRef<"h1">) => (
   <h1
     className={cn(
       "font-light text-2xl tracking-tight md:text-3xl lg:text-4xl",
       className
     )}
-  >
-    {children}
-  </h1>
+    {...props}
+  />
 );
 
 export const Heading2 = ({
-  children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+  ...props
+}: React.ComponentPropsWithoutRef<"h2">) => (
   <h2
     className={cn(
       "mb-2 font-light font-sans text-xl tracking-tight md:text-2xl lg:text-3xl",
       className
     )}
-  >
-    {children}
-  </h2>
+    {...props}
+  />
 );
 
 export const Heading3 = ({
-  children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+  ...props
+}: React.ComponentPropsWithoutRef<"h3">) => (
   <h3
     className={cn(
       "mb-2 font-light font-sans text-lg text-foreground md:text-xl lg:text-2xl",
       className
     )}
-  >
-    {children}
-  </h3>
+    {...props}
+  />
 );
 
 export const Heading4 = ({
-  children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+  ...props
+}: React.ComponentPropsWithoutRef<"h4">) => (
   <h4
     className={cn(
       "mb-2 font-light font-sans text-base tracking-tight md:text-lg lg:text-xl",
       className
     )}
-  >
-    {children}
-  </h4>
+    {...props}
+  />
 );
 
 export const Heading5 = ({
-  children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+  ...props
+}: React.ComponentPropsWithoutRef<"h5">) => (
   <h5
     className={cn(
-      "mb-2 font-light font-sans text-base tracking-tight md:text-lg lg:text-xl",
+      "mb-2 font-medium font-sans text-base tracking-tight md:text-lg lg:text-xl",
       className
     )}
-  >
-    {children}
-  </h5>
+    {...props}
+  />
+);
+
+export const Heading6 = ({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"h6">) => (
+  <h6
+    className={cn(
+      "mb-2 font-light font-sans text-base tracking-tight md:text-base lg:text-base",
+      className
+    )}
+    {...props}
+  />
 );
