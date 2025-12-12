@@ -1,4 +1,6 @@
 export const siteConfig = {
+  url: "https://www.somai.me",
+  sitemap: "https://www.somai.me/sitemap.xml",
   social: [
     {
       name: "GitHub",
