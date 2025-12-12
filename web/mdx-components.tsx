@@ -88,7 +88,7 @@ const components = {
   ),
   code: (props: ComponentPropsWithoutRef<"code">) => (
     <code
-      className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-semibold text-sm"
+      className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-semibold"
       {...props}
     />
   ),

@@ -9,7 +9,6 @@ export default async function Page({
   const { slug } = await params;
   const { Essay, metadata, readingTime } = await getBlogEssay(slug);
 
-  // console.log("TOC", tableOfContents);
   return (
     <article className="prose">
       <div className="flex flex-col">

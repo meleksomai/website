@@ -3,10 +3,7 @@ import { cn } from "@workspace/ui/lib/utils";
 export const Heading1 = ({
   className,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+}: React.ComponentPropsWithoutRef<"h1">) => (
   <h1
     className={cn(
       "font-light text-2xl tracking-tight md:text-3xl lg:text-4xl",
@@ -19,10 +16,7 @@ export const Heading1 = ({
 export const Heading2 = ({
   className,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+}: React.ComponentPropsWithoutRef<"h2">) => (
   <h2
     className={cn(
       "mb-2 font-light font-sans text-xl tracking-tight md:text-2xl lg:text-3xl",
@@ -35,10 +29,7 @@ export const Heading2 = ({
 export const Heading3 = ({
   className,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+}: React.ComponentPropsWithoutRef<"h3">) => (
   <h3
     className={cn(
       "mb-2 font-light font-sans text-lg text-foreground md:text-xl lg:text-2xl",
@@ -51,10 +42,7 @@ export const Heading3 = ({
 export const Heading4 = ({
   className,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+}: React.ComponentPropsWithoutRef<"h4">) => (
   <h4
     className={cn(
       "mb-2 font-light font-sans text-base tracking-tight md:text-lg lg:text-xl",
@@ -67,10 +55,7 @@ export const Heading4 = ({
 export const Heading5 = ({
   className,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
+}: React.ComponentPropsWithoutRef<"h5">) => (
   <h5
     className={cn(
       "mb-2 font-medium font-sans text-base tracking-tight md:text-lg lg:text-xl",
@@ -80,7 +65,10 @@ export const Heading5 = ({
   />
 );
 
-export const Heading6 = ({ className, ...props }: { className?: string }) => (
+export const Heading6 = ({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"h6">) => (
   <h6
     className={cn(
       "mb-2 font-light font-sans text-base tracking-tight md:text-base lg:text-base",
