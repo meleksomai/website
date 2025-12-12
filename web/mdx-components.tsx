@@ -71,10 +71,10 @@ const components = {
   ),
   li: (props: ListItemProps) => <li className="my-3 pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
-    <em className="font-medium" {...props} />
+    <em className="font-medium italic" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
-    <strong className="font-medium" {...props} />
+    <strong className="font-semibold" {...props} />
   ),
   img: (props) => (
     <Image
