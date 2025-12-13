@@ -41,17 +41,13 @@ export const ThemeSwitcher = ({
   const [theme, setTheme] = useState<"light" | "dark" | "system">(
     value ?? defaultValue
   );
-  // const [theme, setTheme] = useControllableState({
-  //   defaultProp: defaultValue,
-  //   prop: value,
-  //   onChange,
-  // });
   const [mounted, setMounted] = useState(false);
   const handleThemeClick = useCallback(
     (themeKey: "light" | "dark" | "system") => {
       setTheme(themeKey);
+      onChange?.(themeKey);
     },
-    [setTheme]
+    [setTheme, onChange]
   );
   // Prevent hydration mismatch
   useEffect(() => {
