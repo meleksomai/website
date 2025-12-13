@@ -1,6 +1,10 @@
 "use client";
-import { useControllableState } from "@radix-ui/react-use-controllable-state";
-import { Monitor, Moon, Sun } from "lucide-react";
+import {
+  ComputerIcon,
+  Moon01Icon,
+  Sun01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "../lib/utils";
@@ -8,17 +12,17 @@ import { cn } from "../lib/utils";
 const themes = [
   {
     key: "system",
-    icon: Monitor,
+    icon: ComputerIcon,
     label: "System theme",
   },
   {
     key: "light",
-    icon: Sun,
+    icon: Sun01Icon,
     label: "Light theme",
   },
   {
     key: "dark",
-    icon: Moon,
+    icon: Moon01Icon,
     label: "Dark theme",
   },
 ];
@@ -34,17 +38,16 @@ export const ThemeSwitcher = ({
   defaultValue = "system",
   className,
 }: ThemeSwitcherProps) => {
-  const [theme, setTheme] = useControllableState({
-    defaultProp: defaultValue,
-    prop: value,
-    onChange,
-  });
+  const [theme, setTheme] = useState<"light" | "dark" | "system">(
+    value ?? defaultValue
+  );
   const [mounted, setMounted] = useState(false);
   const handleThemeClick = useCallback(
     (themeKey: "light" | "dark" | "system") => {
       setTheme(themeKey);
+      onChange?.(themeKey);
     },
-    [setTheme]
+    [setTheme, onChange]
   );
   // Prevent hydration mismatch
   useEffect(() => {
@@ -77,11 +80,12 @@ export const ThemeSwitcher = ({
                 transition={{ type: "spring", duration: 0.5 }}
               />
             )}
-            <Icon
+            <HugeiconsIcon
               className={cn(
-                "relative z-10 m-auto h-4 w-4",
-                isActive ? "text-foreground" : "text-muted-foreground"
+                "relative m-auto size-4",
+                isActive ? "text-primary" : "text-muted-foreground"
               )}
+              icon={Icon}
             />
           </button>
         );
