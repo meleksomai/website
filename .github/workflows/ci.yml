@@ -34,11 +34,23 @@ jobs:
       - name: types
         run: pnpm check-types
 
-      - name: tests
-        run: pnpm test
+      - name: formatting
+        run: pnpm check
 
       - name: build
         run: pnpm build
 
-      - name: formatting
-        run: pnpm check
+      - name: tests
+        run: pnpm test
+
+      - name: install playwright browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: run playwright tests
+        run: pnpm e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: web-playwright-report
+          path: web/playwright-report/
+          retention-days: 30
