@@ -20,7 +20,7 @@ export const EssaysSection = async () => {
             {post.metadata.subtitle}
           </Heading4>
           <p className="font-mono text-muted-foreground text-xs uppercase md:text-sm">
-            / {post.metadata.publishedAt} / {post.readingTime.text} /{" "}
+            / {post.metadata.publishedAtFormatted} / {post.readingTime.text} /{" "}
             {post.readingTime.words} words
           </p>
         </Link>

@@ -8,6 +8,7 @@
     "check-types": "turbo check-types",
     "ci:install": "pnpm install --frozen-lockfile",
     "dev": "turbo dev",
+    "e2e": "turbo e2e",
     "fix": "ultracite fix",
     "prepare": "husky",
     "syncpack": "npx syncpack",
@@ -21,7 +22,8 @@
     "lint-staged": "16.2.7",
     "turbo": "2.5.5",
     "typescript": "5.9.3",
-    "ultracite": "6.3.9"
+    "ultracite": "6.3.9",
+    "@playwright/test": "1.55.0"
   },
   "engines": {
     "node": ">=24"

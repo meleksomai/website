@@ -18,8 +18,8 @@ export default async function Page({
             {metadata.subtitle}
           </Heading3>
           <div className="py-8 font-mono text-muted-foreground text-xs uppercase md:text-sm">
-            / {metadata.publishedAt} / {readingTime.text} / {readingTime.words}{" "}
-            words
+            / {metadata.publishedAtFormatted} / {readingTime.text} /{" "}
+            {readingTime.words} words
           </div>
         </div>
         <div className="prose">
