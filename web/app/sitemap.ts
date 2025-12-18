@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
+import { parsePublishedAt } from "../lib/date";
 import { getBlogEssays } from "./(blog)/utils";
 
 const blogEssays = await getBlogEssays();
 
 const essaySitemapEntries = blogEssays.map((essay) => ({
   url: `${siteConfig.url}/essay/${essay.slug}`,
-  lastModified: new Date(essay.metadata.publishedAt),
+  lastModified: parsePublishedAt(essay.metadata.publishedAt),
   changeFrequency: "monthly",
   priority: 0.4,
 })) satisfies MetadataRoute.Sitemap;

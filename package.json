@@ -8,6 +8,7 @@
     "check-types": "turbo check-types",
     "ci:install": "pnpm install --frozen-lockfile",
     "dev": "turbo dev",
+    "e2e": "turbo e2e",
     "fix": "ultracite fix",
     "prepare": "husky",
     "syncpack": "npx syncpack",
