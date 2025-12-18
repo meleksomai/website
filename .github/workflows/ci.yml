@@ -31,11 +31,14 @@ jobs:
       - name: install dependencies
         run: pnpm ci:install
 
+      - name: types
+        run: pnpm check-types
+
+      - name: tests
+        run: pnpm test
+
       - name: build
         run: pnpm build
 
       - name: formatting
         run: pnpm check
-
-      # - name: test
-      #   run: pnpm test
