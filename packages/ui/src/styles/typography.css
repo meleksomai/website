@@ -1,26 +1,10 @@
 .prose {
-  .heading-anchor::before {
-    content: "#";
-    @apply text-muted-foreground/50;
+  .heading-anchor {
+    @apply hover:opacity-50 opacity-30 text-muted-foreground ml-[-1ch] pr-1;
   }
 
-  h1 .heading-anchor {
-    @apply pr-1;
-  }
-  h2 .heading-anchor {
-    @apply pr-1;
-  }
-  h3 .heading-anchor {
-    @apply pr-1;
-  }
-  h4 .heading-anchor {
-    @apply pr-1;
-  }
-  h5 .heading-anchor {
-    @apply pr-1;
-  }
-  h6 .heading-anchor {
-    @apply pr-1;
+  .heading-anchor::before {
+    content: "#";
   }
 
   h1,
@@ -29,6 +13,6 @@
   h4,
   h5,
   h6 {
-    @apply scroll-mt-24;
+    @apply scroll-mt-8 mt-14;
   }
 }

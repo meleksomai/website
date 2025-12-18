@@ -10,7 +10,7 @@ export default async function Page({
   const { Essay, metadata, readingTime } = await getBlogEssay(slug);
 
   return (
-    <article className="prose">
+    <article>
       <div className="flex flex-col">
         <div className="flex flex-col gap-4">
           <Heading1>{metadata.title}</Heading1>
@@ -22,7 +22,7 @@ export default async function Page({
             words
           </div>
         </div>
-        <div>
+        <div className="prose">
           <Essay />
         </div>
       </div>

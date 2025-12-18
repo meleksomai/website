@@ -6,7 +6,6 @@ import {
   Heading5,
   Heading6,
 } from "@workspace/ui/blocks/headings";
-import { cn } from "@workspace/ui/lib/utils";
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
@@ -19,24 +18,12 @@ type ListItemProps = ComponentPropsWithoutRef<"li">;
 
 const components = {
   // Allows customizing built-in components, e.g. to add styling.
-  h1: ({ className, ...props }) => (
-    <Heading1 className={cn("-ml-2.5", className)} {...props} />
-  ),
-  h2: ({ className, ...props }) => (
-    <Heading2 className={cn("-ml-3.5 lg:-ml-4.5", className)} {...props} />
-  ),
-  h3: ({ className, ...props }) => (
-    <Heading3 className={cn("-ml-3 lg:-ml-4", className)} {...props} />
-  ),
-  h4: ({ className, ...props }) => (
-    <Heading4 className={cn("-ml-3 lg:-ml-4", className)} {...props} />
-  ),
-  h5: ({ className, ...props }) => (
-    <Heading5 className={cn("-ml-3", className)} {...props} />
-  ),
-  h6: (props: ComponentPropsWithoutRef<"h6">) => (
-    <Heading6 className={cn("-ml-3", "")} {...props} />
-  ),
+  h1: (props: ComponentPropsWithoutRef<"h1">) => <Heading1 {...props} />,
+  h2: (props: ComponentPropsWithoutRef<"h2">) => <Heading2 {...props} />,
+  h3: (props: ComponentPropsWithoutRef<"h3">) => <Heading3 {...props} />,
+  h4: (props: ComponentPropsWithoutRef<"h4">) => <Heading4 {...props} />,
+  h5: (props: ComponentPropsWithoutRef<"h5">) => <Heading5 {...props} />,
+  h6: (props: ComponentPropsWithoutRef<"h6">) => <Heading6 {...props} />,
   p: (props: ParagraphProps) => <p className="my-6 leading-loose" {...props} />,
   a: ({ href, ...props }: AnchorProps) => {
     const className =
