@@ -1,7 +1,7 @@
 "use client";
 
 import { Heading2 } from "@workspace/ui/blocks/headings";
-import { LocationIcon, MailIcon } from "@workspace/ui/components/icons";
+import { MailIcon } from "@workspace/ui/components/icons";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
 
 export function ContactSection() {
@@ -44,25 +44,6 @@ export function ContactSection() {
                 hello@somai.me
               </p>
             </a>
-
-            <div
-              className={`transition-all duration-700 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
-              }`}
-              style={{ transitionDelay: "350ms" }}
-            >
-              <div className="mb-1 flex items-center gap-2">
-                <LocationIcon className="h-3 w-3 text-muted-foreground" />
-                <span className="font-mono text-muted-foreground text-xs">
-                  Location
-                </span>
-              </div>
-              <p className="text-base text-foreground md:text-2xl">
-                San Francisco, CA
-              </p>
-            </div>
           </div>
         </div>
       </div>
