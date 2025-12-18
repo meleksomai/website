@@ -21,7 +21,7 @@ export function EssaySection({ essays }: { essays?: Omit<Essay, "Essay">[] }) {
           }`}
         >
           <Heading2>Essays</Heading2>
-          <p className="font-mono text-muted-foreground text-sm uppercase tracking-wider">
+          <p className="font-mono text-muted-foreground text-xs uppercase md:text-base">
             / A space to share thoughts and ideas that are often reflections on
             my current research.
           </p>

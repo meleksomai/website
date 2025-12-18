@@ -1,12 +1,9 @@
 "use client";
-import {
-  ComputerIcon,
-  Moon01Icon,
-  Sun01Icon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 import { useCallback, useEffect, useState } from "react";
+import { ComputerIcon, MoonIcon, SunIcon } from "../components/icons";
 import { cn } from "../lib/utils";
 
 const themes = [
@@ -17,38 +14,29 @@ const themes = [
   },
   {
     key: "light",
-    icon: Sun01Icon,
+    icon: SunIcon,
     label: "Light theme",
   },
   {
     key: "dark",
-    icon: Moon01Icon,
+    icon: MoonIcon,
     label: "Dark theme",
   },
 ];
 export type ThemeSwitcherProps = {
-  value?: "light" | "dark" | "system";
-  onChange?: (theme: "light" | "dark" | "system") => void;
-  defaultValue?: "light" | "dark" | "system";
   className?: string;
 };
-export const ThemeSwitcher = ({
-  value,
-  onChange,
-  defaultValue = "system",
-  className,
-}: ThemeSwitcherProps) => {
-  const [theme, setTheme] = useState<"light" | "dark" | "system">(
-    value ?? defaultValue
-  );
-  const [mounted, setMounted] = useState(false);
+export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false); // set to false initially to prevent hydration mismatch
+
   const handleThemeClick = useCallback(
-    (themeKey: "light" | "dark" | "system") => {
+    (themeKey: string) => {
       setTheme(themeKey);
-      onChange?.(themeKey);
     },
-    [setTheme, onChange]
+    [setTheme]
   );
+
   // Prevent hydration mismatch
   useEffect(() => {
     setMounted(true);
@@ -68,25 +56,22 @@ export const ThemeSwitcher = ({
         return (
           <button
             aria-label={label}
-            className="relative h-6 w-6 rounded-full"
+            className={cn(
+              "relative z-10 flex h-6 w-6 items-center justify-center rounded-full transition-colors hover:text-foreground",
+              isActive ? "text-foreground" : "text-muted-foreground"
+            )}
             key={key}
-            onClick={() => handleThemeClick(key as "light" | "dark" | "system")}
+            onClick={() => handleThemeClick(key)}
             type="button"
           >
             {isActive && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-secondary"
+                className="absolute inset-0 rounded-full bg-secondary -z-10"
                 layoutId="activeTheme"
                 transition={{ type: "spring", duration: 0.5 }}
               />
             )}
-            <HugeiconsIcon
-              className={cn(
-                "relative m-auto size-4",
-                isActive ? "text-primary" : "text-muted-foreground"
-              )}
-              icon={Icon}
-            />
+            <Icon className="size-3.5" />
           </button>
         );
       })}

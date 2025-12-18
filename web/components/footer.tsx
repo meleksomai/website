@@ -1,4 +1,4 @@
-import ThemeToggle from "./theme-toggle";
+import { ThemeSwitcher } from "@workspace/ui/blocks/theme-switcher";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
+          <ThemeSwitcher />
         </div>
       </div>
     </footer>

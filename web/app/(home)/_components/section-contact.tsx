@@ -1,8 +1,8 @@
 "use client";
 
 import { Heading2 } from "@workspace/ui/blocks/headings";
+import { LocationIcon, MailIcon } from "@workspace/ui/components/icons";
 import { useReveal } from "@workspace/ui/hooks/use-reveal";
-import { Mail, MapPin } from "lucide-react";
 
 export function ContactSection() {
   const { ref, isVisible } = useReveal(0.3);
@@ -35,7 +35,7 @@ export function ContactSection() {
               style={{ transitionDelay: "200ms" }}
             >
               <div className="mb-1 flex items-center gap-2">
-                <Mail className="h-3 w-3 text-muted-foreground" />
+                <MailIcon className="h-3 w-3 text-muted-foreground" />
                 <span className="font-mono text-muted-foreground text-xs">
                   Email
                 </span>
@@ -54,7 +54,7 @@ export function ContactSection() {
               style={{ transitionDelay: "350ms" }}
             >
               <div className="mb-1 flex items-center gap-2">
-                <MapPin className="h-3 w-3 text-muted-foreground" />
+                <LocationIcon className="h-3 w-3 text-muted-foreground" />
                 <span className="font-mono text-muted-foreground text-xs">
                   Location
                 </span>
