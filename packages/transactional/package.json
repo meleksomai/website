@@ -14,11 +14,11 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@workspace/typescript-config": "workspace:*",
     "@react-email/preview-server": "5.1.0",
     "@types/node": "24.10.3",
     "@types/react": "19.2.3",
     "@types/react-dom": "19.2.3",
+    "@workspace/typescript-config": "workspace:*",
     "react-email": "5.1.0"
   }
 }

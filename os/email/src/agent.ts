@@ -1,6 +1,5 @@
-import { render } from "@workspace/transactional";
-import WelcomeEmail from "@workspace/transactional/emails/generic";
 import { Agent, type AgentEmail } from "agents";
+import { emailContent } from "./email";
 
 export type State = {
   lastUpdated: Date | null;
@@ -36,6 +35,9 @@ export class HelloEmailAgent extends Agent<Env, State> {
 
     // Agent processing goes here.
 
+    // Forward the email to self
+    email.forward(this.env.ROUTING_EMAIL);
+
     return;
   }
 
@@ -67,18 +69,12 @@ export class HelloEmailAgent extends Agent<Env, State> {
       return;
     }
 
-    const emailContent = await render(
-      <WelcomeEmail
-        content={`Hey, \n\n Thank you for reaching out. I will get back to you as soon as I can.\n\nIn the meantime, feel free to explore my [website](https://somai.me) to learn more about my work and projects.\n\nLooking forward to connecting with you!\n`}
-        footer="This message has been auto-generated."
-        previewMessage="Thank you for reaching out!"
-      />
-    );
+    const content = await emailContent();
 
     await this.replyToEmail(email, {
       subject: "Re: " + (email.headers.get("Subject") || "(No Subject)"),
       fromName: "Melek Somai",
-      body: emailContent,
+      body: content,
       contentType: "text/html",
     });
 

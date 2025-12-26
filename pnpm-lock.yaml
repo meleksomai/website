@@ -36,10 +36,10 @@ importers:
   os/email:
     dependencies:
       agents:
-        specifier: ^0.3.0
+        specifier: 0.3.0
         version: 0.3.0(@cloudflare/workers-types@4.20251225.0)(ai@6.0.3(zod@4.1.13))(react@19.2.3)(typescript@5.9.3)(zod@4.1.13)
       ai:
-        specifier: ^6.0.3
+        specifier: 6.0.3
         version: 6.0.3(zod@4.1.13)
       react:
         specifier: 19.2.3
@@ -48,6 +48,9 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
     devDependencies:
+      '@types/node':
+        specifier: 24.10.3
+        version: 24.10.3
       '@types/react':
         specifier: 19.2.3
         version: 19.2.3
@@ -58,7 +61,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       wrangler:
-        specifier: ^4.56.0
+        specifier: 4.56.0
         version: 4.56.0(@cloudflare/workers-types@4.20251225.0)
 
   packages/transactional:

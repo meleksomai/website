@@ -3,21 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "check-types": "tsc --noEmit",
     "deploy": "npx wrangler deploy --minify",
     "dev": "npx wrangler dev",
-    "generate-types": "npx wrangler types",
-    "check-types": "tsc --noEmit"
+    "generate-types": "npx wrangler types"
   },
   "dependencies": {
-    "agents": "^0.3.0",
-    "ai": "^6.0.3",
+    "agents": "0.3.0",
+    "ai": "6.0.3",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@workspace/typescript-config": "workspace:*",
-    "wrangler": "^4.56.0",
+    "@types/node": "24.10.3",
     "@types/react": "19.2.3",
-    "@types/react-dom": "19.2.3"
+    "@types/react-dom": "19.2.3",
+    "@workspace/typescript-config": "workspace:*",
+    "wrangler": "4.56.0"
   }
 }

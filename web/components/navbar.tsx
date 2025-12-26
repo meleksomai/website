@@ -35,7 +35,7 @@ export default function Navbar() {
         >
           {item.title}
           <span
-            className={`-bottom-1 absolute left-0 h-px bg-foreground transition-all duration-300 ${
+            className={`absolute -bottom-1 left-0 h-px bg-foreground transition-all duration-300 ${
               currentSection === index ? "w-full" : "w-0 group-hover:w-full"
             }`}
           />
