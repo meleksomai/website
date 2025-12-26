@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy --minify",
-    "dev": "wrangler dev",
-    "generate-types": "wrangler types",
+    "deploy": "npx wrangler deploy --minify",
+    "dev": "npx wrangler dev",
+    "generate-types": "npx wrangler types",
     "check-types": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
-    "agents": "^0.3.0"
+    "agents": "^0.3.0",
+    "ai": "^6.0.3"
   },
   "devDependencies": {
     "@workspace/typescript-config": "workspace:*",
