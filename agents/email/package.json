@@ -1,0 +1,20 @@
+{
+  "name": "backend-email",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy --minify",
+    "dev": "wrangler dev",
+    "generate-types": "wrangler types",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "agents": "^0.3.0"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "wrangler": "^4.56.0"
+  }
+}

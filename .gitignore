@@ -11,6 +11,7 @@ node_modules
 .env.development.local
 .env.test.local
 .env.production.local
+!.env.example
 
 # Testing
 coverage
@@ -38,3 +39,7 @@ npm-debug.log*
 *.pem
 *.tsbuildinfo
 .tsconfig.tsbuildinfo
+
+# Cloudflare workers
+.dev.vars*
+!.dev.vars.example
