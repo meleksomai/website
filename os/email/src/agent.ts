@@ -36,8 +36,14 @@ export class HelloEmailAgent extends Agent<Env, State> {
     // Agent processing goes here.
 
     // Forward the email to self
-    email.forward(this.env.ROUTING_EMAIL);
+    console.log("Forwarding email to self:", this.env.ROUTING_EMAIL);
+    await email.forward(this.env.ROUTING_EMAIL);
 
+    console.log("Processing of the incoming email complete.", {
+      forwardedTo: this.env.ROUTING_EMAIL,
+      emailFrom: email.from,
+      emailSubject: email.headers.get("Subject"),
+    });
     return;
   }
 
