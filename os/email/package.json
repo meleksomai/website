@@ -6,9 +6,7 @@
     "deploy": "npx wrangler deploy --minify",
     "dev": "npx wrangler dev",
     "generate-types": "npx wrangler types",
-    "check-types": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "agents": "^0.3.0",
