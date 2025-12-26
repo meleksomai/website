@@ -67,18 +67,19 @@ export class HelloEmailAgent extends Agent<Env, State> {
       return;
     }
 
-    const emailContent = render(
+    const emailContent = await render(
       <WelcomeEmail
         content={`Hey, \n\n Thank you for reaching out. I will get back to you as soon as I can.\n\nIn the meantime, feel free to explore my [website](https://somai.me) to learn more about my work and projects.\n\nLooking forward to connecting with you!\n`}
         footer="This message has been auto-generated."
+        previewMessage="Thank you for reaching out!"
       />
     );
 
     await this.replyToEmail(email, {
       subject: "Re: " + (email.headers.get("Subject") || "(No Subject)"),
       fromName: "Melek Somai",
-      body: `Hello,`,
-      contentType: "text/plain",
+      body: emailContent,
+      contentType: "text/html",
     });
 
     this.setState({
