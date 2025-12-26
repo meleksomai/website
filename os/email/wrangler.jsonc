@@ -12,7 +12,7 @@
     "bindings": [
       {
         "class_name": "HelloEmailAgent",
-        "name": "hello_email_agent"
+        "name": "HelloEmailAgent"
       }
     ]
   },

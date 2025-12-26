@@ -6,7 +6,7 @@ export { HelloEmailAgent } from "./agent";
 export default {
   async email(message: ForwardableEmailMessage, env: Env) {
     await routeAgentEmail(message, env, {
-      resolver: createCatchAllEmailResolver("hello_email_agent", message.from),
+      resolver: createCatchAllEmailResolver("HelloEmailAgent", message.from),
     });
   },
 };
