@@ -25,7 +25,9 @@ test-results
 .vercel
 
 # Build Outputs
+.react-email/
 .next/
+next-env.d.ts
 out/
 build
 dist
@@ -39,6 +41,7 @@ npm-debug.log*
 *.pem
 *.tsbuildinfo
 .tsconfig.tsbuildinfo
+
 
 # Cloudflare workers
 .dev.vars*

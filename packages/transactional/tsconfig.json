@@ -1,0 +1,9 @@
+{
+  "extends": "@workspace/typescript-config/nextjs.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx"
+  }
+}

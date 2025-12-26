@@ -1,0 +1,24 @@
+{
+  "name": "@workspace/transactional",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "email build",
+    "dev": "email dev -p 3001",
+    "export": "email export",
+    "start": "email start -p 3001"
+  },
+  "dependencies": {
+    "@react-email/components": "1.0.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "@react-email/preview-server": "5.1.0",
+    "@types/node": "24.10.3",
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3",
+    "react-email": "5.1.0"
+  }
+}
