@@ -35,16 +35,25 @@ importers:
 
   os/email:
     dependencies:
-      '@workspace/transactional':
-        specifier: workspace:*
-        version: link:../../packages/transactional
       agents:
         specifier: ^0.3.0
         version: 0.3.0(@cloudflare/workers-types@4.20251225.0)(ai@6.0.3(zod@4.1.13))(react@19.2.3)(typescript@5.9.3)(zod@4.1.13)
       ai:
         specifier: ^6.0.3
         version: 6.0.3(zod@4.1.13)
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
     devDependencies:
+      '@types/react':
+        specifier: 19.2.3
+        version: 19.2.3
+      '@types/react-dom':
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.3)
       '@workspace/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
