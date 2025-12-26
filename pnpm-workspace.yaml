@@ -1,4 +1,4 @@
 packages:
   - "web/"
-  - "agents/*"
+  - "os/*"
   - "packages/*"
