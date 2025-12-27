@@ -1,0 +1,19 @@
+{
+  "name": "@workspace/notion",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.6.0",
+    "agents": "0.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20251225.0",
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "5.9.3"
+  },
+  "type": "module"
+}

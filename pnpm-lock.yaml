@@ -33,45 +33,7 @@ importers:
         specifier: 6.3.9
         version: 6.3.9(typescript@5.9.3)
 
-  os/email:
-    dependencies:
-      '@ai-sdk/openai':
-        specifier: ^3.0.1
-        version: 3.0.1(zod@4.2.1)
-      agents:
-        specifier: 0.3.0
-        version: 0.3.0(@ai-sdk/openai@3.0.1(zod@4.2.1))(@cloudflare/workers-types@4.20251225.0)(ai@6.0.3(zod@4.2.1))(react@19.2.3)(typescript@5.9.3)(zod@4.2.1)
-      ai:
-        specifier: 6.0.3
-        version: 6.0.3(zod@4.2.1)
-      ai-gateway-provider:
-        specifier: ^3.0.1
-        version: 3.0.1(@ai-sdk/openai-compatible@2.0.1(zod@4.2.1))(@ai-sdk/provider-utils@4.0.1(zod@4.2.1))(@ai-sdk/provider@3.0.0)(ai@6.0.3(zod@4.2.1))(zod@4.2.1)
-      react:
-        specifier: 19.2.3
-        version: 19.2.3
-      react-dom:
-        specifier: 19.2.3
-        version: 19.2.3(react@19.2.3)
-      zod:
-        specifier: ^4.2.1
-        version: 4.2.1
-    devDependencies:
-      '@types/node':
-        specifier: 24.10.3
-        version: 24.10.3
-      '@types/react':
-        specifier: 19.2.3
-        version: 19.2.3
-      '@types/react-dom':
-        specifier: 19.2.3
-        version: 19.2.3(@types/react@19.2.3)
-      '@workspace/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-      wrangler:
-        specifier: 4.56.0
-        version: 4.56.0(@cloudflare/workers-types@4.20251225.0)
+  os: {dependencies: {'@ai-sdk/openai': {specifier: ^3.0.1, version: 3.0.1(zod@4.2.1)}, agents: {specifier: 0.3.0, version: 0.3.0(@ai-sdk/openai@3.0.1(zod@4.2.1))(@cloudflare/workers-types@4.20251225.0)(ai@6.0.3(zod@4.2.1))(react@19.2.3)(typescript@5.9.3)(zod@4.2.1)}, ai: {specifier: 6.0.3, version: 6.0.3(zod@4.2.1)}, ai-gateway-provider: {specifier: ^3.0.1, version: 3.0.1(@ai-sdk/openai-compatible@2.0.1(zod@4.2.1))(@ai-sdk/provider-utils@4.0.1(zod@4.2.1))(@ai-sdk/provider@3.0.0)(ai@6.0.3(zod@4.2.1))(zod@4.2.1)}, react: {specifier: 19.2.3, version: 19.2.3}, react-dom: {specifier: 19.2.3, version: 19.2.3(react@19.2.3)}, zod: {specifier: ^4.2.1, version: 4.2.1}}, devDependencies: {'@types/node': {specifier: 24.10.3, version: 24.10.3}, '@types/react': {specifier: 19.2.3, version: 19.2.3}, '@types/react-dom': {specifier: 19.2.3, version: 19.2.3(@types/react@19.2.3)}, '@workspace/typescript-config': {specifier: workspace:*, version: link:../packages/typescript-config}, wrangler: {specifier: 4.56.0, version: 4.56.0(@cloudflare/workers-types@4.20251225.0)}}}
 
   packages/notion:
     dependencies:
@@ -5360,9 +5322,6 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.13:
-    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
-
   zod@4.2.1:
     resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
 
@@ -10264,12 +10223,12 @@ snapshots:
 
   trough@2.2.0: {}
 
-  trpc-cli@0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(zod@4.1.13):
+  trpc-cli@0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(zod@4.2.1):
     dependencies:
       commander: 14.0.2
     optionalDependencies:
       '@trpc/server': 11.7.2(typescript@5.9.3)
-      zod: 4.1.13
+      zod: 4.2.1
 
   ts-morph@26.0.0:
     dependencies:
@@ -10335,8 +10294,8 @@ snapshots:
       glob: 13.0.0
       jsonc-parser: 3.3.1
       nypm: 0.6.2
-      trpc-cli: 0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(zod@4.1.13)
-      zod: 4.1.13
+      trpc-cli: 0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(zod@4.2.1)
+      zod: 4.2.1
     transitivePeerDependencies:
       - '@orpc/server'
       - '@valibot/to-json-schema'
@@ -10706,8 +10665,6 @@ snapshots:
   zod@3.22.3: {}
 
   zod@3.25.76: {}
-
-  zod@4.1.13: {}
 
   zod@4.2.1: {}
 

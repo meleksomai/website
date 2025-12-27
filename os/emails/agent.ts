@@ -1,7 +1,7 @@
 import { Agent, type AgentEmail } from "agents";
-import { emailContent } from "./email";
 import { classifyEmailContent } from "./models/classifier";
 import { draftEmail } from "./models/writer";
+import { renderEmail } from "./templates/welcome";
 
 export type State = {
   lastUpdated: Date | null;
@@ -58,7 +58,11 @@ export class HelloEmailAgent extends Agent<Env, State> {
     if (classification.action === "reply") {
       // Draft a reply using the email writer model.
       console.log("Drafting reply email...");
-      const draft = await draftEmail(emailContent);
+      const draft = await draftEmail(
+        emailContent,
+        email.from,
+        email.headers.get("Subject") || ""
+      );
 
       console.log("Drafted reply:", draft);
 
@@ -112,7 +116,7 @@ export class HelloEmailAgent extends Agent<Env, State> {
     //   return;
     // }
 
-    const body = await emailContent(content);
+    const body = await renderEmail(content);
 
     await this.replyToEmail(email, {
       subject: "Re: " + (email.headers.get("Subject") || "(No Subject)"),

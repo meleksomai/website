@@ -28,7 +28,7 @@ export const EmailClassificationSchema = z.object({
 export type EmailClassification = z.infer<typeof EmailClassificationSchema>;
 
 export async function classifyEmailContent(
-  emailContent: string,
+  emailContent: string | Uint8Array<ArrayBufferLike>,
   emailFrom: string,
   emailSubject: string
 ): Promise<EmailClassification> {

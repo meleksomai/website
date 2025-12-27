@@ -4,7 +4,7 @@ import { generateText } from "ai";
 import draft_system_prompt from "./prompt.md";
 
 export async function draftEmail(
-  emailContent: string,
+  emailContent: string | Uint8Array<ArrayBufferLike>,
   emailFrom: string,
   emailSubject: string
 ): Promise<string> {

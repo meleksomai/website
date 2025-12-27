@@ -1,4 +1,4 @@
 packages:
   - "web/"
-  - "os/*"
+  - "os/"
   - "packages/*"
