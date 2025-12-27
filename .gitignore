@@ -46,3 +46,4 @@ npm-debug.log*
 # Cloudflare workers
 .dev.vars*
 !.dev.vars.example
+.wrangler

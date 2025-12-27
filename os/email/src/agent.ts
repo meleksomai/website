@@ -1,5 +1,7 @@
 import { Agent, type AgentEmail } from "agents";
 import { emailContent } from "./email";
+import { classifyEmailContent } from "./models/classifier";
+import { draftEmail } from "./models/writer";
 
 export type State = {
   lastUpdated: Date | null;
@@ -31,11 +33,43 @@ export class HelloEmailAgent extends Agent<Env, State> {
     this.store(email);
 
     // Auto-respond only once.
-    await this.handleAutoResponse(email);
+    // if (this.state.autoResponded) {
+    //   console.log("Auto-response already sent. Skipping further processing.");
+    //   return;
+    // }
+
+    const emailContent = await email.getRaw();
 
     // Agent processing goes here.
+    // 1. Classify the email content
+    console.log("Classifying email content using our AI model...");
+    const classification = await classifyEmailContent(
+      emailContent,
+      email.from,
+      email.headers.get("Subject") || ""
+    );
+    console.log("Email classification:", classification);
 
-    // Forward the email to self
+    if (classification.action === "ignore") {
+      console.log("Ignoring email as per classification.");
+      return;
+    }
+
+    if (classification.action === "reply") {
+      // Draft a reply using the email writer model.
+      console.log("Drafting reply email...");
+      const draft = await draftEmail(emailContent);
+
+      console.log("Drafted reply:", draft);
+
+      // Send the drafted reply.
+      console.log("Sending drafted reply...");
+
+      await this.handleAutoResponse(email, draft);
+      console.log("Reply drafted and sent.");
+    }
+
+    // Forward the email to self by default.
     console.log("Forwarding email to self:", this.env.ROUTING_EMAIL);
     await email.forward(this.env.ROUTING_EMAIL);
 
@@ -69,18 +103,21 @@ export class HelloEmailAgent extends Agent<Env, State> {
     };
   }
 
-  private async handleAutoResponse(email: AgentEmail) {
-    if (this.state.autoResponded) {
-      console.log("Auto-response already sent. Skipping.");
-      return;
-    }
+  private async handleAutoResponse(
+    email: AgentEmail,
+    content: string | null = null
+  ) {
+    // if (this.state.autoResponded) {
+    //   console.log("Auto-response already sent. Skipping.");
+    //   return;
+    // }
 
-    const content = await emailContent();
+    const body = await emailContent(content);
 
     await this.replyToEmail(email, {
       subject: "Re: " + (email.headers.get("Subject") || "(No Subject)"),
       fromName: "Melek Somai",
-      body: content,
+      body,
       contentType: "text/html",
     });
 

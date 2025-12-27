@@ -9,10 +9,13 @@
     "generate-types": "npx wrangler types"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^3.0.1",
     "agents": "0.3.0",
     "ai": "6.0.3",
+    "ai-gateway-provider": "^3.0.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "24.10.3",

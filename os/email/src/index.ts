@@ -9,4 +9,8 @@ export default {
       resolver: createCatchAllEmailResolver("HelloEmailAgent", message.from),
     });
   },
+
+  async fetch(request: Request, env: Env) {
+    return new Response("Email Service is running.");
+  },
 };
