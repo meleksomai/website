@@ -1,4 +1,3 @@
 packages:
-  - "web/"
-  - "os/"
+  - "apps/*"
   - "packages/*"
