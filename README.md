@@ -1,70 +1,94 @@
-# somai.me
+# MelekOS
 
-Welcome to the GitHub repository for my personal website [somai.me](https://somai.me)! I created this site to serve as a portfolio showcasing my projects, research publications, and experiences. It is also a playground to experiment with new web technologies.
+This monorepo contains my personal website and the first pieces of an agentic, AI-driven operating system. The website is the public face of my work; the agent runtime is the private engine I am building to handle real tasks through stateful, auditable workflows.
 
-## Technologies Used
+## Why this exists
 
-- **[Next.js 16](https://nextjs.org/)**: The latest version of the React framework, leveraging the App Router and React Server Components.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
-- **[shadcn/ui](https://ui.shadcn.com/)**: Beautifully designed components built with Radix UI and Tailwind CSS.
-- **[Biome](https://biomejs.dev/)**: A fast formatter and linter, replacing ESLint and Prettier (via [Ultracite](https://github.com/ultracite/ultracite)).
-- **[Radix UI](https://www.radix-ui.com/)**: Unstyled, accessible components for building high-quality design systems.
-- **[Motion](https://motion.dev/)**: A modern animation library for React (formerly Framer Motion).
-- **[MDX](https://mdxjs.com/)**: Markdown for the component era, allowing React components inside Markdown.
-- **[Turborepo](https://turbo.build/)**: High-performance build system for JavaScript and TypeScript monorepos.
-- **[pnpm](https://pnpm.io/)**: Fast, disk space efficient package manager.
-- **[Vercel](https://vercel.com/)**: For hosting and deployment
+- Create a single, coherent home for public-facing content and the systems that power agentic workflows.
+- Iterate in public on the UX while evolving agent capabilities in parallel.
+- Share UI, types, and tooling across web and agent surfaces to keep the system consistent.
 
-## Getting Started
+## Architecture
 
-If you're interested in running this project locally, follow the steps below:
+Key pieces:
 
-### Prerequisites
+- **Web app**: Next.js App Router site for essays, research, and portfolio content.
+- **Agent runtime**: Cloudflare Worker using the `agents` runtime with Durable Objects for stateful, per-identity agents.
+- **Shared packages**: UI components, transactional email renderer, and shared TypeScript configs.
 
-Make sure you have the following software installed on your system:
+## Repository structure
 
-- [Node.js](https://nodejs.org/) (Latest LTS recommended)
-- [Git](https://git-scm.com/)
-- [pnpm](https://pnpm.io/)
+```bash
+apps/
+  web/          # Next.js website (somai.me)
+  agent/        # Cloudflare Email Routing agent worker
+packages/
+  ui/           # Shared UI components + styles
+  transactional # React Email renderer helpers
+  notion/       # Notion-related utilities (placeholder)
+  typescript-config/ # Shared TS configs
+```
 
-### Installation
+## Tech stack
 
-1. Clone the repository to your local machine:
+- Next.js 16 + React 19
+- Tailwind CSS + shadcn/ui + Radix
+- Cloudflare Workers + Durable Objects
+- Vercel (web), Wrangler (agent)
+- Turborepo + pnpm
+- Biome via Ultracite (format/lint)
 
-   ```bash
-   git clone https://github.com/meleksomai/website.git
-   ```
+## Getting started
 
-2. Move into the project directory:
+Prerequisites:
 
-   ```bash
-   cd website
-   ```
+- Node.js >= 24
+- pnpm >= 10
 
-3. Install the project dependencies:
+Install dependencies:
 
-   ```bash
-   pnpm i
-   ```
+```bash
+pnpm i
+```
 
-4. Start the development server:
+Run everything in dev mode:
 
-   ```bash
-   pnpm dev
-   ```
+```bash
+pnpm dev
+```
 
-Now the project should be up and running at [http://localhost:3000](http://localhost:3000)!
+Run a specific app:
+
+```bash
+pnpm --filter web dev
+pnpm --filter backend-email dev
+```
+
+## Common scripts
+
+- `pnpm dev` - start all apps
+- `pnpm build` - build all apps
+- `pnpm test` - run tests
+- `pnpm check` - run Ultracite checks
+- `pnpm fix` - format + fix lint issues
+
+## Status
+
+- Website is live and actively maintained.
+- Agentic OS components are early and evolving; expect breaking changes.
+
+## Usage notes
+
+- Web app details: `apps/web/README.md`
+- Agent worker details: `apps/agent/README.md`
 
 ## Contributing
 
-While this is primarily a personal project, contributions or suggestions are always welcome. If you have any ideas for improvements or have noticed any bugs, please open an issue.
+Contributions are welcome. Please open an issue or PR with a clear description of the change. Before submitting:
+
+- Run `pnpm check` and `pnpm test`
+- Follow the Ultracite code standards in `AGENTS.md`
 
 ## License
 
-This project is open source and available under the [MIT License](LICENCE).
-
-## Acknowledgements
-
-I'd like to thank everyone who has inspired, supported, and helped me throughout my journey. Your encouragement and guidance have been invaluable.
-
-Happy Coding! 🚀
+MIT licensed. See `LICENCE`.

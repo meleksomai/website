@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "emailbot",
+  "main": "./index.ts",
+  "compatibility_date": "2025-12-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "HelloEmailAgent",
+        "name": "HelloEmailAgent"
+      }
+    ]
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "migrations": [
+    {
+      "new_sqlite_classes": ["HelloEmailAgent"],
+      "tag": "v1"
+    }
+  ]
+}
